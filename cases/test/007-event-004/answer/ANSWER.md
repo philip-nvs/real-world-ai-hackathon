@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent replies to Mara Ellwood via the secure portal, relaying the H&V Payment Team's trace for her international transfer (case HV-007): sent onward from H&V, downstream processing pending, and no confirmation of receipt by the beneficiary.

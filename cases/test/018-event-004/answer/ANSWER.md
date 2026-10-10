@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V agent tells Mara Ellison via the secure portal that the two £34.80 future payments to Northmere Heating are separate instructions (a standing order and a direct debit mandate), that neither has been cancelled, and asks her to identify which instruction, if any, she wants changed before H&V acts.

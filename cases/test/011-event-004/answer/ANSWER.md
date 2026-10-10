@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent replies to Mara Ellison via the secure portal that the H&V standing-order journal shows her active monthly standing order next scheduled to run on 3 September 2025, noting this is the scheduled run date, not a guarantee of when the recipient receives the money, and that the future payment has not yet been made.

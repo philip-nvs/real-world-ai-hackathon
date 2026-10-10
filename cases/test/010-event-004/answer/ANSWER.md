@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V replies to Elowen Marr via the secure portal, confirming that the £42.80 credit on her account is the refund matching her Northmere Home Supplies transfer.

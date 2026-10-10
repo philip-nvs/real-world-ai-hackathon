@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `ask`
-- Description: Send Maeve Ellery the checked standing order date change (18 to 22 September 2025) through the secure portal and ask her to confirm it securely.

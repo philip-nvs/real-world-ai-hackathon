@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent completes the check of Northmere Studio Ltd's payroll payment package signing queue against the business mandate and records the queue check result in H&V case record HV-043.

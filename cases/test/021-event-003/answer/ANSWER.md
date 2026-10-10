@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V agent tells Mara Ellison via the secure portal that her replacement card's dispatch is registered in the card journal but that H&V has no confirmation she has received the card.

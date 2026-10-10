@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: Submit Mara Ellison's checked instruction to cancel the Northmere Fitness Direct Debit mandate to the H&V Direct Debit service.

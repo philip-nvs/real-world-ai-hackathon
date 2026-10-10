@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: After Elowen Mercer confirms the replacement number in the secure portal, H&V's secure profile-change system applies the replacement phone number to her profile and notifies her in the secure portal.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's import journal for a receipt record of Mara Ellison's payroll file batch-041.csv (Northmere Studio Ltd., reference HV-041).

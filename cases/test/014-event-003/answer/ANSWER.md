@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent, once the H&V mandate journal returns its status check, tells Mara Ellery via the secure portal the current bank-record status of her Northmere Water Services Direct Debit mandate, without cancelling or changing it.

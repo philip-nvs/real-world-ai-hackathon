@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Mara Ellery through the H&V secure portal that her Northmere Water Services Direct Debit mandate is Active, as checked in the H&V mandate journal on 14 August 2025, without changing the mandate.

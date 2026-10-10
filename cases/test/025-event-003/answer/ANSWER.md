@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V agent searches the H&V card authorisation journal for Mara Ellison's £18.40 authorisation attempt at North Quay Books, using the merchant and amount she identified, and checks the recorded response for that attempt.

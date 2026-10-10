@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V agent confirms Mara Ellison's authenticated profile and secure-portal request, then asks the Data service to create the permitted CSV transactions export covering 6–9 May 2025 only for her secure portal, with no data sent to any third party.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V agent opens the prescribed PIN procedure for Maren Ellwood's H&V debit card in the secure portal, following the completed customer check, and tells her to continue there without sending her PIN in correspondence.

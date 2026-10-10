@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Request the H&V document service to issue the permitted account confirmation to Mara Ellison's secure portal only.

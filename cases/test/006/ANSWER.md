@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Check H&V's payment instruction journal for the count and independent references of Mira's two £84.20 transfers to North Quay Utilities, without cancelling or returning either.

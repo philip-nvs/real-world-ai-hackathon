@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Check Alder Quay Studio Ltd.'s incoming account activity for an identifiable credit matching the buyer's payment details for the workshop invoice.

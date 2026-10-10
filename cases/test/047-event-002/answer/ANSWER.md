@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V Business Support agent checks Maeve Calder's authority to view company limits and the active company outgoing-payment limit setting in the H&V Limit Register before sharing any information.

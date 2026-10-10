@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V customer service agent checks the H&V incoming-entry journal for linked incoming entries on Elowen Marr's account for a £42.80 refund matching her transfer to Northmere Home Supplies, without treating a similar-looking entry as a match.

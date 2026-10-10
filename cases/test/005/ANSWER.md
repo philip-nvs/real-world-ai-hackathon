@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `escalate`
-- Description: Ask the H&V payment team to register the prescribed return request for Leona Mercer's verified £286.40 transfer sent to the wrong saved recipient.

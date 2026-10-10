@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V Business Support agent replies to Maeve Calder via the business portal confirming her company profile's current outgoing-payment limit of £20,000 per payment, noting no limit change or payment has been made and the confirmation does not authorise a payment above the limit.

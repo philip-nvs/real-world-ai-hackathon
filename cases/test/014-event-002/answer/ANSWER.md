@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent requests a status-only check (no change) of Mara Ellery's Northmere Water Services Direct Debit mandate from the H&V mandate journal for case HV-014.

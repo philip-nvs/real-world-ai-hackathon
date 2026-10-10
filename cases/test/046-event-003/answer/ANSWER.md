@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: The H&V business banking agent has already submitted Mara Ellery's verified instruction to revoke Owen Bell's Payroll Approver role for Larkmere Studio Ltd to the H&V admin process, so it waits for the admin process to process it.

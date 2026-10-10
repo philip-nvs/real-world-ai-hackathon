@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent replies to Mara Ellison via the secure portal that H&V's transfer journal records her one-off £420 transfer to Alder & Reed Workshop as sent, noting this does not confirm receipt or credit by the recipient bank.

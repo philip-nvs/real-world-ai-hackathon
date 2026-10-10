@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: After Mira Ellery confirms the amendment in her secure portal session, H&V (the H&V system) applies it, updating her standing order to Westmere Garden Cooperative from £42.00 to £68.00 per month and notifying her in the secure portal.

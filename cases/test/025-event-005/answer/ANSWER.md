@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: H&V tells Mara Ellison through the secure portal (case HV-025) that her £18.40 card attempt at North Quay Books was declined because her available balance was insufficient at the time, that no new payment has been made, and that a future attempt is not guaranteed to succeed.

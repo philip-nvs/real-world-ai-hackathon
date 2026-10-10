@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V payment team registers the return request for case HV-005 against Leona Mercer's verified £286.40 pottery-studio bill transfer to the wrong saved recipient, and notes to the H&V service agent that registration does not confirm the money will be returned.

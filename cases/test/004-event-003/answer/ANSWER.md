@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent replies to Mara Ellery via the secure portal, using the transaction journal's permitted wording, that the receiving bank declined her 14 July 2025 transfer to Northmere Housing Co-operative so H&V did not complete it, and that no new transfer has been made.

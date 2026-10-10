@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V agent notifies Mara Ellison via the secure portal that her CSV export of transactions for 6–9 May 2025 (transactions-033.csv) is available in her secure portal.

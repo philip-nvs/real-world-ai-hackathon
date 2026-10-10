@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V business support agent checks Alder Quay Studio Ltd.'s incoming account activity in the H&V account transaction journal for an identifiable credit matching the buyer's workshop invoice payment details available to the bank.

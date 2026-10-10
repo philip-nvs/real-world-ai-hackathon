@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Check row SUP-17 of the "Alderwick supplier payments" batch in H&V's payment journal to verify that line's status, rather than inferring it from the batch's processed status.

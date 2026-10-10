@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Ask H&V's standing-order journal to verify the next scheduled run date of Mara Ellison's active monthly standing order.

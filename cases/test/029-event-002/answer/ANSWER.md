@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the access log for the recorded device-linking status of Mara Ellison's new tablet under case HV-029.

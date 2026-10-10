@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: H&V's recovery system runs the secure recovery checks for Mara Ellison's H&V profile sign-in in the secure portal, with no password or verification code handled by the agent.

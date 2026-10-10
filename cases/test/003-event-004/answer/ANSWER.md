@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent replies to Elise Rowan via the secure portal that the H&V instruction journal shows her saved invoice transfer instruction as "Awaiting authorisation", meaning it awaits her authorisation and has not yet been authorised or executed.

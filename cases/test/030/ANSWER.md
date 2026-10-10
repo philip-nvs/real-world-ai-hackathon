@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: Check the card journal for replacement request HV-030 to confirm its manufacture and dispatch status.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V (Harrow & Vale Bank plc) posts the H&V admin-log status of the processed revocation instruction for Owen Bell's Payroll Approver role at Larkmere Studio Ltd to administrator Mara Ellery in the business secure portal.

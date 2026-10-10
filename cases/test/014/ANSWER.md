@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Request a status-only check of Mara Ellery's Northmere Water Services Direct Debit mandate from H&V's mandate journal, without changing the mandate.

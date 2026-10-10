@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Select payment HV-040 in the document service and request a payment record for delivery to Mara Ellison's secure portal.

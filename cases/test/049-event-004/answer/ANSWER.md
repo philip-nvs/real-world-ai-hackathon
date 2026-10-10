@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V (via the business portal) notifies Mara Venn that North Quay Printworks' acquiring report for 1–7 July 2025 (merchant-report-049.csv, report total £236.00) is now available in the secure portal, noting that availability does not confirm any funds were credited.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent searches H&V's payment journal, under case HV-008, for the purpose field on Elena Marlow's transfer instruction to Mallow Pottery Works.

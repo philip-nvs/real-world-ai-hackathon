@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V security team sends Nerys Wren the permitted session extract for her profile (sessions-039.txt, device and network identifiers withheld) through the secure portal.

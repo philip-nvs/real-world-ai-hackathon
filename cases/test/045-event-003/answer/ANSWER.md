@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V business support agent sends the new-user secure-portal access request for Nadia Bell's colleague to the verified company administrator of Merefield Design Studio Ltd through the business portal for approval.

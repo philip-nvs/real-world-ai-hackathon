@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent, after matching Mara Ellison's request to the £74.00 payment HV-040 in her authenticated secure-portal session, asks the H&V document service to generate the payment record for delivery to her secure portal.

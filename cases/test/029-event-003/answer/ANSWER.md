@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent replies to Mara Ellison in the secure portal that the access log records her new tablet's device-linking status under case HV-029 as "Awaiting confirmation", so it has not yet been admitted for banking operations.

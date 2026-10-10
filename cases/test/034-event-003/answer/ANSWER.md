@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks the transaction record for Mara Ellery's foreign-currency cash withdrawal against the H&V tariff entry in force on its processing date to verify the £3.20 fee under case HV-034.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent messages Mara Ellison through the H&V secure portal to confirm that the card journal shows her missing debit card is marked blocked under case HV-022, noting that any disputed transactions are handled separately and were not assessed as part of this block confirmation.

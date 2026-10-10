@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's standing-order journal for the next scheduled run date of Mara Ellison's active monthly household contribution standing order, without changing or authorising the instruction.
