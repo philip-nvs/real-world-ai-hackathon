@@ -1,34 +1,32 @@
-"""Bank tool adapter. Mock implementations today; swap the bodies of TOOLS for the
-organisers' real tools at 16:30. Schemas stay the same, so the agent doesn't change."""
+"""Bank tool adapter for cases with no live H&V systems (the unseen Reality Test cases).
 
-import itertools
+Each tool records the action as the system's next step and executes nothing: no data comes
+back, no reference is invented, no message is delivered. Swap the bodies of TOOLS for the
+organisers' real tools if they supply any; schemas stay the same, so the agent doesn't change.
+The dev loop uses bank_env's fixture adapter instead, which does answer."""
 
-_ref = itertools.count(1)
+NOT_EXECUTED = "Recorded as H&V's next step; not executed. No live H&V system is connected in this environment, " \
+               "so no result will come back. Treat the step as taken; don't wait for or assume its result."
 
 
-def _queued(kind, target, text):
-    return {
-        "status": "queued",
-        "reference": f"MOCK-{next(_ref):04d}",
-        "detail": f"{kind} sent to {target}. Mock adapter: no live data; the reply will arrive as a new case event.",
-        "echo": text,
-    }
+def _recorded(kind, target):
+    return {"status": "recorded", "executed": False, "action": kind, "target": target, "detail": NOT_EXECUTED}
 
 
 def check_record(system, query):
-    return _queued("Read-only check", system, query)
+    return _recorded("read-only check", system)
 
 
 def submit_internal_request(team, request):
-    return _queued("Internal request", team, request)
+    return _recorded("internal request", team)
 
 
 def submit_instruction(system, instruction, authorised_by_event):
-    return _queued("Account-changing instruction", system, instruction)
+    return _recorded("account-changing instruction", system)
 
 
 def send_secure_message(recipient, message):
-    return {"status": "delivered", "channel": "Secure portal", "recipient": recipient}
+    return _recorded("secure-portal message", recipient)
 
 
 TOOLS = {

@@ -78,6 +78,9 @@ if __name__ == "__main__":
         assert (r["decision"], r["blocked"], r["crashed"]) == ("act", 1, False), r
         answer = (Path(tmp) / "out/ANSWER.md").read_text()
         assert "**ACT**" in answer and "standing-order journal" in answer and "promises a refund" in answer
+        # with no live bank the check is recorded, not executed, and nothing invents a result or reference
+        assert "(recorded, not executed)" in answer and "were not executed; no results came back" in answer, answer
+        assert "MOCK" not in answer and "queued" not in answer and "delivered" not in answer
         kinds = [json.loads(l)["kind"] for l in (Path(tmp) / "out/trace.jsonl").read_text().splitlines()]
         assert "guard_block" in kinds and kinds[-1] == "decision"
 
