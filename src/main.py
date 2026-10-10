@@ -1,13 +1,29 @@
 import mimetypes
+from contextlib import asynccontextmanager
 from datetime import UTC, datetime
 from pathlib import PurePosixPath
+from uuid import uuid4
 
 from fastapi import FastAPI, Form, HTTPException, UploadFile
 from fastapi.responses import Response
 
-from src.repository import get_db
+from src.agent.sessions import start_session
+from src.repository import close, get_db
 
-app = FastAPI()
+
+@asynccontextmanager
+async def lifespan(app):
+    db = get_db()
+    await db.session_events.create_index([("session_id", 1), ("seq", 1)], unique=True)
+    await db.sessions.create_index([("case_id", 1), ("created_at", -1)])
+    # ponytail: assumes one API process; with several, this would fail another process's live runs
+    await db.sessions.update_many({"status": {"$in": ["queued", "running"]}},
+                                  {"$set": {"status": "failed", "error": "interrupted: the server stopped mid-run"}})
+    yield
+    await close()
+
+
+app = FastAPI(lifespan=lifespan)
 
 # ponytail: whole case in one document, so capped under Mongo's 16 MB; move file bodies to GridFS if cases outgrow it
 MAX_CASE_BYTES = 15 * 1024 * 1024
@@ -85,3 +101,44 @@ async def get_case_file(case_id: str, path: str):
 async def delete_case(case_id: str):
     if not (await get_db().cases.delete_one({"_id": case_id})).deleted_count:
         raise HTTPException(404, "case not found")
+
+
+# ---------- agent sessions ----------
+
+def session_out(s):
+    return {"id": s.pop("_id"), **s}
+
+
+@app.post("/cases/{case_id}/sessions", status_code=202)
+async def create_session(case_id: str):
+    """Start a one-shot agent run on a stored case. Poll GET /sessions/{id} and its /events."""
+    case = await get_db().cases.find_one({"_id": case_id})
+    if not case:
+        raise HTTPException(404, "case not found")
+    session = {"_id": uuid4().hex, "case_id": case_id, "status": "queued", "created_at": datetime.now(UTC)}
+    await get_db().sessions.insert_one(session)
+    start_session(session["_id"], case_id, case["files"])
+    return session_out(session)
+
+
+@app.get("/cases/{case_id}/sessions")
+async def list_sessions(case_id: str):
+    fields = {"case_id": 1, "status": 1, "created_at": 1, "finished_at": 1, "decision.decision": 1, "crashed": 1}
+    return [session_out(s) async for s in get_db().sessions.find({"case_id": case_id}, fields).sort("created_at", -1)]
+
+
+@app.get("/sessions/{session_id}")
+async def get_session(session_id: str):
+    s = await get_db().sessions.find_one({"_id": session_id})
+    if not s:
+        raise HTTPException(404, "session not found")
+    return session_out(s)
+
+
+@app.get("/sessions/{session_id}/events")
+async def get_session_events(session_id: str, after: int = -1):
+    """Trace lines with seq > after, in order: pass the last seq you have to get only new ones."""
+    if not await get_db().sessions.count_documents({"_id": session_id}, limit=1):
+        raise HTTPException(404, "session not found")
+    cursor = get_db().session_events.find({"session_id": session_id, "seq": {"$gt": after}}, {"_id": 0, "session_id": 0})
+    return [e async for e in cursor.sort("seq")]

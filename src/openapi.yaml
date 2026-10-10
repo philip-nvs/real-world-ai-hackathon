@@ -6,6 +6,10 @@ info:
     Upload case folders (index.md, history.md, attachments/...) and read them back.
     A case is stored as one MongoDB document in `cases`, keyed by case id, holding every file's bytes.
 
+    Start an agent session on a case and poll it. A session is one run of the case agent to a single
+    decision (act/ask/wait/escalate), stored in `sessions`; every trace line (model turns, tool calls,
+    tool results, policy-guard blocks) is stored in `session_events`.
+
 paths:
   /health:
     get:
@@ -112,10 +116,79 @@ paths:
         "404":
           $ref: "#/components/responses/Error"
 
+  /cases/{case_id}/sessions:
+    parameters:
+      - $ref: "#/components/parameters/CaseId"
+    post:
+      summary: Start an agent session on a case
+      description: |
+        Queues a one-shot run of the case agent on the stored case and returns at once.
+        The agent's tools answer from the case's `bank_env` fixture when one exists (case `017-event-004`
+        uses fixture `017` and sees only its own events), otherwise from `tools.py`, which records each
+        action without executing it. Poll `GET /sessions/{session_id}` until `status` is `done` or `failed`.
+      responses:
+        "202":
+          description: Session queued
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/Session"}
+        "404":
+          $ref: "#/components/responses/Error"
+    get:
+      summary: List a case's sessions, newest first
+      responses:
+        "200":
+          description: Sessions, with only id, case_id, status, timestamps, decision.decision and crashed
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: "#/components/schemas/Session"}
+
+  /sessions/{session_id}:
+    parameters:
+      - $ref: "#/components/parameters/SessionId"
+    get:
+      summary: Get a session's status and result
+      responses:
+        "200":
+          description: The session
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/Session"}
+        "404":
+          $ref: "#/components/responses/Error"
+
+  /sessions/{session_id}/events:
+    parameters:
+      - $ref: "#/components/parameters/SessionId"
+      - name: after
+        in: query
+        description: Return only events with `seq` greater than this; pass the last `seq` you have. Default -1 (all).
+        schema: {type: integer, default: -1}
+    get:
+      summary: Get a session's trace, in order
+      responses:
+        "200":
+          description: Trace lines with seq > after
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: "#/components/schemas/SessionEvent"}
+        "404":
+          $ref: "#/components/responses/Error"
+
 components:
   parameters:
     CaseId:
       name: case_id
+      in: path
+      required: true
+      schema: {type: string}
+
+    SessionId:
+      name: session_id
       in: path
       required: true
       schema: {type: string}
@@ -171,3 +244,43 @@ components:
         size: {type: integer, description: Bytes}
         content_type: {type: string, examples: [application/pdf]}
       required: [path, size, content_type]
+
+    Session:
+      type: object
+      properties:
+        id: {type: string}
+        case_id: {type: string}
+        status:
+          type: string
+          enum: [queued, running, done, failed]
+          description: |
+            `done` includes an agent crash (`crashed: true`), which still ends in the Escalate fallback decision.
+            `failed` means the run itself broke or the server stopped mid-run; see `error`.
+        created_at: {type: string, format: date-time}
+        started_at: {type: string, format: date-time}
+        finished_at: {type: string, format: date-time}
+        decision:
+          type: object
+          description: The agent's submit_decision input (decision, next_action, evidence, conflicts, customer_message, handover, rejected_options, final_result).
+        crashed: {type: boolean}
+        blocked: {type: integer, description: Policy-guard blocks during the run}
+        tokens:
+          type: array
+          items: {type: integer}
+          description: "[input tokens, output tokens]"
+        bank: {type: string, enum: [fixture, mock], description: Which tools answered}
+        bank_log: {type: array, items: {type: object}, description: Every fixture call and its outcome; empty for mock}
+        answer_md: {type: string, description: The run's ANSWER.md}
+        reasoning_md: {type: string, description: The run's REASONING.md}
+        error: {type: string, description: Set when status is failed}
+      required: [id, case_id, status, created_at]
+
+    SessionEvent:
+      type: object
+      description: One trace.jsonl line plus its position; the other fields depend on kind.
+      properties:
+        seq: {type: integer}
+        t: {type: number, description: Unix time}
+        kind: {type: string, enum: [loaded, model, tool_call, tool_result, tool_error, guard_block, crash, decision]}
+      required: [seq, t, kind]
+      additionalProperties: true
