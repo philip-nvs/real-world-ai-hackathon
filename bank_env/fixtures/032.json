@@ -1,0 +1,95 @@
+{
+  "case_id": "032",
+  "case_ref": "HV-032",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-006",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "statements_service",
+      "topic_terms": [
+        "January 2024 statement",
+        "archived statement",
+        "archive check",
+        "availability",
+        "can be ordered"
+      ],
+      "status": "completed",
+      "reference": null,
+      "response": "The archive check confirms that the January 2024 statement is available to order. Any applicable charge is subject to the current tariff.",
+      "document": null,
+      "source_event": "event-003"
+    },
+    {
+      "id": "t2",
+      "team": "statements_service",
+      "topic_terms": [
+        "order statement",
+        "January 2024 statement",
+        "HV-032",
+        "permitted statement period",
+        "statement-032.pdf"
+      ],
+      "status": "completed",
+      "reference": "HV-032",
+      "response": "Statement HV-032 | January 2024 | status: ready for secure-portal access. The statement shows an opening balance of £200.00, local travel of -£12.00 on 18 Jan 2024 and a closing balance of £188.00 on 31 Jan 2024. The statement is available, but this does not confirm that it has been downloaded.",
+      "document": "statement-032.pdf",
+      "source_event": "event-005"
+    }
+  ],
+  "processes": []
+}

@@ -1,0 +1,96 @@
+{
+  "case_id": "024",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Rowan Ellery",
+      "kind": "person",
+      "roles": [
+        "cardholder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "card_journal",
+      "kind": "card",
+      "party": "p1",
+      "match_terms": [
+        "H&V card",
+        "Rowan Ellery",
+        "card temporarily unavailable",
+        "restriction",
+        "grocery purchase decline"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "temporarily unavailable"
+        },
+        {
+          "key": "restriction_category",
+          "value": "temporary security-related restriction"
+        },
+        {
+          "key": "restriction_basis",
+          "value": "not shown"
+        },
+        {
+          "key": "restriction_lifted",
+          "value": "not confirmed"
+        }
+      ],
+      "customer_facing": "Your card has a temporary security-related restriction. Further operational detail can't be provided, and this confirmation does not mean the restriction has been lifted or say when it may be.",
+      "disclosure_rules": [
+        "Exact basis is not shown",
+        "Do not provide operational detail",
+        "Do not confirm that the restriction will be lifted"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

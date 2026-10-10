@@ -1,0 +1,95 @@
+{
+  "case_id": "030",
+  "case_ref": "HV-030",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Maren Ellery",
+      "kind": "person",
+      "roles": [
+        "cardholder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": false
+    },
+    {
+      "id": "event-003",
+      "channel": "Secure chat",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "card_journal",
+      "kind": "card_replacement",
+      "party": "p1",
+      "match_terms": [
+        "HV-030",
+        "replacement card",
+        "debit card replacement",
+        "Maren Ellery"
+      ],
+      "attributes": [
+        {
+          "key": "reference",
+          "value": "HV-030"
+        },
+        {
+          "key": "request_status",
+          "value": "accepted"
+        },
+        {
+          "key": "status",
+          "value": "in manufacture"
+        },
+        {
+          "key": "dispatch",
+          "value": "not confirmed"
+        },
+        {
+          "key": "delivery",
+          "value": "not confirmed"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

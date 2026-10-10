@@ -1,0 +1,73 @@
+{
+  "case_id": "038",
+  "case_ref": "HV-038",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "document_service",
+      "topic_terms": [
+        "account confirmation",
+        "account relationship",
+        "confirmation letter",
+        "HV-038",
+        "secure portal",
+        "Mara Ellison"
+      ],
+      "status": "completed",
+      "reference": "HV-038",
+      "response": "Issued: account-confirmation-038.pdf. Status: available to the verified account holder in the secure portal. Account relationship: active at issue date, 1 October 2025. Released to the secure portal only. Account number and sort code are withheld. This is not a payment instruction.",
+      "document": "account-confirmation-038.pdf",
+      "source_event": "event-004"
+    }
+  ],
+  "processes": []
+}

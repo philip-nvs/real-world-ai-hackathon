@@ -1,0 +1,111 @@
+{
+  "case_id": "004",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellery",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "Northmere Housing Co-operative",
+      "kind": "business",
+      "roles": [
+        "payee"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "payment_journal",
+      "kind": "outgoing_transfer",
+      "party": "p1",
+      "match_terms": [
+        "Northmere Housing Co-operative",
+        "2025-07-14",
+        "14 July 2025",
+        "Mara Ellery"
+      ],
+      "attributes": [
+        {
+          "key": "payee",
+          "value": "Northmere Housing Co-operative"
+        },
+        {
+          "key": "date",
+          "value": "2025-07-14"
+        },
+        {
+          "key": "status",
+          "value": "Not completed"
+        },
+        {
+          "key": "decline_code_recorded",
+          "value": "true"
+        },
+        {
+          "key": "decline_reason",
+          "value": "The receiving bank declined the transfer"
+        },
+        {
+          "key": "completed_by_hv",
+          "value": "false"
+        }
+      ],
+      "customer_facing": "The receiving bank declined the transfer.",
+      "disclosure_rules": [
+        "Share only the permitted customer-facing wording",
+        "Decline code itself not shown to the customer"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

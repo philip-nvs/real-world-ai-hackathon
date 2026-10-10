@@ -1,0 +1,125 @@
+{
+  "case_id": "014",
+  "case_ref": "HV-014",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellery",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "instruction_register",
+      "kind": "direct_debit_mandate",
+      "party": "p1",
+      "match_terms": [
+        "Northmere Water Services",
+        "Direct Debit",
+        "mandate",
+        "HV-014"
+      ],
+      "attributes": [
+        {
+          "key": "payee",
+          "value": "Northmere Water Services"
+        },
+        {
+          "key": "status",
+          "value": "Active"
+        },
+        {
+          "key": "status_checked_date",
+          "value": "2025-08-14"
+        },
+        {
+          "key": "record_side",
+          "value": "payer-side mandate record"
+        }
+      ],
+      "customer_facing": "Direct Debit mandate — Northmere Water Services — Status: Active. Status checked 14 August 2025.",
+      "disclosure_rules": [
+        "Confirms bank-side mandate status only; does not establish any obligation to Northmere Water Services",
+        "Absence of newer collections does not by itself mean the mandate was cancelled"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    },
+    {
+      "id": "r2",
+      "system": "payment_journal",
+      "kind": "direct_debit_collection",
+      "party": "p1",
+      "match_terms": [
+        "Northmere Water Services",
+        "Direct Debit",
+        "March 2025",
+        "statement period ending 31 March 2025"
+      ],
+      "attributes": [
+        {
+          "key": "payee",
+          "value": "Northmere Water Services"
+        },
+        {
+          "key": "statement_period_end",
+          "value": "2025-03-31"
+        },
+        {
+          "key": "entry_type",
+          "value": "historic statement entry"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

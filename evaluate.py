@@ -2,6 +2,9 @@
 """Dev loop: cut each public case just before the bank agent's first move, run the same
 agent as run.py, and have Claude judge its next action against the gold one.
 
+The agent's tools answer from the case's bank_env fixture, seeing only the events before the
+cut; every bank call lands in answers/<case>/bank_log.json. --mock uses tools.py's mocks instead.
+
     python evaluate.py                 # all 50 public Banking cases
     python evaluate.py 001 017 041     # a few
 """
@@ -16,9 +19,13 @@ from pathlib import Path
 
 import anthropic
 
-from run import EVENT_RE, call_claude, load_case, run_case, section
+from bank_env.fixture_adapter import FixtureAdapter
+from bank_env.world import FIXTURES, load_scenario
 
-PUBLIC = Path(__file__).parent / "HackatonPublicCases" / "Banking & Financial Services"
+from run import EVENT_RE, call_claude, load_case, load_env, run_case, section
+from tools import TOOLS
+
+PUBLIC = Path(__file__).parent / "cases" / "full"
 HIDDEN_SECTIONS = ("Overview", "Next action at escalation", "Outcome")
 JUDGE_SCHEMA = {
     "type": "object", "additionalProperties": False, "required": ["pass", "reason"],
@@ -75,7 +82,9 @@ def main():
     ap.add_argument("--cases", default=str(PUBLIC))
     ap.add_argument("--out", default="eval_out")
     ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--mock", action="store_true", help="use tools.py's mocks instead of the fixture adapter")
     args = ap.parse_args()
+    load_env()
 
     out = Path(args.out)
     srcs = sorted(p for p in Path(args.cases).iterdir() if (p / "index.md").is_file()
@@ -84,13 +93,20 @@ def main():
 
     def one(src):
         gold, outcome, cut = cut_case(src, out / "cases" / src.name)
-        r = run_case(out / "cases" / src.name, out / "answers" / src.name, client)
+        bank = None
+        if not args.mock and (FIXTURES / f"{src.name}.json").is_file():
+            visible = {e["id"] for e in load_case(src)["events"][:cut]}
+            bank = FixtureAdapter(load_scenario(src.name), visible_events=visible)
+        r = run_case(out / "cases" / src.name, out / "answers" / src.name, client, bank.tools() if bank else TOOLS)
+        if bank:
+            (out / "answers" / src.name / "bank_log.json").write_text(json.dumps(bank.log, indent=2, ensure_ascii=False))
         try:
             verdict = judge(client, gold, outcome, (out / "answers" / src.name / "ANSWER.md").read_text())
         except Exception as e:
             verdict = {"pass": False, "reason": f"judge failed: {e}"}
         print(f"  {src.name}: {r['decision']} {'PASS' if verdict['pass'] else 'FAIL'}", file=sys.stderr)
-        return {**r, **verdict, "gold": gold, "cut_at_event": cut + 1}
+        return {**r, **verdict, "gold": gold, "cut_at_event": cut + 1, "bank": "fixture" if bank else "mock",
+                "bank_calls": [c.get("output", {}).get("status") or c.get("fault") for c in bank.log] if bank else []}
 
     with ThreadPoolExecutor(args.workers) as pool:
         rows = list(pool.map(one, srcs))
@@ -104,14 +120,16 @@ def main():
         f"- Crashes (fallback escalations): {sum(r['crashed'] for r in rows)}",
         f"- Tokens: {sum(r['tokens'][0] for r in rows):,} in / {sum(r['tokens'][1] for r in rows):,} out (agent only)",
         "- Decisions: " + ", ".join(f"{k} {sum(r['decision'] == k for r in rows)}" for k in ("act", "ask", "wait", "escalate")),
-        "", "| Case | Cut before event | Decision | Result | Agent next action | Gold next action | Judge |",
-        "|---|---|---|---|---|---|---|",
+        f"- Bank: fixture adapter for {sum(r['bank'] == 'fixture' for r in rows)} cases, mocks for {sum(r['bank'] == 'mock' for r in rows)}",
+        "", "| Case | Cut before event | Decision | Result | Bank calls | Agent next action | Gold next action | Judge |",
+        "|---|---|---|---|---|---|---|---|",
     ]
     cell = lambda s: str(s).replace("|", "/").replace("\n", " ")
     lines += [f"| {r['case']} | {r['cut_at_event']} | {r['decision']} | {'PASS' if r['pass'] else 'FAIL'} | "
+              f"{cell(', '.join(map(str, r['bank_calls'])) or r['bank'])} | "
               f"{cell(r['next_action'])} | {cell(r['gold'])} | {cell(r['reason'])} |" for r in rows]
     (out / "scorecard.md").write_text("\n".join(lines) + "\n")
-    print("\n".join(lines[:7]), file=sys.stderr)
+    print("\n".join(lines[:8]), file=sys.stderr)
     print(f"Full scorecard: {out / 'scorecard.md'}", file=sys.stderr)
 
 

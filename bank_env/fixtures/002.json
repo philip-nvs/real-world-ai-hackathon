@@ -1,0 +1,91 @@
+{
+  "case_id": "002",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Elowen Marsh",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "External message",
+      "party": null,
+      "bank_originated": false,
+      "verified": false
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "incoming_payments",
+      "kind": "account_incoming_credits",
+      "party": "p1",
+      "match_terms": [
+        "Elowen Marsh",
+        "kiln contribution",
+        "pottery studio kiln",
+        "bank transfer",
+        "incoming payment"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "no incoming payment found"
+        },
+        {
+          "key": "result",
+          "value": "No incoming payment found for the account at the time of this check."
+        },
+        {
+          "key": "sender_payment_status",
+          "value": "unknown"
+        }
+      ],
+      "customer_facing": "No incoming payment was found for your account at the time of the check. This confirms only what H&V can see; H&V cannot determine from its records whether the sender made or completed the payment.",
+      "disclosure_rules": [
+        "Report only what H&V's incoming-payment records show",
+        "Do not state or imply whether the sender made or completed the payment"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

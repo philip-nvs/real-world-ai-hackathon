@@ -1,0 +1,99 @@
+{
+  "case_id": "003",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Elise Rowan",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "instruction_register",
+      "kind": "saved_transfer_instruction",
+      "party": "p1",
+      "match_terms": [
+        "invoice",
+        "transfer instruction",
+        "saved transfer",
+        "secure portal",
+        "Elise Rowan"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "Awaiting authorisation"
+        },
+        {
+          "key": "purpose",
+          "value": "invoice"
+        },
+        {
+          "key": "authorised",
+          "value": "false"
+        },
+        {
+          "key": "executed",
+          "value": "false"
+        },
+        {
+          "key": "created_via",
+          "value": "secure portal"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Do not represent the saved instruction as a sent payment; it has not been authorised or executed",
+        "Agent must not authorise the instruction on the customer's behalf"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

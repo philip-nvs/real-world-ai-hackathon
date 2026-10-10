@@ -1,0 +1,119 @@
+{
+  "case_id": "034",
+  "case_ref": "HV-034",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellery",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "tariff",
+      "kind": "fee",
+      "party": "p1",
+      "match_terms": [
+        "3.20",
+        "£3.20",
+        "service fee",
+        "foreign-currency cash withdrawal",
+        "HV-034"
+      ],
+      "attributes": [
+        {
+          "key": "amount_gbp",
+          "value": "3.20"
+        },
+        {
+          "key": "fee_type",
+          "value": "service fee"
+        },
+        {
+          "key": "transaction_type",
+          "value": "foreign-currency cash withdrawal"
+        },
+        {
+          "key": "fee_basis",
+          "value": "tariff entry in force on the transaction's processing date for a foreign-currency cash withdrawal"
+        },
+        {
+          "key": "matches_applicable_tariff_entry",
+          "value": "true"
+        },
+        {
+          "key": "refund_decision",
+          "value": "none made"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "tariff_team",
+      "topic_terms": [
+        "fee",
+        "tariff",
+        "3.20",
+        "foreign-currency cash withdrawal",
+        "processing date",
+        "fee review",
+        "HV-034"
+      ],
+      "status": "completed",
+      "reference": "HV-034",
+      "response": "The transaction record identifies a foreign-currency cash withdrawal, and the £3.20 fee matches the tariff entry applicable to that transaction on its processing date. No refund or account change is authorised by this review; no refund decision has been made.",
+      "document": null,
+      "source_event": "event-004"
+    }
+  ],
+  "processes": []
+}

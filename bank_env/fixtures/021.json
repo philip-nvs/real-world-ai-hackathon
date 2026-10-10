@@ -1,0 +1,91 @@
+{
+  "case_id": "021",
+  "case_ref": "HV-021",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder",
+        "cardholder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "card_journal",
+      "kind": "replacement_card",
+      "party": "p1",
+      "match_terms": [
+        "HV-021",
+        "replacement card",
+        "Mara Ellison",
+        "dispatch"
+      ],
+      "attributes": [
+        {
+          "key": "request_status",
+          "value": "accepted"
+        },
+        {
+          "key": "dispatch_status",
+          "value": "registered"
+        },
+        {
+          "key": "customer_receipt",
+          "value": "not recorded"
+        }
+      ],
+      "customer_facing": "Card status: dispatch registered. We do not have confirmation that you have received the card.",
+      "disclosure_rules": [
+        "Return the recorded dispatch status only",
+        "Do not confirm delivery or receipt of the card; receipt by the customer is not recorded"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

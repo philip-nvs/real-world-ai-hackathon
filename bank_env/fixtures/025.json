@@ -1,0 +1,98 @@
+{
+  "case_id": "025",
+  "case_ref": "HV-025",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder",
+        "cardholder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "External message",
+      "party": null,
+      "bank_originated": false,
+      "verified": false
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-006",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "card_journal",
+      "kind": "card_authorisation",
+      "party": "p1",
+      "match_terms": [
+        "North Quay Books",
+        "18.40",
+        "HV-025"
+      ],
+      "attributes": [
+        {
+          "key": "merchant",
+          "value": "North Quay Books"
+        },
+        {
+          "key": "amount_gbp",
+          "value": "18.40"
+        },
+        {
+          "key": "status",
+          "value": "declined"
+        },
+        {
+          "key": "decline_reason",
+          "value": "available balance was insufficient to cover the £18.40 authorisation at the time of the attempt"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-005"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

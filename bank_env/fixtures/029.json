@@ -1,0 +1,89 @@
+{
+  "case_id": "029",
+  "case_ref": "HV-029",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "access_log",
+      "kind": "device",
+      "party": "p1",
+      "match_terms": [
+        "new tablet",
+        "tablet",
+        "HV-029",
+        "H&V app",
+        "device linking",
+        "Mara Ellison"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "Awaiting confirmation"
+        },
+        {
+          "key": "device_type",
+          "value": "tablet"
+        },
+        {
+          "key": "admitted_for_banking_operations",
+          "value": "false"
+        }
+      ],
+      "customer_facing": "Device status: Awaiting confirmation. This tablet has not yet been admitted for banking operations.",
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

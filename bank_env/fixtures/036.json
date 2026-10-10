@@ -1,0 +1,118 @@
+{
+  "case_id": "036",
+  "case_ref": "HV-036",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "External message",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": false
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-005",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-006",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "customer_profile",
+      "kind": "correspondence_address",
+      "party": "p1",
+      "match_terms": [
+        "Mara Ellison",
+        "correspondence address",
+        "address",
+        "HV-036"
+      ],
+      "attributes": [
+        {
+          "key": "address_type",
+          "value": "correspondence"
+        },
+        {
+          "key": "move",
+          "value": "customer moved within the UK"
+        }
+      ],
+      "customer_facing": "Your new address is marked as current for correspondence. This confirmation does not establish whether any correspondence already sent was redirected or delivered.",
+      "disclosure_rules": [
+        "new address not displayed in full",
+        "no address recorded in internal notes",
+        "confirmation does not establish whether correspondence already sent was redirected or delivered"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-006"
+    }
+  ],
+  "team_responses": [],
+  "processes": [
+    {
+      "id": "x1",
+      "process": "profile_change",
+      "action": "change_address",
+      "match_terms": [
+        "correspondence address",
+        "address change",
+        "HV-036",
+        "Mara Ellison"
+      ],
+      "target_record": "r1",
+      "confirmed_by": [
+        "event-004"
+      ],
+      "effect": [
+        {
+          "key": "status",
+          "value": "new address marked as current for correspondence"
+        }
+      ],
+      "result": "Your new address is marked as current for correspondence. This confirmation does not establish whether any correspondence already sent was redirected or delivered.",
+      "source_event": "event-003"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "case_id": "050",
+  "case_ref": "HV-050",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "authorised_signatory"
+      ],
+      "acts_for": "p2"
+    },
+    {
+      "id": "p2",
+      "name": "Northmere Studio Ltd",
+      "kind": "business",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    },
+    {
+      "id": "p3",
+      "name": "Alder Quay Supplies",
+      "kind": "business",
+      "roles": [
+        "payee"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "payment_journal",
+      "kind": "outgoing_transfer",
+      "party": "p2",
+      "match_terms": [
+        "Alder Quay Supplies",
+        "materials invoice",
+        "2025-10-25",
+        "HV-050"
+      ],
+      "attributes": [
+        {
+          "key": "payee",
+          "value": "Alder Quay Supplies"
+        },
+        {
+          "key": "purpose",
+          "value": "materials invoice"
+        },
+        {
+          "key": "authorisation_recorded_at",
+          "value": "2025-10-25 09:00:00 UTC"
+        },
+        {
+          "key": "status",
+          "value": "sent"
+        },
+        {
+          "key": "receipt_confirmed",
+          "value": "not confirmed by this record (recipient's bank or supplier)"
+        }
+      ],
+      "customer_facing": "Our payment journal shows this payment as “sent”. This is the stage recorded by H&V; we cannot confirm from that record whether the supplier has received the funds.",
+      "disclosure_rules": [
+        "Status 'sent' is H&V's recorded stage only; it does not confirm receipt by the recipient's bank or the supplier",
+        "Do not state or imply that the supplier has received the funds"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "payment_team",
+      "topic_terms": [
+        "payment stage",
+        "stage check",
+        "Alder Quay Supplies",
+        "materials invoice",
+        "not received",
+        "HV-050"
+      ],
+      "status": "completed",
+      "reference": null,
+      "response": "I checked the payment journal. The recorded stage is “sent”; this record does not confirm receipt by the recipient’s bank or supplier.",
+      "document": null,
+      "source_event": "event-004"
+    }
+  ],
+  "processes": []
+}

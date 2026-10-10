@@ -1,0 +1,101 @@
+{
+  "case_id": "011",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "instruction_register",
+      "kind": "standing_order",
+      "party": "p1",
+      "match_terms": [
+        "Mara Ellison",
+        "standing order",
+        "monthly",
+        "household contribution",
+        "monthly household contribution standing order",
+        "2025-09-03",
+        "3 September 2025"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "active"
+        },
+        {
+          "key": "frequency",
+          "value": "monthly"
+        },
+        {
+          "key": "purpose",
+          "value": "household contribution"
+        },
+        {
+          "key": "next_run_date",
+          "value": "2025-09-03"
+        },
+        {
+          "key": "next_payment_executed",
+          "value": "false"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "The next run date is the scheduled run date, not a guarantee of when the recipient will receive the money",
+        "The future payment has not yet been made; do not present it as executed"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

@@ -1,0 +1,127 @@
+{
+  "case_id": "013",
+  "case_ref": "HV-013",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Elodie Mercer",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-006",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "instruction_register",
+      "kind": "recurring_instruction",
+      "party": "p1",
+      "match_terms": [
+        "HV-013",
+        "studio rent",
+        "studio-rent",
+        "recurring studio-rent payment instruction",
+        "rent"
+      ],
+      "attributes": [
+        {
+          "key": "instruction_ref",
+          "value": "HV-013"
+        },
+        {
+          "key": "purpose",
+          "value": "studio rent"
+        },
+        {
+          "key": "status",
+          "value": "active"
+        },
+        {
+          "key": "next_run_status",
+          "value": "not started"
+        },
+        {
+          "key": "authority",
+          "value": "Elodie Mercer has authority over this instruction"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    }
+  ],
+  "team_responses": [],
+  "processes": [
+    {
+      "id": "x1",
+      "process": "instruction_process",
+      "action": "cancel_recurring_instruction_future_run",
+      "match_terms": [
+        "HV-013",
+        "studio rent",
+        "cancel future run",
+        "recurring studio-rent payment instruction"
+      ],
+      "target_record": "r1",
+      "confirmed_by": [
+        "event-003"
+      ],
+      "effect": [
+        {
+          "key": "next_run_status",
+          "value": "cancelled"
+        }
+      ],
+      "result": "HV-013 — Future run cancelled. No payment was in progress when the cancellation was recorded. This does not reverse or return any payments already sent.",
+      "source_event": "event-004"
+    }
+  ]
+}
