@@ -148,7 +148,7 @@ async def get_session_events(session_id: str, after: int = -1):
 
 @app.get("/export")
 async def export_answers(case_id: list[str] = Query()):
-    """Zip of <case>/ANSWER.md and REASONING.md from each case's newest session, like run.py's ANSWERS/.
+    """Zip of <case>/ANSWER.md and REASONING.md from each case's newest session, one folder per case.
     A case whose newest session isn't done is left out rather than exporting an older, stale answer."""
     buf, found = io.BytesIO(), 0
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:

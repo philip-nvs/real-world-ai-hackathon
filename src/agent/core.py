@@ -3,7 +3,7 @@
     run_case(case_dir, out_dir, client, tools)
 
 writes ANSWER.md, REASONING.md and trace.jsonl to out_dir. A case that crashes still gets an
-Escalate answer. run.py runs it over a folder of cases; src/agent/sessions.py runs it for the API.
+Escalate answer. src/run.py runs it over a folder of cases; src/agent/sessions.py runs it for the API.
 """
 
 import base64
@@ -14,7 +14,7 @@ import time
 import traceback
 from pathlib import Path
 
-from tools import TOOL_SCHEMAS, TOOLS
+from src.agent.tools import TOOL_SCHEMAS, TOOLS
 
 MODEL = "claude-opus-5-5"
 MAX_TURNS = 10

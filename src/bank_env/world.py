@@ -1,6 +1,6 @@
 """Load a case's world fixture, optionally with an overlay that adds conflicts or faults.
 
-Overlay file (bank_env/overlays/<name>.json):
+Overlay file (src/bank_env/overlays/<name>.json):
     {"base": "001", "description": "...",
      "add_records": [Record...], "patch_records": [{"id": "r1", "attributes": [{"key": ..., "value": ...}]}],
      "clone_records": [{"from": "r1", "id": "r9", "attributes": [...], <any other Record field to override>}],
@@ -13,7 +13,7 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from bank_env.schema import Attr, Record, TeamResponse, World, check_world
+from src.bank_env.schema import Attr, Record, TeamResponse, World, check_world
 
 HERE = Path(__file__).parent
 FIXTURES, OVERLAYS = HERE / "fixtures", HERE / "overlays"

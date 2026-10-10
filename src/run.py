@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Batch case agent for the Banking track.
 
-    python run.py CASES_DIR --out ANSWERS/
+    uv run -m src.run CASES_DIR --out ANSWERS/
 
 Every case folder (one holding index.md) under CASES_DIR gets ANSWERS/<case>/ with
 ANSWER.md, REASONING.md and trace.jsonl. A case that crashes still gets an Escalate answer.
-The agent itself lives in src/agent/; its names are re-exported here for evaluate.py and the tests.
+The agent itself lives in src/agent/core.py; the API runs the same agent.
 """
 
 import argparse
@@ -15,7 +15,6 @@ from pathlib import Path
 
 import anthropic
 
-from src.agent.core import *  # noqa: F403
 from src.agent.core import MODEL, load_env, run_case
 
 

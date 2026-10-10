@@ -11,9 +11,9 @@ into adapter.log, for scoring."""
 
 import re
 
-from bank_env.ports import PortError
-from bank_env.schema import Attr
-from bank_env.systems import PROCESSES, RECORD_SYSTEMS, RELATED_SYSTEMS, TEAMS, resolve_process, resolve_system, resolve_team
+from src.bank_env.ports import PortError
+from src.bank_env.schema import Attr
+from src.bank_env.systems import PROCESSES, RECORD_SYSTEMS, RELATED_SYSTEMS, TEAMS, resolve_process, resolve_system, resolve_team
 
 STOPWORDS = {"the", "a", "an", "of", "for", "and", "to", "in", "on", "my", "her", "his", "their", "h", "v", "s",
              "check", "status", "record", "please", "is", "was", "with", "from", "by", "this", "that", "specific"}

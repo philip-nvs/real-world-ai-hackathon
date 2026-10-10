@@ -219,10 +219,9 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Claude
-CLAUDE.md
 
 # Pycharm
 .idea/
+
 # Dev-loop output
 eval_out/

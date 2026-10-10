@@ -1,7 +1,7 @@
 """Offline runtime-fault scenarios: what happens to a case when the model, the tools or the runner misbehave.
 
-    uv run test_runtime_faults.py            # report; exits 1 if any scenario shows a GAP
-    uv run test_runtime_faults.py --report   # report only, always exits 0
+    uv run -m src.agent.test_runtime_faults            # report; exits 1 if any scenario shows a GAP
+    uv run -m src.agent.test_runtime_faults --report   # report only, always exits 0
 
 These are the edge-case scenarios that can't be expressed as case data (catalogue items I720–I731, from
 synthetic/edge-case-scenarios-1.md). Each drives run_case with a scripted fake Claude and/or fake tools, then
@@ -14,9 +14,9 @@ import tempfile
 from pathlib import Path
 from types import SimpleNamespace as NS
 
-from run import run_case
-from test_run import CASE, DECISION, tool_use
-from tools import TOOLS
+from src.agent.core import run_case
+from src.agent.test_core import CASE, DECISION, tool_use
+from src.agent.tools import TOOLS
 
 
 def scripted(*steps):
@@ -125,14 +125,14 @@ def ec465_act_with_refund_promise():
 
 
 def ec466_nondeterminism():
-    return "INFO", ("not checkable offline. run.py uses adaptive thinking (no temperature/seed). Check by running "
-                    "`uv run evaluate.py --cases cases/synthetic --out eval_a` twice and diffing decisions per case")
+    return "INFO", ("not checkable offline. The agent uses adaptive thinking (no temperature/seed). Check by running "
+                    "`uv run -m src.evaluate --cases cases/synthetic --out eval_a` twice and diffing decisions per case")
 
 
 def ec470_irreversible_tool_in_eval():
     out = TOOLS["submit_instruction"](system="card system", instruction="Block card ending 4417", authorised_by_event="event-001")
     if out.get("executed") is False:
-        return "PASS", ("tools.py records side-effecting calls without executing them; evaluate.py --mock and cases without "
+        return "PASS", ("tools.py records side-effecting calls without executing them; src.evaluate --mock and cases without "
                         "a fixture use it, and fixture adapters simulate. Keep it that way when real tools are wired in")
     return "GAP", f"the mock submit_instruction reports execution: {out}"
 

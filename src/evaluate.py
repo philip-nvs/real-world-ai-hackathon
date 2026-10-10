@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""Dev loop: run the same agent as run.py on the test cut-offs in cases/test/, and have Claude
+"""Dev loop: run the API's agent (src/agent/core.py) on the test cut-offs in cases/test/, and have Claude
 judge its next step against each one's gold answer.
 
 Each test case (NNN-event-KKK/) holds a public case's history up to event KKK; its answer/ folder
 (never shown to the agent) holds ANSWER.md with the gold action (act/ask/wait/escalate) and
 description, plus any artefact from the full case. When answer/RUBRIC.md exists (acceptable
 alternatives, red flags, critical failures), the judge grades against it too; a critical failure
-never passes. The agent's tools answer from the case's bank_env fixture, seeing only the test
+never passes. The agent's tools answer from the case's src/bank_env fixture, seeing only the test
 history's events; every bank call lands in answers/<case>/bank_log.json. Cases without a fixture
-(e.g. cases/synthetic) and --mock use tools.py, which records actions without executing them.
+(e.g. cases/synthetic) and --mock use src/agent/tools.py, which records actions without executing them.
 
-    python evaluate.py                          # all test cut-offs
-    python evaluate.py 001 017 041              # every cut-off of a few public cases
-    python evaluate.py 017-event-004            # one cut-off
-    python evaluate.py --cases cases/synthetic  # the synthetic stress cases
+    uv run -m src.evaluate                          # all test cut-offs
+    uv run -m src.evaluate 001 017 041              # every cut-off of a few public cases
+    uv run -m src.evaluate 017-event-004            # one cut-off
+    uv run -m src.evaluate --cases cases/synthetic  # the synthetic stress cases
 """
 
 import argparse
@@ -26,12 +26,12 @@ from pathlib import Path
 
 import anthropic
 
-from bank_env.fixture_adapter import FixtureAdapter
-from bank_env.world import FIXTURES, load_scenario
-from run import call_claude, load_case, load_env, run_case, section
-from tools import TOOLS
+from src.bank_env.fixture_adapter import FixtureAdapter
+from src.bank_env.world import FIXTURES, load_scenario
+from src.agent.core import call_claude, load_case, load_env, run_case, section
+from src.agent.tools import TOOLS
 
-ROOT = Path(__file__).parent
+ROOT = Path(__file__).parents[1]
 TEST_CASES, FULL_CASES = ROOT / "cases" / "test", ROOT / "cases" / "full"
 DECISIONS = ("act", "ask", "wait", "escalate")
 JUDGE_SCHEMA = {
@@ -106,7 +106,7 @@ def main():
     ap.add_argument("--cases", default=str(TEST_CASES))
     ap.add_argument("--out", default="eval_out")
     ap.add_argument("--workers", type=int, default=4)
-    ap.add_argument("--mock", action="store_true", help="use tools.py's mocks instead of the fixture adapter")
+    ap.add_argument("--mock", action="store_true", help="use src/agent/tools.py's mocks instead of the fixture adapter")
     args = ap.parse_args()
     load_env()
 

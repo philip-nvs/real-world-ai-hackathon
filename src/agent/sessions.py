@@ -19,10 +19,10 @@ from pathlib import Path
 import anthropic
 from pymongo import MongoClient
 
-from bank_env.fixture_adapter import FixtureAdapter
-from bank_env.world import FIXTURES, load_scenario
+from src.bank_env.fixture_adapter import FixtureAdapter
+from src.bank_env.world import FIXTURES, load_scenario
 from src.agent.core import load_case, load_env, run_case
-from tools import TOOLS
+from src.agent.tools import TOOLS
 
 # ponytail: in-process pool, runs die with the server (marked failed on restart); a job queue if we run several API processes
 EXECUTOR = ThreadPoolExecutor(int(os.environ.get("AGENT_WORKERS", "4")))

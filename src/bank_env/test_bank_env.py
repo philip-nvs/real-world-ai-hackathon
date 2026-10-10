@@ -1,20 +1,20 @@
 """Offline self-check for the simulated bank: fixtures, alias resolution, the fixture adapter, overlays.
-    uv run test_bank_env.py
+    uv run -m src.bank_env.test_bank_env
 """
 
 import json
 import re
 from pathlib import Path
 
-from bank_env.fixture_adapter import FixtureAdapter
-from bank_env.ports import PortError
-from bank_env.schema import check_world
-from bank_env.systems import resolve_process, resolve_system, resolve_team
-from bank_env.world import FIXTURES, load_scenario
-from run import EVENT_RE, load_case
-from tools import TOOLS
+from src.bank_env.fixture_adapter import FixtureAdapter
+from src.bank_env.ports import PortError
+from src.bank_env.schema import check_world
+from src.bank_env.systems import resolve_process, resolve_system, resolve_team
+from src.bank_env.world import FIXTURES, load_scenario
+from src.agent.core import EVENT_RE, load_case
+from src.agent.tools import TOOLS
 
-CASES = Path(__file__).parent / "cases" / "full"
+CASES = Path(__file__).parents[2] / "cases" / "full"
 
 
 def raises(code, fn, *args):

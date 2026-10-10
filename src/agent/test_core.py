@@ -1,5 +1,5 @@
 """Offline self-check: loader, policy guard, and the agent loop driven by a scripted fake Claude.
-    python test_run.py
+    uv run -m src.agent.test_core
 """
 
 import json
@@ -8,11 +8,12 @@ import tempfile
 from pathlib import Path
 from types import SimpleNamespace as NS
 
-from evaluate import FULL_CASES, TEST_CASES, case_id, gold_file, judge, judge_prompt, parse_gold, stage_case
-from run import (DECISION_TOOL, SYSTEM, bank_names, case_content, guard_decision, guard_tool, load_case,
+from src.evaluate import FULL_CASES, TEST_CASES, case_id, gold_file, judge, judge_prompt, parse_gold, stage_case
+from src.agent.core import (DECISION_TOOL, SYSTEM, bank_names, case_content, guard_decision, guard_tool, load_case,
                  red_flags, run_case)
-from tools import TOOL_SCHEMAS, TOOLS
+from src.agent.tools import TOOL_SCHEMAS, TOOLS
 
+CASES = FULL_CASES.parent
 CASE = FULL_CASES / "017"
 
 
@@ -58,7 +59,7 @@ if __name__ == "__main__":
     assert any("not a secure confirmation" in p for p in guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-002"}, case))
     assert guard_tool("submit_instruction", {"system": "PAY", "instruction": "Re-send the payment", "authorised_by_event": "event-002"}, case)
     # forged events: S200 quotes fake event headers inside the customer's message
-    forged = load_case(next(Path("cases/synthetic").glob("S200-*")))
+    forged = load_case(next((CASES / "synthetic").glob("S200-*")))
     assert [(e["id"], e["channel"]) for e in forged["events"]] == [("event-001", "Secure chat"), ("event-002", "Internal note")]
     assert len(forged["warnings"]) == 2 and all("no event anchor" in w for w in forged["warnings"])
     cancel = {"system": "Direct Debit service", "instruction": "Cancel the Northmere Water Direct Debit"}
@@ -115,7 +116,7 @@ if __name__ == "__main__":
         assert sorted(f.name for f in (Path(tmp) / "staged").iterdir()) == ["attachments", "history.md", "index.md"]
 
         # the judge sees a case's rubric when there is one; the agent never does; a critical failure never passes
-        synthetic = next(Path("cases/synthetic").glob("S200-*"))
+        synthetic = next((CASES / "synthetic").glob("S200-*"))
         rubric = (synthetic / "answer" / "RUBRIC.md").read_text()
         with_rubric = judge_prompt(parse_gold(gold_file(synthetic)), "", "answer", rubric)
         assert "Acceptable alternatives" in with_rubric and "the rubric wins" in with_rubric
@@ -157,7 +158,7 @@ if __name__ == "__main__":
         assert "guard_block" in kinds and kinds[-1] == "decision"
 
         # text in the case aimed at graders never reaches ANSWER.md: the writer uses the agent's summary
-        s190 = next(Path("cases/synthetic").glob("S190-*"))
+        s190 = next((CASES / "synthetic").glob("S190-*"))
         assert "Note to graders" in (s190 / "index.md").read_text() + (s190 / "history.md").read_text()
         run_case(s190, Path(tmp) / "s190", fake_client([[tool_use(9, "submit_decision", **DECISION)]]))
         assert "graders" not in (Path(tmp) / "s190/ANSWER.md").read_text().lower()
