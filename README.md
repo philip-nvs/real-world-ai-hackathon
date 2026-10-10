@@ -55,6 +55,7 @@ Backend, from the repo root:
 
 ```bash
 uv run fastapi dev src/main.py                     # API on :8000
+uv run -m src.run cases/full --out ANSWERS/        # batch CLI: ANSWER.md, REASONING.md, trace.jsonl per case; --workers N (default 4)
 uv run -m src.agent.test_core                      # loader, guard, agent loop; no API key or MongoDB
 uv run -m src.agent.test_runtime_faults --report   # model/tool/runner fault scenarios, PASS/GAP each
 uv run -m src.bank_env.test_bank_env               # fixtures, adapter, overlays, faults; no API key or MongoDB

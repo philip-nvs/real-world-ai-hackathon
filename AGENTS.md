@@ -6,6 +6,7 @@
 - `src/agent/`: the case agent (loader, policy guard, agent loop, answer writer), API sessions, and the tool stubs used when a case has no fixture.
 - `src/bank_env/`: simulated bank for public cases. `fixtures/NNN.json` serves cases `NNN` and `NNN-event-KKK`; `overlays/` add conflicts and faults; `extract.py` builds fixtures with Claude.
 - `src/repository/`: MongoDB connection.
+- `src/run.py`: batch CLI that runs the agent over a folder of cases without the API or MongoDB.
 - `src/evaluate.py`: dev loop that runs the agent on `cases/test/` and has Claude judge each step against the gold one; writes `eval_out/`.
 - `src/openapi.yaml`: hand-written API spec; the UI's types are generated from it.
 - `web/`: React UI (Vite, TanStack Router and Query, shadcn on Base UI, Tailwind).
