@@ -1,3 +1,3 @@
 - Cut-off: event-002
 - Action: `escalate`
-- Description: Open a protected name review and refer Elowen Marr's "Mar" to "Marr" correction request (HV-037) to the data team to determine required supporting information, without changing the profile.
+- Description: Open a protected name review and refer Elowen Marr's "Mar" to "Marr" correction request to the data team to determine required supporting information, without changing the profile.

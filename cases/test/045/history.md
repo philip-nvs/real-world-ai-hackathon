@@ -28,4 +28,3 @@ I’m following up to find out the next step for the access request. I still nee
 - **To:** Nadia Bell
 
 I can’t grant access based on your email or your employee role. I’ll check the authorised company-administrator record and, if confirmed, send the request to that administrator for approval.
-

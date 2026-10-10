@@ -1,4 +1,4 @@
-# Case 022: Lost card blocked
+# Case 022: Request to block a missing debit card
 
 ## Case details
 
