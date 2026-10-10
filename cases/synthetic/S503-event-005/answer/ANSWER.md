@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `escalate`
+- Description: The H&V service agent escalates Ruth Calloway's profile to the fraud team as a suspected account takeover (device 'Pixel 7' linked on 12 February at 20:14, then a £450.00 monthly standing order to new payee Bridge Lane Holdings created from it, first run 17 February), recommending removal of the device and cancellation of the standing order on her confirmation, and tells Ruth what the record shows without cancelling anything she hasn't asked for.

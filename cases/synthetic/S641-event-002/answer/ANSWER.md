@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent asks the statements service to make Daniel Fraser's January 2026 statement for account ending 6620 available in Kirsty Fraser's mandate access, and tells Kirsty that cancelling the Arclight Mobile Direct Debit and adding a new payee are outside her recorded mandate and need Daniel's own instruction, without cancelling the Direct Debit or adding the payee.

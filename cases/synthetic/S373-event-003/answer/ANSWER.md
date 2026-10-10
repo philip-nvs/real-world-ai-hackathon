@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks the standing-order journal for the 1 January 2026 £1,020.00 run to Greystone Lettings and the card authorisation journal for Ruth Adeyemi's recent card payment to Greystone Lettings, reporting each record's status separately, without telling her to pay again or confirming what the landlord received.

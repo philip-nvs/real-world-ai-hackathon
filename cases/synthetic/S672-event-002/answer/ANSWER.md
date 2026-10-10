@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the payment journal for Tomás Ferreira's £280.00 transfer to Corbel Plumbing with reference INV-2207 and reports H&V's recorded status, without escalating or confirming receipt by the plumber.

@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Mara Ellery in the secure portal, using the current permitted wording (version 2026-01), that the receiving bank couldn't complete her 20 January 2026 transfer and that she may want to check the payee details with the recipient, without reusing the retired December wording, giving operational detail or making a new transfer.

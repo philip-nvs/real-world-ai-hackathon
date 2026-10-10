@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `escalate`
+- Description: The H&V service agent escalates amendment AM-51290 to operations as a system anomaly (the confirmation was auto-accepted by batch job CB-7 with no customer action, and Hamza Qureshi says he hasn't confirmed), keeps the standing order at £150.00, and tells Hamza nothing has changed and he should confirm in the portal only if he still wants the change, without applying the amendment.

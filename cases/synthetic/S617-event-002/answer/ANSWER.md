@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the standing-order journal for the amounts H&V sent on Peter Lindqvist's monthly £600.00 standing order to Claire Dubois over the last three runs, without explaining the euro amounts the landlord received or promising a fixed euro amount.

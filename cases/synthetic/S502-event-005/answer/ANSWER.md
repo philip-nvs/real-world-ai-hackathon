@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `escalate`
+- Description: The H&V service agent escalates Harvey Mbeki's account to the fraud team as an urgent account takeover with the timeline (email changed 10:02, password reset 10:05 via the new email, new payee Orbis Freight Services, three Faster Payments of £2,900.00, £2,950.00 and £2,990.00 sent 10:26–10:41), asking for the profile to be secured and recovery attempted, and tells Harvey his account has been referred urgently without promising the £8,840 back.

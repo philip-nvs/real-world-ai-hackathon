@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent asks the statements service to place Imogen Tate's November 2025 statement in her secure portal, checks the card authorisation journal for the declined £64.10 Corran Hardware attempt on card ending 2096, and starts the secure address-change process so she can confirm the new address in the portal, without changing the address from the chat message or guessing the decline reason.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent submits Penelope Ward's verified block on card ending 6620 and escalates the £1,500.00 Kettering branch withdrawal of 23 February 2026 to the fraud team as suspected impersonation (stolen card and passport presented at the counter), without telling her the branch was at fault or promising the £1,500.00 back.

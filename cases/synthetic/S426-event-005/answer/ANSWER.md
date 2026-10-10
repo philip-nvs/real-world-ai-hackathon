@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `ask`
+- Description: The H&V service agent tells Marcus Bell that his confirmed change to £68.00 is in place and sends him a new amendment from £68.00 to £70.00 for his confirmation in the secure portal, without changing the standing order from the chat message.

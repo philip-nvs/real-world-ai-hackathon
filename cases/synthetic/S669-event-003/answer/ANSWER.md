@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks the standing-order journal for Bartosz Wiśniewski's £420 monthly standing order to Spółdzielnia Mieszkaniowa Zielona for the 1 March 2026 run and replies to him in Polish in the secure portal with H&V's recorded status, without confirming receipt by the housing cooperative.

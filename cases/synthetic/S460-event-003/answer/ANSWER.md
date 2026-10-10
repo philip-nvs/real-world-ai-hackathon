@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V business support agent tells Callum Rees that H&V's import read wages-wk06.csv (HV-S460) as £161,750.00 because the amounts appear to be in pence (for example 42000 for £420.00), and asks him to check the file's unit and upload a corrected file in pounds, without confirming £1,617.50, approving the batch or changing the figures himself.

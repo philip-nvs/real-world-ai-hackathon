@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V service agent asks H&V's payment team whether the £450.00 credit from 'KAYLEIGH BRYANT' (16:38 UTC) is the return under request RR-88120, because the incoming-entry journal shows it as not linked to any return request, and tells Owen Rafferty the credit has arrived but isn't yet identified as the return, without closing RR-88120 or confirming the match.

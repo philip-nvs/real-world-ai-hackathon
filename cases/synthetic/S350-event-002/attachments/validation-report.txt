@@ -1,0 +1,5 @@
+HARROW & VALE BANK PLC | SYNTHETIC VALIDATION REPORT
+Batch HV-S342 | 2 February 2026 | Wrenfield Joinery Ltd
+Validation status: FAILED
+Row 4: sort code not recognised.
+Row 9: amount exceeds per-payment limit.

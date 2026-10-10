@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's card authorisation journal for the declined Tesco attempt of about £30 on the evening of 22 January 2026 on Graham Pike's card ending 9021 and its recorded decline reason, without acting on the café complaint or making any change to the card.

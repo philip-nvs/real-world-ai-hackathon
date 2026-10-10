@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Joanna Pryce that no £89.99 credit or credit carrying ARN 74839201604215580193347 has reached card ending 6614 (only a separate £15.00 GOODWILL-HO-55821 credit), and registers a card-team enquiry quoting the ARN, without saying the refund is on its way or treating the £15.00 as part of it.

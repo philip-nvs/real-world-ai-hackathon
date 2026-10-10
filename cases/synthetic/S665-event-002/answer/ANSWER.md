@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent submits an internal request to the overdraft-fee remediation team asking whether Darnell Price's account is in scope of the April 2019–March 2021 review, and tells him in the secure portal that his question has been passed to that team and affected customers will be contacted, without saying he is included, estimating any amount or giving a date.

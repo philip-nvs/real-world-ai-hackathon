@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `wait`
+- Description: H&V waits for the £145.00 The Saffron Room authorisation on card ending 2093 to post before any dispute is registered, without registering a dispute on the pending authorisation, promising the amount will be corrected, or blocking the card she has used herself.

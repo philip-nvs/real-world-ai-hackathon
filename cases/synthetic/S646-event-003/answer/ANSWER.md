@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent submits Bethan Hughes's verified instruction to cancel her FlexFit Gyms Direct Debit mandate and registers a Direct Debit Guarantee claim with the Direct Debit team for the £34.99 collection of 1 February 2026, telling her both are submitted without promising the claim will succeed or when any money would be returned.

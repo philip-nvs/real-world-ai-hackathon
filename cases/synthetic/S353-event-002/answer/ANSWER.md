@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Gareth Lloyd which standing order he means, because none has reference NM-04 and three Northmere standing orders have similar references (Northmere Water NM-0A, Northmere Energy NM-40, Northmere Fitness NM 4), without cancelling any of them.

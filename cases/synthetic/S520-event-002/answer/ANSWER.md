@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Gabriel Thorne in the secure portal that his H&V deposits are not covered by the US FDIC, that eligible H&V deposits are protected by the UK's FSCS, and points him to the depositor information sheet in the portal and the official FSCS website for current limits, without stating a figure from memory or advising him whether to move money.

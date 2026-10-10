@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Imogen Hale in the secure portal that her January 2026 statement is now available there as statement-2026-01.pdf, without emailing it or saying she has downloaded it.

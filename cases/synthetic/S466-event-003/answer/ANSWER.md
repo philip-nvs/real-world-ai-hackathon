@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V business support agent asks H&V's import service to re-check batch HV-S466 and regenerate its validation report, because the report checks 12 rows and lists errors on rows 7 and 9 while the uploaded file has 5 rows totalling £5,847.85, and tells Sunita Okafor that the report doesn't match her file so she shouldn't change her rows based on it yet, without resubmitting, editing or approving the batch.

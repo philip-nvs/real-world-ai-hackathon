@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates Graham Teale's account to the fraud team as an urgent suspected SIM-swap account takeover (number changed to ending 9038 on 23 March, new payee K. Mensah Holdings, £4,000.00 sent at 18:04, £3,500.00 scheduled for 25 March), asking for the scheduled transfer to be stopped and the profile protected, and tells Graham the case is with the fraud team without promising the £4,000 back.

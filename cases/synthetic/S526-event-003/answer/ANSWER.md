@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V business support agent tells Dana Whitlock that rows 4 (£1,840.00) and 7 (£1,795.00) of batch PR-0226 were rejected and not paid while the other eight were paid, and that H&V can't edit payment details or resend, so the company needs to submit corrected payments for those two staff only and authorise them under its mandate, without changing any sort code or resending the batch.

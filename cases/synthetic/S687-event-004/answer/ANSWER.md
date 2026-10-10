@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers a Direct Debit indemnity claim with the Direct Debit team for the £212.00 Northmere Energy collection of 10 January 2026 (reference NE-88731) on Joanne Fairweather's closed account ending 5521, on her verified call instruction, and records that she has no portal access so the team must contact her through a verified phone or postal route, without promising a refund or sending anything by email.

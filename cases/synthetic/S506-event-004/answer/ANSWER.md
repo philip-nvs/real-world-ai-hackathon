@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent gives Yusuf Rahimi only the permitted wording that his account is subject to a review and refers his enquiry, including the rent due on Friday, to the Financial Crime Review team, without confirming or denying any link to the £9,000 transfer, asking him to explain it, or promising when payments will resume.

@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V service agent submits an internal request to the Payment Team to register a return request for Eilidh Baxter's £140.00 transfer of 6 April 2026 to account 41877720, noting that the payee-name check was unavailable at the time and that she entered the account number in error, without promising the money will be returned or sending £140.00 to the correct account.

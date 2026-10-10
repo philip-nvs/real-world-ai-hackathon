@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V service agent submits Ade Ogunleye's secure-chat request to order a replacement for blocked card ending 9047 to his long-standing profile address, without asking for extra identity checks or address re-confirmation.

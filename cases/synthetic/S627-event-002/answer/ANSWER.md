@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the overdraft limit register for Tariq Hussain's current account for when and why the limit changed from £1,500.00 to £500.00 and whether a notice of the change was sent, without promising to restore the limit or saying he was or wasn't notified before checking.

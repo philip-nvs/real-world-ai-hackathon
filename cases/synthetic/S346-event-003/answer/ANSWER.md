@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V business support agent tells Owen Pryce that H&V's import journal records wages-wk06.csv as received with 3 rows totalling £1,190.00, not the two rows and £805.00 he describes (row 3, Staff C £385.00, is extra), so he should check the file before it is approved, without validating, approving or changing the batch.

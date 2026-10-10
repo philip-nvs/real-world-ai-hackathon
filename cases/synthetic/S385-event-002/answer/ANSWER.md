@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks the caller to complete H&V's identification checks, which will establish which profile she is (P-55120 Mara Ellery or P-71933 Mara Ellery-Shaw), before disclosing anything about a council payment, without picking a profile by name or skipping the checks.

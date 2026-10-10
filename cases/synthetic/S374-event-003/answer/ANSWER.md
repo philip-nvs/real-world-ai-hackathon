@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks the incoming card credits on card ending 5012 for an £89.00 refund from Halberd Outdoor matching order HO-5521, without opening a dispute or chargeback and without promising when the refund will arrive.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V business support agent tells Gemma Holt that payroll-jan.csv failed to import (unterminated quoted field at line 8; only 6 of the 9 rows were readable and the file ends mid-row) and asks her to correct the file and re-upload it through the business portal, without importing a partial batch, guessing the missing rows or editing the file for her.

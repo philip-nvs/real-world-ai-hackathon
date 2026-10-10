@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Joanne Rees in the secure portal that no £100 payment is recorded on her open complaint CMP-22019, which is with the Complaints team, and adds her statement about the promise to that complaint by internal request so the call can be reviewed, without promising or paying £100.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent submits Chloe Martin's verified instruction to block card ending 9011 and raises an urgent internal request to the card team for an emergency replacement or emergency cash options abroad, without promising that a replacement card or cash will reach her before her hotel bill is due.

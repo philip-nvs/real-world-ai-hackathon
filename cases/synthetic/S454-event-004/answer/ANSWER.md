@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent runs a filtered query of H&V's card authorisation journal for Theo Marchetti's £18.40 attempt at Corran Books on 9 February 2026 and reports its recorded decline reason, without concluding from the truncated posted-transactions export that no such attempt exists.

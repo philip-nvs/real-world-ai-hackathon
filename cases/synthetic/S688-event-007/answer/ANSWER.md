@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `escalate`
+- Description: The H&V service agent escalates the over-refund on Grace Okonjo's account to the Direct Debit team and DD-INC-0102 remediation for reconciliation, because the second £148.00 Brookfield Council collection was credited twice (indemnity DDI-55120 on 8 January and the incident correction on 9 January), and tells her in the secure portal that both credits are recorded and are being reviewed, without telling her to keep or return either credit, blaming her or making any adjustment to her account.

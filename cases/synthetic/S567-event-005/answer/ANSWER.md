@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Ruth Adeyemi that H&V's archive shows the January 2024 statement as unavailable, that the document placed was January 2025 in error, raises the wrong document with the statement service and registers a review of the £10.00 archive fee, without saying the request is fulfilled or promising a refund.

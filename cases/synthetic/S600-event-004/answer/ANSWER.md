@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Nathan Ellis that a £22.40 Westway Buses contactless payment from 31 January posted late on 9 February and took his balance to -£8.15, and registers a review of the £6.00 fee with the Tariff Team as he asked, without promising the fee will be refunded.

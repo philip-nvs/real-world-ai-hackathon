@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent submits Imogen Hart's verified instruction from the call to block her debit card ending 7731 immediately and tells her once the card system confirms, without waiting for a secure-portal confirmation and without treating the £6.40 TfL payment as unrecognised.

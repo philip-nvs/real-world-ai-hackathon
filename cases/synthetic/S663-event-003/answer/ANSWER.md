@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent escalates Hannah Birch's account to the fraud team as an urgent potential compromise linked to campaign FB-112 (she called 0203 996 4410 and read back a one-time code), and tells her in the secure portal that the text and number aren't H&V's and that the fraud team is reviewing her account now, without asking her for any code, card number or password and without promising that no money has been taken.

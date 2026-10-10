@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `ask`
+- Description: The H&V service agent tells Bethan Lloyd that replacement card HV-S410 was returned undelivered ('addressee not known') and cancelled on 13 February, and asks her to check her address on file through the secure profile process before a new card is ordered, without promising delivery or ordering a new card to the same address.

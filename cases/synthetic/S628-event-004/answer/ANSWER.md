@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent sends an internal request to the financial support team for Bethany Cole, noting the £214.30 loan repayment on account ending 3381 returned unpaid on 2 February and her reduced hours, and tells her the team will review her options, without granting or promising a payment holiday, advising her to borrow elsewhere, or telling her to pay the missed amount immediately.

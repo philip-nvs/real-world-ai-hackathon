@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `act`
+- Description: The H&V service agent submits Laura Pike's secure-chat instruction to block replacement card ending 5527, registers the £612.40, £89.99 and £300.00 transactions with the card fraud team as unrecognised (noting the card went to the old address, 12 Mill Lane, and was activated from an unrecognised number), and flags the dispatch-address failure, without promising a refund or saying who is at fault.

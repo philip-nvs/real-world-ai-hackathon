@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V business support agent escalates package PR-0226 (£38,420.00) to the business-banking team because it was uploaded and approved by the same person, Darren Pike, although the mandate requires a different approver for packages over £10,000, and tells Sonia Patel the package can't be confirmed as approved yet, without releasing, holding or approving it himself or promising a payment time.

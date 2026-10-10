@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `act`
+- Description: The H&V service agent checks H&V's standing-order journal for the next scheduled run date of Owen Castellanos's monthly standing order to Larchfield Nursery, without changing the order or guessing a date.

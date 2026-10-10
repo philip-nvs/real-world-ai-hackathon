@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent tells Lucy Barrow that 31 February doesn't exist and asks which valid date she wants for her £200.00 standing order SO-3310 (for example 28 February or 2 March 2026, or a new monthly date), without sending any amendment until she gives a valid date.

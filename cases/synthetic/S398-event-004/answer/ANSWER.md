@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates to the Tariff Team the two conflicting tariff versions effective 1 February 2026 (TV-2026-01 at £3.20 and TV-2026-01a at £2.75) for Anya Petrova's foreign-currency cash withdrawal fee, and tells Anya that the applicable fee is being confirmed, without telling her the £3.20 fee is correct or promising a refund of the difference.

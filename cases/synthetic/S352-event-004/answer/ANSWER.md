@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V service agent asks Priya Natarajan to confirm which saved payee she means, 'Landlord' (last paid March 2024) or 'Willowmere Lettings' (her current monthly rent payee), before she sends the £500.00 herself in the app, without choosing one for her or making the payment.

@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `wait`
+- Description: H&V waits for the £725.00 return under trace TR-61842 to arrive from the receiving bank, without opening a second trace, sending a new payment to Brookfield Lettings, or promising when the return will be credited.

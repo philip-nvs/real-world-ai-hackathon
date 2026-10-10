@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers a review of the £2.75 non-sterling fee on Rhys Carrow's 18 February 2026 Café Brasa payment with the tariff team, because the transaction record shows the tariff entry gives £2.37, and tells Rhys what the fee is for and that it doesn't appear to match the tariff and is being reviewed, without promising a refund of the difference.

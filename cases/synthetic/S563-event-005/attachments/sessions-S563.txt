@@ -1,0 +1,6 @@
+HARROW & VALE BANK PLC | SYNTHETIC ALLOWED SESSION EXTRACT
+Extract HV-S563 | profile of Priya Nair | prepared 3 March 2026
+02 March 2026 06:52 UTC | new device (iPhone) | successful sign-in
+02 March 2026 07:31 UTC | recognised device | password changed
+02 March 2026 21:14 UTC | new device (iPhone) | successful sign-in
+Device and network identifiers withheld. Origin of sessions not determined.

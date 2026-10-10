@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent explains to Noah Fisher in the secure portal what cancelling the Brightwell Energy Direct Debit does on H&V's side (it stops future collections under the mandate but doesn't end his agreement with Brightwell), and that only Brightwell can say whether their tariff changes for other payment methods, without cancelling the mandate or speculating about Brightwell's charges.

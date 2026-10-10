@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers a review of Theo Lindqvist's £15.00 fee of 1 March 2026 with the Tariff Team, citing that his account moved from Graduate Account to Everyday Plus via migration batch MIG-11 with no customer request, and flags the migration to operations, without promising a refund or saying the fee is wrong.

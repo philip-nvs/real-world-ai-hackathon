@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the card authorisation journal for the declined £23.60 Brindle Grocers attempt on card ending 6631 at 14:02 today and tells Tyler Grant the recorded, permitted decline reason in plain words, without guessing the reason or promising a retry will work.

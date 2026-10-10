@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Aled Prosser that H&V's standing-order record shows the next run of SO-41187 to Fenwick Lettings (£725.00) scheduled for 27 February 2026 and not yet executed, without calculating a different date or promising when Fenwick Lettings will receive it.

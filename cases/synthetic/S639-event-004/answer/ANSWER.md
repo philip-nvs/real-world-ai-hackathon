@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits a bereavement notification for Robert Lewis on joint account ending 8124 to H&V's Bereavement team by internal request and sends Hannah Lewis a compassionate secure message saying a named team will contact her and that she doesn't need to upload the death certificate in chat, without removing Robert's name now or asking for documents in this conversation.

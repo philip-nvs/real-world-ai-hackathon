@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent registers a card dispute enquiry with H&V's card team for Owen Pritchard's £186.00 TicketHub Resale payment of 3 December 2025 on card ending 5521, citing the promoter's cancellation and the merchant's refusal, and tells Owen it is registered without promising a refund or an outcome.

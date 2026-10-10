@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Martin Kowalski which instructions are still active on his account (the Ashgrove Lettings standing order, the Northmere Energy Direct Debit with a £64.20 collection in processing, and the Halden Mobile Direct Debit) and that these, the remaining balance and the closure conditions need to be dealt with before closure, without closing the account or cancelling anything.

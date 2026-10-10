@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent retries the PIN-procedure request with the Access team and tells Gareth Pryce in the secure portal that H&V can't check or confirm any PIN, that because the PIN was photographed and shared the card should be treated as compromised (offering a block and replacement), and that the new number can only be added through the secure phone-change process, without repeating the PIN or changing the phone number.

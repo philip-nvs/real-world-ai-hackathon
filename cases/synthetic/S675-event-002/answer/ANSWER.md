@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent asks the statements service to place Sana Qureshi's January 2026 statement in her own secure portal, without emailing it, contacting her mortgage lender or asking for further justification.

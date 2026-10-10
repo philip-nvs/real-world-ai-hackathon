@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V business support agent looks up what payment-journal state 'SNT' and return code 'X17' mean in H&V's status-code reference for payment BP-77810 before telling Naomi Feld anything, without assuming 'SNT' means sent or that the payment reached Ashcombe Fabrics.

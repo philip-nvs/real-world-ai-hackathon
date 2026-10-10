@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent submits Iwan Rees's verified instruction (event-002) to cancel his Summit Broadband Direct Debit mandate through H&V's Direct Debit service, without touching the Severn Water mandate, noting that the case index has no 'Initial request' section.

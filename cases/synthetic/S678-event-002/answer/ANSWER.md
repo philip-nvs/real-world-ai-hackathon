@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the standing-order journal for Siobhan Kearney's 1 February 2026 £610.00 run to Little Acorns Nursery and reports H&V's recorded status, relying on the authenticated session rather than her typed spelling, without asking for identity re-verification or confirming receipt by the nursery.

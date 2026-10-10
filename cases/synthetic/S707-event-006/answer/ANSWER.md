@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `escalate`
+- Description: The H&V service agent escalates Andrew Kerr's account ending 4417 to the remediation team (duplicate Northmere Energy collection DD-77121, linked to INC-2231) and to the collections / debt-respite team to stop letter COL-1 follow-up and the 5 March call because of his Breathing Space from 12 February, and tells him in the secure portal, using the approved INC-2231 wording, that the duplicate and the fee it caused will be put right, without promising a specific amount or date or asking him to pay.

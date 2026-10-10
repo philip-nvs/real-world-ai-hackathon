@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks H&V's transaction record for the £12.00 fee dated 2 March 2026 on Hannah Lowe's account against the tariff in force on that date, noting that the attachment statement-077.pdf named in her message was not received, without guessing the fee's basis or promising a refund.

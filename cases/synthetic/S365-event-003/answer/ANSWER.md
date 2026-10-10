@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Ellis Young that his card ending 3306 has a temporary security-related restriction that he didn't apply and that the agent can't lift, and sends an urgent internal request to the card security team to review it, without lifting the restriction, giving operational detail or promising when it will be released.

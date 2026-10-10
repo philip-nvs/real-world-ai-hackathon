@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Felix Barker to confirm which Nell's Bakery charge he wants to dispute, noting that no £4,280 charge is on record and the closest entries are £42.80 (24 January 2026) and £12.50 (10 January 2026), without registering a dispute for an assumed amount or promising any refund.

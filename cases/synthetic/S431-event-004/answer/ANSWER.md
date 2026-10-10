@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V service agent asks Imogen Price to identify, once and by reference, which instruction she wants cancelled (PAY-71102, completed 19 January, or PAY-71388, pending for 22 January), explaining that only the pending one can still be stopped, without cancelling or requesting a return of either payment.

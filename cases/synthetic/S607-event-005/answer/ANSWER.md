@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Declan Murray the record shows a £46.40 purchase plus £40.00 cashback at Fairmart Stores and registers a card-team review of the £40.00 cashback component he says he never received, without promising a refund or suggesting the shop or the customer is at fault.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V service agent sends Graham Ince a follow-up in the secure portal asking again which of the two future payments (£600.00 to Hartley Build Ltd on 20 February 2026 or £450.00 to J Hartley on 25 February 2026) he wants stopped, noting the first runs on 20 February, without cancelling either payment by default or closing the case unanswered.

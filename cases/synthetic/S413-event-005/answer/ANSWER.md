@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent reopens HV-S413 and checks H&V's incoming-payment records again for a £1,874.20 credit with reference PAYRL-2201 from Corbridge Logistics, without relying on the earlier 'not found' result or saying the employer did or didn't send it.

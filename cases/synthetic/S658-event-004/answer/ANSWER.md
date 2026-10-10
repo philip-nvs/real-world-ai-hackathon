@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V business support agent refers St Bride's Primary PTA account ending 4418 to H&V's business bereavement and mandate team by internal request (signatory Michael Byrne reported deceased on 6 January) and tells Helen Ward that payments above £1,000.00, such as the £1,450 SoundWave Discos payment, need two signatories under the current mandate, so the mandate needs updating, without authorising the payment, removing Michael or confirming the status of other payments.

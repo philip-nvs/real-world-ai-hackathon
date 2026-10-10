@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent escalates to H&V's specialist operations team Clare Dunn's request (with her solicitor's letter) to restrict joint account ending 4058 amid divorce proceedings, as a joint-account dispute needing a decision on mandate options, and tells Clare her request has been passed to a specialist team, without freezing the account or discussing Paul's transactions.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent refers Leah Corrigan's account to H&V's financial crime team because a £950.00 credit from J MARSDEN, sent by someone she met on a dating app, is being forwarded to a new payee OMAR TRADE SERVICES (£300.00 already sent, £600.00 requested), a money-mule pattern, and tells Leah not to move any more of the money and that a specialist will contact her, without sending the £600.00 or advising her to return the funds herself.

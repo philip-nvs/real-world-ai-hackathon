@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent refers both requested corrections (surname Nowicki to Nowicka, and date of birth 14/03/1988 to the 14/08/1988 shown on the uploaded document) to H&V's data team for review under procedure, noting that the date of birth on the document doesn't match the profile, and tells the customer they've been passed on, without changing the profile or promising a same-day fix.

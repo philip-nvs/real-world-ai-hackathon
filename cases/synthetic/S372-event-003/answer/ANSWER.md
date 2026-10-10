@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks H&V's payment journal for Ama Owusu's £350.00 Faster Payment of 7 January 2026 to saved payee 'Kofi Owusu (old)', to confirm the payee details H&V sent it to and its status, without assigning blame, registering a return request yet or promising the money back.

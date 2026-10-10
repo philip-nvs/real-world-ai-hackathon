@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent tells Naomi Fisher that portal CSV exports cover up to 24 months each and only back to April 2019, with earlier years available only as archived statements (charges may apply under the current tariff), and asks which periods she needs, without creating partial exports or quoting a fee.

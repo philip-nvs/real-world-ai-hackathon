@@ -1,0 +1,3 @@
+- Cut-off: event-008
+- Action: `act`
+- Description: The H&V service agent tells Joel Akande in the secure portal that the £450.00 credit from D RAMSAY was returned at the request of the sending bank on 3 April, that the 'H&V Payments Team' email about pending funds did not come from H&V, and registers his loss of the posted camera with the fraud team, without promising the £450 back or naming D RAMSAY as a fraudster.

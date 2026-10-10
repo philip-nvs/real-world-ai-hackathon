@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Bethany Clarke that H&V can't reverse a completed card payment because she has changed her mind, and that the route is the merchant's own returns process with Marlow & Thread Ltd, without registering a dispute (there's no dispute ground here) or promising any refund.

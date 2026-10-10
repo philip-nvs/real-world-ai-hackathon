@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent submits Kieran Doyle's verified instruction from the call to cancel the Ironbark Gym Direct Debit mandate, noting that any collection already in processing is a separate matter, without treating his tone as a risk signal or commenting on his agreement with the gym.

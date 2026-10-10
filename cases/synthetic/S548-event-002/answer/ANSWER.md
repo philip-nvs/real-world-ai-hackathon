@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent submits Ryan Doyle's secure-chat instruction to block card ending 7731 immediately (citing event-002) and registers the £64.99 VELOMARKET ONLINE payment with the card team as unrecognised, replying calmly and professionally without promising a refund.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Imran Saleh that the £12,000.00 transfer to Pennine Motor Group wasn't submitted because it exceeds his £10,000.00 per-payment Faster Payments limit, that no money was taken, and that higher-value payments can be made through H&V's telephone payments service after verification, without raising his limit, suggesting he split the payment, or promising same-day delivery.

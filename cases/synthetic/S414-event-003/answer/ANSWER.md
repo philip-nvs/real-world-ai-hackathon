@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent escalates to a team leader that the two holders of joint account ending 6620 gave opposite instructions on the same day about the £950 Willowbank Lettings standing order — Ben Carver to cancel it (verified call) and Hannah Carver to increase it to £1,050 (secure chat) — and neither cancels it nor sends the increase for confirmation, telling both holders in the secure portal that H&V needs them to agree one instruction before 1 March.

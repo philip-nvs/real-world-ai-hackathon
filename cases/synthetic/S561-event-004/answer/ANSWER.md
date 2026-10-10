@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Sofia Brennan in the secure portal that H&V's records show the £640.00 transfer of 3 February was sent (not declined or returned) and that one £320.00 credit referenced 'REFUND ORDER 5531 PART' arrived from the payee on 20 February, and suggests she ask Orchard & Pine about the remainder, without speculating about or promising the other £320.

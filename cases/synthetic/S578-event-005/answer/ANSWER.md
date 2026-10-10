@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `wait`
+- Description: H&V waits for the Tariff Team's decision on review HV-S578 of Sanjay Rao's £12.00 fee, without deciding the review itself or promising a refund.

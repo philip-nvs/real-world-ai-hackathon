@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's incoming-payment records for a £640.00 credit to Leah Grant's account and tells her only what H&V's records show, explaining that a screenshot from another bank isn't an H&V record and that H&V can't guarantee a payment it hasn't received, without promising the money will arrive.

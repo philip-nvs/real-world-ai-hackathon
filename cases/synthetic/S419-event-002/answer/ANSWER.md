@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent asks H&V's payment team to handle the £325.00 credit from J MORLEY on Leon Hart's account as a misdirected incoming payment under H&V's return process, and tells Leon that H&V can't share the sender's details and that the return will be handled through the bank, without giving any sender information or telling him to transfer the money himself.

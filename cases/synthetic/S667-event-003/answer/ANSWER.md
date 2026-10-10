@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks the payment journal for Annika Søndergaard's £1,150.00 transfer to Hëlløw Lettings Ltd with reference FLAT3/2-ANNIKA and reports H&V's recorded status to her in the secure portal, without confirming receipt by the letting agent.

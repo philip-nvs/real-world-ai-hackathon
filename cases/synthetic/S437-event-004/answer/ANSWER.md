@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V service agent asks Wendell Ashby to confirm the exact new amount for his Brackley Allotment Society standing order in a fresh secure-portal confirmation, pointing out that the prepared change was £68.00 but his confirmation form says £86.00, and that the order stays at £52.00 until a confirmation matches, without applying either amount.

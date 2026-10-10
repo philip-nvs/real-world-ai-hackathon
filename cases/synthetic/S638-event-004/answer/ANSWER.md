@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Priya Nair in the secure portal that, per H&V's records, her old card ending 2093 keeps working until she activates the new card ending 7781 or until 20 March 2026, whichever comes first, so she can activate the new card when ready, without activating or cancelling either card for her.

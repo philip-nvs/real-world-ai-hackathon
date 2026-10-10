@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent raises an internal request to H&V's data team to correct the garbled name held for payee name checks on account ending 3046 ('SI?N O?NEILL-D?BROWSKA' vs profile 'Siân O'Neill-Dąbrowska') and tells Siân in the secure portal that her profile hasn't been changed since April 2023 and the problem is how her name's special characters are held for name checks, without promising when the tenant's payment will work.

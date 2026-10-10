@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Harriet Lowe in the secure portal whether she wants her card blocked (lost, stolen or compromised) or wants a specific weekend transaction she doesn't recognise looked into, offering the card-freeze option in the app if she's worried, without blocking the card or registering a dispute from the garbled transcript.

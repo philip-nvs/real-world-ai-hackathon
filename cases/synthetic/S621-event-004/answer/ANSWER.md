@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Dariusz Nowak, using the permitted wording, that the £4,800.00 from J HARLAND is being reviewed and the payment review team may contact him for more information, and sends an internal request to that team noting his explanation (private car sale, buyer has the car), without disclosing why it is held or saying when it will be released.

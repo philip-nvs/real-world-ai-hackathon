@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates held payment PI-77120 (£2,000.00 via SmartSave Wallet to 'P ROWE SAVINGS', Confirmation of Payee no match with the receiving name 'K OSEI') to the fraud team as a suspected scam, warns Patricia Rowe clearly that the name mismatch, the 11:00 deadline and someone telling her what to say are signs of a scam, and offers to revoke the SmartSave Wallet consent, without releasing the payment.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Ingrid Solberg that her enquiry about the £126.99 NOVAMART ONLINE payment on 16 January 2026 is registered with the card team but no reference number has been issued yet, and asks H&V card operations by internal request to issue the missing reference, without inventing a reference or saying anything about the outcome.

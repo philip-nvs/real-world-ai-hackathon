@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Graham Holt's verified-call instruction (event 002) to block card ending 4467 and order a replacement, registers the £79.99 SLIMNOW* TRIAL payment (and the linked £1.00 VITAL-SAMPLE payment) with the card team, and gives him guidance on free-trial subscription traps, without stating that the merchant committed fraud or promising a refund.

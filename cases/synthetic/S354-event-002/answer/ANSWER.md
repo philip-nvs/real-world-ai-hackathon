@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Moira Fenton to confirm she wants the £8.50 monthly standing order SO-5520 to Kingsmead Allotment Society cancelled, explaining that it is a standing order, not a Direct Debit, and that her only Direct Debit is to Pulse Gym Group, without cancelling either instruction yet.

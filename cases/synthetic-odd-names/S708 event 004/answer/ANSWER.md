@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Tobias Wren in the secure portal that H&V's payment journal records his £365.00 transfer to Oakbeam Carpentry as SENT on 12 January 2026, and that this does not confirm receipt or credit by the recipient's bank, without promising when or whether the carpenter will receive it or suggesting he pay again.

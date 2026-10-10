@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the card transaction record for the £27.99 FNF*BKS LDN payment of 25 January 2026 on card ending 4402 for the merchant details H&V holds, and notes the similar £27.99 FNF*BKS ONLINE payment of 25 December 2025, before asking Olivia Brandt to confirm whether she wants either registered with the card team, without asserting what the merchant is or labelling either payment as fraud.

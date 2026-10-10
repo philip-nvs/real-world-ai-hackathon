@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `wait`
+- Description: H&V takes no new action while the Tariff Team reviews fee request HV-S542, without writing the requested refund confirmation or promising any outcome for the £15.00 unpaid-item fee.

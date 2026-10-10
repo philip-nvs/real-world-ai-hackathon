@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V business support agent tells Pemberton Joinery Ltd that H&V's records show one £1,200.00 credit from HALSEY INT LTD on 9 March 2026 with reference 'PJ04 MAR' and no £1,250.00 credit, that H&V can't confirm which invoice it relates to or why it differs from the remittance, and that H&V doesn't chase the buyer's bank, so they should raise it with Halsey Interiors, without matching the credit to PJ-0419.

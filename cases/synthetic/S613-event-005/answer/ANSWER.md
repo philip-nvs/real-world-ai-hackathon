@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent registers an authorised-push-payment scam claim with the fraud team for Sandra Whitlock's £1,450.00 transfer to Alder & Reed Workshop on 2 March 2026, recording that a close-match payee check was shown and she chose to continue, without promising reimbursement or telling her whether H&V or she is responsible.

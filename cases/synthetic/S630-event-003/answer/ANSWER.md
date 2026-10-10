@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent sends an internal request to the Specialist Support team to review Rosie Kaplan's current account ending 1659 ahead of her IVA and tells her that team will contact her, without saying whether her account will be kept or closed, giving advice about the IVA, or changing the account.

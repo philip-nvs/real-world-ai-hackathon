@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent checks the card journal for the current status of Ruairi Doyle's card ending 2290 before retrying the block (the block request CMS-30551 returned HTTP 500 with an unknown result), and tells him the block isn't confirmed yet, without telling him the card is blocked or submitting a second block blindly.

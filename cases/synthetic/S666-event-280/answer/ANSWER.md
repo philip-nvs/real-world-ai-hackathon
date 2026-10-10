@@ -1,0 +1,3 @@
+- Cut-off: event-280
+- Action: `act`
+- Description: The H&V service agent tells Ruth Calloway in the secure portal that the card journal shows dispatch of replacement RC-74418 registered on 14 April 2026 to her current profile address, with receipt not recorded, without relying on the older cancelled RC-71030 statuses or promising delivery before 25 April.

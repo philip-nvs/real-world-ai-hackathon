@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent registers a Direct Debit Guarantee indemnity claim with H&V's Direct Debit team for Ruth Okafor's £62.40 Brightwell Insurance collection of 15 November 2024, with her stated reason that the policy was cancelled in October 2024, and tells her it is registered without promising a refund or rejecting it for age.

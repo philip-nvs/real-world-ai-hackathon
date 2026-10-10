@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells the caller that no account information can be given after the identification checks failed, points them to the secure portal, the app or a branch to see the balance, and records the two failed attempts on Gwen Talbot's profile for the security team, without disclosing the balance or any account detail.

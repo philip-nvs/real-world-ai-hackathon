@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent escalates Margaret Lindqvist's case to H&V's fraud team as urgent (a caller claiming to be H&V told her to move savings to a 'safe account'; £2,400 sent at 14:20 to new payee M Lindqvist Secure; the caller wants a further £6,000 today), and tells her clearly not to send any more money or act on that caller's instructions, without promising that the £2,400 will be recovered.

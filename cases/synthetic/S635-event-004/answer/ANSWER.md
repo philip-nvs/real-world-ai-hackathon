@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates Marcus Walsh's account ending 6612 to the specialist support team (customer in custody, relative Dean Walsh asking for all direct debits to be cancelled, no authority recorded) so that Marcus can be contacted or an authority arranged, without cancelling any direct debit or disclosing anything about the account to Dean.

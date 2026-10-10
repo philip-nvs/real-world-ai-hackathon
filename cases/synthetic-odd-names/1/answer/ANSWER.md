@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's card journal for the dispatch status of replacement request HV-S716 for Hana Petrova, without telling her it has been sent or giving a delivery date before the journal answers.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent registers a review of the £15.00 unarranged overdraft fee dated 11 February 2026 on Joel Marsh's account with the Tariff Team, recording his reason (salary credited a day late), and confirms the registration to him without saying the fee is refunded or that the case is closed.

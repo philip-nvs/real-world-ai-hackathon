@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Owen Pritchard that the receiving bank has replied to recall RC-40921 saying the £900.00 is no longer in the beneficiary's account and that it will contact its customer to ask for a voluntary return, without promising the money will come back, disclosing details of the recipient, or offering to credit him.

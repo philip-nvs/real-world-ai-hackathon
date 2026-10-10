@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent registers an authorised-push-payment scam claim with H&V's fraud team for Ayesha Rahman's £2,800.00 Faster Payment to C OVENS on 12 February 2026 (HV-S470), including the seller's name, platform, non-delivery and blocking, and the close-match name check, and tells Ayesha the claim is registered and the team will contact her, without promising reimbursement or recovery or a timescale.

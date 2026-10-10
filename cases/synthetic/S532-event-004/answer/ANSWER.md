@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `wait`
+- Description: H&V takes no new action on Kwame Adjei's case, because the November 2025 statement has already been placed in his secure portal and he has been told (event-004), without re-requesting the statement, sending it to his broker or messaging him again.

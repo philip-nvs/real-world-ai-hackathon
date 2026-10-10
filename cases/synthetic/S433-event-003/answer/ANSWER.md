@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent escalates Leanne Okoro's profile to the fraud team as urgent (she entered her sign-in details and a one-time code on harrow-vale-support.co, followed by a new-device sign-in at 18:57 and a new payee 'L OKORO SAVINGS' added at 19:02), and tells her in the secure portal that the email was not from H&V and that the fraud team is acting on her profile now, without asking for any codes or promising that no money will be lost.

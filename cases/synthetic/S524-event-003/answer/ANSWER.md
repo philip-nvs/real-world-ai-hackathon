@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V merchant services agent tells Isla Grant that chargeback CB-55102 on sale ACQ-7781 (£128.00) was raised by the cardholder's bank under the category 'goods or services not as described' and that she can submit evidence in the business portal's disputes area within 14 days of 15 January 2026, without identifying the cardholder, judging the claim or promising the money back.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Jaden Okafor in the secure portal that his Teen Account ending 1186 allows a daily card limit of up to £200.00 (and cash up to £100.00), which he can set himself in the app, and that £500 a day isn't possible on this account, without changing any limit for him.

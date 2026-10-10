@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Anwen Price's verified instruction to cancel card ending 2286 and order a replacement, and registers the £640.00 Harlow & Finch Jewellers chip-and-PIN payment of 26 January with the card team as unrecognised, telling her both are done without saying whether the payment was fraudulent or suggesting she made it.

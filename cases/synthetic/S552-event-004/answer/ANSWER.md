@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V business support agent tells Oliver Grant that batch HV-S552 is received but its validation is pending, that row 7 of payroll-feb.csv is unreadable and the file's own total (£17,960.00) differs from the £18,420.00 he stated, and that Fiona Grant's emailed consent can't count so she must consent in the business portal, and asks for a corrected file; nothing is approved, validated or confirmed for Friday.

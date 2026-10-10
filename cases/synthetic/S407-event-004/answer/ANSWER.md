@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Darren Holt that H&V's journal shows his £1,250.00 transfer to Oakvale Builders was authorised at 09:14 and sent at 09:16, so he must not authorise it again, and that the portal status was out of date, without saying the builder has received it.

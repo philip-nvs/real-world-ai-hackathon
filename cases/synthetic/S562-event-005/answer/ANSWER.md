@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Daniel Okoro in the secure portal that H&V won't re-run standing order SO-55102, that his one-off £975.00 payment to Fairway Lettings is pending and re-running the standing order could pay the rent twice, and that H&V's record shows the 1 March run was not executed with no automatic retry set, without re-running the order or promising when the one-off will arrive.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Ruth Adeyemi that Kestrel Motor Insurance's £486.20 attempt on 3 February was declined because card ending 5521 had expired on 31 January (her replacement card ending 8830 is active), and that she would need to contact Kestrel herself with her current card details, without contacting the insurer, saying H&V was at fault, or commenting on whether her policy is valid.

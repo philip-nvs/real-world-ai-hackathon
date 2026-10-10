@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `escalate`
+- Description: The H&V service agent escalates SO-66120 to the payments team for reconciliation, because journal sequence numbers show the cancellation (sequence 88213, CX-30772) was recorded before the £45.00 run (sequence 88240, RN-51904) while CLK-0329 makes the timestamps unreliable, and tells Joel Okafor the £45.00 payment after his cancellation is being looked into, without telling him he cancelled too late or promising a refund.

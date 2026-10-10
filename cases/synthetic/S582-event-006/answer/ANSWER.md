@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `wait`
+- Description: H&V tells Ifeoma Clarke nothing beyond what its records show: at the 10:02 check no £340.00 credit from Tamsin Hale had arrived. It treats Tamsin's 'payment sent' message as her own bank's claim, not as H&V evidence, and suggests checking again a little later.

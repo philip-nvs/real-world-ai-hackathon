@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent asks H&V's bereavement team to open a bereavement notification for Graham Lowe's sole account ending 1194 and contact Patricia Lowe with condolences and an explanation of the bereavement process (including funeral-cost payments), without cancelling any Direct Debits or disclosing the balance by email.

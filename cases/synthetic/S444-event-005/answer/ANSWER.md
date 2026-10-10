@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Bethan Lloyd that H&V's journal records her £1,150.00 transfer TX-660184 to Kingsway Lettings as sent at 09:12 on 30 January 2026, which does not confirm the landlord's bank has credited it, without sending the payment again.

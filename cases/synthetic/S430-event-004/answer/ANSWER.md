@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Joseph Annan's secure-chat instruction to cancel pending profile-change request PC-58841 (still awaiting his confirmation) and tells him in the secure portal that the change has been stopped and his profile number has not been changed, without making any other profile change.

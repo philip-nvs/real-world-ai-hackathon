@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent re-checks H&V's payment journal now for the live status of Ffion Hale's £310.00 transfer HV-S530 to Pell & Co, because the journal replies in the history conflict (SENT at 10:04 vs PROCESSING in an entry stamped 09:59) and their timestamps are out of order, without telling her it is sent or processing until the live record is read.

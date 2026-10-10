@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V service agent asks the payment team to correct return request RR-S585 from £4,200.00 to £420.00 against transfer TX-551902, and tells Callum Fraser the request is registered but its amount is being corrected, without confirming the £4,200.00 details or promising the money will be returned.

@@ -1,0 +1,10 @@
+batch,HV-S552,header_total_gbp,17960.00,rows,8
+row_id,payee_label,amount_gbp
+1,Staff A,2410.00
+2,Staff B,2185.00
+3,Staff C,2300.00
+4,Staff D,2260.00
+5,Staff E,2195.00
+6,Staff F,2240.00
+7,"Staff G,2,"4 80.0
+8,Staff H,2090.00

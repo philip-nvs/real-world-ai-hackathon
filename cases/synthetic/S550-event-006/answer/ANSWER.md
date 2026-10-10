@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `ask`
+- Description: The H&V service agent tells Harriet Long in the secure portal that the two £34.80 Northmere Heating payments are a standing order (SO-22817) and a Direct Debit (DD-90431), both set up on 3 March 2025, and that her screenshot shows a different payee, and asks her to say which instruction she wants cancelled, without cancelling either.

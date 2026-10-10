@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's transfer journal for Agnieszka Nowak's £420.00 transfer to Alder & Reed on 12 January 2026 and replies, ideally in Polish, with only the recorded H&V status, without confirming that Alder & Reed received it.

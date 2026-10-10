@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `escalate`
+- Description: The H&V service agent escalates Bethan Price's closure-and-transfer request on account ending 4471 to the legal orders team (restriction LO-55120), noting her Breathing Space and the open fee review HV-S690-F, and tells her in the secure portal only the permitted wording about the restriction, without closing the account, moving the balance, or saying anything about the order's source.

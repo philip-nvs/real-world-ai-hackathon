@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent replies to Katarzyna Nowak in Polish with the permitted wording that payment IP-55871 is being reviewed, with no further details or timescale, explains that H&V can't advise splitting the payment, and passes to the compliance team by internal request the new information (her brother's pressure and suggested wording in the attached messages, and the question about splitting or sending via another bank), without disclosing the screening, cancelling or re-sending the payment, or promising when it will arrive.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V business support agent retries the mandate check on Kwame Mensah's authority to view Larchfield Logistics Ltd's limits before disclosing anything, and tells him the limits will be shared once his viewing authority is confirmed, without giving either limit now.

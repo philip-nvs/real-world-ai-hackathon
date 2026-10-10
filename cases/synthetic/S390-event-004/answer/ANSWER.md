@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates to the H&V payment team the conflict between the portal's 'Sent' status and the payment journal's 'PENDING — awaiting scheme submission' for Marcus Hale's £1,250.00 Faster Payment to Thornbury Lettings, and tells Marcus that H&V cannot yet confirm the payment has left H&V and is checking, without confirming it was sent, advising him to pay again or promising when it will arrive.

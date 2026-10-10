@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent tells Tobias Wren in the secure portal that the only £540.00 payment on 9 January went to Northmere Housing Association (status SENT, ref FLAT 3 RENT) and that nothing has been paid to his saved payee Northmere Housing Co-operative, and asks him to confirm which organisation his rent should go to, without saying the co-op was paid or suggesting he pay again.

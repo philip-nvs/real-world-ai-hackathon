@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's incoming-payment records for a £120.00 credit from Peter Calder to Ines Calder's account in June 2025, without drawing any conclusion from the attached statement, which covers May 2025 (where the £120.00 credit on 15 May does appear).

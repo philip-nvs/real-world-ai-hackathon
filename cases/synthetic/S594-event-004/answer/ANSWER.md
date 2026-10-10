@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V service agent tells Liam Doherty that, despite the dispatch text, the card journal shows the dispatch was reversed on 3 March because his address didn't pass validation and the card is being held, not posted, and asks him to check and confirm his address through the secure profile process, without promising a delivery date or updating the address from chat.

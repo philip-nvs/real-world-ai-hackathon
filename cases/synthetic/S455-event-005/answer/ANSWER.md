@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Graham Pettit that H&V's journal now records his £1,250.00 payment TX-702215 to Northbrook University as sent at 11:04 UTC after a screening check cleared, noting that the status changed from pending a few minutes earlier and that this doesn't confirm the university's bank has received it, without promising it will arrive today.

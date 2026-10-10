@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Moira Banks's confirmed amendment of standing order SO-22850 to Riverside Allotments Society from £40.00 to £50.00 a month once, citing her secure-portal confirmation (event-003), treating event-004 as a duplicate log of the same confirmation, without applying the change twice or raising it above £50.00.

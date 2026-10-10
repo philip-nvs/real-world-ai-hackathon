@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent asks the card disputes team by internal request for the current status of dispute CD-31570 (the journal entry is a nightly sync last updated 27 February 2026 and shows 'under review', while Winslow Electricals says it has accepted the chargeback), and tells Farah Siddiqui that H&V's records don't yet show a decision or a £210.00 credit, without confirming or denying the refund.

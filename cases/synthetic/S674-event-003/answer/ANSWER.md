@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent submits the verified attorney's instruction from event-003 to cancel the Garden Monthly Subscriptions Direct Debit mandate on Margaret Oyelaran's account ending 6019, as account management within the registered LPA's scope, without treating the gift restriction as relevant or promising any refund of past collections.

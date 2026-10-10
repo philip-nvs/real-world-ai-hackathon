@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V service agent tells Bethan Lowry that the £39.99 Pulse Fitness collection of 3 February 2026 was submitted by Pulse Fitness on 30 January, before the mandate was cancelled, and offers to register a Direct Debit review of that collection, without promising a refund or blaming her.

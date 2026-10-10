@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Ayesha Rahman whether she wants the Greenhill Community Garden standing order to be £68.00 or £86.00 a month, since her message gives both, without sending any amendment for confirmation until she answers.

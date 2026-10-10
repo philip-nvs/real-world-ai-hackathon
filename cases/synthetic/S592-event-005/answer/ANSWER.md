@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent re-routes HV-S592 to the Direct Debit team as an indemnity claim on the £38.90 Northmere Broadband collection of 2 January 2026, with the full history, and tells Gemma Holt it was sent to the wrong team, apologising for the delay, without promising a refund or a decision date.

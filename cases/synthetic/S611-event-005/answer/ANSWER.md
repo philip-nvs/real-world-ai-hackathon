@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent submits an internal request to the Payment Team to attempt a recall of the €3,200.00 payment sent on 18 February 2026 to IBAN ending 5304 ('M SOUSA'), on Fiona Gallagher's explicit secure-chat instruction (event 003), and tells her the payment shows as sent and that a recall depends on the receiving bank, without promising the money will come back or sending a new payment to the correct IBAN.

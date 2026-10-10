@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent explains to Sophie Linden that if dispute HV-S481 (£1,180.00, Aurora Sofas) is withdrawn it may not be possible to reopen it and the merchant's refund offer is not something H&V can guarantee, and asks her to confirm she still wants to withdraw it, without withdrawing it yet, advising her what to choose or promising either outcome.

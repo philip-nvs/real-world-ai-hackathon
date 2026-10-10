@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates to the H&V payment team the unexplained mismatch between the in-app authorisation (£684.20) and the execution record (£648.20) for Samuel Achebe's 7 February 2026 payment to Alderman Property Management, and tells Samuel that H&V sent £648.20 and the difference from the approval record is being investigated, without guessing the cause or suggesting a top-up payment.

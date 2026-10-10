@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Priya Venkat that H&V's record shows the next run of standing order SO-90412 to Calloway Tutors (£180.00) at 00:30 UK time on 1 April 2026 (recorded as 23:30 UTC on 31 March because of British Summer Time), without stating it runs on 31 March or promising when the tutor will receive it.

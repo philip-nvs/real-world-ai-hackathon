@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers a review of the £15.00 unarranged overdraft fee of 2 March 2026 on Alan Brooks's account ending 1904 with the fees team, including the document-log facts (paper opted out in May 2024, monthly e-statements opened), and tells him the review is registered, without promising a refund or accusing him of having read his statements.

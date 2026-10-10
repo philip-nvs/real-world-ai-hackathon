@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `wait`
+- Description: H&V waits until the standing-order journal is back after 06:00 UTC to check the next run date of Agnieszka Nowak's standing order to Piotr Nowak, as already promised, without guessing the date or confirming 'the 24th' meanwhile.

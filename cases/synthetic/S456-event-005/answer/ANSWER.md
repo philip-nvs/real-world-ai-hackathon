@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `wait`
+- Description: H&V waits for the Payment Team's trace TR-60218 follow-up with the correspondent bank (chaser scheduled for 27 March 2026), with no new information to give Margaret Ellwood, without sending a second payment, contacting the Spanish bank directly or promising when the funds will arrive.

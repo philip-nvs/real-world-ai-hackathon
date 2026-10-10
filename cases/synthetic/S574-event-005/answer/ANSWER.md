@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `wait`
+- Description: H&V leaves Bethan Price's scheduled £650.00 transfer TX-660184 to run on its chosen date of 16 January 2026, without executing it early on her behalf, creating a second payment or promising when Harlow Lettings will receive it.

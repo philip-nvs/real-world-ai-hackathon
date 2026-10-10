@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Leo Fitzgerald in the secure portal that the journal shows his £385.00 payment to Dan Rourke Plumbing as pending, not failed, so he shouldn't make it again, without re-sending it, cancelling it or promising when it will reach the plumber.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Ifeoma Bello that H&V's journal shows her £1,480.00 payment to Penhallow Tiles Ltd (reference PT-0714) as sent on 2 February 2026 but cannot confirm its receipt, and offers a payment record in her secure portal plus a trace request to the payment team, without writing to Penhallow Tiles or stating that they received the funds.

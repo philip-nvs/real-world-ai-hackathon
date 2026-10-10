@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent opens a card-team case for the specific £62.15 Brightwater Pets card payment dated 14 February 2026 on Agnieszka Wolak's card ending 5512, as reported on the verified call, without concluding it was fraudulent, promising a refund or relying on a loose summary of the 400-page export.

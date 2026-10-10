@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks H&V's incoming-payment records on Nia Evans's account ending 7319 for an £85.00 credit from Swapsy and tells her what H&V's records show, noting that Swapsy's own message says the withdrawal is still 'Processing', without saying H&V has lost or is holding the money.

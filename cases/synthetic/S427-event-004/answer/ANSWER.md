@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V service agent asks Sian Pritchard to confirm that she wants return request HV-S427 for the £215.00 transfer to G HOLLIS withdrawn, explaining that if it continues and the bank also returns the money she would be repaid twice, without withdrawing the request until she confirms.

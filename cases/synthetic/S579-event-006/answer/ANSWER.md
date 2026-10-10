@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `wait`
+- Description: H&V waits for the outcome of trace TR-61842 on Owen Pryce's €3,150.00 payment, without requesting a recall that he hasn't clearly instructed as a cancellation, encouraging a second payment, or promising when or whether the funds will arrive.

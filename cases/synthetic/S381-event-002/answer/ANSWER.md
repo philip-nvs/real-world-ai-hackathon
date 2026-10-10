@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Bethan Morgan in the secure portal what she would like H&V to go ahead with, because no conversation from last week is on her record, without assuming it is the transfer-limit increase she discussed and dropped in October 2025, and without making any change.

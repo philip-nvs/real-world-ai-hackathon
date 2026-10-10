@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Anthony Bishop, using the permitted wording, that H&V has received an HMRC notice and has had to hold £1,240.00 in account ending 9035, that it can't be released unless HMRC says so and that he should contact HMRC directly if he disputes the debt, and logs the case with the Legal Orders team, without releasing the hold, advising on the tax dispute, or contacting HMRC for him.

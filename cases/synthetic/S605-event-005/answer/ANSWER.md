@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Lewis Oduya that card ending 5509 has a temporary security-related restriction and that no travel notice is recorded (an email is not a recorded travel notice), and sends an internal request to the card security team to review the restriction, without lifting it, giving operational detail, or promising when the card will work.

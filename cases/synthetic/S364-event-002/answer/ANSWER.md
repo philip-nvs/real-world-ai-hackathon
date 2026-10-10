@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent submits Harriet Doyle's verified instruction from the call to cancel her Flexi Fitness Direct Debit mandate, and explains that this stops future collections through H&V but doesn't cancel any amount she may owe Flexi Fitness under her membership agreement, which is a matter between her and the gym.

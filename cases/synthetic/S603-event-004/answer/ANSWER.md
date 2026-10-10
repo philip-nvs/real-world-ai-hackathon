@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent checks the card transaction journal for any £64.00 Brightwater Electricals credit posted against the blocked card ending 1144 or to Callum Ferris's account since 15 December 2025, without promising that a refund to a blocked card will reach the account or unblocking the old card.

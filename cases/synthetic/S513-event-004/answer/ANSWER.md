@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent refers Courtney Blake to H&V's financial support team by internal request, telling her that the 1 March £710.00 standing-order run to Ashgrove Housing wasn't executed and nothing else is pending to the landlord, and pointing her to free debt advice, without telling her how much to pay, promising forbearance or giving financial advice.

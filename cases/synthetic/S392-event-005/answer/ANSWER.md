@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Grace Ofori in the secure portal that H&V's card journal shows her replacement card's dispatch registered on 2 February 2026, that H&V's records show no text message sent to her, and that she should not use the link, and asks whether she entered any details on it, and the agent reports the text to H&V's fraud team, without promising a delivery date.

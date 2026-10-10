@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Gareth Bowen that the only charge posted is £45.20, the £1.00 was a card check already released, and the £99.00 is a pump pre-authorisation hold, not a charge, without promising when the hold will drop off.

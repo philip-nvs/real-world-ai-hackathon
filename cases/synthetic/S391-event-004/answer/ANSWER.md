@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent passes the mismatch between the standing-order journal (next run 3 February 2026) and the portal display (3 March 2026) for Lena Fischer's £520.00 Dovecote Childcare standing order to the payments operations team, and tells Lena what the journal records and that the display difference is being checked, without promising the payment will run on either date or making any change to the order.

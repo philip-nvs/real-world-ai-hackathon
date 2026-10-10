@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks H&V's card journal for the current status of card ending 7716 and reports only what it shows, noting that the case history is missing so neither the call nor any block instruction can be confirmed from events, without telling the customer the card is blocked before the record shows it.

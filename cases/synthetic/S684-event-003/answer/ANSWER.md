@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V business support agent asks the import service to make the validation report for batch DC-0402 available in the business portal to Lena Vasquez, who holds the recorded 'view validation reports' permission, without correcting, resubmitting or releasing the batch.

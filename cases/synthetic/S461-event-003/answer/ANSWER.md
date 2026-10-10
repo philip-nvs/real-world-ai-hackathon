@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V business support agent tells Agnieszka Wolak that supplier-run-0219.csv (HV-S461) was received but is empty (0 bytes, no rows), so no supplier payments exist yet, and asks her to re-upload the complete file through the business portal, without creating the payments herself or promising when they will be paid.

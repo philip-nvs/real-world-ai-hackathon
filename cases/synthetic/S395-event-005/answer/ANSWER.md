@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent registers a review of the £52.00 Quayside Broadband collection of 3 February 2026 with the Direct Debit team, citing mandate QB-77213's cancellation on 10 January and the collection file received on 9 January, and tells Chloe Ndlovu the review is registered, without promising a refund or telling her the collection was valid or invalid.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent registers Imogen Price's formal complaint about the £25.00 international payment fee of 30 January 2026 with H&V Complaints, recording her reason that the website described international payments as free, and tells her in the secure portal it has been registered, without refunding or promising a refund under the threat of legal or press action.

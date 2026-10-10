@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent asks H&V's legacy data / archive team for account ending 3304's pre-migration fee record for 14 November 2025, registers Gwilym Rhys's review of the £15 'premium account service' fee with the Tariff Team, and replies to him in Welsh that the review is registered, without saying no fee was charged, refunding it, or relying on his 2024 tariff.

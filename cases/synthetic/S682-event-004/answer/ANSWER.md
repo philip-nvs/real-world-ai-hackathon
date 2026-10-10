@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Wiktoria Hale in the secure portal that the card journal shows dispatch of replacement HV-S682 registered on 9 February 2026, with receipt not recorded, without running another check, escalating or promising a delivery date.

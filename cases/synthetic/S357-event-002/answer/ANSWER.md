@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent explains to Dominic Shaw that 20 January 2026 has already passed, so a run can't be moved to it, and asks whether he wants the £120.00 standing order SO-4471 to move to the 20th from February 2026 onwards (and what should happen to the 28 January run), without amending or cancelling anything yet.

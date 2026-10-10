@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent passes Joanna Finch's request and the probate copy to the bereavement team under case BV-20733 and separately escalates to the fraud team the £1,450.00 app transfer to a new payee 'J Finch' made on 16 February 2026, two days after Harold Finch's date of death, from a device linked on 15 February, without stopping any Direct Debits, disclosing the balance or commenting on the transfer to Joanna.

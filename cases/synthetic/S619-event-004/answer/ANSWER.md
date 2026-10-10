@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Grace Mbeki's explicit secure-chat instruction (event 002) to revoke PennyPilot Ltd's account-information access to her account ending 7390 (or directs her to the Connected apps setting in the secure portal), and tells her the connection was read-only with no payment permission, without saying whether PennyPilot's incident affected her data.

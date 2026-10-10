@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent registers a card-team dispute for Priya Nandakumar's posted £129.99 payment to Lumen Audio Online on 3 February 2026 (card ending 4120, order LA-55821, goods not received, merchant contacted 10 and 23 February), attaching her emails, without asking for more information or promising a refund.

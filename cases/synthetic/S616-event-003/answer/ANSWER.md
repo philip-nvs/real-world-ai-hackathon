@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Natalia Wiśniewska that her £2,140.00 salary from Corrie Logistics was sent on 28 January to her closed account ending 4385, that redirection to her new account ending 0912 had ended on 10 January, and that the payment was returned to Corrie Logistics' bank on 29 January, so her employer needs to update her details and pay again, without promising when or whether the employer will resend it.

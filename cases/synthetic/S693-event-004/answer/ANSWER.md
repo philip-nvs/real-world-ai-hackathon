@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V business support agent tells Kerry Doyle, using the approved INC-2207 wording, that batch HPW-0226 was submitted on 26 February at 16:42 and processed on 27 February at 05:55, explains that H&V can't write to her employees or use the address list, and registers her complaint with the Complaints team tagged INC-2207, without admitting fault beyond the approved wording or promising to cover the employees' bank charges.

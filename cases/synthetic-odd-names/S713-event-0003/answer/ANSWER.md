@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: H&V waits for Daniel Mbeki to confirm the prepared date change for his Larkspur Nursery standing order in the secure portal, without applying the change, re-sending it or treating his chat message as confirmation.

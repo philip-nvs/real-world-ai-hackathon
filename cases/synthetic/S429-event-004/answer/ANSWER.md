@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V business support agent tells Ffion Adair that H&V can't schedule a role revocation for a future date and that Callum Reyes's Payroll Approver role stays active until an administrator instructs its removal, and asks her to confirm whether she wants it revoked now or will instruct the revocation on 13 February, noting that a former employee keeps approval rights meanwhile, without revoking or scheduling anything.

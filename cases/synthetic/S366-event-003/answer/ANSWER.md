@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent registers a review of the £18.00 Premier Plus fee of 5 March 2026 with the Tariff Team, citing Victor Hale's downgrade request of 18 February 2026 still showing as pending, and tells him the review is registered and how to make a formal complaint if he wishes, without promising a refund or that the fee was wrong.

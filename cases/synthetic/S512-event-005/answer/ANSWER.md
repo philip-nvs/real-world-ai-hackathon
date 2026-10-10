@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent logs Bethan Lloyd's formal complaint about the £25.00 unarranged overdraft fee of 5 February with H&V's Complaints team and registers a fee review, and tells her both are recorded and the fee matches the tariff in force, without promising a refund or treating the complaint as just a query.

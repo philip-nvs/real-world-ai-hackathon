@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent submits Callum Reyes's verified instruction (event-002) to cancel his Ironleaf Gym Ltd Direct Debit mandate through H&V's protected Direct Debit process, without saying anything about refunding the 1 February £32.00 collection or about his contract with the gym.

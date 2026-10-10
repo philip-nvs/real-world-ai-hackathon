@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Rhys Bowen in the secure portal that H&V's record shows his £860.00 payment of 30 January 2026 to Kestrel Timber Ltd was sent with the reference 'Invioce 1182', exactly as recorded, and offers a payment record document for his portal he can share himself, without advising him to pay the invoice again or contacting the supplier.

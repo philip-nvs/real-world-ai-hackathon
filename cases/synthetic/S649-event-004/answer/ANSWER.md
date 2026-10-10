@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers a card-team case for Tasha Bloom's unrecognised £249.00 Vireo Electronics payment on card ending 8840, recording that the authorisation came from her registered iPhone wallet with Face ID, and tells her it is registered and offers to secure the card, without accusing her, stating whether it was fraud or promising a refund.

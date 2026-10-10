@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Samira Haidari that H&V's journal shows her £600.00 transfer to Laila Haidari as sent from H&V on 7 January with no hold recorded, that receipt by her sister's bank isn't confirmed, and that H&V doesn't contact the recipient's bank to vouch for payments, without escalating, opening a compliance review or promising when it will arrive.

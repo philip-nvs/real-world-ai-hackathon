@@ -1,0 +1,3 @@
+- Cut-off: event-008
+- Action: `escalate`
+- Description: The H&V service agent escalates to H&V's payments operations that the change process reported SUCCESS at 23:30 for Owen Price's Greenhill Nursery standing order although the 13 March run was already being processed and the journal shows £410.00 executed on 13 March with the next run on 13 April (no 20th recorded), and tells Owen the 13 March payment was made on the original date and the change isn't showing, without promising a reversal or that the change is in place.

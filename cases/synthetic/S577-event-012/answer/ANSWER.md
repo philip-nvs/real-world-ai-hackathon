@@ -1,0 +1,3 @@
+- Cut-off: event-012
+- Action: `wait`
+- Description: H&V waits for the recipient bank's response to return request RR-S577, which was checked and reported to Agnieszka Nowak at 08:05, without registering a second request, chasing outside the payment team's process or promising the £275.00 will come back.

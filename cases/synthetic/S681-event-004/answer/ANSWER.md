@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits the skip of the 20 March 2026 £85.00 run of standing order SO-82214 to Holloway Music Tuition through H&V's protected instruction process, citing Faisal Rahman's secure-portal confirmation in event-004, leaving the standing order active for later runs.

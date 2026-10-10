@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Shannon Riley that the £812.00 Universal Credit payment was credited and reduced her overdrawn balance from -£852.00 to -£40.00 (no money was taken by H&V today), and sends an internal request to the financial support team for her, without giving debt advice beyond signposting or promising changes to her overdraft.

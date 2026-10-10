@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent refers Amira Haddad's hardship request for Fixed Saver ending 2210 to the Financial Support team by internal request and tells her in the secure portal that the product allows no partial withdrawal, only full early closure with a charge of about £78.90, and that any waiver is that team's decision, without closing the saver or promising a waiver.

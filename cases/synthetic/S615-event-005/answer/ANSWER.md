@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent sends an internal request to the switching team to investigate why the Ashby District Council mandate was left out of the redirection file for account ending 6620, tells Martin Achterberg that the record shows the mandate wasn't included and the £158.00 collection was returned because the account had closed, and that he will need to arrange the council tax payment from his new account, without paying the council from the closed account or promising to cover the £15.00 late fee.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks the payment journal for Callum Rees's £750.00 transfer to Thornbury Removals Ltd and tells him in the secure portal what H&V's record shows, using the approved PSN-0219 wording about the national Faster Payments delay, without promising when Thornbury's bank will credit it or suggesting he send the money again from another account.

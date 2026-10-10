@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent checks the current status of debit card ending 4402 in the card journal after the unknown-result error before retrying or telling Liam Burke anything, and does not tell him the card is blocked until the journal confirms it.

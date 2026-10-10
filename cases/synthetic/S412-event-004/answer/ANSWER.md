@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent asks the H&V card team to hold the 10 March dispatch of renewal card ending 7731, which is scheduled for Kwame Asante's previous address (14 Harbour Row), until his address change is confirmed, and tells him the card is currently set to go to the address on file and that he needs to confirm the address change in the secure profile process, without promising a delivery date.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Nell Huxley that the £2,340.00 HMRC payment from her personal account ending 4471 is recorded as sent and H&V can't re-route a sent payment, and that if she wants the cost to sit with the business she can transfer £2,340.00 from business account ending 9015 to her personal account herself, without moving money for her, recalling the HMRC payment or advising on tax treatment.

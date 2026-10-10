@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent gives Wendy Clarke general safety guidance in the secure portal (don't use the link; H&V never asks for card details or codes by text) and asks whether she clicked the link, entered card details or a code, or made a payment, without asking for any card details or codes and without checking or blocking her card until she says.

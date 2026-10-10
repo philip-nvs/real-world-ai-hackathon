@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Callum Reyes in the secure portal which of his four recent or scheduled payments he wants stopped (Brookfield Motors £1,150.00 sent, J Reyes £75.00 pending, Harlow Dental Care £240.00 scheduled, or the Oak Lane Lettings £895.00 standing order), and why, without cancelling, recalling or holding any of them.

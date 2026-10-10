@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's transfer journal for the recorded status of Dominic Achebe's one-off £315.00 transfer to Birchwood Frames Ltd, without telling him whether the recipient has received it.

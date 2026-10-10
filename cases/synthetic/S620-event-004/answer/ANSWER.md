@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Ravi Chandran that the payment to Mysore Institute of Technology was rejected before execution because a purpose code from the list in the payment form is required (the free text 'uni fees' wasn't accepted) and that no money was debited, so he needs to resubmit it with a purpose code, without editing or resubmitting the payment for him or promising it will arrive by Friday.

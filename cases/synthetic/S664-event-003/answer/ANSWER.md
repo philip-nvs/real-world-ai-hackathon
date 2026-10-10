@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Agnieszka Ward in the secure portal, using the approved SAV-INC-0307 wording, that an error in February Easy Saver interest has been identified and affected accounts will be corrected and written to, and links her account ending 3308 to SAV-INC-0307 for the savings team, without confirming her spreadsheet figure, calculating a correct amount or paying any difference.

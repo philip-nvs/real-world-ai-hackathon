@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent registers an authorised-push-payment scam claim with H&V's fraud team for Glenys Morgan's £2,300.00 transfer to J HARGREAVE on 13 March 2026, noting her circumstances for vulnerability consideration, and tells her it's registered without promising reimbursement or stating the outcome.

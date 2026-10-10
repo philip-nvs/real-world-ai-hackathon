@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent asks Sanjay Mehta, while still on the verified call, whether the lost card is his debit card ending 4471 or his credit card ending 1744 (no card ends 4417), so the block can be applied straight away to the right card, without blocking either card before he confirms.

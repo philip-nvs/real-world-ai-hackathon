@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks H&V's incoming-payment record for Harbour Mutual Insurance's credit (reference CLM-55820) on Gwen Powell's account and tells her it was received as £1,240.00, explaining that H&V can't change the amount a sender paid and that Harbour Mutual would need to correct it, without adjusting her balance.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V service agent asks Rhiannon Delaney in the secure portal which transfer went to the wrong person — the £286.40 to K ASHWORTH on 3 February or the £268.40 to K ASHFORD PLUMBING on 4 February — before registering any return request, and does not register one for either yet.

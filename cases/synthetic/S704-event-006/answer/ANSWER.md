@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V business support agent tells Mei Lin urgently that two identical batches, BT-88101 and BT-88107 (same file, 12 rows, £46,302.50 each), were both received and both have Adam Fry's first consent, so approving both would pay the suppliers twice (£92,605.00), and that one should be withdrawn through the business portal before Claire Ndlovu approves, without cancelling, withdrawing or approving either batch for her.

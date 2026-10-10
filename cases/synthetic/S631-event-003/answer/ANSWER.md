@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent escalates joint account ending 4471 to the insolvency specialist team (restricted after Gareth Price's bankruptcy order BK-2026-0187) with Lowri Price's request to access her salary and separate the account, and tells Lowri in the secure portal that a specialist team will review it, without removing Gareth, opening a new account, moving any funds or promising when the restriction will change.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Leah Okafor's verified instruction (event-004) to H&V's card system to block her debit card ending 2291, and tells her in the secure portal that the block has been submitted, without claiming it is confirmed until the card system replies or promising anything about other transactions.

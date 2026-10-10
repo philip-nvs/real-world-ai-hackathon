@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent registers a card dispute enquiry with H&V's card team for Callum Reyes's £899.00 Orchard Lane Furniture purchase of 2 June 2024 (goods not received), and tells him the card team will decide whether a chargeback is possible, without promising a refund or refusing it because of its age.

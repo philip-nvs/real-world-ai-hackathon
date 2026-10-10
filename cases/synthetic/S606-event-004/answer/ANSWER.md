@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Hannah Okafor's verified-call instruction (event 002) to block card ending 8842 and registers the £312.00 Northgate Electronics transaction with the card team as unrecognised, noting her location evidence and the journal's chip-and-PIN record, without deciding whether the payment was fraudulent or promising a refund.

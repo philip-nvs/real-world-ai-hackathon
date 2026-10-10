@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `wait`
+- Description: H&V takes no further action on case HV-S583: Harvey Doyle's December 2025 statement is already in his portal and his 'ok' asks for nothing new.

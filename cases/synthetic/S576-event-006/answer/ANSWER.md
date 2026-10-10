@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `wait`
+- Description: H&V waits for the card journal to register dispatch of replacement HV-S576, without giving Kofi Mensah a delivery date or a 'best guess' it doesn't hold.

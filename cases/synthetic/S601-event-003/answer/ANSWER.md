@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Isla Robertson that the hotel's terminal converted the 2,100 koruna into £84.60 itself (dynamic currency conversion), so H&V received and charged a GBP amount and applied no exchange rate, and offers to register a card-team enquiry if she wants to dispute it, without changing the amount or promising a refund.

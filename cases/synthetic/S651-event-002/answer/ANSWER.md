@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent registers a card-team case for Megan Hale's disputed £320.00 The Copper Tap and £95.00 GameNest payments on card ending 6108, recording that she gave the card and PIN to her boyfriend, and offers to block and replace the card, without telling her she will or won't be refunded or labelling it fraud.

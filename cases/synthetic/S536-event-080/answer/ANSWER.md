@@ -1,0 +1,3 @@
+- Cut-off: event-080
+- Action: `act`
+- Description: The H&V service agent tells Tamsin Leigh in the secure portal, using the permitted wording from the card authorisation journal (event-060), that her £64.20 attempt at Hollins Hardware on card ending 3390 was declined because the card details entered did not match H&V's records and that the card is active with no restriction, without disclosing the internal reason code or promising a retry will work.

@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `ask`
+- Description: The H&V service agent sends Priya Nandakumar the prepared change from £12.00 to £18.00 per month for her Fenwick Allotment Society standing order, for her to confirm in the secure portal, explaining that the chat message can't serve as confirmation and that the order stays at £12.00 until she confirms.

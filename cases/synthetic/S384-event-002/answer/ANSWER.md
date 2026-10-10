@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the standing-order journal for the next scheduled run of Mara Ellison's standing order to Quayside Housing and tells her the recorded date, treating the one-L sign-off as a typo because the secure chat session is authenticated to her profile, and without promising when Quayside Housing will receive the money.

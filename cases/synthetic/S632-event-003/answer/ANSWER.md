@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks H&V's correspondence log for the notice of Callum Reeve's Student-to-Graduate account change on account ending 9083 and registers his formal complaint about the £3.00 monthly fee with the Complaints team, telling him it is registered without promising the fee will be refunded or removed.

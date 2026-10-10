@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V service agent registers a separate Tariff Team review of the £12.00 unarranged overdraft fee dated 19 December 2025 with Rhian Castell's reason (wages arrived a day late), and asks her to confirm whether she wants review HV-S428 for the £4.50 fee withdrawn, without withdrawing it on a casual remark or promising either fee will be refunded.

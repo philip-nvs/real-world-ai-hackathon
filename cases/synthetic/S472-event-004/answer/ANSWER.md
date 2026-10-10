@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent refers Neil Ashdown's request to H&V's fraud team as a likely investment scam with remote-access risk (limit increase to £25,000 for 'CoinVantage Capital', a third party controlling his laptop via AnyDesk, unrealistic returns on £3,000 sent to new payee CVC GLOBAL PAYMENTS LTD, deadline pressure), and tells Neil not to let anyone else control his device or move money and to close the remote session, without raising his limit or making any payment.

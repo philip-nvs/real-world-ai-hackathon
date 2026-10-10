@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates the incoming-payment check for Darnell Hughes's account ending 3318 to the payments operations team (the journal returned status, matches and count as null for the Harbourline Logistics query on 27 February 2026), and tells Darnell that H&V couldn't get a result from its records yet, without telling him that no wage has arrived.

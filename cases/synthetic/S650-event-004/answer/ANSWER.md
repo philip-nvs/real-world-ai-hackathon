@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Rory Quinn's secure-chat instruction to cancel the Sentinel Home Cover Direct Debit mandate on account ending 2288 and registers a Direct Debit indemnity review with the Direct Debit team for the collections he says he never authorised, including the mandate history (lodged July 2024, 18 collections), without promising a refund or suggesting he set it up.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent tells Edith Marsh that her Pinewood Allotments standing order is currently £68.00 a month (changed from £42.00 on 2 February 2026 after her portal confirmation) and asks whether she still wants it changed to £60.00, which would lower it, without sending or applying any amendment yet.

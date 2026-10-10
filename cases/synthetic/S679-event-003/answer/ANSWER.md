@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V business banking agent submits Rhys Penhaligon's verified administrator instruction to revoke Carla Venn's Payments Approver role for Penhaligon Boatworks Ltd, without approving, rejecting or cancelling the two pending approval-queue items.

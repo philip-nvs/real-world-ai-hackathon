@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the £5.00 Premier Current Account fee applied on 1 February 2026 against the H&V tariff in force on that date, rather than the attached tariff effective from 1 April 2023, without promising a refund.

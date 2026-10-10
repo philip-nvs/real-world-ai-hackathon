@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `escalate`
+- Description: The H&V service agent escalates the card ending 8830 to the card fraud team as urgent for a manual block by another route (the block returned HTTP 500, status unknown, and a £24.99 Snapkart authorisation was approved at 14:08 with the card ACTIVE), and tells Owen Tasker in the secure portal, in text, that the block is not confirmed yet and the £24.99 is recorded as not his, without saying the card is blocked or asking him to phone.
