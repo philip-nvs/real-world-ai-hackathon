@@ -238,6 +238,163 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/cases/{case_id}/sessions": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                case_id: components["parameters"]["CaseId"];
+            };
+            cookie?: never;
+        };
+        /** List a case's sessions, newest first */
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    case_id: components["parameters"]["CaseId"];
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Sessions, with only id, case_id, status, timestamps, decision.decision and crashed */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Session"][];
+                    };
+                };
+            };
+        };
+        put?: never;
+        /**
+         * Start an agent session on a case
+         * @description Queues a one-shot run of the case agent on the stored case and returns at once.
+         *     The agent's tools answer from the case's `bank_env` fixture when one exists (case `017-event-004`
+         *     uses fixture `017` and sees only its own events), otherwise from `tools.py`, which records each
+         *     action without executing it. Poll `GET /sessions/{session_id}` until `status` is `done` or `failed`.
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    case_id: components["parameters"]["CaseId"];
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Session queued */
+                202: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Session"];
+                    };
+                };
+                404: components["responses"]["Error"];
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/sessions/{session_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                session_id: components["parameters"]["SessionId"];
+            };
+            cookie?: never;
+        };
+        /** Get a session's status and result */
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    session_id: components["parameters"]["SessionId"];
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description The session */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Session"];
+                    };
+                };
+                404: components["responses"]["Error"];
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/sessions/{session_id}/events": {
+        parameters: {
+            query?: {
+                /** @description Return only events with `seq` greater than this; pass the last `seq` you have. Default -1 (all). */
+                after?: number;
+            };
+            header?: never;
+            path: {
+                session_id: components["parameters"]["SessionId"];
+            };
+            cookie?: never;
+        };
+        /** Get a session's trace, in order */
+        get: {
+            parameters: {
+                query?: {
+                    /** @description Return only events with `seq` greater than this; pass the last `seq` you have. Default -1 (all). */
+                    after?: number;
+                };
+                header?: never;
+                path: {
+                    session_id: components["parameters"]["SessionId"];
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Trace lines with seq > after */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["SessionEvent"][];
+                    };
+                };
+                404: components["responses"]["Error"];
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -266,6 +423,52 @@ export interface components {
             /** @example application/pdf */
             content_type: string;
         };
+        Session: {
+            id: string;
+            case_id: string;
+            /**
+             * @description `done` includes an agent crash (`crashed: true`), which still ends in the Escalate fallback decision.
+             *     `failed` means the run itself broke or the server stopped mid-run; see `error`.
+             * @enum {string}
+             */
+            status: "queued" | "running" | "done" | "failed";
+            /** Format: date-time */
+            created_at: string;
+            /** Format: date-time */
+            started_at?: string;
+            /** Format: date-time */
+            finished_at?: string;
+            /** @description The agent's submit_decision input (decision, next_action, evidence, conflicts, customer_message, handover, rejected_options, final_result). */
+            decision?: Record<string, never>;
+            crashed?: boolean;
+            /** @description Policy-guard blocks during the run */
+            blocked?: number;
+            /** @description [input tokens, output tokens] */
+            tokens?: number[];
+            /**
+             * @description Which tools answered
+             * @enum {string}
+             */
+            bank?: "fixture" | "mock";
+            /** @description Every fixture call and its outcome; empty for mock */
+            bank_log?: Record<string, never>[];
+            /** @description The run's ANSWER.md */
+            answer_md?: string;
+            /** @description The run's REASONING.md */
+            reasoning_md?: string;
+            /** @description Set when status is failed */
+            error?: string;
+        };
+        /** @description One trace.jsonl line plus its position; the other fields depend on kind. */
+        SessionEvent: {
+            seq: number;
+            /** @description Unix time */
+            t: number;
+            /** @enum {string} */
+            kind: "loaded" | "model" | "tool_call" | "tool_result" | "tool_error" | "guard_block" | "crash" | "decision";
+        } & {
+            [key: string]: unknown;
+        };
     };
     responses: {
         /** @description Error */
@@ -283,6 +486,7 @@ export interface components {
     };
     parameters: {
         CaseId: string;
+        SessionId: string;
     };
     requestBodies: never;
     headers: never;

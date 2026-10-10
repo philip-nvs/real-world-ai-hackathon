@@ -37,7 +37,7 @@ def get_client():
 @cache
 def sync_db():
     """Runs happen in worker threads, so they write with the sync client; the API uses src.repository's async one."""
-    return MongoClient(os.environ.get("MONGODB_URI", "mongodb://localhost:27017"))[
+    return MongoClient(os.environ.get("MONGODB_URI", "mongodb://localhost:27017"), tz_aware=True)[
         os.environ.get("MONGODB_DB", "banking_case_agent")]
 
 
