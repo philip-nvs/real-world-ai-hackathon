@@ -105,6 +105,14 @@ if __name__ == "__main__":
     assert sent["status"] != "queued", sent
     assert "Awaiting" in str(bank.lookup(*query))
 
+    # 036: wording written after the address change stays hidden until the change is applied
+    bank = FixtureAdapter(load_scenario("036"))
+    query = ("customer profile", "Mara Ellison correspondence address")
+    assert "permitted_customer_wording" not in bank.lookup(*query)
+    process = next(x for x in bank.world.processes if x.action == "change_address")
+    bank.submit_instruction("profile change", " ".join(process.match_terms), process.confirmed_by[0])
+    assert "permitted_customer_wording" in bank.lookup(*query)
+
     # faults: an unavailable system fails the call and is logged
     bank = FixtureAdapter(load_scenario(overlay={"base": "001", "faults": [
         {"port": "records", "target": "payment_journal", "mode": "unavailable", "message": "journal offline"}]}))

@@ -114,10 +114,12 @@ class FixtureAdapter:
                                for r in matches]})
         return self._record("records", call, {"status": "found", "system": matches[0].system, **self._view(matches[0])})
 
-    @staticmethod
-    def _view(r):
+    def _view(self, r):
         out = {"record_ref": f"{r.system}:{r.id}", "kind": r.kind, "facts": {a.key: a.value for a in r.attributes}}
-        if r.customer_facing:
+        # wording on a record a process changes is often written after the change (036: "new address is marked
+        # as current"), so it only shows once that process has been applied
+        pending = any(x.target_record == r.id and x.id not in self.fired for x in self.world.processes)
+        if r.customer_facing and not pending:
             out["permitted_customer_wording"] = r.customer_facing
         if r.disclosure_rules:
             out["disclosure_rules"] = r.disclosure_rules
