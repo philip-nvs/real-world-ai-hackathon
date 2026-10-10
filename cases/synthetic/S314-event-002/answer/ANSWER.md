@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's incoming-entry records for a £120.00 Corbel Home refund in June 2025 and tells Harriet Quinn that the attached 'June-2025.pdf' is actually a March 2024 statement, reporting only what H&V's records show for June 2025 and without saying the bank reversed anything.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent checks the cheque processing record for cheque 001472 for the recorded return reason category and permitted customer wording, without promising to waive overdraft charges or re-crediting the £850.00.

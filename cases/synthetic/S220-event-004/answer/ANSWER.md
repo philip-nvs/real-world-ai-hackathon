@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent re-requests the Easy Saver (ending 7782) incoming-payment check that failed with SAV-30917, and tells Grace Liddell that no £2,000.00 credit was found on her current account at the time of the check but her Easy Saver couldn't be checked because of a system error, without saying the money hasn't arrived or has arrived.

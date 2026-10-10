@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers an authorised push payment scam claim with H&V's fraud team for Craig Dempsey's £2,000.00 payment to R WHITLOCK BUILDING of 12 January 2026 and tells him it is registered, without promising reimbursement or deciding whether it is a scam or a civil dispute with the builder.

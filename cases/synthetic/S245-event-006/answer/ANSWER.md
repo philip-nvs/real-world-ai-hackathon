@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V service agent tells Daniel Okafor in the secure portal, using the permitted wording, that H&V needs up-to-date identity documents before outgoing payments can resume and that he can upload them through Secure document upload, and that today's £725.00 standing order to Brockley Lettings was not executed, without promising when the restriction will lift or telling him to pay again.

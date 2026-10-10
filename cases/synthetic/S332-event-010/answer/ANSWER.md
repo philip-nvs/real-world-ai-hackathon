@@ -1,0 +1,3 @@
+- Cut-off: event-010
+- Action: `escalate`
+- Description: The H&V service agent escalates case HV-S332 to payment operations, because the joint mandate requires both holders for payment-instruction changes, Daniel's confirmed increase (SOP-77310 'SUCCESS') is not reflected in the journal (still £900.00), and Priya has given a conflicting verified instruction to cancel, and tells Daniel only that the change is not confirmed, without increasing, cancelling or confirming the standing order.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V business support agent registers a cash deposit discrepancy enquiry with H&V's cash processing team for bag CB-77410 (9 March 2026, Hollins Road), stating the counted total of £1,500.00 against the £1,465.00 credited, and tells Margaret Okonjo it is registered, without promising that £35 will be credited or suggesting where the difference lies.

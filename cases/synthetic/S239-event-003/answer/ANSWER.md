@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks the card authorisation journal for Sophie Lund's £18.40 Corner Deli attempt at about 12:36 for its recorded decline reason, without assuming insufficient funds, saying a retry will work, or disclosing more than the permitted wording.

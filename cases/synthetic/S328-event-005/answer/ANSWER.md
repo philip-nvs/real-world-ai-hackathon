@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `wait`
+- Description: H&V takes no further action on Owen Pritchard's case HV-S328, because the account confirmation was issued, delivered and acknowledged, and no new document, check or message is needed.

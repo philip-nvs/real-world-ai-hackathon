@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent sends an internal request to H&V's data/KYC team to review the profile name 'Muhammad Alrashid' against Mohammed Al-Rashid's verified travel document and his new passport (to be uploaded via Secure document upload), and tells him how to upload it, without changing the name directly, treating the spelling differences as suspicious, or promising the update before 30 January.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent submits Priyanka Shah's verified instruction from event-003, as registered attorney under LPA PA-7720-118-934, to cancel the Westway Gym Direct Debit mandate on Rajesh Shah's current account, noting that the gym membership itself is a separate matter and making no refund promise.

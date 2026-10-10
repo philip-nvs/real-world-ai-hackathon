@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates to the debt-respite specialist team that arrears letter COL-2 and a collections call were issued on Tomasz Reid's overdraft (account ending 2210) after his standard Breathing Space was registered on 2 January 2026, asking for collections activity to stop and be reviewed, and tells Tomasz in the secure portal that the letter is being looked into, without asking him to pay or promising anything about fees or interest.

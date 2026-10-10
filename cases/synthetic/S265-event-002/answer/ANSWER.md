@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the standing-order journal for Owen Pritchard's £925.00 rent standing order run due 1 February 2026 and its recorded status, without contacting Brookfield Lettings or telling Owen to pay again.

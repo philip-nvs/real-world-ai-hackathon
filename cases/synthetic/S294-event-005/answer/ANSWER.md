@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Oliver Grant in the secure portal that the Pennant Mobile mandate is already cancelled and H&V can't reinstate it, so Pennant Mobile would need to set up a new Direct Debit with him, without claiming the cancellation has been undone.

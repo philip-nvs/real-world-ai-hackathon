@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `ask`
+- Description: The H&V service agent asks the caller to complete the identification checks, including date of birth and the security questions, that identify which of the two David Holt profiles at 14 Larch Close is theirs, and discloses nothing about either account until then.

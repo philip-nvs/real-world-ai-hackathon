@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the card transaction record for the £10.99 STRMCO LTD payment on card ending 4402 for its merchant details (merchant ID, category, any link to the earlier monthly STREAMBOX £10.99 payments) before registering any dispute, and does not tell Ali Rahman it is fraud.

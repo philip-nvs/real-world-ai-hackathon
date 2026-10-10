@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the payment team's status for return request HV-S307 (matched by the £212.00 amount, Kestrel Print Co and 18 November 2025, since the customer typed 'HV-S3O7' with a letter O), and reports only the recorded stage, without promising the money back.

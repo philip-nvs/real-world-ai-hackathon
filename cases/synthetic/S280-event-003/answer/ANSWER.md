@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent registers a settlement query with H&V's acquiring service for Marchetti Gelato's 2–8 February 2026 period (report total £240.00 against the £180.00 settlement credit of 10 February) and tells Sofia Marchetti it is registered, without guessing that the £60 is fees, chargebacks or a delayed payment.

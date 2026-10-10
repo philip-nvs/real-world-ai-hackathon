@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `escalate`
+- Description: The H&V service agent escalates Bethan Lloyd's £1,250.00 Corran Builders transfer query to the duty manager with a handover citing PJ-90117, RR-22051 and MI-0120, and tells her in the secure portal that H&V can't confirm the transfer's status right now, without saying it has or hasn't been sent.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V business support agent tells Owen Pritchard that the report's own lines (card sales £240.00, adjustments −£4.00) add up to £236.00, not the stated £246.00 total, and asks H&V's acquiring service to check the report, without confirming any amount owed or a missing settlement.

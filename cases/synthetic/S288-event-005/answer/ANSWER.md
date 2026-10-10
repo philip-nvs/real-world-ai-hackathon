@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent re-checks the incoming-payment journal for the £895.00 credit from L MARSH (reference “RENT MARCH FLAT 2”) on Hannah Whitlock's account before replying, rather than reporting the earlier 10:00 'not found' result.

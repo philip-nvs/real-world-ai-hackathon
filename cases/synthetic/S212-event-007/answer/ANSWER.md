@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `ask`
+- Description: The H&V service agent does not submit either amendment, because Leah Morrow's portal confirmation refers to her Pinecrest Lettings standing order HV-S212-A rather than the prepared Pinecrest Storage change HV-S212-B, and sends her the HV-S212-B change (Pinecrest Storage, £45.00 to £60.00) again for confirmation in the secure portal, telling her that her Pinecrest Lettings order is unchanged at £850.00.

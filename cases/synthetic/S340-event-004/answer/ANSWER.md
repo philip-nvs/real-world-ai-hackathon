@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates case HV-S340 to H&V's fraud team and the bereavement team as a suspected impersonation, because the account holder Dorothy Price was registered as deceased under BV-2210 the day before, a cancelled-card attempt followed, and a caller passing knowledge-based checks now asks for an address change and a new card, and makes no profile change, issues no card and doesn't reveal the bereavement record to the caller.

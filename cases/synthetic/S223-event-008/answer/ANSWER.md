@@ -1,0 +1,3 @@
+- Cut-off: event-008
+- Action: `act`
+- Description: The H&V service agent submits Daniel Achebe's verified instruction from the call at event-006 to suspend Apple Pay token TKN-77Q-2290 on card ending 2290 and registers the £64.10 Northgate Electronics and £22.50 Quayside Taxis payments with the card team as unrecognised, without telling him the earlier block covered Apple Pay or promising a refund.

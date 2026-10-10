@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V business support agent submits an internal request to the business data team to change the account name from Millbrook Athletic Club to Millbrook Harriers Running Club through the account-name change process, attaching Harriet Sowerby's AGM minutes, and tells her it has been submitted, without changing the name itself or promising when payee-check warnings will stop.

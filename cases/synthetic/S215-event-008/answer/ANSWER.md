@@ -1,0 +1,3 @@
+- Cut-off: event-008
+- Action: `act`
+- Description: The H&V service agent submits an internal request to the Complaints team flagging that complaint CMP-40871 passed its 26 January final-response date with no final response, and tells Declan Moore that the complaint is still open and that, because eight weeks have passed without a final response, he can refer it to the Financial Ombudsman Service, without promising any outcome or refund of the £25.00 fees.

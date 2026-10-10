@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's payment journal for the recorded status of Callum Reid's £260.00 transfer to Isla Reid submitted on 7 February 2026, without promising when or whether it will reach her account.

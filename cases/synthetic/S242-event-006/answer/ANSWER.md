@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `escalate`
+- Description: The H&V service agent escalates Rhiannon Pryce's case urgently to H&V's financial support (hardship) team, setting out that set-off SO-5519 took £412.00 from current account ending 7781 leaving £6.18 and that she has told H&V she cannot buy food or pay for electricity for her children, and tells her in the secure portal that a specialist team is reviewing it, without promising to reverse the set-off.

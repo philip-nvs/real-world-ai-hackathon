@@ -7,4 +7,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [tanstackRouter({ target: 'react', autoCodeSplitting: true }), react(), tailwindcss()],
   resolve: { alias: { '@': path.resolve(__dirname, './src') } },
+  server: {
+    proxy: { '/api': { target: 'http://localhost:8000', rewrite: (p) => p.replace(/^\/api/, '') } },
+  },
 })

@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `escalate`
+- Description: The H&V service agent escalates Albert Finch's address change HV-S249 to H&V's vulnerable customer/accessibility team so an alternative verified confirmation route (for example branch or assisted phone confirmation) can be arranged because he has no portal access, and tells him not to share his security details with his daughter, without applying the change unconfirmed.

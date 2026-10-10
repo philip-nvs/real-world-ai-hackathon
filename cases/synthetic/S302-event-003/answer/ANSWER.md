@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Kieran Doyle in the secure portal that H&V cannot see or explain another bank's card decisions, so the Monzo decline must be raised with Monzo, without checking or commenting on any H&V record for that payment.

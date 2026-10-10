@@ -1,0 +1,3 @@
+- Cut-off: event-009
+- Action: `escalate`
+- Description: The H&V service agent escalates the four card ending 6620 payments (£1,326.50) to the card disputes team with a handover setting out Elliot Vance's three different accounts of what happened (stolen at the gym, lost at home, lent to a friend called Jordan), the confirmed block and the journal details, and tells Elliot in the secure portal that his request has been passed to the team, without promising a refund or accusing him.

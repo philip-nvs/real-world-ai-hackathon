@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks the payment journal for the recorded stage of Eleanor Pike's £214,600.00 CHAPS payment to Fairbrook Conveyancing LLP submitted at 15:58, without promising same-day arrival, re-sending the payment or stating a cut-off H&V's records haven't shown.

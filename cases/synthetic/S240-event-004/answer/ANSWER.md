@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers the £480.00 Volta Tech Online payment and the £0.50 and £1.00 PAYHUB*DONATE payments from 02:11–02:31 on card ending 1736 with the card team as unrecognised, and offers Ewan Clarke an immediate block of the card, without promising a refund or stating that fraud is established.

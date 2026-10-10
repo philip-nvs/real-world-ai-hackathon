@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates case HV-S209 to a human in customer service (Welsh language services) because the profile process has no language option for Rhiannon Pugh's request for Welsh statements and letters, and tells her, ideally in Welsh and English, that her request has been passed to a colleague, without inventing a process, changing her statement delivery or promising Welsh documents.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the card authorisation journal for card ending 9025 to establish whether the pending £56.70 Fernby Garage entry is the authorisation for the posted £56.70 payment, before raising any dispute, and does not tell Gareth Lyle he was charged twice.

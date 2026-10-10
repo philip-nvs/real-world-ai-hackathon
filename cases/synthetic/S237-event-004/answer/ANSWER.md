@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers a card-team enquiry for the £79.00 Glowline Skincare payment of 3 January 2026 on virtual card ending 8812, and offers Bethan Rees the option to cancel the virtual card or stop recurring payments to Glowline, without promising a refund or stating the merchant acted wrongly.

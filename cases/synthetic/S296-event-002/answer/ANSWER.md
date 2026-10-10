@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent escalates George Whitfield's £7,800.00 payment to Halden Asset Partners to H&V's fraud team as an urgent suspected scam for an immediate stop or recall attempt, and tells him what has been passed on, without promising the money can be stopped or recovered.

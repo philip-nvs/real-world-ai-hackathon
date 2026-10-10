@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Leah Whitford's verified instruction from the call (event-002) to cancel the FitPlanner Pro recurring card payment authority (merchant ID FPP-20931) on her debit card ending 7731, without promising a refund of the January £49.99 or that FitPlanner Pro will not attempt further charges.

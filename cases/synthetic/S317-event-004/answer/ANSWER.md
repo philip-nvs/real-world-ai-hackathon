@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V business support agent escalates Haldane Print Ltd to business banking for a mandate review, because Companies House records Graham Haldane's resignation as director on 30 November 2025 while H&V still lists him as sole administrator, and does not approve the new payee or the £8,400.00 payment.

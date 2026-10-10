@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Gareth Lloyd in the secure portal that H&V's payee register shows no payee named J Okafor and no payee changes in the last 90 days, and advises him not to use the text's link or number and to contact H&V only through the app or the number on his card, without blocking his account or opening a fraud case.

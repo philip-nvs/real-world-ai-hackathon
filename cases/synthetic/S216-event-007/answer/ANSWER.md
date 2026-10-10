@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `act`
+- Description: The H&V service agent submits an internal request to the Complaints team with the facts of case HV-S216 (duplicate fee FEE-7782 caused by system error, reversed under REV-7782, the customer's report of a week in overdraft, and her request for £150 compensation), and tells Alisha Kapoor that her request has been passed to Complaints, who decide on compensation, without offering or promising any amount.

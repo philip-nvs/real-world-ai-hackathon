@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers an authorised push payment scam claim with H&V's fraud team for Lena Fischer's own £360.00 payment to K DUNN of 4 December 2025 and tells her it is registered and that her friends need to report their payments to their own banks, without promising reimbursement or acting on the other payers' money.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Tomasz Reyes in the secure portal that the 2 December dispatch message for replacement card HV-S321 is a genuine H&V secure-portal message matching his 1 December request (optionally after checking the card journal's dispatch record), without promising a delivery date or treating the message as phishing.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent opens the protected name-change process for Ms Michaela Dunn and tells her in the secure portal how to upload her deed poll or new passport, that the data team will apply the new name and title and a replacement card will follow, addressing her as Ms Dunn throughout and never using her previous name or changing the profile directly.

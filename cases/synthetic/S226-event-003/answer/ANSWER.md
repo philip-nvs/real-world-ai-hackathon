@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent immediately submits Olumide Bassey's verified instruction from event-003 to block card ending 6034 and registers the twelve pending ZEN*MARKETPLACE, GIFTLY.EU and PLAYARC ONLINE payments from 03:10–03:42 with the card team as unrecognised and urgent, without promising refunds or stating that fraud has been established.

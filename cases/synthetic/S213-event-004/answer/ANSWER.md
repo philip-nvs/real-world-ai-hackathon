@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `wait`
+- Description: The H&V service agent leaves the Glenmoor Gym standing-order cancellation with Sian Rees, who has case HV-S213 locked and submitted the instruction at 09:08 with no reply yet, and does not submit a second cancellation or tell Owen Pritchard it is done.

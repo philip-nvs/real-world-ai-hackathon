@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent submits Marcus Adeyemi's verified instruction from the call (event-002) to block debit card ending 3384 and registers the £500.00 Kingsway Retail Park ATM withdrawal of 5 March 2026 with the card team as disputed, without promising a refund or reaching any finding about who made the withdrawal.

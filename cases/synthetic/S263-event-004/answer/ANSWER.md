@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers a card-team dispute (chargeback) enquiry for Rhys Calder's £1,240.00 debit card payment to Oakleaf Sofas Ltd on 18 October 2025 and tells him in the secure portal it has been registered, without promising a refund or saying Section 75 applies to his debit card.

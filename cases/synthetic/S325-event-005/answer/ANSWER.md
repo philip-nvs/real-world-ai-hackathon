@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Imogen Price in the secure portal that H&V's payment journal shows her £1,150.00 transfer to Harwick Garage as SENT at 11:42 UTC on 5 March 2026, and that this does not confirm receipt or credit by the garage's bank.

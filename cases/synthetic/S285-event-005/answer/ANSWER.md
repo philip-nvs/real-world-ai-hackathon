@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent submits an internal request for a lookup of Priyanka Shah's 27 January £410.00 Hollin Dental payment in the pre-upgrade records, and tells her the current journal doesn't cover that date so the check is still in progress, without saying the payment wasn't made or suggesting she pay again.

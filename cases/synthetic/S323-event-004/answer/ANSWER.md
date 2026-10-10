@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Kezia Morgan in the secure portal that H&V's incoming-entry journal shows a £64.99 REFUND credit from Brightwell Outdoor posted on 14 January 2026 and linked to her 9 January purchase, relying on the journal rather than the merchant's email.
