@@ -404,9 +404,9 @@ export interface paths {
         };
         /**
          * Download the answers for some cases as a zip
-         * @description For each `case_id`, the newest `done` session's ANSWER.md and REASONING.md, stored as
+         * @description For each `case_id`, the newest session's ANSWER.md and REASONING.md, stored as
          *     `<case_id>/ANSWER.md` and `<case_id>/REASONING.md` (the same layout as `run.py --out`).
-         *     Cases without a done session are left out. `/`, `\` and leading dots in a case id are replaced or stripped
+         *     Cases whose newest session is not `done` are left out. `/`, `\` and leading dots in a case id are replaced or stripped
          *     so every entry stays inside the zip.
          */
         get: {

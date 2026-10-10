@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type DragEvent } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { useQueryClient } from '@tanstack/react-query'
-import { ChevronRightIcon, DownloadIcon, FileIcon, FolderUpIcon, PlayIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
+import { ChevronRightIcon, DownloadIcon, FileIcon, FolderUpIcon, PlayIcon, RotateCwIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
 import { cn } from 'cn'
 import { api, errorMessage } from '@/api/client'
 import type { components } from '@/api/schema'
@@ -251,6 +251,8 @@ function CaseRow({ id, uploadedAt, deleting, playAll, onDelete }: CaseRowProps) 
     { params: { path: { session_id: start.data?.id ?? '' } } },
     { enabled: !!start.data, refetchInterval: (q) => (finished(q.state.data?.status) ? false : 1000) },
   )
+  const past = api.useQuery('get', '/cases/{case_id}/sessions', { params: { path: { case_id: id } } })
+  const ran = !!start.data || !!past.data?.length
   const running = start.isPending || (!!start.data && !finished(session.data?.status))
   const play = () => start.mutate({ params: { path: { case_id: id } } })
   // Skips mount (0) and rows already running.
@@ -268,11 +270,12 @@ function CaseRow({ id, uploadedAt, deleting, playAll, onDelete }: CaseRowProps) 
           <Button
             variant="ghost"
             size="icon-xs"
-            aria-label={`Start a session on case ${id}`}
+            aria-label={`${ran ? 'Re-run' : 'Start'} a session on case ${id}`}
+            title={ran ? 'Re-run' : 'Run'}
             disabled={running}
             onClick={(e) => (e.preventDefault(), play())}
           >
-            <PlayIcon />
+            {ran ? <RotateCwIcon /> : <PlayIcon />}
           </Button>
           <Button
             variant="ghost"

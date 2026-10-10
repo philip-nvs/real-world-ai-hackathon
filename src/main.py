@@ -148,12 +148,13 @@ async def get_session_events(session_id: str, after: int = -1):
 
 @app.get("/export")
 async def export_answers(case_id: list[str] = Query()):
-    """Zip of <case>/ANSWER.md and REASONING.md from each case's newest done session, like run.py's ANSWERS/."""
+    """Zip of <case>/ANSWER.md and REASONING.md from each case's newest session, like run.py's ANSWERS/.
+    A case whose newest session isn't done is left out rather than exporting an older, stale answer."""
     buf, found = io.BytesIO(), 0
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
         for cid in dict.fromkeys(case_id):
-            s = await get_db().sessions.find_one({"case_id": cid, "status": "done"}, sort=[("created_at", -1)])
-            if not s:
+            s = await get_db().sessions.find_one({"case_id": cid}, sort=[("created_at", -1)])
+            if not s or s["status"] != "done":
                 continue
             found += 1
             name = cid.replace("/", "_").replace("\\", "_").lstrip(".") or "case"  # keep entries inside the zip
