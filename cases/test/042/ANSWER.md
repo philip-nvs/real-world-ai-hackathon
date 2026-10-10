@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Verify Nadia Fenwick's permission to view validation reports and ask the H&V import service to retrieve the validation report for batch HV-042 for her secure-portal access.

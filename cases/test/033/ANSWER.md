@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Ask the data service to create the permitted CSV export of Mara Ellison's transactions for 6–9 May 2025, for her secure portal only.

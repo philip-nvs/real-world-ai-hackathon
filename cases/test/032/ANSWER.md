@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `act`
+- Description: Check the account-holder mandate and ask the H&V archive group to confirm whether the January 2024 statement is available to order, without promising availability or a fee.

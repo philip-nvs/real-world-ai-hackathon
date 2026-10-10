@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: Check that Elodie Mercer has authority over the studio-rent instruction and that its next run has not started, then submit her secure-portal cancellation through H&V's protected instruction process.

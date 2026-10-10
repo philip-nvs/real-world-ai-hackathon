@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Reply to Mara Ellery in the secure portal using the permitted wording that the receiving bank declined her transfer to Northmere Housing Co-operative, so H&V did not complete it.

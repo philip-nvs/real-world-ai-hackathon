@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: Escalate the specific authorised Alder Quay Supplies payment to H&V's payment team to check and confirm the stage recorded in H&V's payment journal.

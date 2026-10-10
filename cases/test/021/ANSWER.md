@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Check H&V's card journal for a registered dispatch record for Mara Ellison's replacement card.

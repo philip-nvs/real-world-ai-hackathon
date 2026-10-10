@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: Open the prescribed PIN procedure for Maren Ellwood in the secure portal and tell her to continue there, without sending any PIN in correspondence.
