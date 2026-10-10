@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: Order the January 2024 statement period through the H&V statement service, following the archive group's confirmation that it is available to order.

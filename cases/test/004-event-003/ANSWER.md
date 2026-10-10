@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the H&V transaction journal to return the decline code and permitted customer-facing wording for Mara Ellery’s transfer before replying to her.

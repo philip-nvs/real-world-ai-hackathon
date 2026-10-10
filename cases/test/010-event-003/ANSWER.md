@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for H&V's incoming-entry journal to return the result of the check for a £42.80 refund matching the Northmere Home Supplies transfer; nothing new to do until it replies.

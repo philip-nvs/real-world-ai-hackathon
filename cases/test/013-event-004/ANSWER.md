@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `wait`
+- Description: Wait for H&V's instruction log to record the outcome of the submitted cancellation before confirming anything to Elodie Mercer.

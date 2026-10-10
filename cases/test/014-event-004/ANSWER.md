@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Reply to Mara Ellery via the secure portal that the Northmere Water Services Direct Debit mandate status is Active, as checked on 14 August 2025.

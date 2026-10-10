@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the H&V account transaction journal to return the result of the incoming-activity check before replying to the customer.

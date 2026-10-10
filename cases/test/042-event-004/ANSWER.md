@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Reply to Nadia Fenwick in secure chat confirming validation-042.txt is in her secure portal and reports a missing required payee label on row 2, noting no corrected batch has been submitted and she can decide whether to prepare and submit a correction.

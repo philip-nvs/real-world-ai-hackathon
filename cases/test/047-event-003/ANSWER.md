@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the H&V limit register to return the mandate check and the active company payment-limit setting before responding to Maeve.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the H&V document service to issue the requested account confirmation to Mara Ellison's secure portal; nothing new to do until it replies.

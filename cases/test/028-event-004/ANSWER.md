@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `wait`
+- Description: Wait for Elowen Mercer to review and confirm the replacement number in the secure portal; no change may be applied until she confirms.

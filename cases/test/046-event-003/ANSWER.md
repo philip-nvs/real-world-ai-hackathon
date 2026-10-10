@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the H&V admin process to confirm it has processed the submitted revocation of Owen Bell's Payroll Approver role; nothing new to do until it replies.

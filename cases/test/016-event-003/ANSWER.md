@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for H&V's Direct Debit team to record the registration of the review of the £18.40 Northmere Water Services charge in the case journal; nothing new to do until it does.

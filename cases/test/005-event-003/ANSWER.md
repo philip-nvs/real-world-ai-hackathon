@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the H&V payment team to confirm it has registered the return request; no new action is needed from the service agent yet.

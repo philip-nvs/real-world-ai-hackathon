@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Reply to Mara Ellery via the business portal that the package is awaiting the second signatory's consent, her first consent is recorded, no second consent is recorded, and no individual payment submissions are shown.

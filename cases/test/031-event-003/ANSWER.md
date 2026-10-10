@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the statements service to check the June 2025 period and confirm the statement has been placed in Elowen Marr's secure portal; nothing new to do until it replies.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Reply to Mara Ellison via the secure portal that dispatch of her replacement card is registered, but H&V has no confirmation that she has received it.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the request log to confirm that Mara Ellison's fee review request has been registered and routed to the Tariff Team; nothing new to do until it replies.

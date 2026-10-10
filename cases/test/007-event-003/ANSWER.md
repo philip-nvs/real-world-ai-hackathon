@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for H&V's Payment Team to return the available trace for Mara Ellwood's international transfer; nothing new to do until it replies.

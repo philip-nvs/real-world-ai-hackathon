@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Deliver Elena Wren a protected overview through the secure portal listing the Willowmere Lettings standing order and Northmere Energy direct debit mandate, noting it does not confirm recipients' records and that the account remains open with no payments moved or changed.

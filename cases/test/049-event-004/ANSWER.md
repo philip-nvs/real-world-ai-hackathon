@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Make the 1–7 July 2025 acquiring report available to Mara Venn in the secure portal, showing card sales, adjustments and the £236.00 report total, and stating that availability does not confirm any funds were credited.

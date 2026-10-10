@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Notify Mara Ellison through the secure portal that the card journal confirms her card is marked blocked, noting that any disputed transactions are handled separately.

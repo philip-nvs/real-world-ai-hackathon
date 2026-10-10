@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the card team to confirm registration of the card-team case for the Fern & Finch Books purchase; nothing new to send yet.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Reply to Mara Ellison via the business portal confirming that batch-041.csv (reference HV-041, June 2025 payroll) was received, stating that validation, payment authorisation, and payment execution are not confirmed.

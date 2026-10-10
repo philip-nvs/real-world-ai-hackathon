@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Reply to Elena Marlow in the secure portal with the purpose text recorded on her transfer instruction (“Deposit for kiln repair estimate”), noting it is H&V's record and has not been sent to Mallow Pottery Works.

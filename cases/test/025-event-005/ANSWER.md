@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: Send Mara a secure portal message explaining that the £18.40 North Quay Books attempt was declined because her available balance was insufficient at the time, that no new payment has been made, and that a future attempt is not guaranteed to succeed.

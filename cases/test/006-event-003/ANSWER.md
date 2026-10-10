@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the H&V payment instruction journal to return the count and independent references of Mira's two £84.20 transfers to North Quay Utilities, taking no cancellation or return action meanwhile.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Send Elowen Marr a secure portal status update confirming the correction request has been received for review, that her profile name has not been changed, and that any supporting information required will be requested through the secure process.

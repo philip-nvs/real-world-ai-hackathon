@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Send Mara Ellery a secure portal reply explaining that the £3.20 debit is the fee for the recorded foreign-currency cash withdrawal and matches the tariff entry in force on its processing date, noting no refund decision has been made.

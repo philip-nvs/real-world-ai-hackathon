@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: Apply Mira's portal-confirmed amendment, updating the standing order to Westmere Garden Cooperative to £68.00 per month and notifying her in the secure portal of the recorded applicable date without promising the next payment.

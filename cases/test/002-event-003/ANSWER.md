@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for H&V's incoming-payment system to return the result of the incoming-credit check on Elowen Marsh's account before replying to her.

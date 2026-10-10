@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Confirm to Mara Ellery via the secure portal admin log that Owen Bell's Payroll Approver role for Larkmere Studio Ltd is revoked.

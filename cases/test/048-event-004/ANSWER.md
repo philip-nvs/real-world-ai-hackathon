@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Reply to Mara Ellison via the business portal that no matching incoming credit could be identified at the time of the check, making clear this does not confirm the payment's status at the buyer's bank or that the invoice has been paid.

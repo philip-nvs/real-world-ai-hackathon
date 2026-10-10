@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the card journal to return the recorded dispatch status before replying to Mara Ellison.

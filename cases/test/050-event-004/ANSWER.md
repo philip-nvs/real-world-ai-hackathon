@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Reply to Mara Ellison through the business portal that H&V's payment journal shows the payment as "sent", making clear this is only H&V's recorded stage and does not confirm the supplier has received the funds.

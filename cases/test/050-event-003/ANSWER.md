@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for H&V's payment team to check the payment journal and return the recorded stage of the Alder Quay Supplies payment; nothing new to do until it replies.

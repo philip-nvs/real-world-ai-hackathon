@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `wait`
+- Description: Wait for the H&V security team to determine the permitted scope and prepare the session extract before replying to Nerys Wren.

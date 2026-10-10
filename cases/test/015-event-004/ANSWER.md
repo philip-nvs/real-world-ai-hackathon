@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `wait`
+- Description: Wait for the H&V Direct Debit service to process the submitted cancellation instruction and update the Northmere Fitness mandate status shown in Mara Ellison's secure portal.

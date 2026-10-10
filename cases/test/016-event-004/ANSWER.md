@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: Reply to Tamsin Rook via the secure portal confirming her review request for the £18.40 Direct Debit charge is registered under reference HV-016, and that registration does not determine whether the amount was due or a refund is available.

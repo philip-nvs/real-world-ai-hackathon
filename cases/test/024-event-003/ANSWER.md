@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for the H&V card journal to return the permitted restriction category and disclosure limit for Rowan Ellery's card; nothing new to do until it replies.

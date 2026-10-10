@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for H&V's import journal check to return the receipt record for batch-041.csv under reference HV-041; nothing new to do until it does.

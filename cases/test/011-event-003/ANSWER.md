@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: Wait for H&V's standing-order journal to return the recorded next scheduled run date of Mara Ellison's active monthly standing order; nothing new to do until it replies.

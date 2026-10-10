@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: Complete the check of the payroll package's signing queue against the business mandate and record the result: Mara Ellery is the first signatory, no second consent is recorded, and no individual payment submissions are shown.
