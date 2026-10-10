@@ -7,10 +7,10 @@ import tempfile
 from pathlib import Path
 from types import SimpleNamespace as NS
 
-from evaluate import PUBLIC, cut_case
+from evaluate import FULL_CASES, TEST_CASES, parse_gold, stage_case
 from run import guard_tool, load_case, red_flags, run_case
 
-CASE = PUBLIC / "017"
+CASE = FULL_CASES / "017"
 
 
 def tool_use(i, name, **args):
@@ -42,9 +42,14 @@ if __name__ == "__main__":
     assert guard_tool("submit_instruction", {"system": "PAY", "instruction": "Re-send the payment", "authorised_by_event": "event-002"}, case)
 
     with tempfile.TemporaryDirectory() as tmp:
-        gold, _, cut = cut_case(CASE, Path(tmp) / "cut")
-        assert cut == 2 and "event 003" not in (Path(tmp) / "cut/history.md").read_text()
-        assert "insufficient" not in (Path(tmp) / "cut/index.md").read_text() and "journal entry" in gold
+        # the dev loop's gold answer is parsed, and never staged where the agent can read it
+        gold = parse_gold(TEST_CASES / "017" / "ANSWER.md")
+        assert gold["action"] == "act" and gold["cut_off"].startswith("event-") and "standing" in gold["description"].lower()
+        (Path(tmp) / "staged/stale.txt").parent.mkdir(parents=True)
+        (Path(tmp) / "staged/stale.txt").write_text("left over from an earlier run")
+        stage_case(TEST_CASES / "017", Path(tmp) / "staged")
+        assert sorted(f.name for f in (Path(tmp) / "staged").iterdir()) == ["history.md", "index.md"]
+        assert all(parse_gold(a)["action"] in ("act", "ask", "wait", "escalate") for a in TEST_CASES.glob("*/ANSWER.md"))
 
         # first a red-flag message (blocked), then a clean check + decision
         client = fake_client([
