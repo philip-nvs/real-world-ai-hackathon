@@ -4,6 +4,11 @@
 
 Nevis' case agent for the Banking & Financial Services track of Dwelly's Real-world Agents hackathon: a FastAPI backend (`src/`) and a React UI (`web/`). Why it exists and what it does: [PRODUCT.md](PRODUCT.md).
 
+## Launch posts
+
+- LinkedIn: https://lnkd.in/p/efNuAtMV
+- X: https://x.com/xylankant/status/2108940085068702192
+
 ## Project Setup
 
 You need [uv](https://docs.astral.sh/uv/), Node.js 20.19+ or 22.12+, and Docker (for MongoDB).
@@ -56,6 +61,7 @@ Backend, from the repo root:
 ```bash
 uv run fastapi dev src/main.py                     # API on :8000
 uv run -m src.run cases/full --out ANSWERS/        # batch CLI: ANSWER.md, REASONING.md, trace.jsonl per case; --workers N (default 4)
+uv run -m src.run reality_test/ --out ANSWERS/ --workers 10   # unseen cases (index.md, history.md, attachments/ per folder)
 uv run -m src.agent.test_core                      # loader, guard, agent loop; no API key or MongoDB
 uv run -m src.agent.test_runtime_faults --report   # model/tool/runner fault scenarios, PASS/GAP each
 uv run -m src.bank_env.test_bank_env               # fixtures, adapter, overlays, faults; no API key or MongoDB
