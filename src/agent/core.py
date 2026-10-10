@@ -285,9 +285,18 @@ def red_flags(text):
     return list(dict.fromkeys(hits))
 
 
+INTERNAL = re.compile(r"\b(system prompt|policy guard|submit_decision|tool[ _]use|hidden instructions?"
+                      r"|my instructions)\b", re.I)
+
+
+def internal_text(message):
+    """Internal or system text that must never reach a customer."""
+    return ["shares internal or system text with the customer"] if INTERNAL.search(message or "") else []
+
+
 def guard_tool(name, args, case):
     if name == "send_secure_message":
-        return red_flags(args.get("message", ""))
+        return red_flags(args.get("message", "")) + internal_text(args.get("message", ""))
     if name == "submit_instruction":
         problems = []
         if RESEND.search(args.get("instruction", "")):
@@ -314,8 +323,16 @@ def from_bank(sender, case):
     return bool(re.search(rf"\b(agent|bank)\b{'|(?<!\\w)(' + names + ')(?!\\w)' if names else ''}", sender, re.I))
 
 
-def guard_decision(d, executed=()):
+def guard_decision(d, executed=(), case=None):
     problems = red_flags(d.get("customer_message", "")) + red_flags(d.get("final_result", ""))
+    problems += internal_text(d.get("customer_message", ""))
+    if case is not None:
+        norm = lambda ref: re.sub(r"^event[-\s]?0*(\d+)$", lambda m: f"event-{int(m[1]):03d}", (ref or "").strip().lower())
+        known = {norm(e["id"]) for e in case["events"]}
+        cited = {norm(x.get("event_id")) for x in d.get("evidence", [])}
+        unknown = sorted(c for c in cited if re.fullmatch(r"event-\d+", c) and c not in known)
+        if unknown:
+            problems.append(f"evidence cites {', '.join(unknown)}, which is not an event in this case")
     if d.get("decision") == "escalate" and not d.get("handover", "").strip():
         problems.append("escalate needs a handover note")
     if d.get("customer_message", "").strip() and not any(x["tool"] == "send_secure_message" for x in executed):
@@ -335,9 +352,10 @@ def call_claude(client, **kw):
     return resp
 
 
-def run_agent(case, client, trace, tools=TOOLS):
+def run_agent(case, client, trace, tools=TOOLS, state=None):
+    """state: filled in as the agent works; pass one in to keep what was done if the case crashes midway."""
     messages = [{"role": "user", "content": case_content(case)}]
-    state = {"executed": [], "blocked": [], "failures": [], "tokens": [0, 0]}
+    state = state if state is not None else {"executed": [], "blocked": [], "failures": [], "tokens": [0, 0]}
     for _ in range(MAX_TURNS):
         resp = call_claude(client, system=SYSTEM, tools=ALL_TOOLS, messages=messages, output_config={"effort": "high"})
         state["tokens"][0] += resp.usage.input_tokens
@@ -365,7 +383,7 @@ def run_agent(case, client, trace, tools=TOOLS):
 def execute(name, args, case, state, trace, tools=TOOLS):
     trace("tool_call", tool=name, input=args)
     if name == "submit_decision":
-        problems = guard_decision(args, state["executed"])
+        problems = guard_decision(args, state["executed"], case)
     elif name in tools:
         problems = guard_tool(name, args, case)
     else:
@@ -378,6 +396,8 @@ def execute(name, args, case, state, trace, tools=TOOLS):
         return {"status": "accepted"}, False
     try:
         out = tools[name](**args)
+        if not isinstance(out, dict):  # a tool outside the agreed contract (e.g. a bare string) is wrapped, not fatal
+            out = {"status": "returned", "result": out}
         state["executed"].append({"tool": name, "input": args, "output": out})
         trace("tool_result", tool=name, output=out)
         return out, False
@@ -387,13 +407,17 @@ def execute(name, args, case, state, trace, tools=TOOLS):
         return {"error": str(e)}, True
 
 
-def fallback_decision(error):
+def fallback_decision(error, executed=()):
+    done = "; ".join(f"{x['tool']} ({x['input'].get('system') or x['input'].get('team') or x['input'].get('recipient')})"
+                     for x in executed)
     return {
         "decision": "escalate", "evidence": [], "conflicts": [], "rejected_options": [], "customer_message": "",
         "received": "Not summarised: the automated agent did not finish this case.",
         "next_action": "A human case handler reviews this case from the start.",
-        "handover": f"The automated agent could not finish this case ({error}). Nothing was changed and the customer "
-                    "was not contacted. Question for the handler: what is the right next step for this case?",
+        "handover": f"The automated agent could not finish this case ({error}). "
+                    + (f"Before it stopped it had already taken these actions: {done}. " if done else
+                       "Nothing was changed and the customer was not contacted. ")
+                    + "Question for the handler: what is the right next step for this case?",
         "final_result": "Escalated to a human handler. No action taken.",
     }
 
@@ -417,16 +441,21 @@ def run_case(case_dir, out_dir, client, tools=TOOLS, on_trace=None):
     try:
         case = load_case(case_dir)
         trace("loaded", case=case["id"], events=len(case["events"]), attachments=[a.name for a in case["attachments"]])
-        decision, state = run_agent(case, client, trace, tools)
+        decision, state = run_agent(case, client, trace, tools, state)
     except Exception as e:
         error = f"{type(e).__name__}: {e}"
         trace("crash", error=error, traceback=traceback.format_exc())
-        decision = fallback_decision(error)
+        decision = fallback_decision(error, state["executed"])
         state["failures"].append(f"Agent crashed: {error}")
     trace("decision", **decision)
     trace_file.close()
-    write_answer(out_dir, case or {"id": Path(case_dir).name, "index": "", "events": [], "attachments": []},
-                 decision, state)
+    case = case or {"id": Path(case_dir).name, "index": "", "events": [], "attachments": []}
+    try:
+        write_answer(out_dir, case, decision, state)
+    except Exception as e:  # never leave a case without an answer, whatever a tool or the decision looked like
+        error = error or f"writer failed: {type(e).__name__}: {e}"
+        decision = fallback_decision(f"writer failed: {type(e).__name__}: {e}", state["executed"])
+        write_answer(out_dir, case, decision, {**state, "executed": [], "blocked": []})
     return {"case": Path(case_dir).name, "decision": decision["decision"], "crashed": error is not None,
             "blocked": len(state["blocked"]), "tokens": state["tokens"], "next_action": decision["next_action"], "output": decision}
 
