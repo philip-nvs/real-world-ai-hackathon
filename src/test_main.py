@@ -96,6 +96,14 @@ def test_agent_session():
             assert c.get(f"/sessions/{sid}/events", params={"after": events[-2]["seq"]}).json() == events[-1:]
             assert [x["id"] for x in c.get("/cases/001/sessions").json()][0] == sid
             assert c.get("/sessions/nope").status_code == 404
+
+            import io, zipfile
+            r = c.get("/export", params={"case_id": ["001", "nope"]})
+            assert r.status_code == 200 and r.headers["content-type"] == "application/zip", r.text
+            z = zipfile.ZipFile(io.BytesIO(r.content))
+            assert z.namelist() == ["001/ANSWER.md", "001/REASONING.md"]
+            assert z.read("001/ANSWER.md").decode() == s["answer_md"]
+            assert c.get("/export", params={"case_id": "nope"}).status_code == 404
         finally:
             c.delete("/cases/001")
             sessions.sync_db().sessions.delete_many({"case_id": {"$in": ["001", "nope"]}})
