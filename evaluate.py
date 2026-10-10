@@ -40,6 +40,7 @@ def cut_case(src, dst):
         cut = max(len(case["events"]) - 1, 1)
     marks = list(EVENT_RE.finditer(case["history"]))
     history = case["history"][: marks[cut].start()] if cut < len(marks) else case["history"]
+    history = re.sub(r"^Total events:.*\n", "", history, flags=re.M)  # would reveal hidden events
     dst.mkdir(parents=True, exist_ok=True)
     (dst / "index.md").write_text(index)
     (dst / "history.md").write_text(history)

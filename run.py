@@ -22,6 +22,13 @@ import anthropic
 
 from tools import TOOL_SCHEMAS, TOOLS
 
+# .env is loaded on import so run.py and evaluate.py both see the key
+_env = Path(__file__).parent / ".env"
+for _line in _env.read_text().splitlines() if _env.is_file() else []:
+    _key, _, _value = _line.partition("=")
+    if _key.strip() and not _key.lstrip().startswith("#"):
+        os.environ.setdefault(_key.strip(), _value.strip().strip('"'))
+
 MODEL = "claude-opus-5-5"
 MAX_TURNS = 10
 SECURE_CHANNELS = {"secure portal", "secure chat", "verified call", "business portal"}
@@ -139,7 +146,7 @@ RED_FLAGS = [
     (r"\b(will|shall) (be )?refund|\brefund\b.{0,30}\b(will be|has been|have been|is being) (issued|made|processed|paid|credited|sent)"
      r"|\byou will (receive|get) (a |your )?(refund|money back)", "promises a refund"),
     (r"\bfraud(ulent)?\b.{0,20}\b(has been |was |is )?(confirmed|established|proven)|\b(is|was) fraud(ulent)?\b", "states a fraud finding"),
-    (r"\bwill (arrive|reach|be (delivered|received|credited))|received by (the )?(recipient|payee|beneficiary)"
+    (r"\b(payment|transfer|money|funds|card|refund|amount)\b.{0,40}\bwill (arrive|reach|be (delivered|received|credited))|received by (the )?(recipient|payee|beneficiary)"
      r"|\b(recipient|payee|beneficiary) (has|have) received", "promises delivery or receipt"),
     (r"\bguarantee", "gives a guarantee"),
     (r"\b(send|share|tell|give|provide|enter|confirm|type)\b.{0,40}\b(password|pin|passcode|one-time|otp|security code)\b", "asks for credentials"),
@@ -364,11 +371,6 @@ def main():
     ap.add_argument("--workers", type=int, default=4, help="cases run in parallel (default 4)")
     args = ap.parse_args()
 
-    env = Path(__file__).parent / ".env"
-    for line in env.read_text().splitlines() if env.is_file() else []:
-        key, _, value = line.partition("=")
-        if key.strip() and not key.lstrip().startswith("#"):
-            os.environ.setdefault(key.strip(), value.strip().strip('"'))
     cases = find_cases(args.cases)
     if not cases:
         sys.exit(f"No case folders (with index.md) under {args.cases}")

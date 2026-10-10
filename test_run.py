@@ -37,13 +37,15 @@ if __name__ == "__main__":
     assert red_flags("Please never share your PIN.") == []
     assert red_flags("Receipt confirmed: batch-041.csv was received by H&V.") == []
     assert red_flags("The payment will arrive on Friday.") == ["promises delivery or receipt"]
+    assert red_flags("The check is queued and the reply will arrive as a new case event.") == []
     assert guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-001"}, case)
     assert not guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-002"}, case)
     assert guard_tool("submit_instruction", {"system": "PAY", "instruction": "Re-send the payment", "authorised_by_event": "event-002"}, case)
 
     with tempfile.TemporaryDirectory() as tmp:
         gold, _, cut = cut_case(CASE, Path(tmp) / "cut")
-        assert cut == 2 and "event 003" not in (Path(tmp) / "cut/history.md").read_text()
+        cut_history = (Path(tmp) / "cut/history.md").read_text()
+        assert cut == 2 and "event 003" not in cut_history and "Total events" not in cut_history
         assert "insufficient" not in (Path(tmp) / "cut/index.md").read_text() and "journal entry" in gold
 
         # first a red-flag message (blocked), then a clean check + decision
