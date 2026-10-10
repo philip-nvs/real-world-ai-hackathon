@@ -57,7 +57,8 @@ if __name__ == "__main__":
         # every test cut-off: gold parses and matches its folder, history ends at the cut-off, and only
         # attachments the visible history or request names
         cuts = sorted(p for p in TEST_CASES.iterdir() if p.is_dir())
-        assert len(cuts) > 100, len(cuts)
+        uncovered = {p.name for p in FULL_CASES.iterdir() if p.is_dir()} - {case_id(c) for c in cuts}
+        assert not uncovered, f"public cases without a test cut-off: {sorted(uncovered)}"
         for cut in cuts:
             gold = parse_gold(gold_file(cut))
             k = int(cut.name.split("-event-")[1])
