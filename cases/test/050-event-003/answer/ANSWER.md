@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V payment team checks H&V's payment journal for the recorded stage of Mara Ellison's authorised Northmere Studio Ltd payment to Alder Quay Supplies for the materials invoice, and reports it back to the H&V service agent.

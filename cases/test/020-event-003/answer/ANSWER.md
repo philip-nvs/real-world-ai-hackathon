@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V agent delivers Elena Wren a protected overview of her account's active instructions in the secure portal, listing the Willowmere Lettings standing order and the Northmere Energy direct debit mandate recorded in H&V's instruction register, without moving or changing any payment.

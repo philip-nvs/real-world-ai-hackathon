@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent, with Mara Ellison's identification checks complete, reviews the collection-stage information for her Northmere Fitness Direct Debit mandate before submitting her cancellation instruction, noting in case record HV-015 that a collection already being processed cannot be ruled out and needs separate reconciliation.

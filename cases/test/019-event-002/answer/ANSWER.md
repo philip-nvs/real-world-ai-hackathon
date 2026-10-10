@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the processing stage of Maeve Ellery's active standing order to Willow Yard Studios and records in the case record that the 18 September 2025 run is not yet being processed, so the change to 22 September 2025 can be sent to her for secure confirmation.

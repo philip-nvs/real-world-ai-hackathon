@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `ask`
-- Description: The H&V service agent sends Mira Ellery the amendment of her standing order to Westmere Garden Cooperative from £42.00 to £68.00 per month in her secure portal session for her to confirm, without changing the order itself.

@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V agent notifies Mara Ellison via the secure portal that payment-record-040.pdf, the record for her £74.00 payment HV-040 dated 14 July 2025, is available in her secure portal.

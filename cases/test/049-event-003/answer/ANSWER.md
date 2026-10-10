@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V acquiring service prepares and places North Quay Printworks' acquiring report for 1–7 July 2025 in the H&V secure portal for authorised manager Mara Venn, and notes to the H&V service agent that placement confirms report availability only, not a settlement credit.

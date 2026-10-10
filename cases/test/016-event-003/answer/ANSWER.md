@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V Direct Debit team registers the review request for Tamsin Rook's disputed £18.40 Direct Debit charge to Northmere Water Services (dated 9 July 2025) in the H&V case journal.

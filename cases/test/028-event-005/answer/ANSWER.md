@@ -1,3 +1,0 @@
-- Cut-off: event-005
-- Action: `act`
-- Description: H&V's secure profile-change system applies Elowen Mercer's securely confirmed replacement phone number to her H&V profile and notifies her via the secure portal.

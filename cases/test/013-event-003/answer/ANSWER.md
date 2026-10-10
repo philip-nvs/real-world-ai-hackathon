@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `escalate`
-- Description: The H&V agent checks that Elodie Mercer has authority over recurring studio-rent instruction HV-013 and that its next run has not started, then submits her secure-portal cancellation confirmation to the H&V protected instruction process.

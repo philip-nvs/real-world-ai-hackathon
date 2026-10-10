@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: Harrow & Vale Bank plc tells Mara Ellery, through the secure portal, the recorded status and reason for her scheduled monthly rent standing-order run, as shown in the H&V standing-order journal.

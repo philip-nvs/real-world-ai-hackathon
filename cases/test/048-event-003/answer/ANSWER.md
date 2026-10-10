@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: Harrow & Vale Bank replies to Mara Ellison of Alder Quay Studio Ltd. via the business portal that its check of the business account's incoming activity found no identifiable credit matching the buyer's workshop invoice payment at the time of the check, and that this does not confirm the payment's status at the buyer's bank or that the invoice is paid.

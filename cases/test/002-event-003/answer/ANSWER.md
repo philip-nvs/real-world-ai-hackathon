@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V service agent replies to Elowen Marsh through the secure portal with the result of the H&V incoming-payment journal check for the kiln contribution, stating only what H&V's records show and not whether the sender made or completed the payment.

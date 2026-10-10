@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V service agent records the import-journal result for Mara Ellison's batch-041.csv (Northmere Studio Ltd. June 2025 payroll, Staff A £420.00 and Staff B £385.00) in H&V case record HV-041.

@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: H&V (Direct Debit team) notifies Tamsin Rook via the secure portal that her request to review the £18.40 Direct Debit charge to Northmere Water Services is registered under reference HV-016, noting that registration does not decide whether the amount was due or a refund is available.

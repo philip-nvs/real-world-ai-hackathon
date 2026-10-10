@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V Payment Team checks the available H&V trace for case HV-007 (Mara Ellwood's international transfer) and reports the current recorded stage to the H&V service agent, distinguishing H&V's status from any confirmation of receipt by the beneficiary.

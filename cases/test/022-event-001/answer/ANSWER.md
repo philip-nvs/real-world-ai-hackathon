@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `escalate`
+- Description: The H&V service agent opens case HV-022 and escalates Mara Ellison's verified request, confirmed on the checked call, to the H&V card team for an immediate block of her missing debit card.

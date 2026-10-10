@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: The H&V service agent has already registered Mara Ellison's review request for the £4.50 paper statement fee with the Tariff Team, so it waits for the H&V request log to confirm registration and routing.

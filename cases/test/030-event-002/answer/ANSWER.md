@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V agent completes H&V's identity checks with Maren Ellery in the secure chat and tells her it will check the existing replacement card record (HV-030) without making any changes to her account.
