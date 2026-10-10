@@ -7,6 +7,7 @@ import { api, errorMessage } from '@/api/client'
 import type { components } from '@/api/schema'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Markdown } from '@/components/markdown'
 
 export const Route = createFileRoute('/')({ component: Index })
 
@@ -344,34 +345,73 @@ function CaseRow({ id, uploadedAt, deleting, playAll, onDelete }: CaseRowProps) 
 
 function AnswerPanel({ caseId, sessionId, onClose }: { caseId: string; sessionId: string; onClose: () => void }) {
   const s = api.useQuery('get', '/sessions/{session_id}', { params: { path: { session_id: sessionId } } })
+  const [tab, setTab] = useState<'answer' | 'reasoning' | 'trace'>('answer')
+  // the panel only opens on a finished run, so the trace is complete and needs no polling
+  const events = api.useQuery('get', '/sessions/{session_id}/events', { params: { path: { session_id: sessionId } } }, { enabled: tab === 'trace' })
+  // write_answer's first line is "# Case <id>: <DECISION>"; the header shows it, so the body drops it
+  const decision = s.data?.answer_md?.match(/^# .*: (\w+)/)?.[1]
+  const body = (s.data?.[tab === 'answer' ? 'answer_md' : 'reasoning_md'] ?? '').replace(/^# .*\n/, '')
   return (
     <div className="flex h-full flex-col">
       <div className="flex items-center gap-2 border-b px-4 py-3">
         <p className="min-w-0 flex-1 truncate font-mono text-xs">
           {caseId} · session {sessionId.slice(0, 8)}
         </p>
+        {decision && (
+          <span className={cn('rounded-full px-2 py-0.5 text-xs font-semibold', decisionColor[decision.toLowerCase()] ?? 'bg-muted')}>
+            {decision}
+          </span>
+        )}
         <Button variant="ghost" size="icon-xs" aria-label="Close" onClick={onClose}>
           <XIcon />
         </Button>
       </div>
-      <div className="flex-1 space-y-4 overflow-y-auto p-4">
+      <div role="tablist" className="flex gap-1 border-b px-4">
+        {(['answer', 'reasoning', 'trace'] as const).map((t) => (
+          <button
+            key={t}
+            role="tab"
+            aria-selected={tab === t}
+            onClick={() => setTab(t)}
+            className={cn(
+              '-mb-px border-b-2 px-3 py-2 text-xs font-medium capitalize',
+              tab === t ? 'border-primary text-foreground' : 'border-transparent text-muted-foreground hover:text-foreground',
+            )}
+          >
+            {t}
+          </button>
+        ))}
+      </div>
+      <div className="flex-1 overflow-y-auto p-4">
         {s.isPending && <p className="text-muted-foreground">Loading…</p>}
         {s.isError && <p className="text-destructive">Couldn't load the answer: {errorMessage(s.error)}</p>}
-        {s.data && (
+        {tab === 'trace' ? (
           <>
-            <section className="space-y-1">
-              <h3 className="font-medium">ANSWER.md</h3>
-              <pre className="whitespace-pre-wrap rounded bg-muted p-3 font-mono text-xs">{s.data.answer_md}</pre>
-            </section>
-            <section className="space-y-1">
-              <h3 className="font-medium">REASONING.md</h3>
-              <pre className="whitespace-pre-wrap rounded bg-muted p-3 font-mono text-xs">{s.data.reasoning_md}</pre>
-            </section>
+            {events.isPending && <p className="text-muted-foreground">Loading…</p>}
+            {events.isError && <p className="text-destructive">Couldn't load the trace: {errorMessage(events.error)}</p>}
+            {events.data && (
+              <ol className="space-y-3 text-xs">
+                {events.data.map((e) => (
+                  <li key={e.seq}>
+                    <TraceLine e={e} />
+                  </li>
+                ))}
+              </ol>
+            )}
           </>
+        ) : (
+          s.data && <Markdown text={body} />
         )}
       </div>
     </div>
   )
+}
+
+const decisionColor: Record<string, string> = {
+  act: 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-400',
+  ask: 'bg-sky-500/15 text-sky-700 dark:text-sky-400',
+  wait: 'bg-amber-500/15 text-amber-700 dark:text-amber-400',
+  escalate: 'bg-red-500/15 text-red-700 dark:text-red-400',
 }
 
 type SessionEvent = components['schemas']['SessionEvent']
