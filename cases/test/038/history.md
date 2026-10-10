@@ -1,4 +1,4 @@
-# Case 038 history — Account confirmation available in the secure portal
+# Case 038 history — Account confirmation request via secure portal
 
 Total events: 2
 

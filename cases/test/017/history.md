@@ -1,4 +1,4 @@
-# Case 017 history — The Standing Order That Did Not Run
+# Case 017 history — Was My Rent Standing Order Sent?
 
 Total events: 2
 

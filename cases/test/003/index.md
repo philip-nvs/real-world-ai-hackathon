@@ -1,4 +1,4 @@
-# Case 003: Transfer Awaiting Authorisation
+# Case 003: Saved Transfer Without Sent Confirmation
 
 ## Case details
 

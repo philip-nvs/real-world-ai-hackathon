@@ -1,4 +1,4 @@
-# Case 010 history — Refund visible in the account
+# Case 010 history — Query about a possible supplier refund
 
 Total events: 2
 
