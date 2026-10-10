@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Bethan Hughes in the secure portal which standing order or orders she wants cancelled (Willow Yard Studios and Willowmere Lettings both match 'Willow') and to finish her cut-off message, without cancelling any instruction.

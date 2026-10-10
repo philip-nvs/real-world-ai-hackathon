@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates Fiona Kerr's £640.00 BudgetNest-initiated payment to K. Daventry to the fraud team as a possible account takeover, noting the payment-initiation consent was granted from a device first seen 11 minutes earlier, and tells her it is with the fraud team and that she can revoke BudgetNest's access through the secure consent process, without promising a refund or stating that fraud occurred.

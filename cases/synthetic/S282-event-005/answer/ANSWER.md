@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `wait`
+- Description: H&V leaves Tomasz Wilk's £725.00 → £760.00 Brightwater Lettings amendment pending his confirmation in the secure portal once incident INC-4470 is resolved, without applying the change on the strength of his email.

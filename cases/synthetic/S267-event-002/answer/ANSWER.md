@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's incoming-payment and returned-payment records for the £612.40 HMRC repayment of 9 January 2026 addressed to Priya Nandakumar's closed account ending 4410 (whether it was received, returned to HMRC or is held), without promising to move it to account 8823 or confirming any outcome not shown in the records.

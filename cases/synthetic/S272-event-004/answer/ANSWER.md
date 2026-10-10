@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers the £64.99 PixelVault Games payment of 12 February 2026 on Ben Ashworth's card ending 9912 with the card team as unrecognised and tells him it is registered and that his card can be protected (block and replacement) if he wants, without labelling it fraud or promising a refund.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent asks Colin Ashworth in the secure portal to confirm which standing order he wants changed and the new monthly amount, because the payee and amount were inaudible on the call, without preparing or applying any amendment from the partial transcript.

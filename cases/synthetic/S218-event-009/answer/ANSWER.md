@@ -1,0 +1,3 @@
+- Cut-off: event-009
+- Action: `act`
+- Description: The H&V service agent submits an internal request to the payment team to withdraw the duplicate return request HV-S218-2, created by the retry after the RQ-1188 timeout, keeping HV-S218 for the single £520.00 transfer PAY-80311, and tells Tamsin Hale that both references relate to the same one £520.00 transfer and only one request will stand, without saying the money will be returned.

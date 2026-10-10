@@ -1,0 +1,3 @@
+- Cut-off: event-014
+- Action: `escalate`
+- Description: The H&V service agent escalates case HV-S208 to a supervisor and logs a complaint, with a handover covering the £1,400.00 Ashdown Care Home standing-order run of 1 March recorded as 'Submitted to payments engine' (SOT-1207), the Payment Team (PT-3391) and Card team (CT-8812) tickets closed without investigation, six customer chases and the care home's 7-day final reminder, and asks who owns tracing that run, while telling Gwen Talbot a manager now has the case, without advising her to pay again or promising when the fees will arrive.

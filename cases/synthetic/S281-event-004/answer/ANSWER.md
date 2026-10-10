@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent checks the Direct Debit journal for Imogen Hartley's two £86.40 Northmere Energy collections of 1 December, links her case to incident INC-4412 and tells her in the secure portal, using the approved incident wording, that H&V is correcting the duplicate, without promising a refund date or advising her to cancel the mandate.

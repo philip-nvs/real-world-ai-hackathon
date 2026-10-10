@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers an ATM cash-dispute with the card team for Hannah Okafor's £200.00 withdrawal at terminal LDS-CNL-04 on 3 February, recording her report that only £100 was dispensed alongside the terminal's 'COMPLETE' status, and tells her it is registered without promising the £100 back or saying who is at fault.

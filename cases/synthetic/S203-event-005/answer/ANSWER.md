@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent submits an internal request to the payment team to investigate the second execution EXE-881377 (batch rerun SO-RUN-1208-R) of standing order SO-30215, and tells Imogen Hartley that H&V's journal shows two £250.00 payments sent to Fairbourne Nursery this morning for one scheduled run and that this is being investigated, without promising a refund, a timescale or that the nursery will return it.

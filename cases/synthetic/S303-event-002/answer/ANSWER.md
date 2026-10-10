@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Isla Brennan in the secure portal that H&V can confirm the £180.00 credit from F HOLLINS but cannot give tax advice on whether to declare it, and points her to HMRC guidance or a qualified adviser, without answering yes or no.

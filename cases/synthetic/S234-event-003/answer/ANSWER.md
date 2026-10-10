@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent escalates Nadine Brooks's profile to the fraud/security team as urgent, citing the 'Galaxy A54' device linked at 01:37 and the £0.01 transfer to new payee S Mertens at 01:52 that she denies, and tells her it is being handled by the security team, without dismissing it as 'only 1p', asking for her passcode or promising what the team will do.

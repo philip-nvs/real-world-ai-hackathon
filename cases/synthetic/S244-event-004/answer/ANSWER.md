@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Kezia Mwangi's verified instruction from event-002 to cancel the QuickFunds Direct continuous payment authority (merchant ID QFD-2291) on her debit card ending 5520, without giving debt advice or saying her debt to QuickFunds Direct is affected.

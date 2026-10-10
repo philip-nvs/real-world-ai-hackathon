@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent submits Priyanka Shah's verified instruction from event-003 to stop future LUMENSTREAM LTD recurring card payments on card ending 5521, and tells her it has been submitted, without promising a refund of the £11.99 or earlier charges or saying her Lumenstream contract is ended.

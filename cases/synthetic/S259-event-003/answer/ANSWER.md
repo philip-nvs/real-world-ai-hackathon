@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent opens the correspondence address-change process for Jordan Hale so that he can enter and confirm the St Brigid's Hostel address in the secure profile process, and reassures him that a hostel address can be used for correspondence, without changing the address on his behalf or suggesting his account is at risk.

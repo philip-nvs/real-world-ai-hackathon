@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `ask`
+- Description: The H&V service agent tells Tara Quinn in the secure portal that H&V's records show two £42.80 credits on 4 March 2026 (from 'NMH SETTLEMENTS', ref 8834201, and from 'J BARROW', ref 'cheers'), that neither is identified as a refund, and asks her for Northmere's refund reference or paying-account name so a match can be checked, without telling her either credit is the Northmere refund.

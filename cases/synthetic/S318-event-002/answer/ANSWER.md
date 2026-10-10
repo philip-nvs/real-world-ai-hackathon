@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V business support agent refers Simon Arkwright's emailed liquidation notice for Copperbeck Interiors Ltd to H&V's insolvency team for verification and handling, without sending balances or statements by email or changing account control.

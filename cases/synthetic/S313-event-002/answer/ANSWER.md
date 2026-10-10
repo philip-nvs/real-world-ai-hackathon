@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's payment journal for Beatrice Olawale's 28 November 2025 deposit payment to Fenwick Lettings and reports only H&V's recorded status and amount, without relying on the scanned letter's garbled '£1,2OO' or confirming receipt by the agent.

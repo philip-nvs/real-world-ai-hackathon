@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent asks H&V's statements service to place Edith Marsh's January 2026 current account statement in Simon Pell's verified deputy secure-portal access under the registered deputyship order, without sending it by email or to anyone else.

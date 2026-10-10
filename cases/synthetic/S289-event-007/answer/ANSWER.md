@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `act`
+- Description: The H&V service agent asks H&V Complaints by internal request to link CMP-30894 and CMP-30902 to CMP-30871 as one complaint about the £15.00 fee of 22 January, and tells Desmond Achebe in the secure portal that one complaint (CMP-30871) is being handled, without promising a refund or an outcome.

@@ -1,0 +1,3 @@
+- Cut-off: event-008
+- Action: `escalate`
+- Description: The H&V service agent escalates HV-S336 to the Payment Team and payment operations, because the portal and journal say SENT while trace TR-61207 says the instruction was never released from H&V's queue and the screening fields came back empty, and tells Felix Brandt that H&V is investigating the payment's status and that a second payment shouldn't be sent while the first is unresolved, without re-sending, cancelling or explaining any compliance reason.

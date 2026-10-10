@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `escalate`
+- Description: The H&V service agent escalates transfer HV-S232 to the Payment Team for reconciliation, setting out that the portal shows Returned, the journal shows Rejected with no credit back, and trace TR-60412 shows a recall RC-1189 with no linked customer instruction, and tells Amir Haddad the £780.00 is being investigated without stating where the money is, when it will come back, or which status is right.

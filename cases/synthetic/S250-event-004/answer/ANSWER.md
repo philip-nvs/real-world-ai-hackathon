@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates Nasreen Akhtar's call to H&V's vulnerable customer and fraud team, recording that her nephew Farhan answered for her, that she said 'I don't know him' about the £3,000 payee Kamran Bhatti, and that a professional Urdu interpreter is needed to hear her own wishes, and takes no action on the payment on Farhan's word.

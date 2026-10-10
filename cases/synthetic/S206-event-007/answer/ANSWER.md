@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `act`
+- Description: The H&V service agent tells Conor Lightfoot in the secure portal that H&V's journal shows payment PAY-61200 was returned by the recipient bank on 9 January because the account details did not match and the £1,250.00 was credited back to his account (RTN-61200), correcting the earlier message that wrongly said Hawthorn Joinery had received it, without sending a new payment or telling him to pay again.

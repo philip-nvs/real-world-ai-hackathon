@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's mandate register for any Direct Debit set-up instruction from Eastmere Energy on Daniel Okoro's account and its recorded status, without accepting the energy company's statement that H&V rejected it or blaming either party.

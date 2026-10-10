@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Imogen Fairley, using the journal's permitted wording, that the beneficiary's bank returned the US$1,500.00 payment because it could not apply it to the account details provided, and that the £37.00 difference comes from the two recorded conversions (1.2643 out, 1.3050 back), offering to register a review if she disputes it, without promising compensation.

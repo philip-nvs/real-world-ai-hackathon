@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V service agent reopens case HV-S214 and tells Bethan Ashby that H&V's incoming-payment journal shows a £208.40 credit from Cobalt Travel on 2 February with her reference CBT-90551, and a separate £104.00 Cobalt credit on 29 January (CBT-90410) that H&V cannot confirm is part of the same refund, without saying the full £312.40 refund has been received.

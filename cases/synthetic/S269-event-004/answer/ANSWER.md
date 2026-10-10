@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent registers a card-team case for the 11 APP STORE*GALAXYBRICKS payments totalling £340.00 on Hannah Moss's card ending 5106, recording her account that her son may have used her phone and the journal's registered-device authentication, and tells her it is registered, without declaring fraud, refusing on the basis of the device evidence or promising a refund.

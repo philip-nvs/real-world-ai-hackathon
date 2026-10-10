@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent registers a card-team dispute for Imogen Hart's £186.00 Kelso Home payment of 4 January 2026, noting in the request that her uploaded email thread includes a 9 January reply confirming receipt of order KH-55102 as well as her later non-receipt complaints, and tells her it is registered, without accusing her, deciding the dispute or promising a refund.

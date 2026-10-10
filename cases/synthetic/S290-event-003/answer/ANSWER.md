@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks the standing-order journal for the current status of Fiona Gallagher's £35.00 Kestrel Gym standing order before confirming anything to her, because the earlier note claims a cancellation but no instruction-process confirmation is recorded.

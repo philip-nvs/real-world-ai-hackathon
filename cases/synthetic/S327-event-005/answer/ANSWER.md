@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent checks H&V's standing-order journal for the next scheduled run date of Lena Novak's monthly standing order to Pinewood Nursery, without raising any fraud or security concern or changing the instruction.

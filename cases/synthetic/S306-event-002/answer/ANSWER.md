@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Nadia Okafor through the secure portal whether '07/08' means 7 August 2025 or 8 July 2025, since both dates hold a £64.00 Ravenscourt Florist payment, before registering anything with the card team.

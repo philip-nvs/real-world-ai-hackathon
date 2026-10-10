@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the 4 January 2026 Hotel Lumen card payment and the £3.20 fee against the H&V tariff in force on its processing date, without opening a fraud case, blocking the card or promising a refund.

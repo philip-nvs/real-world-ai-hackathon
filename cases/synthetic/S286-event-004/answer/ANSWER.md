@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Ruth Okafor in the secure portal that the 19 December £320.00 Larchfield Nursery run is already being processed and can't be moved, and offers to send a date change for future runs for her secure confirmation, without changing or cancelling anything now.

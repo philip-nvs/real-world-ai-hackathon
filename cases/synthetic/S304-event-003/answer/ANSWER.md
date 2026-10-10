@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent asks Rosalind Ashworth through the secure portal to confirm the exact spelling she wants (her chat signature reads 'Ashworth' but on the call she gave 'Ashwroth'), before referring any correction to the data team, and does not change the profile.

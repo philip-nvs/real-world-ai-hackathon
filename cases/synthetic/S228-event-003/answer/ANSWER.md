@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks the payment journal for Ruth Calder's €3,000.00 payment to Hôtel Belvaux SARL for the amount sent, the charging option recorded (e.g. SHA/OUR) and any H&V fee, without sending €25 on her behalf, contacting the hotel or saying who deducted the difference.

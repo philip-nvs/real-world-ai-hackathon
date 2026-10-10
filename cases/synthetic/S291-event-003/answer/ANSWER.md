@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent escalates the unrecognised £950.00 credit from R TALBOT and the SMS asking for it to be sent to a different account to H&V's financial crime team, and tells Kofi Mensah not to move the money while H&V looks into it, without sending any funds to the texted account.

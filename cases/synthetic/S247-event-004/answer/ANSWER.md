@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates Imran Saleh's request to H&V's accessibility/reasonable-adjustments team, explaining that his screen reader cannot complete the secure-portal confirmation of the £520.00 to £560.00 standing-order change to Greenhaven Housing before the 1 February 2026 run, so an accessible confirmation route can be arranged, and tells Imran this is being arranged, without applying the change from the call alone or telling him to get someone else to confirm it.

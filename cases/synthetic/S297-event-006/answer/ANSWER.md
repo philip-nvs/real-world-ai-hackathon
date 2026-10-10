@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `escalate`
+- Description: The H&V service agent escalates Lorna McBride's profile to H&V's security team as a possible account takeover, because the address confirmation came from an Android tablet she says she doesn't own using her password and SMS code, and tells her it has been passed on, without simply reverting the address or treating the earlier confirmation as hers.

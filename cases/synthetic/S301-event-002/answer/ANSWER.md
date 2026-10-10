@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's payment journal for the recorded status of Rhian Pryce's £275.00 transfer HV-S301 to Tŷ Gwydr Glass Studio and replies in Welsh (or bilingually) with only what the journal shows, without confirming that the studio has received it.

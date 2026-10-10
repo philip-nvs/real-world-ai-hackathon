@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Yasmin Haddad in the secure portal that card ending 2290 was blocked as lost, which is permanent, so it can't be unblocked, and offers to order a replacement if she wants one, without submitting any unblock instruction.

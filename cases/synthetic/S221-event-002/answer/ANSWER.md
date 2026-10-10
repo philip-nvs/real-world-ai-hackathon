@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the card authorisation journal for card ending 3318 to establish whether the £300.00 Larchmont Hotel entry is a pending check-in authorisation hold rather than a second posted charge, without raising a dispute, promising a refund or saying when the hold will drop.
