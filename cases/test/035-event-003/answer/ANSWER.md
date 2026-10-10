@@ -1,3 +1,3 @@
 - Cut-off: event-003
-- Action: `escalate`
-- Description: The H&V service agent takes no further action after registering the review with the Tariff Team; the next event is the H&V request log confirming that Mara Ellison's request (HV-035) for review of the £4.50 paper statement fee dated 18 June 2025 was registered and routed to the Tariff Team.
+- Action: `wait`
+- Description: The H&V service agent has already registered Mara Ellison's review request for the £4.50 paper statement fee with the Tariff Team, so it waits for the H&V request log to confirm registration and routing.
