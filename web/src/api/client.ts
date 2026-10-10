@@ -3,7 +3,8 @@ import createClient from 'openapi-react-query'
 import type { paths } from './schema'
 
 // Vite proxies /api to the FastAPI server (see vite.config.ts).
-export const api = createClient(createFetchClient<paths>({ baseUrl: '/api' }))
+export const fetchClient = createFetchClient<paths>({ baseUrl: '/api' })
+export const api = createClient(fetchClient)
 
 // FastAPI errors are { detail: string | validation-error[] }.
 export const errorMessage = (err: unknown) => {

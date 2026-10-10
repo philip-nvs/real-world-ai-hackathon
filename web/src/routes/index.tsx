@@ -1,9 +1,9 @@
 import { useRef, useState, type DragEvent } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
-import { useQueryClient } from '@tanstack/react-query'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { ChevronRightIcon, FileIcon, FolderUpIcon, PlayIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
 import { cn } from 'cn'
-import { api, errorMessage } from '@/api/client'
+import { api, errorMessage, fetchClient } from '@/api/client'
 import type { components } from '@/api/schema'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
@@ -31,6 +31,20 @@ async function walk(entry: FileSystemEntry): Promise<Entry[]> {
   return (await Promise.all(children.map(walk))).flat()
 }
 
+// Every folder holding an index.md is a case (as in run.py); a file goes to its deepest one, sent as
+// `<folder name>/<path inside it>` so the server takes the folder name as the case id.
+// Fewer than two such folders: everything is one case, as before.
+function splitCases(entries: Entry[]): Entry[][] {
+  const dirs = entries.map((e) => e.path.match(/^(.+\/)index\.md$/)?.[1]).filter((d) => d !== undefined)
+  if (dirs.length < 2) return [entries]
+  const groups = new Map(dirs.map((d) => [d, [] as Entry[]]))
+  for (const e of entries) {
+    const dir = dirs.filter((d) => e.path.startsWith(d)).sort((a, b) => b.length - a.length)[0]
+    if (dir) groups.get(dir)!.push({ ...e, path: dir.split('/').at(-2) + '/' + e.path.slice(dir.length) })
+  }
+  return [...groups.values()]
+}
+
 const formatSize = (bytes: number) =>
   bytes < 1024 ? `${bytes} B` : bytes < 1024 ** 2 ? `${(bytes / 1024).toFixed(1)} KB` : `${(bytes / 1024 ** 2).toFixed(1)} MB`
 
@@ -45,8 +59,19 @@ function Index() {
   const refreshCases = () => queryClient.invalidateQueries({ queryKey: api.queryOptions('get', '/cases').queryKey })
   const cases = api.useQuery('get', '/cases')
   const remove = api.useMutation('delete', '/cases/{case_id}', { onSuccess: refreshCases })
-  const uploadCase = api.useMutation('post', '/cases', {
-    onSuccess: () => (setEntries([]), setCaseId(''), refreshCases()),
+  // One POST per case, in turn; cases uploaded before a failure stay uploaded.
+  const uploadCase = useMutation({
+    mutationFn: async (bodies: FormData[]) => {
+      const done = []
+      for (const body of bodies) {
+        const { data, error } = await fetchClient.POST('/cases', { body: body as never })
+        if (error) throw error
+        done.push(data)
+      }
+      return done
+    },
+    onSuccess: () => (setEntries([]), setCaseId('')),
+    onSettled: refreshCases,
   })
   const uploading = uploadCase.isPending
 
@@ -68,10 +93,14 @@ function Index() {
 
   const upload = () => {
     // Each part's filename is its path inside the case; openapi-fetch sends FormData as-is.
-    const body = new FormData()
-    for (const { path, file } of entries) body.append('files', file, path)
-    if (caseId.trim()) body.append('case_id', caseId.trim())
-    uploadCase.mutate({ body: body as never })
+    const groups = splitCases(entries)
+    const bodies = groups.map((group) => {
+      const body = new FormData()
+      for (const { path, file } of group) body.append('files', file, path)
+      if (groups.length === 1 && caseId.trim()) body.append('case_id', caseId.trim())
+      return body
+    })
+    uploadCase.mutate(bodies)
   }
 
   const total = entries.reduce((n, e) => n + e.file.size, 0)
@@ -81,7 +110,7 @@ function Index() {
       <Card className="w-full max-w-lg">
         <CardHeader>
           <CardTitle>Upload a case</CardTitle>
-          <CardDescription>A case folder (with its index.md, history.md and attachments) or individual files.</CardDescription>
+          <CardDescription>A case folder (with its index.md, history.md and attachments), a folder of case folders, or individual files.</CardDescription>
         </CardHeader>
 
         <CardContent className="space-y-4">
@@ -146,7 +175,7 @@ function Index() {
           )}
 
           <label className="block space-y-1 text-sm">
-            <span className="text-muted-foreground">Case id (optional for a single folder)</span>
+            <span className="text-muted-foreground">Case id (optional; ignored for several cases)</span>
             <input
               value={caseId}
               onChange={(e) => setCaseId(e.target.value)}
@@ -157,7 +186,9 @@ function Index() {
 
           {uploadCase.isSuccess && (
             <p className="text-sm text-muted-foreground">
-              Uploaded case <span className="font-mono">{uploadCase.data.id}</span> ({uploadCase.data.files.length} files).
+              Uploaded {uploadCase.data.length > 1 ? 'cases' : 'case'}{' '}
+              <span className="font-mono">{uploadCase.data.map((c) => c.id).join(', ')}</span> (
+              {uploadCase.data.reduce((n, c) => n + c.files.length, 0)} files).
             </p>
           )}
           {uploadCase.isError && <p className="text-sm text-destructive">Upload failed: {errorMessage(uploadCase.error)}</p>}
