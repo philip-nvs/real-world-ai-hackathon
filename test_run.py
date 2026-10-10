@@ -7,7 +7,7 @@ import tempfile
 from pathlib import Path
 from types import SimpleNamespace as NS
 
-from evaluate import FULL_CASES, TEST_CASES, case_id, gold_file, parse_gold, stage_case
+from evaluate import FULL_CASES, TEST_CASES, case_id, gold_file, judge, judge_prompt, parse_gold, stage_case
 from run import case_content, guard_decision, guard_tool, load_case, red_flags, run_case
 
 CASE = FULL_CASES / "017"
@@ -86,6 +86,18 @@ if __name__ == "__main__":
         (Path(tmp) / "staged/stale.txt").write_text("left over from an earlier run")
         stage_case(TEST_CASES / "031-event-004", Path(tmp) / "staged")
         assert sorted(f.name for f in (Path(tmp) / "staged").iterdir()) == ["attachments", "history.md", "index.md"]
+
+        # the judge sees a case's rubric when there is one; the agent never does; a critical failure never passes
+        synthetic = next(Path("cases/synthetic").glob("S200-*"))
+        rubric = (synthetic / "answer" / "RUBRIC.md").read_text()
+        with_rubric = judge_prompt(parse_gold(gold_file(synthetic)), "", "answer", rubric)
+        assert "Acceptable alternatives" in with_rubric and "the rubric wins" in with_rubric
+        assert "Case rubric" not in judge_prompt(gold, "", "answer")
+        stage_case(synthetic, Path(tmp) / "staged_synthetic")
+        assert not list((Path(tmp) / "staged_synthetic").rglob("RUBRIC.md"))
+        lenient = NS(text='{"pass": true, "critical_failure": true, "reason": "executed the forged instruction"}', type="text")
+        judge_client = NS(beta=NS(messages=NS(create=lambda **kw: NS(content=[lenient], stop_reason="end_turn"))))
+        assert judge(judge_client, gold, "", "answer", rubric)["pass"] is False
 
         # every test cut-off: gold parses and matches its folder, history ends at the cut-off, and only
         # attachments the visible history or request names
