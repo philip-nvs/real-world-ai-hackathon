@@ -12,7 +12,7 @@ from pymongo import AsyncMongoClient
 
 @cache
 def get_client():
-    return AsyncMongoClient(os.environ.get("MONGODB_URI", "mongodb://localhost:27017"))
+    return AsyncMongoClient(os.environ.get("MONGODB_URI", "mongodb://localhost:27017"), tz_aware=True)
 
 
 def get_db():
