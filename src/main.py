@@ -1,10 +1,12 @@
+import io
 import mimetypes
+import zipfile
 from contextlib import asynccontextmanager
 from datetime import UTC, datetime
 from pathlib import PurePosixPath
 from uuid import uuid4
 
-from fastapi import FastAPI, Form, HTTPException, UploadFile
+from fastapi import FastAPI, Form, HTTPException, Query, UploadFile
 from fastapi.responses import Response
 
 from src.agent.sessions import start_session
@@ -142,3 +144,22 @@ async def get_session_events(session_id: str, after: int = -1):
         raise HTTPException(404, "session not found")
     cursor = get_db().session_events.find({"session_id": session_id, "seq": {"$gt": after}}, {"_id": 0, "session_id": 0})
     return [e async for e in cursor.sort("seq")]
+
+
+@app.get("/export")
+async def export_answers(case_id: list[str] = Query()):
+    """Zip of <case>/ANSWER.md and REASONING.md from each case's newest done session, like run.py's ANSWERS/."""
+    buf, found = io.BytesIO(), 0
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+        for cid in dict.fromkeys(case_id):
+            s = await get_db().sessions.find_one({"case_id": cid, "status": "done"}, sort=[("created_at", -1)])
+            if not s:
+                continue
+            found += 1
+            name = cid.replace("/", "_").replace("\\", "_").lstrip(".") or "case"  # keep entries inside the zip
+            z.writestr(f"{name}/ANSWER.md", s["answer_md"])
+            z.writestr(f"{name}/REASONING.md", s["reasoning_md"])
+    if not found:
+        raise HTTPException(404, "none of these cases has a finished session")
+    return Response(buf.getvalue(), media_type="application/zip",
+                    headers={"Content-Disposition": 'attachment; filename="ANSWERS.zip"'})

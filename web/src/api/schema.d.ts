@@ -395,6 +395,53 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/export": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Download the answers for some cases as a zip
+         * @description For each `case_id`, the newest `done` session's ANSWER.md and REASONING.md, stored as
+         *     `<case_id>/ANSWER.md` and `<case_id>/REASONING.md` (the same layout as `run.py --out`).
+         *     Cases without a done session are left out. `/`, `\` and leading dots in a case id are replaced or stripped
+         *     so every entry stays inside the zip.
+         */
+        get: {
+            parameters: {
+                query: {
+                    /** @description Repeat for each case, e.g. `?case_id=001&case_id=002`. */
+                    case_id: string[];
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description ANSWERS.zip */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/zip": string;
+                    };
+                };
+                404: components["responses"]["Error"];
+                422: components["responses"]["Error"];
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {

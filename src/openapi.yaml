@@ -179,6 +179,35 @@ paths:
         "404":
           $ref: "#/components/responses/Error"
 
+  /export:
+    get:
+      summary: Download the answers for some cases as a zip
+      description: |
+        For each `case_id`, the newest `done` session's ANSWER.md and REASONING.md, stored as
+        `<case_id>/ANSWER.md` and `<case_id>/REASONING.md` (the same layout as `run.py --out`).
+        Cases without a done session are left out. `/`, `\` and leading dots in a case id are replaced or stripped
+        so every entry stays inside the zip.
+      parameters:
+        - name: case_id
+          in: query
+          required: true
+          style: form
+          explode: true
+          description: Repeat for each case, e.g. `?case_id=001&case_id=002`.
+          schema:
+            type: array
+            items: {type: string}
+      responses:
+        "200":
+          description: ANSWERS.zip
+          content:
+            application/zip:
+              schema: {type: string, format: binary}
+        "404":
+          $ref: "#/components/responses/Error"
+        "422":
+          $ref: "#/components/responses/Error"
+
 components:
   parameters:
     CaseId:

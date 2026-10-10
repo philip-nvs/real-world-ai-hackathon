@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type DragEvent } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { useQueryClient } from '@tanstack/react-query'
-import { ChevronRightIcon, FileIcon, FolderUpIcon, PlayIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
+import { ChevronRightIcon, DownloadIcon, FileIcon, FolderUpIcon, PlayIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
 import { cn } from 'cn'
 import { api, errorMessage } from '@/api/client'
 import type { components } from '@/api/schema'
@@ -40,6 +40,7 @@ function Index() {
   const [caseId, setCaseId] = useState('')
   // Bumped by "Play all"; every row starts a session when it changes.
   const [playAll, setPlayAll] = useState(0)
+  const [exportError, setExportError] = useState('')
   const fileInput = useRef<HTMLInputElement>(null)
   const folderInput = useRef<HTMLInputElement>(null)
 
@@ -74,6 +75,18 @@ function Index() {
     for (const { path, file } of entries) body.append('files', file, path)
     if (caseId.trim()) body.append('case_id', caseId.trim())
     uploadCase.mutate({ body: body as never })
+  }
+
+  // fetch rather than a plain link so a 404 shows here instead of downloading as a broken file
+  const exportAnswers = async () => {
+    setExportError('')
+    const res = await fetch(`/api/export?${new URLSearchParams(cases.data?.map((c) => ['case_id', c.id]))}`)
+    if (!res.ok) return setExportError(errorMessage(await res.json().catch(() => res.statusText)))
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(await res.blob())
+    a.download = 'ANSWERS.zip'
+    a.click()
+    URL.revokeObjectURL(a.href)
   }
 
   const total = entries.reduce((n, e) => n + e.file.size, 0)
@@ -183,9 +196,14 @@ function Index() {
       <Card className="w-full max-w-lg">
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle>Cases</CardTitle>
-          <Button variant="outline" size="sm" disabled={!cases.data?.length} onClick={() => setPlayAll((n) => n + 1)}>
-            <PlayIcon /> Play all
-          </Button>
+          <div className="flex gap-2">
+            <Button variant="outline" size="sm" disabled={!cases.data?.length} onClick={exportAnswers}>
+              <DownloadIcon /> Export all
+            </Button>
+            <Button variant="outline" size="sm" disabled={!cases.data?.length} onClick={() => setPlayAll((n) => n + 1)}>
+              <PlayIcon /> Play all
+            </Button>
+          </div>
         </CardHeader>
         <CardContent className="text-sm">
           {cases.isPending && <p className="text-muted-foreground">Loading…</p>}
@@ -206,13 +224,20 @@ function Index() {
             </ul>
           )}
           {remove.isError && <p className="mt-2 text-destructive">Delete failed: {errorMessage(remove.error)}</p>}
+          {exportError && <p className="mt-2 text-destructive">Export failed: {exportError}</p>}
         </CardContent>
       </Card>
     </main>
   )
 }
 
-type CaseRowProps = { id: string; uploadedAt: string; deleting: boolean; playAll: number; onDelete: () => void }
+type CaseRowProps = {
+  id: string
+  uploadedAt: string
+  deleting: boolean
+  playAll: number
+  onDelete: () => void
+}
 
 // Expands to the case's files; they're only fetched once the row is opened.
 function CaseRow({ id, uploadedAt, deleting, playAll, onDelete }: CaseRowProps) {
