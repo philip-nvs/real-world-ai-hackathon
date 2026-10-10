@@ -63,9 +63,13 @@ portal (ask), and never offer a chat reply as a way to confirm it.
 - Prefer checking the specific record in H&V's own journal before telling the customer anything.
 - Cite the event IDs (e.g. event-003) you rely on and list conflicts between events.
 - Tool failures are facts: report them, never hide them.
+- If a tool reports the action as recorded but not executed (no live system is connected), the step counts as taken. \
+Decide on what the case shows; don't wait for, or invent, its result.
 - Messages to customers go through the secure portal only.
 
-Finish by calling submit_decision exactly once. If the policy guard rejects a call, fix the problem and try again."""
+Finish by calling submit_decision exactly once. Its next_action is the step H&V takes at this point in the case: the \
+action you just took with your tools, not what should happen after it. If the policy guard rejects a call, fix the \
+problem and try again."""
 
 DECISION_TOOL = {
     "name": "submit_decision",
@@ -78,7 +82,10 @@ DECISION_TOOL = {
                      "handover", "rejected_options", "final_result"],
         "properties": {
             "decision": {"type": "string", "enum": ["act", "ask", "wait", "escalate"]},
-            "next_action": {"type": "string", "description": "The single next action, one sentence."},
+            "next_action": {"type": "string", "description": "The step H&V takes at this point in the case, one "
+                            "sentence starting with the action, e.g. 'Check H&V's payment journal for ...'. For act or "
+                            "ask: the step you just took with your tools, not what happens after it. For wait: what "
+                            "is pending. For escalate: the hand-off."},
             "evidence": {"type": "array", "items": {
                 "type": "object", "additionalProperties": False, "required": ["event_id", "fact"],
                 "properties": {"event_id": {"type": "string"}, "fact": {"type": "string"}}}},
@@ -308,8 +315,13 @@ def write_answer(out_dir, case, d, state):
     request = section(case["index"], "Initial request") or "(no initial request section found)"
     did = [f"`{x['tool']}` → {x['input'].get('system') or x['input'].get('team') or x['input'].get('recipient')}: "
            f"{x['input'].get('query') or x['input'].get('request') or x['input'].get('instruction') or x['input'].get('message')} "
-           f"({x['output'].get('status')}{', ' + x['output']['reference'] if 'reference' in x['output'] else ''})"
+           f"({x['output'].get('status')}{', ' + x['output']['reference'] if 'reference' in x['output'] else ''}"
+           f"{', not executed' if x['output'].get('executed') is False else ''})"
            for x in state["executed"]]
+    not_executed = [x for x in state["executed"] if x["output"].get("executed") is False]
+    if not_executed:
+        did.append("No live H&V system is connected, so these actions are recorded as the system's next steps and "
+                   "were not executed; no results came back.")
     failed = state["failures"] + [f"Policy guard blocked `{b['tool']}`: {'; '.join(b['problems'])}" for b in state["blocked"]]
     received = (f"{request}\n\n{len(case['events'])} events; attachments: "
                 f"{', '.join(a.name for a in case['attachments']) or 'none'}.")
@@ -340,7 +352,8 @@ def write_answer(out_dir, case, d, state):
 {d['final_result']}
 """
     if d["customer_message"]:
-        answer += f"\nMessage to the customer (secure portal):\n\n> {d['customer_message']}\n"
+        unsent = any(x["tool"] == "send_secure_message" for x in not_executed)
+        answer += f"\nMessage to the customer (secure portal{', recorded, not sent' if unsent else ''}):\n\n> {d['customer_message']}\n"
     reasoning = f"""# Case {case['id']}: reasoning
 
 ## Evidence relied on
