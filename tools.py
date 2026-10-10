@@ -73,7 +73,10 @@ TOOL_SCHEMAS = [
     },
     {
         "name": "send_secure_message",
-        "description": "Send a message to the customer through the bank's secure portal. Never by email.",
+        "description": "Send a message to the customer through the bank's secure portal. Never by email. Before sending, check "
+        "each statement against this case's history and tool results: say nothing they don't support, at the same "
+        "strength; a check that came back not found or failed supports nothing; include what the outcome does not "
+        "mean.",
         "input_schema": _schema({"recipient": "Customer or business user name", "message": "The message text"}),
     },
 ]
