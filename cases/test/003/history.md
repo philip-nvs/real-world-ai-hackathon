@@ -1,4 +1,4 @@
-# Case 003 history — Transfer Awaiting Authorisation
+# Case 003 history — Saved Transfer Without Sent Confirmation
 
 Total events: 2
 

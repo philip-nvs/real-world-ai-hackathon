@@ -1,4 +1,4 @@
-# Case 010: Refund visible in the account
+# Case 010: Query about a possible supplier refund
 
 ## Case details
 

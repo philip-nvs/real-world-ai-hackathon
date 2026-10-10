@@ -1,4 +1,4 @@
-# Case 017: The Standing Order That Did Not Run
+# Case 017: Was My Rent Standing Order Sent?
 
 ## Case details
 

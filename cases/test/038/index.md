@@ -1,4 +1,4 @@
-# Case 038: Account confirmation available in the secure portal
+# Case 038: Account confirmation request via secure portal
 
 ## Case details
 

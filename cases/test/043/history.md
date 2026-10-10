@@ -1,4 +1,4 @@
-# Case 043 history — Waiting for the Second Signatory
+# Case 043 history — Payroll Package Status After First Consent
 
 Total events: 2
 

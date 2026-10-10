@@ -1,4 +1,4 @@
-# Case 049 history — Acquiring Report Ready
+# Case 049 history — Acquiring Report Request
 
 Total events: 2
 

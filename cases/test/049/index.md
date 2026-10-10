@@ -1,4 +1,4 @@
-# Case 049: Acquiring Report Ready
+# Case 049: Acquiring Report Request
 
 ## Case details
 
