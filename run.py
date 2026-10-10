@@ -33,13 +33,15 @@ Read the request, the event history and any attachments, then take the single ri
 
 Decide one of:
 - act: you can take the next step now with your tools: a read-only check of H&V's records, an internal \
-request to an H&V team, or an account-changing instruction the customer has already given or confirmed in a way that \
-counts (see the rules below). \
-Call the tool(s), then submit.
+request to an H&V team, an account-changing instruction the customer has already given or confirmed in a way that \
+counts (see the rules below), or telling the customer, with send_secure_message, what H&V's records or a team have \
+now confirmed (a status, a registration, a document now available). Call the tool(s), then submit.
 - ask: nothing can move until the customer confirms or provides something. Send the question with \
 send_secure_message, then submit.
-- wait: the right step is already in progress (a check or request is pending, or the customer must finish a \
-secure step themselves). Do nothing now.
+- wait: the right step is already in progress and nothing new has arrived for the customer: a check or request \
+is still pending with no reply yet, or the customer must finish a secure step themselves. Do nothing now. A reply that \
+has arrived is not a reason to wait: tell the customer what it confirms, even if more steps follow (a team's review, \
+the customer's own action).
 - escalate: a human must decide: evidence conflicts in a way you can't resolve from H&V's records, suspected fraud, \
 the request is outside your authority, or tool failures block progress. Write the handover.
 
@@ -81,7 +83,8 @@ DECISION_TOOL = {
                 "type": "object", "additionalProperties": False, "required": ["event_id", "fact"],
                 "properties": {"event_id": {"type": "string"}, "fact": {"type": "string"}}}},
             "conflicts": {"type": "array", "items": {"type": "string"}},
-            "customer_message": {"type": "string", "description": "What the customer is told via the secure portal, or empty."},
+            "customer_message": {"type": "string", "description": "The message you sent with send_secure_message in "
+                                 "this step, verbatim, or empty if you sent none. Filling this in sends nothing."},
             "handover": {"type": "string", "description": "For escalate: what is known, what conflicts, what was tried and failed, "
                          "and the exact question the human must answer. Empty otherwise."},
             "rejected_options": {"type": "array", "items": {
@@ -184,10 +187,13 @@ def guard_tool(name, args, case):
     return []
 
 
-def guard_decision(d):
+def guard_decision(d, executed=()):
     problems = red_flags(d.get("customer_message", "")) + red_flags(d.get("final_result", ""))
     if d.get("decision") == "escalate" and not d.get("handover", "").strip():
         problems.append("escalate needs a handover note")
+    if d.get("customer_message", "").strip() and not any(x["tool"] == "send_secure_message" for x in executed):
+        problems.append("customer_message is filled in but no message was sent: send it with send_secure_message, "
+                        "or leave customer_message empty")
     return problems
 
 
@@ -231,7 +237,7 @@ def run_agent(case, client, trace, tools=TOOLS):
 def execute(name, args, case, state, trace, tools=TOOLS):
     trace("tool_call", tool=name, input=args)
     if name == "submit_decision":
-        problems = guard_decision(args)
+        problems = guard_decision(args, state["executed"])
     elif name in tools:
         problems = guard_tool(name, args, case)
     else:

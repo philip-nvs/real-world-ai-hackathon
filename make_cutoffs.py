@@ -118,6 +118,10 @@ The description is one specific sentence naming the customer, the record, team o
 - Action: `{curated['action']}`
 - Description: {curated['description']}
 
+When a system or team reply has just arrived and the next real event tells the customer what it confirms (a status, \
+a registration, a document now available), that message is H&V's next step even if a team sends it in its own name: \
+the action is act, telling the customer exactly what the reply confirms and nothing more.
+
 Set usable to false if no decision is needed from H&V at this cut-off or the right step can't be determined; give \
 the reason either way."""
     resp = call_claude(client, messages=[{"role": "user", "content": prompt}],
