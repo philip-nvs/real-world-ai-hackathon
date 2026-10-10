@@ -1,17 +1,15 @@
 import { useRef, useState, type DragEvent } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
-import { FileIcon, FolderUpIcon, UploadIcon, XIcon } from 'lucide-react'
+import { useQueryClient } from '@tanstack/react-query'
+import { FileIcon, FolderUpIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
 import { cn } from 'cn'
+import { api, errorMessage } from '@/api/client'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const Route = createFileRoute('/')({ component: Index })
 
-// ponytail: endpoint TBC; files go up as one multipart form, field "files", filename = path inside the case
-const UPLOAD_URL = '/api/cases/upload'
-
 type Entry = { path: string; file: File }
-type Status = { kind: 'idle' | 'uploading' | 'done' } | { kind: 'error'; message: string }
 
 const fromFiles = (files: FileList | null): Entry[] =>
   Array.from(files ?? [], (file) => ({ path: file.webkitRelativePath || file.name, file }))
@@ -38,12 +36,21 @@ const formatSize = (bytes: number) =>
 function Index() {
   const [entries, setEntries] = useState<Entry[]>([])
   const [dragging, setDragging] = useState(false)
-  const [status, setStatus] = useState<Status>({ kind: 'idle' })
+  const [caseId, setCaseId] = useState('')
   const fileInput = useRef<HTMLInputElement>(null)
   const folderInput = useRef<HTMLInputElement>(null)
 
+  const queryClient = useQueryClient()
+  const refreshCases = () => queryClient.invalidateQueries({ queryKey: api.queryOptions('get', '/cases').queryKey })
+  const cases = api.useQuery('get', '/cases')
+  const remove = api.useMutation('delete', '/cases/{case_id}', { onSuccess: refreshCases })
+  const uploadCase = api.useMutation('post', '/cases', {
+    onSuccess: () => (setEntries([]), setCaseId(''), refreshCases()),
+  })
+  const uploading = uploadCase.isPending
+
   const add = (next: Entry[]) => {
-    setStatus({ kind: 'idle' })
+    uploadCase.reset()
     setEntries((prev) => {
       const byPath = new Map(prev.map((e) => [e.path, e]))
       for (const e of next) byPath.set(e.path, e)
@@ -58,24 +65,18 @@ function Index() {
     add((await Promise.all(roots.map(walk))).flat())
   }
 
-  const upload = async () => {
-    setStatus({ kind: 'uploading' })
+  const upload = () => {
+    // Each part's filename is its path inside the case; openapi-fetch sends FormData as-is.
     const body = new FormData()
     for (const { path, file } of entries) body.append('files', file, path)
-    try {
-      const res = await fetch(UPLOAD_URL, { method: 'POST', body })
-      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`)
-      setStatus({ kind: 'done' })
-      setEntries([])
-    } catch (err) {
-      setStatus({ kind: 'error', message: err instanceof Error ? err.message : String(err) })
-    }
+    if (caseId.trim()) body.append('case_id', caseId.trim())
+    uploadCase.mutate({ body: body as never })
   }
 
   const total = entries.reduce((n, e) => n + e.file.size, 0)
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-muted/30 p-4">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-muted/30 p-4">
       <Card className="w-full max-w-lg">
         <CardHeader>
           <CardTitle>Upload a case</CardTitle>
@@ -143,8 +144,22 @@ function Index() {
             </ul>
           )}
 
-          {status.kind === 'done' && <p className="text-sm text-muted-foreground">Uploaded.</p>}
-          {status.kind === 'error' && <p className="text-sm text-destructive">Upload failed: {status.message}</p>}
+          <label className="block space-y-1 text-sm">
+            <span className="text-muted-foreground">Case id (optional for a single folder)</span>
+            <input
+              value={caseId}
+              onChange={(e) => setCaseId(e.target.value)}
+              placeholder="Defaults to the folder name"
+              className="w-full rounded-md border bg-background px-3 py-1.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            />
+          </label>
+
+          {uploadCase.isSuccess && (
+            <p className="text-sm text-muted-foreground">
+              Uploaded case <span className="font-mono">{uploadCase.data.id}</span> ({uploadCase.data.files.length} files).
+            </p>
+          )}
+          {uploadCase.isError && <p className="text-sm text-destructive">Upload failed: {errorMessage(uploadCase.error)}</p>}
         </CardContent>
 
         <CardFooter className="justify-between gap-2">
@@ -152,14 +167,45 @@ function Index() {
             {entries.length ? `${entries.length} file${entries.length > 1 ? 's' : ''} · ${formatSize(total)}` : 'Nothing selected'}
           </span>
           <div className="flex gap-2">
-            <Button variant="ghost" disabled={!entries.length || status.kind === 'uploading'} onClick={() => setEntries([])}>
+            <Button variant="ghost" disabled={!entries.length || uploading} onClick={() => setEntries([])}>
               Clear
             </Button>
-            <Button disabled={!entries.length || status.kind === 'uploading'} onClick={upload}>
-              {status.kind === 'uploading' ? 'Uploading…' : 'Upload'}
+            <Button disabled={!entries.length || uploading} onClick={upload}>
+              {uploading ? 'Uploading…' : 'Upload'}
             </Button>
           </div>
         </CardFooter>
+      </Card>
+
+      <Card className="w-full max-w-lg">
+        <CardHeader>
+          <CardTitle>Cases</CardTitle>
+        </CardHeader>
+        <CardContent className="text-sm">
+          {cases.isPending && <p className="text-muted-foreground">Loading…</p>}
+          {cases.isError && <p className="text-destructive">Couldn't load cases: {errorMessage(cases.error)}</p>}
+          {cases.data?.length === 0 && <p className="text-muted-foreground">No cases yet.</p>}
+          {!!cases.data?.length && (
+            <ul className="divide-y rounded-lg border">
+              {cases.data.map((c) => (
+                <li key={c.id} className="flex items-center gap-3 px-3 py-2">
+                  <span className="min-w-0 flex-1 truncate font-mono text-xs">{c.id}</span>
+                  <span className="shrink-0 text-xs text-muted-foreground">{new Date(c.uploaded_at).toLocaleString()}</span>
+                  <Button
+                    variant="ghost"
+                    size="icon-xs"
+                    aria-label={`Delete case ${c.id}`}
+                    disabled={remove.isPending}
+                    onClick={() => confirm(`Delete case ${c.id}?`) && remove.mutate({ params: { path: { case_id: c.id } } })}
+                  >
+                    <Trash2Icon />
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          )}
+          {remove.isError && <p className="mt-2 text-destructive">Delete failed: {errorMessage(remove.error)}</p>}
+        </CardContent>
       </Card>
     </main>
   )
