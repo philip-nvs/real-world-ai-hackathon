@@ -1,0 +1,168 @@
+{
+  "case_id": "039",
+  "case_ref": "HV-039",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Nerys Wren",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-006",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "access_log",
+      "kind": "sign_in_session",
+      "party": "p1",
+      "match_terms": [
+        "10 July 2025",
+        "2025-07-10",
+        "09:15 UTC",
+        "recognised device",
+        "successful sign-in",
+        "HV-039"
+      ],
+      "attributes": [
+        {
+          "key": "date",
+          "value": "2025-07-10"
+        },
+        {
+          "key": "time_utc",
+          "value": "09:15"
+        },
+        {
+          "key": "device_state",
+          "value": "recognised device"
+        },
+        {
+          "key": "status",
+          "value": "successful sign-in"
+        }
+      ],
+      "customer_facing": "Recognised-device successful sign-in at 09:15 UTC on 10 July 2025. Device and network identifiers are withheld.",
+      "disclosure_rules": [
+        "Device and network identifiers withheld",
+        "Exclude internal detection details",
+        "Exclude anyone else's data"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-006"
+    },
+    {
+      "id": "r2",
+      "system": "access_log",
+      "kind": "sign_in_session",
+      "party": "p1",
+      "match_terms": [
+        "11 July 2025",
+        "2025-07-11",
+        "08:42 UTC",
+        "new device",
+        "sign-in notification",
+        "HV-039"
+      ],
+      "attributes": [
+        {
+          "key": "date",
+          "value": "2025-07-11"
+        },
+        {
+          "key": "time_utc",
+          "value": "08:42"
+        },
+        {
+          "key": "device_state",
+          "value": "new device"
+        },
+        {
+          "key": "status",
+          "value": "sign-in notification generated"
+        },
+        {
+          "key": "origin",
+          "value": "not determined"
+        }
+      ],
+      "customer_facing": "New-device sign-in notification generated at 08:42 UTC on 11 July 2025. Device and network identifiers are withheld, and the origin of the new session is not determined.",
+      "disclosure_rules": [
+        "Device and network identifiers withheld",
+        "Exclude internal detection details",
+        "Exclude anyone else's data",
+        "Origin of the new session not determined; do not speculate"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    }
+  ],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "security_team",
+      "topic_terms": [
+        "permitted session extract",
+        "sign-in sessions",
+        "session list",
+        "new device",
+        "HV-039",
+        "Nerys Wren"
+      ],
+      "status": "completed",
+      "reference": "HV-039",
+      "response": "I've limited the extract to the permitted session details and withheld device and network identifiers. The permitted session extract, sessions-039.txt, is attached in the secure portal. It records a recognised-device successful sign-in at 09:15 UTC on 10 July 2025 and a new-device sign-in notification at 08:42 UTC on 11 July 2025. The origin of the new session is not determined.",
+      "document": "sessions-039.txt",
+      "source_event": "event-006"
+    }
+  ],
+  "processes": []
+}

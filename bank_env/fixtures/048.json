@@ -1,0 +1,102 @@
+{
+  "case_id": "048",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Alder Quay Studio Ltd.",
+      "kind": "business",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "authorised_business_user",
+        "authorised_accountant"
+      ],
+      "acts_for": "p1"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "External message",
+      "party": null,
+      "bank_originated": false,
+      "verified": false
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p2",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "incoming_payments",
+      "kind": "incoming_activity_check",
+      "party": "p1",
+      "match_terms": [
+        "Alder Quay Studio Ltd.",
+        "workshop invoice",
+        "buyer payment",
+        "incoming credit"
+      ],
+      "attributes": [
+        {
+          "key": "matching_credit_found",
+          "value": "false"
+        },
+        {
+          "key": "result",
+          "value": "No identifiable incoming credit matching the available payment details is shown in the account activity checked"
+        },
+        {
+          "key": "checked_at",
+          "value": "2025-10-21 11:21:00 UTC"
+        }
+      ],
+      "customer_facing": "We checked your business account's incoming activity and could not identify a matching credit at the time of the check. This check does not confirm the status of a payment in the buyer's bank, or confirm that your invoice has been paid.",
+      "disclosure_rules": [
+        "Result applies only at the time of the check",
+        "Does not establish whether the buyer sent a payment",
+        "Does not confirm the status of a payment in the buyer's bank",
+        "Does not confirm the invoice has been paid"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

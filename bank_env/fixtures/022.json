@@ -1,0 +1,111 @@
+{
+  "case_id": "022",
+  "case_ref": "HV-022",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder",
+        "cardholder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-003",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "card_journal",
+      "kind": "card",
+      "party": "p1",
+      "match_terms": [
+        "H&V debit card",
+        "debit card",
+        "Mara Ellison",
+        "missing card",
+        "lost card",
+        "Alder Quay Market",
+        "HV-022"
+      ],
+      "attributes": [
+        {
+          "key": "card_type",
+          "value": "debit"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Disputed transactions are handled separately and are not assessed as part of the block confirmation"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    }
+  ],
+  "team_responses": [],
+  "processes": [
+    {
+      "id": "x1",
+      "process": "card_system",
+      "action": "block_card",
+      "match_terms": [
+        "block card",
+        "missing card",
+        "lost card",
+        "H&V debit card",
+        "Mara Ellison",
+        "HV-022"
+      ],
+      "target_record": "r1",
+      "confirmed_by": [
+        "event-001"
+      ],
+      "effect": [
+        {
+          "key": "status",
+          "value": "BLOCKED"
+        }
+      ],
+      "result": "Card journal status: BLOCKED. The card is marked blocked.",
+      "source_event": "event-003"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "case_id": "009",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellwood",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "payment_journal",
+      "kind": "outgoing_transfer",
+      "party": "p1",
+      "match_terms": [
+        "property manager",
+        "648.20",
+        "Mara Ellwood",
+        "property-manager transfer"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "completed"
+        },
+        {
+          "key": "payee",
+          "value": "property manager"
+        },
+        {
+          "key": "amount_gbp",
+          "value": "648.20"
+        },
+        {
+          "key": "final_instruction_amount_gbp",
+          "value": "648.20"
+        },
+        {
+          "key": "execution_record_amount_gbp",
+          "value": "648.20"
+        },
+        {
+          "key": "amount_received_by_recipient",
+          "value": "not established by this record"
+        }
+      ],
+      "customer_facing": "The amount sent was £648.20. The journal confirms the amount sent by H&V, not the amount received by the recipient.",
+      "disclosure_rules": [
+        "Record confirms only the amount sent by H&V; it does not establish the amount received by the recipient",
+        "No record of the draft amount £684.20; confirm only the final instruction and execution amount"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

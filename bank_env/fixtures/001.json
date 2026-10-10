@@ -1,0 +1,123 @@
+{
+  "case_id": "001",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "Alder & Reed Workshop",
+      "kind": "business",
+      "roles": [
+        "payee"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "payment_journal",
+      "kind": "outgoing_transfer",
+      "party": "p1",
+      "match_terms": [
+        "Alder & Reed Workshop",
+        "420.00",
+        "£420",
+        "one-off transfer",
+        "bookcase"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "SENT"
+        },
+        {
+          "key": "transfer_type",
+          "value": "one-off"
+        },
+        {
+          "key": "payee",
+          "value": "Alder & Reed Workshop"
+        },
+        {
+          "key": "amount_gbp",
+          "value": "420.00"
+        },
+        {
+          "key": "account_activity",
+          "value": "debit shown in account activity"
+        },
+        {
+          "key": "portal_status",
+          "value": "Sent"
+        },
+        {
+          "key": "record_scope",
+          "value": "H&V's outgoing-transfer record"
+        },
+        {
+          "key": "recipient_bank_receipt",
+          "value": "not confirmed"
+        },
+        {
+          "key": "recipient_credit",
+          "value": "not confirmed"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "SENT status is H&V's outgoing-transfer record only; it does not confirm receipt or credit by the recipient bank"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

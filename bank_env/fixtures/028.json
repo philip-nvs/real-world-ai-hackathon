@@ -1,0 +1,111 @@
+{
+  "case_id": "028",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Elowen Mercer",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "External message",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": false
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-006",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "customer_profile",
+      "kind": "profile_phone_number",
+      "party": "p1",
+      "match_terms": [
+        "Elowen Mercer",
+        "phone number",
+        "profile phone number",
+        "mobile number"
+      ],
+      "attributes": [
+        {
+          "key": "name",
+          "value": "Elowen Mercer"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-006"
+    }
+  ],
+  "team_responses": [],
+  "processes": [
+    {
+      "id": "x1",
+      "process": "profile_change",
+      "action": "change_phone",
+      "match_terms": [
+        "phone number",
+        "change phone number",
+        "replacement number",
+        "Elowen Mercer",
+        "profile"
+      ],
+      "target_record": "r1",
+      "confirmed_by": [
+        "event-005"
+      ],
+      "effect": [
+        {
+          "key": "phone_number_status",
+          "value": "updated to replacement number confirmed by customer"
+        }
+      ],
+      "result": "Phone number updated. The phone number in your profile has been updated following your secure confirmation.",
+      "source_event": "event-003"
+    }
+  ]
+}

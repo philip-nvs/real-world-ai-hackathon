@@ -1,0 +1,159 @@
+{
+  "case_id": "005",
+  "case_ref": "HV-005",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Leona Mercer",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "payment_journal",
+      "kind": "outgoing_transfer",
+      "party": "p1",
+      "match_terms": [
+        "286.40",
+        "pottery-studio bill",
+        "shared pottery-studio bill",
+        "wrong saved recipient",
+        "HV-005"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "sent"
+        },
+        {
+          "key": "amount_gbp",
+          "value": "286.40"
+        },
+        {
+          "key": "purpose",
+          "value": "shared pottery-studio bill"
+        },
+        {
+          "key": "recipient_type",
+          "value": "saved recipient"
+        },
+        {
+          "key": "return_status",
+          "value": "not confirmed"
+        }
+      ],
+      "customer_facing": "Transfer status: sent. This status confirms the transfer was sent from your H&V account; it does not confirm that the recipient has returned the money.",
+      "disclosure_rules": [
+        "Sent status confirms only that the transfer left the H&V account; it does not confirm the recipient has returned the money"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    },
+    {
+      "id": "r2",
+      "system": "payment_journal",
+      "kind": "return_request",
+      "party": "p1",
+      "match_terms": [
+        "HV-005",
+        "return request",
+        "286.40",
+        "pottery-studio bill",
+        "2025-07-27"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "registered"
+        },
+        {
+          "key": "case_ref",
+          "value": "HV-005"
+        },
+        {
+          "key": "linked_transfer",
+          "value": "r1"
+        },
+        {
+          "key": "reason",
+          "value": "recipient selected in error"
+        },
+        {
+          "key": "return_of_money",
+          "value": "not confirmed"
+        }
+      ],
+      "customer_facing": "Request status: registered. H&V has registered your request to seek a return of the transfer; a return of the money is not confirmed.",
+      "disclosure_rules": [
+        "Registration does not confirm that the money will be returned"
+      ],
+      "exists_before_agent": false,
+      "created_by": "t1",
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "payment_team",
+      "topic_terms": [
+        "return request",
+        "wrong recipient",
+        "wrong saved recipient",
+        "seek return",
+        "286.40",
+        "pottery-studio bill",
+        "HV-005"
+      ],
+      "status": "registered",
+      "reference": "HV-005",
+      "response": "I have registered the return request for case HV-005 against the verified transfer. Registration does not confirm that the money will be returned.",
+      "document": null,
+      "source_event": "event-004"
+    }
+  ],
+  "processes": []
+}

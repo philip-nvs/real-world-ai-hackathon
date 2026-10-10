@@ -1,0 +1,75 @@
+{
+  "case_id": "033",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "data_service",
+      "topic_terms": [
+        "transaction export",
+        "CSV export",
+        "6 May 2025",
+        "9 May 2025",
+        "6–9 May 2025",
+        "secure portal",
+        "budgeting",
+        "transactions-033.csv"
+      ],
+      "status": "completed",
+      "reference": null,
+      "response": "Export created for the requested period (6–9 May 2025) and made available for placement in the customer's secure portal. Data is for the verified account holder's secure portal only and is not sent to any third party. Third-party accounting software compatibility has not been checked.",
+      "document": "transactions-033.csv",
+      "source_event": "event-004"
+    }
+  ],
+  "processes": []
+}

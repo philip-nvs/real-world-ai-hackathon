@@ -1,0 +1,74 @@
+{
+  "case_id": "031",
+  "case_ref": "HV-031",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Elowen Marr",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    }
+  ],
+  "records": [],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "statements_service",
+      "topic_terms": [
+        "June 2025",
+        "statement",
+        "secure portal",
+        "HV-031",
+        "statement-031.pdf",
+        "statement period",
+        "account owner"
+      ],
+      "status": "completed",
+      "reference": "HV-031",
+      "response": "Statement HV-031 for June 2025 has been placed in the account owner's secure portal as statement-031.pdf. The displayed statement shows an opening balance of £410.00 and a closing balance of £386.00.",
+      "document": "statement-031.pdf",
+      "source_event": "event-004"
+    }
+  ],
+  "processes": []
+}

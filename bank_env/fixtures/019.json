@@ -1,0 +1,150 @@
+{
+  "case_id": "019",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Maeve Ellery",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "Willow Yard Studios",
+      "kind": "business",
+      "roles": [
+        "payee"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-006",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "instruction_register",
+      "kind": "standing_order",
+      "party": "p1",
+      "match_terms": [
+        "Willow Yard Studios",
+        "standing order",
+        "monthly",
+        "18 September 2025",
+        "2025-09-18"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "active"
+        },
+        {
+          "key": "payee",
+          "value": "Willow Yard Studios"
+        },
+        {
+          "key": "frequency",
+          "value": "monthly"
+        },
+        {
+          "key": "next_run_date",
+          "value": "2025-09-18"
+        },
+        {
+          "key": "next_run_processing_stage",
+          "value": "not yet being processed"
+        },
+        {
+          "key": "payment_status",
+          "value": "not yet made"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    }
+  ],
+  "team_responses": [],
+  "processes": [
+    {
+      "id": "x1",
+      "process": "instruction_process",
+      "action": "amend_standing_order",
+      "match_terms": [
+        "Willow Yard Studios",
+        "standing order",
+        "18 September 2025",
+        "22 September 2025",
+        "2025-09-22",
+        "date change"
+      ],
+      "target_record": "r1",
+      "confirmed_by": [
+        "event-005"
+      ],
+      "effect": [
+        {
+          "key": "next_run_date",
+          "value": "2025-09-22"
+        },
+        {
+          "key": "status",
+          "value": "active"
+        },
+        {
+          "key": "payment_status",
+          "value": "not yet made"
+        }
+      ],
+      "result": "Standing order update confirmed. Next scheduled run: 22 September 2025. Payment status: not yet made.",
+      "source_event": "event-004"
+    }
+  ]
+}

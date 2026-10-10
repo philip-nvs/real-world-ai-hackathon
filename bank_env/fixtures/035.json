@@ -1,0 +1,153 @@
+{
+  "case_id": "035",
+  "case_ref": "HV-035",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "tariff",
+      "kind": "fee",
+      "party": "p1",
+      "match_terms": [
+        "paper statement fee",
+        "4.50",
+        "2025-06-18",
+        "18 June 2025"
+      ],
+      "attributes": [
+        {
+          "key": "fee_type",
+          "value": "paper_statement_fee"
+        },
+        {
+          "key": "amount_gbp",
+          "value": "4.50"
+        },
+        {
+          "key": "date",
+          "value": "2025-06-18"
+        },
+        {
+          "key": "status",
+          "value": "applied"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "The fee notification does not confirm whether the fee will be changed."
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    },
+    {
+      "id": "r2",
+      "system": "tariff",
+      "kind": "fee_review_request",
+      "party": "p1",
+      "match_terms": [
+        "HV-035",
+        "paper statement fee",
+        "4.50",
+        "2025-06-18",
+        "tariff review"
+      ],
+      "attributes": [
+        {
+          "key": "reference",
+          "value": "HV-035"
+        },
+        {
+          "key": "status",
+          "value": "accepted_for_review"
+        },
+        {
+          "key": "routed_to",
+          "value": "Tariff Team"
+        },
+        {
+          "key": "reason",
+          "value": "Customer had chosen electronic statements"
+        },
+        {
+          "key": "fee_decision",
+          "value": "none; no cancellation or refund confirmed"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Registration and acceptance do not indicate a decision on the fee; no cancellation or refund has been confirmed."
+      ],
+      "exists_before_agent": false,
+      "created_by": "t1",
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "tariff_team",
+      "topic_terms": [
+        "paper statement fee",
+        "4.50",
+        "18 June 2025",
+        "tariff review",
+        "electronic statements",
+        "fee dispute"
+      ],
+      "status": "registered",
+      "reference": "HV-035",
+      "response": "Request HV-035 registered and routed to the Tariff Team. We have accepted your request for review of the tariff application for the paper statement fee dated 18 June 2025. This confirms acceptance for review only; no cancellation or refund has been confirmed.",
+      "document": null,
+      "source_event": "event-005"
+    }
+  ],
+  "processes": []
+}

@@ -1,0 +1,131 @@
+{
+  "case_id": "043",
+  "case_ref": "HV-043",
+  "parties": [
+    {
+      "id": "b1",
+      "name": "Northmere Studio Ltd",
+      "kind": "business",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    },
+    {
+      "id": "p1",
+      "name": "Mara Ellery",
+      "kind": "person",
+      "roles": [
+        "first_signatory"
+      ],
+      "acts_for": "b1"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Business portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "signing_queue",
+      "kind": "payment_package",
+      "party": "b1",
+      "match_terms": [
+        "Northmere Studio Ltd",
+        "payroll payment package",
+        "payroll",
+        "HV-043"
+      ],
+      "attributes": [
+        {
+          "key": "package_type",
+          "value": "payroll"
+        },
+        {
+          "key": "status",
+          "value": "Awaiting second signatory consent"
+        },
+        {
+          "key": "first_consent",
+          "value": "recorded (Mara Ellery, first signatory)"
+        },
+        {
+          "key": "second_consent",
+          "value": "not recorded"
+        },
+        {
+          "key": "individual_payment_submissions",
+          "value": "none shown"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    },
+    {
+      "id": "r2",
+      "system": "business_mandate",
+      "kind": "company_mandate",
+      "party": "b1",
+      "match_terms": [
+        "Northmere Studio Ltd",
+        "Mara Ellery",
+        "first signatory",
+        "second signatory"
+      ],
+      "attributes": [
+        {
+          "key": "first_signatory",
+          "value": "Mara Ellery"
+        },
+        {
+          "key": "signing_rule",
+          "value": "second signatory must provide their own consent"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

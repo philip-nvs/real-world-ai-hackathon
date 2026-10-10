@@ -194,7 +194,7 @@ def call_claude(client, **kw):
     return resp
 
 
-def run_agent(case, client, trace):
+def run_agent(case, client, trace, tools=TOOLS):
     messages = [{"role": "user", "content": case_content(case)}]
     state = {"executed": [], "blocked": [], "failures": [], "tokens": [0, 0]}
     for _ in range(MAX_TURNS):
@@ -210,7 +210,7 @@ def run_agent(case, client, trace):
             continue
         results, decision = [], None
         for u in uses:
-            out, is_error = execute(u.name, u.input, case, state, trace)
+            out, is_error = execute(u.name, u.input, case, state, trace, tools)
             if u.name == "submit_decision" and not is_error:
                 decision = u.input
             results.append({"type": "tool_result", "tool_use_id": u.id, "content": json.dumps(out), "is_error": is_error})
@@ -220,11 +220,11 @@ def run_agent(case, client, trace):
     raise RuntimeError(f"no accepted decision after {MAX_TURNS} turns")
 
 
-def execute(name, args, case, state, trace):
+def execute(name, args, case, state, trace, tools=TOOLS):
     trace("tool_call", tool=name, input=args)
     if name == "submit_decision":
         problems = guard_decision(args)
-    elif name in TOOLS:
+    elif name in tools:
         problems = guard_tool(name, args, case)
     else:
         problems = [f"unknown tool {name}"]
@@ -235,7 +235,7 @@ def execute(name, args, case, state, trace):
     if name == "submit_decision":
         return {"status": "accepted"}, False
     try:
-        out = TOOLS[name](**args)
+        out = tools[name](**args)
         state["executed"].append({"tool": name, "input": args, "output": out})
         trace("tool_result", tool=name, output=out)
         return out, False
@@ -255,7 +255,8 @@ def fallback_decision(error):
     }
 
 
-def run_case(case_dir, out_dir, client):
+def run_case(case_dir, out_dir, client, tools=TOOLS):
+    """tools: name -> function, same signatures as tools.TOOLS (e.g. a bank_env adapter's .tools())."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     trace_file = (out_dir / "trace.jsonl").open("w")
@@ -269,7 +270,7 @@ def run_case(case_dir, out_dir, client):
     try:
         case = load_case(case_dir)
         trace("loaded", case=case["id"], events=len(case["events"]), attachments=[a.name for a in case["attachments"]])
-        decision, state = run_agent(case, client, trace)
+        decision, state = run_agent(case, client, trace, tools)
     except Exception as e:
         error = f"{type(e).__name__}: {e}"
         trace("crash", error=error, traceback=traceback.format_exc())
@@ -350,6 +351,14 @@ def write_answer(out_dir, case, d, state):
 
 # ---------- batch ----------
 
+def load_env():
+    env = Path(__file__).parent / ".env"
+    for line in env.read_text().splitlines() if env.is_file() else []:
+        key, _, value = line.partition("=")
+        if key.strip() and not key.lstrip().startswith("#"):
+            os.environ.setdefault(key.strip(), value.strip().strip('"'))
+
+
 def find_cases(root):
     root = Path(root)
     if (root / "index.md").is_file():
@@ -364,11 +373,7 @@ def main():
     ap.add_argument("--workers", type=int, default=4, help="cases run in parallel (default 4)")
     args = ap.parse_args()
 
-    env = Path(__file__).parent / ".env"
-    for line in env.read_text().splitlines() if env.is_file() else []:
-        key, _, value = line.partition("=")
-        if key.strip() and not key.lstrip().startswith("#"):
-            os.environ.setdefault(key.strip(), value.strip().strip('"'))
+    load_env()
     cases = find_cases(args.cases)
     if not cases:
         sys.exit(f"No case folders (with index.md) under {args.cases}")

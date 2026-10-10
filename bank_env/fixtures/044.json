@@ -1,0 +1,136 @@
+{
+  "case_id": "044",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Leona Voss",
+      "kind": "person",
+      "roles": [
+        "payout_viewer"
+      ],
+      "acts_for": "p2"
+    },
+    {
+      "id": "p2",
+      "name": "Business customer (name not stated)",
+      "kind": "business",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure chat",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "payment_journal",
+      "kind": "supplier_batch",
+      "party": "p2",
+      "match_terms": [
+        "Alderwick supplier payments",
+        "supplier batch"
+      ],
+      "attributes": [
+        {
+          "key": "batch_name",
+          "value": "Alderwick supplier payments"
+        },
+        {
+          "key": "status",
+          "value": "Processed"
+        },
+        {
+          "key": "authorisation",
+          "value": "previously authorised"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Batch status Processed does not establish that every payment line was paid; check each row individually"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    },
+    {
+      "id": "r2",
+      "system": "payment_journal",
+      "kind": "batch_row",
+      "party": "p2",
+      "match_terms": [
+        "SUP-17",
+        "Alderwick supplier payments",
+        "studio materials supplier"
+      ],
+      "attributes": [
+        {
+          "key": "row_id",
+          "value": "SUP-17"
+        },
+        {
+          "key": "batch_name",
+          "value": "Alderwick supplier payments"
+        },
+        {
+          "key": "payee",
+          "value": "studio materials supplier"
+        },
+        {
+          "key": "status",
+          "value": "Rejected"
+        },
+        {
+          "key": "reason",
+          "value": "Beneficiary details did not match the receiving institution’s records."
+        }
+      ],
+      "customer_facing": "Row SUP-17 — status: Rejected. Reason: Beneficiary details did not match the receiving institution’s records.",
+      "disclosure_rules": [
+        "Status applies to row SUP-17 only; other rows in the batch were not re-evaluated"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

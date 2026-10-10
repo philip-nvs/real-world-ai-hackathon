@@ -1,0 +1,167 @@
+{
+  "case_id": "046",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Larkmere Studio Ltd",
+      "kind": "business",
+      "roles": [
+        "business_customer"
+      ],
+      "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "Mara Ellery",
+      "kind": "person",
+      "roles": [
+        "company_administrator"
+      ],
+      "acts_for": "p1"
+    },
+    {
+      "id": "p3",
+      "name": "Owen Bell",
+      "kind": "person",
+      "roles": [
+        "payroll_approver",
+        "former_employee"
+      ],
+      "acts_for": "p1"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p2",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "business_mandate",
+      "kind": "user_role",
+      "party": "p3",
+      "match_terms": [
+        "Owen Bell",
+        "Payroll Approver",
+        "Larkmere Studio Ltd"
+      ],
+      "attributes": [
+        {
+          "key": "role",
+          "value": "Payroll Approver"
+        },
+        {
+          "key": "assigned_user",
+          "value": "Owen Bell"
+        },
+        {
+          "key": "business",
+          "value": "Larkmere Studio Ltd"
+        },
+        {
+          "key": "status",
+          "value": "active"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    },
+    {
+      "id": "r2",
+      "system": "business_mandate",
+      "kind": "administrator_mandate",
+      "party": "p2",
+      "match_terms": [
+        "Mara Ellery",
+        "administrator",
+        "Larkmere Studio Ltd"
+      ],
+      "attributes": [
+        {
+          "key": "role",
+          "value": "business administrator"
+        },
+        {
+          "key": "user",
+          "value": "Mara Ellery"
+        },
+        {
+          "key": "business",
+          "value": "Larkmere Studio Ltd"
+        },
+        {
+          "key": "mandate_check",
+          "value": "checked"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-003"
+    }
+  ],
+  "team_responses": [],
+  "processes": [
+    {
+      "id": "x1",
+      "process": "admin_process",
+      "action": "revoke_role",
+      "match_terms": [
+        "Owen Bell",
+        "Payroll Approver",
+        "Larkmere Studio Ltd",
+        "revoke"
+      ],
+      "target_record": "r1",
+      "confirmed_by": [
+        "event-002"
+      ],
+      "effect": [
+        {
+          "key": "status",
+          "value": "revoked"
+        }
+      ],
+      "result": "Revocation instruction processed. The admin-log status is available to the business administrator in the secure portal. Admin log: Payroll Approver role for Owen Bell — REVOKED.",
+      "source_event": "event-004"
+    }
+  ]
+}

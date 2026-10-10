@@ -1,0 +1,111 @@
+{
+  "case_id": "016",
+  "case_ref": "HV-016",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Tamsin Rook",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "payment_journal",
+      "kind": "direct_debit_payment",
+      "party": "p1",
+      "match_terms": [
+        "Northmere Water Services",
+        "18.40",
+        "9 July 2025",
+        "2025-07-09",
+        "Direct Debit"
+      ],
+      "attributes": [
+        {
+          "key": "payment_type",
+          "value": "Direct Debit"
+        },
+        {
+          "key": "payee",
+          "value": "Northmere Water Services"
+        },
+        {
+          "key": "amount_gbp",
+          "value": "18.40"
+        },
+        {
+          "key": "date",
+          "value": "2025-07-09"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    }
+  ],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "direct_debit_team",
+      "topic_terms": [
+        "Direct Debit",
+        "review",
+        "dispute",
+        "Northmere Water Services",
+        "18.40",
+        "9 July 2025",
+        "amount debited"
+      ],
+      "status": "registered",
+      "reference": "HV-016",
+      "response": "Review request for the £18.40 Direct Debit charge registered under reference HV-016. Registration does not determine whether the amount was due or whether a refund is available.",
+      "document": null,
+      "source_event": "event-004"
+    }
+  ],
+  "processes": []
+}

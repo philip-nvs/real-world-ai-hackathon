@@ -1,0 +1,133 @@
+{
+  "case_id": "012",
+  "case_ref": "HV-012",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mira Ellery",
+      "kind": "person",
+      "roles": [
+        "account_holder",
+        "standing_order_owner"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-006",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "instruction_register",
+      "kind": "standing_order",
+      "party": "p1",
+      "match_terms": [
+        "Westmere Garden Cooperative",
+        "standing order",
+        "42.00",
+        "68.00",
+        "monthly",
+        "HV-012"
+      ],
+      "attributes": [
+        {
+          "key": "payee",
+          "value": "Westmere Garden Cooperative"
+        },
+        {
+          "key": "amount_gbp",
+          "value": "42.00"
+        },
+        {
+          "key": "frequency",
+          "value": "monthly"
+        },
+        {
+          "key": "owner",
+          "value": "Mira Ellery (verified owner, may amend)"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Applicable date of any amendment is as recorded in the standing-order record; do not state an unrecorded date",
+        "An update does not guarantee the next payment"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    }
+  ],
+  "team_responses": [],
+  "processes": [
+    {
+      "id": "x1",
+      "process": "instruction_process",
+      "action": "amend_standing_order",
+      "match_terms": [
+        "Westmere Garden Cooperative",
+        "standing order",
+        "42.00",
+        "68.00",
+        "monthly"
+      ],
+      "target_record": "r1",
+      "confirmed_by": [
+        "event-005"
+      ],
+      "effect": [
+        {
+          "key": "amount_gbp",
+          "value": "68.00"
+        },
+        {
+          "key": "frequency",
+          "value": "monthly"
+        }
+      ],
+      "result": "Standing order updated: £68.00 per month. The applicable date is recorded in your standing-order record. This update does not guarantee the next payment.",
+      "source_event": "event-004"
+    }
+  ]
+}

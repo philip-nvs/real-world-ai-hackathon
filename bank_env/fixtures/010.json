@@ -1,0 +1,131 @@
+{
+  "case_id": "010",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Elowen Marr",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "payment_journal",
+      "kind": "outgoing_transfer",
+      "party": "p1",
+      "match_terms": [
+        "Northmere Home Supplies",
+        "42.80",
+        "outgoing transfer"
+      ],
+      "attributes": [
+        {
+          "key": "payee",
+          "value": "Northmere Home Supplies"
+        },
+        {
+          "key": "amount_gbp",
+          "value": "42.80"
+        },
+        {
+          "key": "direction",
+          "value": "outgoing"
+        },
+        {
+          "key": "status",
+          "value": "shown in account history"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Reason the original payment was declined is not established; do not state a decline reason"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    },
+    {
+      "id": "r2",
+      "system": "incoming_payments",
+      "kind": "refund_credit",
+      "party": "p1",
+      "match_terms": [
+        "Northmere Home Supplies",
+        "42.80",
+        "refund",
+        "incoming entry"
+      ],
+      "attributes": [
+        {
+          "key": "amount_gbp",
+          "value": "42.80"
+        },
+        {
+          "key": "status",
+          "value": "credited"
+        },
+        {
+          "key": "type",
+          "value": "refund"
+        },
+        {
+          "key": "matched_outgoing_transfer",
+          "value": "Northmere Home Supplies transfer in the account history"
+        },
+        {
+          "key": "counterparty",
+          "value": "Northmere Home Supplies"
+        }
+      ],
+      "customer_facing": "Refund status: £42.80 credited to your account. This credit matches the Northmere Home Supplies transfer shown in your account history.",
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

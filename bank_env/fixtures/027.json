@@ -1,0 +1,134 @@
+{
+  "case_id": "027",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Secure chat",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-004",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "access_log",
+      "kind": "profile_access",
+      "party": "p1",
+      "match_terms": [
+        "Mara Ellison",
+        "H&V profile",
+        "sign-in",
+        "sign-in declined",
+        "recovery",
+        "access restored",
+        "2025-09-09"
+      ],
+      "attributes": [
+        {
+          "key": "sign_in_result",
+          "value": "declined"
+        },
+        {
+          "key": "sign_in_declined_message",
+          "value": "Sign-in declined. Use H&V's secure recovery process to restore access."
+        },
+        {
+          "key": "recovery_channel",
+          "value": "H&V secure portal recovery process"
+        },
+        {
+          "key": "recovery_checks_status",
+          "value": "completed securely"
+        },
+        {
+          "key": "recovery_checks_completed_at",
+          "value": "2025-09-09 11:21:00 UTC"
+        },
+        {
+          "key": "access_status",
+          "value": "restored"
+        },
+        {
+          "key": "access_restored_recorded_at",
+          "value": "2025-09-09 12:08:00 UTC"
+        },
+        {
+          "key": "access_restored_message",
+          "value": "Access restored and recorded by the system. You can now sign in."
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Agent does not ask for or handle the customer's password or verification codes",
+        "Recovery is completed by the customer through H&V's secure portal, not by the agent"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    },
+    {
+      "id": "r2",
+      "system": "customer_profile",
+      "kind": "profile",
+      "party": "p1",
+      "match_terms": [
+        "Mara Ellison",
+        "H&V profile"
+      ],
+      "attributes": [
+        {
+          "key": "name",
+          "value": "Mara Ellison"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-002"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

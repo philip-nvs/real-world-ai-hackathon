@@ -1,0 +1,124 @@
+{
+  "case_id": "020",
+  "case_ref": "HV-020",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Elena Wren",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "External message",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": false
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "instruction_register",
+      "kind": "standing_order",
+      "party": "p1",
+      "match_terms": [
+        "Willowmere Lettings",
+        "standing order",
+        "monthly"
+      ],
+      "attributes": [
+        {
+          "key": "payee",
+          "value": "Willowmere Lettings"
+        },
+        {
+          "key": "status",
+          "value": "active"
+        },
+        {
+          "key": "frequency",
+          "value": "monthly"
+        },
+        {
+          "key": "changed_during_case",
+          "value": "no"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Register shows H&V payer-side records only; it does not confirm the recipient's records or any payment outcome"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    },
+    {
+      "id": "r2",
+      "system": "instruction_register",
+      "kind": "direct_debit_mandate",
+      "party": "p1",
+      "match_terms": [
+        "Northmere Energy",
+        "direct debit",
+        "mandate"
+      ],
+      "attributes": [
+        {
+          "key": "payee",
+          "value": "Northmere Energy"
+        },
+        {
+          "key": "status",
+          "value": "active"
+        },
+        {
+          "key": "changed_during_case",
+          "value": "no"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Register shows H&V payer-side records only; it does not confirm the recipient's records or any payment outcome"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

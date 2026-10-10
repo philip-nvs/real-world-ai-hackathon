@@ -1,0 +1,140 @@
+{
+  "case_id": "018",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "instruction_register",
+      "kind": "standing_order",
+      "party": "p1",
+      "match_terms": [
+        "Northmere Heating",
+        "34.80",
+        "standing order"
+      ],
+      "attributes": [
+        {
+          "key": "instruction_type",
+          "value": "customer standing order"
+        },
+        {
+          "key": "payee",
+          "value": "Northmere Heating"
+        },
+        {
+          "key": "amount_gbp",
+          "value": "34.80"
+        },
+        {
+          "key": "portal_display",
+          "value": "shown as a future payment line"
+        },
+        {
+          "key": "relationship",
+          "value": "separate instruction record from the direct debit mandate to the same payee; type and internal reference distinct"
+        },
+        {
+          "key": "status",
+          "value": "not cancelled"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    },
+    {
+      "id": "r2",
+      "system": "instruction_register",
+      "kind": "direct_debit_mandate",
+      "party": "p1",
+      "match_terms": [
+        "Northmere Heating",
+        "34.80",
+        "direct debit"
+      ],
+      "attributes": [
+        {
+          "key": "instruction_type",
+          "value": "direct debit mandate"
+        },
+        {
+          "key": "payee",
+          "value": "Northmere Heating"
+        },
+        {
+          "key": "amount_gbp",
+          "value": "34.80"
+        },
+        {
+          "key": "portal_display",
+          "value": "shown as a future payment line"
+        },
+        {
+          "key": "relationship",
+          "value": "separate instruction record from the standing order to the same payee; type and internal reference distinct"
+        },
+        {
+          "key": "status",
+          "value": "not cancelled"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

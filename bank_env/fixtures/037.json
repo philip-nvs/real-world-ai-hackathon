@@ -1,0 +1,148 @@
+{
+  "case_id": "037",
+  "case_ref": "HV-037",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Elowen Marr",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "customer_profile",
+      "kind": "profile_name",
+      "party": "p1",
+      "match_terms": [
+        "Elowen Mar",
+        "Elowen Marr",
+        "profile name",
+        "name"
+      ],
+      "attributes": [
+        {
+          "key": "name",
+          "value": "Elowen Mar"
+        },
+        {
+          "key": "change_status",
+          "value": "unchanged"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    },
+    {
+      "id": "r2",
+      "system": "customer_profile",
+      "kind": "name_correction_request",
+      "party": "p1",
+      "match_terms": [
+        "HV-037",
+        "name correction",
+        "protected name review",
+        "Elowen Marr",
+        "Elowen Mar"
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "value": "received for review"
+        },
+        {
+          "key": "current_name",
+          "value": "Elowen Mar"
+        },
+        {
+          "key": "requested_name",
+          "value": "Elowen Marr"
+        },
+        {
+          "key": "basis_validated",
+          "value": "not yet validated"
+        },
+        {
+          "key": "profile_name_changed",
+          "value": "no"
+        },
+        {
+          "key": "supporting_documents_supplied",
+          "value": "none"
+        }
+      ],
+      "customer_facing": "Your correction request has been received for review. Your profile name has not been changed; any supporting information required will be requested through the secure process.",
+      "disclosure_rules": [
+        "Basis for correction not yet validated; do not state the name has been or will be corrected",
+        "Supporting information is requested only through the secure process"
+      ],
+      "exists_before_agent": false,
+      "created_by": "t1",
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "data_team",
+      "topic_terms": [
+        "name correction",
+        "spelling",
+        "profile name",
+        "HV-037",
+        "Elowen Marr",
+        "protected name review"
+      ],
+      "status": "registered",
+      "reference": "HV-037",
+      "response": "HV-037 logged as received for review. The basis for the correction has not yet been validated, and the profile name remains unchanged. Any supporting information required will be requested through the secure process.",
+      "document": null,
+      "source_event": "event-004"
+    }
+  ],
+  "processes": []
+}

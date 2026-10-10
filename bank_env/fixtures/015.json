@@ -1,0 +1,123 @@
+{
+  "case_id": "015",
+  "case_ref": "HV-015",
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellison",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "Northmere Fitness",
+      "kind": "business",
+      "roles": [
+        "direct_debit_recipient"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Verified call",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "instruction_register",
+      "kind": "direct_debit_mandate",
+      "party": "p1",
+      "match_terms": [
+        "Northmere Fitness",
+        "Direct Debit",
+        "mandate"
+      ],
+      "attributes": [
+        {
+          "key": "payee",
+          "value": "Northmere Fitness"
+        },
+        {
+          "key": "status",
+          "value": "Active"
+        },
+        {
+          "key": "collection_in_processing",
+          "value": "cannot be ruled out; needs separate reconciliation"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Cancelling the mandate does not cancel the customer's agreement with Northmere Fitness",
+        "Any collection already in processing is a separate matter; no refund is confirmed",
+        "No end to any debt owed to Northmere Fitness is confirmed"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-001"
+    }
+  ],
+  "team_responses": [],
+  "processes": [
+    {
+      "id": "x1",
+      "process": "instruction_process",
+      "action": "cancel_mandate",
+      "match_terms": [
+        "Northmere Fitness",
+        "Direct Debit",
+        "mandate",
+        "cancel"
+      ],
+      "target_record": "r1",
+      "confirmed_by": [
+        "event-002"
+      ],
+      "effect": [
+        {
+          "key": "status",
+          "value": "Cancelled"
+        }
+      ],
+      "result": "Direct Debit mandate: Northmere Fitness — Cancelled.",
+      "source_event": "event-004"
+    }
+  ]
+}

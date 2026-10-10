@@ -1,0 +1,112 @@
+{
+  "case_id": "017",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Ellery",
+      "kind": "person",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "Elm Quay Property Services",
+      "kind": "business",
+      "roles": [
+        "payee"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "External message",
+      "party": "p2",
+      "bank_originated": false,
+      "verified": false
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "instruction_register",
+      "kind": "standing_order",
+      "party": "p1",
+      "match_terms": [
+        "Elm Quay Property Services",
+        "Elm Quay",
+        "rent",
+        "monthly rent standing order",
+        "standing order",
+        "Mara Ellery"
+      ],
+      "attributes": [
+        {
+          "key": "payee",
+          "value": "Elm Quay Property Services"
+        },
+        {
+          "key": "purpose",
+          "value": "rent"
+        },
+        {
+          "key": "frequency",
+          "value": "monthly"
+        },
+        {
+          "key": "scheduled_run_status",
+          "value": "not executed"
+        },
+        {
+          "key": "scheduled_run_reason",
+          "value": "insufficient cleared funds at the scheduled processing time"
+        },
+        {
+          "key": "payment_made_for_run",
+          "value": "no"
+        }
+      ],
+      "customer_facing": "Standing-order status: Not executed — insufficient cleared funds at the scheduled processing time.",
+      "disclosure_rules": [
+        "Do not advise the customer to pay again without first checking for any new or pending activity"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
+  "team_responses": [],
+  "processes": []
+}

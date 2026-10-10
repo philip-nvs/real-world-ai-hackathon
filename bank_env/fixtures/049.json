@@ -1,0 +1,116 @@
+{
+  "case_id": "049",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Mara Venn",
+      "kind": "person",
+      "roles": [
+        "authorised_manager",
+        "report_viewer"
+      ],
+      "acts_for": "p2"
+    },
+    {
+      "id": "p2",
+      "name": "North Quay Printworks",
+      "kind": "business",
+      "roles": [
+        "merchant",
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Business portal",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-005",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "business_mandate",
+      "kind": "business_user",
+      "party": "p1",
+      "match_terms": [
+        "Mara Venn",
+        "North Quay Printworks",
+        "authorised manager"
+      ],
+      "attributes": [
+        {
+          "key": "role",
+          "value": "authorised manager"
+        },
+        {
+          "key": "business",
+          "value": "North Quay Printworks"
+        },
+        {
+          "key": "authority_checked",
+          "value": "true"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-003"
+    }
+  ],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "acquiring_service",
+      "topic_terms": [
+        "acquiring report",
+        "merchant report",
+        "1–7 July 2025",
+        "card sales",
+        "adjustments",
+        "North Quay Printworks",
+        "secure portal"
+      ],
+      "status": "completed",
+      "reference": null,
+      "response": "I placed the report for 1–7 July 2025 in the secure portal. Its report total is £236.00 (card sales £240.00, adjustments -£4.00); placement confirms report availability only, not a settlement credit.",
+      "document": "merchant-report-049.csv",
+      "source_event": "event-004"
+    }
+  ],
+  "processes": []
+}

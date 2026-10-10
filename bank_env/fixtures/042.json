@@ -1,0 +1,170 @@
+{
+  "case_id": "042",
+  "case_ref": null,
+  "parties": [
+    {
+      "id": "p1",
+      "name": "Nadia Fenwick",
+      "kind": "person",
+      "roles": [
+        "authorised_uploader",
+        "report_viewer"
+      ],
+      "acts_for": "p2"
+    },
+    {
+      "id": "p2",
+      "name": "Fenwick Workshop",
+      "kind": "business",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-002",
+      "channel": "Secure chat",
+      "party": "p1",
+      "bank_originated": false,
+      "verified": true
+    },
+    {
+      "id": "event-003",
+      "channel": "Internal note",
+      "party": null,
+      "bank_originated": true,
+      "verified": false
+    },
+    {
+      "id": "event-004",
+      "channel": "Business portal",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    },
+    {
+      "id": "event-005",
+      "channel": "Secure chat",
+      "party": null,
+      "bank_originated": true,
+      "verified": true
+    }
+  ],
+  "records": [
+    {
+      "id": "r1",
+      "system": "import_journal",
+      "kind": "payment_batch_file",
+      "party": "p2",
+      "match_terms": [
+        "HV-042",
+        "batch HV-042",
+        "Fenwick Workshop",
+        "supplier payment batch",
+        "16 July 2025",
+        "row 2",
+        "validation-042.txt"
+      ],
+      "attributes": [
+        {
+          "key": "batch_reference",
+          "value": "HV-042"
+        },
+        {
+          "key": "batch_date",
+          "value": "16 July 2025"
+        },
+        {
+          "key": "batch_type",
+          "value": "supplier payment batch"
+        },
+        {
+          "key": "uploaded_by",
+          "value": "Nadia Fenwick"
+        },
+        {
+          "key": "validation_status",
+          "value": "FAILED"
+        },
+        {
+          "key": "row_2_error",
+          "value": "missing required payee label"
+        },
+        {
+          "key": "corrected_batch_received",
+          "value": "no"
+        },
+        {
+          "key": "payment_execution_confirmed",
+          "value": "no"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    },
+    {
+      "id": "r2",
+      "system": "business_mandate",
+      "kind": "company_user",
+      "party": "p1",
+      "match_terms": [
+        "Nadia Fenwick",
+        "Fenwick Workshop",
+        "validation reports",
+        "report viewer",
+        "file uploader"
+      ],
+      "attributes": [
+        {
+          "key": "company",
+          "value": "Fenwick Workshop"
+        },
+        {
+          "key": "role",
+          "value": "authorised file uploader"
+        },
+        {
+          "key": "permission_view_validation_reports",
+          "value": "yes"
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-003"
+    }
+  ],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "import_service",
+      "topic_terms": [
+        "validation report",
+        "batch HV-042",
+        "HV-042",
+        "row-level errors",
+        "Fenwick Workshop",
+        "Nadia Fenwick"
+      ],
+      "status": "completed",
+      "reference": null,
+      "response": "Your validation report, validation-042.txt, is available in the secure portal. Batch HV-042 | 16 July 2025; Validation status: FAILED; Row 2: missing required payee label. No corrected batch received; no payment execution confirmed.",
+      "document": "validation-042.txt",
+      "source_event": "event-004"
+    }
+  ],
+  "processes": []
+}

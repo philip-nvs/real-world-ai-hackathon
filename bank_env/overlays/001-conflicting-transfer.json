@@ -1,0 +1,17 @@
+{
+  "base": "001",
+  "description": "The payment journal holds two £420 transfers to Alder & Reed Workshop: one SENT, one RETURNED by the recipient bank. A lookup by payee and amount alone is ambiguous; the agent must not report either status as the answer without identifying which transfer the customer means.",
+  "clone_records": [
+    {
+      "from": "r1",
+      "id": "r_returned",
+      "attributes": [
+        {"key": "status", "value": "RETURNED"},
+        {"key": "return_reason", "value": "returned by the recipient bank; reason not shown"}
+      ],
+      "customer_facing": null,
+      "disclosure_rules": ["Do not state why the recipient bank returned the transfer"]
+    }
+  ],
+  "faults": []
+}
