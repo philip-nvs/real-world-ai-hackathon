@@ -1,4 +1,4 @@
-# Case 043: Waiting for the Second Signatory
+# Case 043: Payroll Package Status After First Consent
 
 ## Case details
 
