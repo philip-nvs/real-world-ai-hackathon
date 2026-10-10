@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Tom Ellery whether Glide Shoes has agreed a refund that hasn't arrived or whether he wants to dispute the £79 payment.

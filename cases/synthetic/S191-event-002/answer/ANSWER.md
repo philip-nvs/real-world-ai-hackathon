@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent refers Barry Lund's compensation letter to the fraud team and tells him no compensation is recorded, without paying anything.

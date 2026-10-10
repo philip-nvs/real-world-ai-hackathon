@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates Peter Lowe's £4,000 safe-account scam payment through the 24/7 fraud line (ext. 4400) instead of the closed queue, and tells him not to send anything more or speak to the caller again.

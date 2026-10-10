@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent escalates Eileen Marsh's 'tax office' call to the fraud team and tells her not to pay, because HMRC does not phone threatening arrest.

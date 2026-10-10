@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `ask`
+- Description: The H&V service agent asks Ada Kim what she needs help with on her card, mentioning that she can freeze it in the app straight away if it's lost.

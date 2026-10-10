@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Rob Kane to confirm that he wants a new monthly £400 standing order to M KANE and from when, without creating it.

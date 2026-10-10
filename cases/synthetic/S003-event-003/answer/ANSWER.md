@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent escalates to the fraud team as a suspected safe-account scam in progress (£2,000 sent at 08:41 to 'SAFE-HOLD', £14,200 still at risk) and tells Grace Whitfield in the secure portal not to move any more money, because H&V never asks customers to move money to a safe account.

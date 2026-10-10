@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `escalate`
+- Description: The H&V service agent hands the statement request to the statements team, because the service failed twice under incident INC-4471, and tells Chloe Danvers the statements are delayed and will be placed only in her own secure portal, without emailing them to her broker or promising Friday.

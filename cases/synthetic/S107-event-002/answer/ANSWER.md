@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Isla Reid which of today's two payments she means (the £75 to T Reid, sent, or the £1,200 to Haven Car Sales, pending a payee check), without releasing the pending payment.

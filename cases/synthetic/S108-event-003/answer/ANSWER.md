@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent confirms with Katarzyna Nowak, in Polish if possible, that she wants only the standing order to Marek cancelled and not the electricity Direct Debit, before sending it for her secure confirmation.

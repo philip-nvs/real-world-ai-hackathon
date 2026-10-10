@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks in the secure chat why the request is signed 'Mara Ellison' when the authenticated profile is 'Mara Ellis-Ono', before placing the September statement.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates to the Access team Beth Lomax's PIN procedure, locked after three failed checks, without telling or setting a PIN.

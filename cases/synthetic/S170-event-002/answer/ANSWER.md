@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V business support agent asks Leila Haddad which account she means (Operating, Tax reserve or Payroll) or gives each balance clearly labelled.

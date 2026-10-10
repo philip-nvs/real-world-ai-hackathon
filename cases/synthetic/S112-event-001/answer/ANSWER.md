@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `act`
+- Description: The H&V business support agent tells Jade Wu that she or another authorised user submits supplier payments in the business portal, without paying either Kestrel Paper invoice.

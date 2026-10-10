@@ -1,0 +1,3 @@
+- Cut-off: event-048
+- Action: `act`
+- Description: The H&V service agent confirms to Joy Adams that her Peak Mobile Direct Debit is still active and no cancellation was submitted, as she asked in event 046.

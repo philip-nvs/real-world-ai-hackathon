@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Pippa Long that the £3.20 is the non-sterling cash withdrawal fee under the current tariff.

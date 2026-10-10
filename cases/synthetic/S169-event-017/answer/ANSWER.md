@@ -1,0 +1,3 @@
+- Cut-off: event-017
+- Action: `act`
+- Description: The H&V service agent asks the card team to register a dispute of Felix Grant's £780 Velo Bikes payment of 2 Oct, without promising a chargeback.

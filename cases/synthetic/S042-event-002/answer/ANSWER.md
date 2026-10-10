@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Grace Oyelaran that the account is a joint account with Tunde Oyelaran, so closure needs both holders, without closing it or moving the balance.

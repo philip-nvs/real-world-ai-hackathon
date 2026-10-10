@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent gives Eli Novak the journal's permitted wording for the £450 Aerodrome Car Hire decline and asks the card team to reconcile the two recorded reasons, without mentioning fraud rule FR-204.

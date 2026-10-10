@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent replies to Dan Wells in the secure portal that the £4.50 is the paper statement fee, without acting on the requests he withdrew in the quoted thread.

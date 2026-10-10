@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Ifeoma Adeyemi in the secure portal which Northmere instruction she means (Lettings standing order, Energy Direct Debit or Studio one-off transfer) and whether to stop one payment or the whole instruction, without cancelling anything.

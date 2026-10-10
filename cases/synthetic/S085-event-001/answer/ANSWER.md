@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `act`
+- Description: The H&V business support agent tells Clara Wynn that the .xlsx cannot be read here and that she can upload the payments through the business portal's file import, without setting up payments.

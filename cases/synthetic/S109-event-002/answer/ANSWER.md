@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Sarah Pike whether she means joint holder John Pike or additional cardholder John Doherty, without removing anyone.

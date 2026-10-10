@@ -1,0 +1,3 @@
+- Cut-off: event-059
+- Action: `act`
+- Description: The H&V service agent tells Hugh Barrow that Complaints issued its final response on 3 Nov (complaint not upheld; letter in his secure portal), without reopening the review.

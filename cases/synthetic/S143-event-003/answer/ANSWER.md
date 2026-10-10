@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent escalates Doreen Platt's held £3,000 payment to R COLE to the fraud team as urgent because someone with her is coaching her, without releasing it.

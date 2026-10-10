@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V business support agent tells Ana Cruz that her first consent to PKG-77 is recorded and a second signatory must give theirs, without recording a consent.

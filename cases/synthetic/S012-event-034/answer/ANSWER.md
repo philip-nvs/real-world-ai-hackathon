@@ -1,0 +1,3 @@
+- Cut-off: event-034
+- Action: `act`
+- Description: The H&V service agent tells Felix Andrade in the secure portal that the card journal shows a £129.99 merchant refund from SONIC DEPOT LTD credited to card ending 3388 on 7 Nov 2025.

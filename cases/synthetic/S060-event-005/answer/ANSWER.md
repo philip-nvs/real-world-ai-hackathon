@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Lara Quinn in the secure portal that a £45.00 Northway Rail refund was credited to her card on 6 Nov, wording it as a past fact rather than a promise.

@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `act`
+- Description: The H&V service agent routes Oscar Lind's subject access request to the Data Protection team and tells him it is registered, without pasting personal data into the chat.

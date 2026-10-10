@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates to payments operations that H&V applied Olu Bankole's amendment to the wrong Greyfriars standing order (a £1,090 overpayment on the parking order) and tells him it was H&V's error, without promising when the money comes back.

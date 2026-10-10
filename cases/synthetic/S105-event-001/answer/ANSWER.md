@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `ask`
+- Description: The H&V service agent asks Nora Quill whether she wants a temporary freeze or a permanent cancellation, mentioning that she can freeze the card in the app now.

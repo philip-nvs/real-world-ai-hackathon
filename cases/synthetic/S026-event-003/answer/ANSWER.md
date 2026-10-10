@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent checks Ellen Hartley's payment journal for transfers to Bramble or Bramley Roofing around 4 and 14 Nov to identify the transfer, without registering a return from the garbled transcript or the misfiled note about another customer.

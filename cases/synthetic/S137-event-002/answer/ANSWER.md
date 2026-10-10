@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Calum Reid that the 17 Oct +£12.30 'HVX ADJ 4471' line is an adjustment correcting interest previously charged.

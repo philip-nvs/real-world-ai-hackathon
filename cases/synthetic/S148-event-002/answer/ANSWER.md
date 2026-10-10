@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent routes Jen Corrie's fee-waiver request to the Staff Banking team, without waiving the fee.

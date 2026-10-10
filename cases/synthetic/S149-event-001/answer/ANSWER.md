@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `escalate`
+- Description: The H&V service agent passes Priya Lal's media enquiry to the press office, without giving any comment or figures.

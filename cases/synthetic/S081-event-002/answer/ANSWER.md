@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Theo Marsh that both the iPad Air and the Galaxy Tab registered this afternoon are awaiting confirmation, and asks whether both are his.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent escalates Joan Webb's report of Lily Hart's missing card to the card/fraud team as urgent, without disclosing any account information to Joan.

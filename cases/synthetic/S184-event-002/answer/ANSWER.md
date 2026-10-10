@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Lewis Crane that no call or overdraft application is recorded and points him to the overdraft application process, without changing his overdraft.

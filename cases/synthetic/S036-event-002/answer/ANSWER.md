@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks Jonah Webb's £20 international payment fee of 4 Nov against the tariff in force on that date, noting that his attached tariff is from 1 March 2024, without promising the £5 difference.

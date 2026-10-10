@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Ola Bright that both uploads were received (proof-of-address.pdf and payslip-oct.pdf), without saying they are approved.

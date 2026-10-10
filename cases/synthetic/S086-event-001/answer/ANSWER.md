@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `ask`
+- Description: The H&V service agent asks June Harper what the text says and gives her the standard safety advice (H&V never asks for passwords, PINs, codes or money transfers), without saying the text is safe.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent asks the card disputes team to review whether closed case HV-CD-2291 (£640 Velora Travel) can be reconsidered now that the merchant is in administration and the trip did not happen, without promising a refund.

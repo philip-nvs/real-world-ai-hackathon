@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `wait`
+- Description: H&V holds off on the Grayson Care Home standing-order decision at Owen Flint's request, acknowledging him kindly, without pressing him or choosing for him.

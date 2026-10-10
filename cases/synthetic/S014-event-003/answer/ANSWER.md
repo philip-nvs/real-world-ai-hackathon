@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: H&V waits for a second signatory's own consent to package PKG-S14 in the business portal, telling Liam Ortega that Nadia Ferreira or Grant Ho must give it themselves, without recording a consent on anyone's behalf.

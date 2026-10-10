@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent confirms to Mara Ellison in the secure chat that her new correspondence address is marked as current.

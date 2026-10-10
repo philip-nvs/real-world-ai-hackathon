@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Gail Morris whether she means the £86.40 payment on 14 Nov or the £14.99 one on 7 Nov at Greenacre Garden Centre, without registering a dispute yet.

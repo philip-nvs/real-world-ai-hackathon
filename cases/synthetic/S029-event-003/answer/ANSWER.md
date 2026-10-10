@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `wait`
+- Description: H&V takes no action, because Harriet Vale set the travel notice herself (event 002) and asked for nothing, beyond at most a short acknowledgement.

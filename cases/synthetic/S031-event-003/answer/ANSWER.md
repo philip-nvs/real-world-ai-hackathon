@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent asks the card team to register a review of Nadia Osei's £1,240 Larkspur Electronics payment, recording her statement and the in-app biometric approval, without making a finding or promising a refund.

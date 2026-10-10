@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Ellie Shaw that the £100 standing order to J SHAW is scheduled for 29 Dec, the next working day after the holidays, without setting up another payment.

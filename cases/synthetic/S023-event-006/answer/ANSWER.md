@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `escalate`
+- Description: The H&V service agent escalates to a team lead and the complaints team the unauthorised refund promise of 4 Nov on review HV-S23, and tells Imogen Shaw the review is still open and the earlier message was sent in error, without repeating the promise.

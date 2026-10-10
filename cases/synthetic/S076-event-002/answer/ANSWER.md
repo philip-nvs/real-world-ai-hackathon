@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Owen Price that the 1 Nov run of his £620 Riverbank Nursery standing order was executed and sent, without confirming receipt.

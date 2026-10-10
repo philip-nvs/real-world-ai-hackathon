@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `wait`
+- Description: H&V waits for Bea Lindqvist to confirm the £45 to £60 standing-order amendment HV-S11 in the secure portal, without applying it on the strength of her email.

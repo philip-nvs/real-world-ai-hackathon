@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Paul Mensah which of his four November fees he disputes, without promising a refund.

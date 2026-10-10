@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `act`
+- Description: The H&V service agent asks the statements service to place Victor Lamb's October 2025 statement in his secure portal.

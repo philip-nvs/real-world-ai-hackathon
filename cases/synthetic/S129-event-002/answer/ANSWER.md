@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent blocks Owain Hughes's ATM-retained card ending 8812, arranges a replacement and tells him H&V has no mortgage for him on record.

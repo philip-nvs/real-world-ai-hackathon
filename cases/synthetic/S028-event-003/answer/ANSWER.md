@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent registers a Direct Debit review with the Direct Debit team for the £42 Ironclad Gym collection on 1 Nov, taken after the mandate was cancelled on 1 Oct, without promising a refund or claiming to cancel the gym membership.

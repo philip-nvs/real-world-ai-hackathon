@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent resubmits Daniel Roy's trace to the Payment Team with the UETR and reference INT-77310 from the journal, without promising arrival.

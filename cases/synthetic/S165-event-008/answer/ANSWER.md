@@ -1,0 +1,3 @@
+- Cut-off: event-008
+- Action: `ask`
+- Description: The H&V service agent tells Ken Moriyama that the beneficiary bank is holding his payment until it gets the purpose (deadline 14 Nov) and asks him for it.

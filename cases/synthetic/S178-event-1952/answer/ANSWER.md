@@ -1,0 +1,3 @@
+- Cut-off: event-1952
+- Action: `act`
+- Description: The H&V service agent tells Wendy Hollis that dispatch of her replacement card was registered on 19 Nov, without confirming receipt.

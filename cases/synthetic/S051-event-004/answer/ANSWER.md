@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent refers Ruth Ocampo's trace result to the fraud team that suspended her portal inbox, without contacting her by email or SMS.

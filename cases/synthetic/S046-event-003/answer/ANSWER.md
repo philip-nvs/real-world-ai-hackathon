@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent asks the profile/mail team why two letters, including a PIN advice, went to Femi Adeyinka's old address after his change, and flags the PIN letter to the card team, without asking him for card or PIN details.

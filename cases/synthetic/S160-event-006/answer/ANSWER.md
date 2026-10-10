@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V service agent tells Neha Joshi that her Little Acorns Nursery standing order was set up on 10 Jan 2025 at £540.00 a month.

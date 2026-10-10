@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Gus Ward that dispute HV-C-1201 is still under review with no decision, without promising a refund in any wording.

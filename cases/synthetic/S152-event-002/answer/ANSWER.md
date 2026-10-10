@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent escalates Mavis Hood's £8,000 cash request to the fraud / vulnerable-customer team before the branch visit, without booking the withdrawal.

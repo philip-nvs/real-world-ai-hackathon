@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent asks the statements service again for Ivy Tan's October 2025 statement and tells her the September statement was placed by mistake.

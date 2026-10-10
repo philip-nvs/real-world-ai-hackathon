@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Leo Brandt which payment he means (USD 2,000 to the USA or EUR 2,000 to France), without opening a trace yet.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent asks for the duplicate £310 card-bill payment to be corrected under clause 14.3 of the terms and tells Faisal Noor what that clause says.

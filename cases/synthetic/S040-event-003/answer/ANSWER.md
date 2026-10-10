@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Sian Price in the secure portal that no credit from Harbourline Events or referencing INV-204 was found, and that today's £500 is from M PRICE (ref BIRTHDAY), without confirming the invoice as paid.

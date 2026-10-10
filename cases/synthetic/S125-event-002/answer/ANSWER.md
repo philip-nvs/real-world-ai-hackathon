@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent confirms with Billy Cross that he means the Ironworks Gym standing order and sends the cancellation for his secure confirmation before the 12 Nov run.

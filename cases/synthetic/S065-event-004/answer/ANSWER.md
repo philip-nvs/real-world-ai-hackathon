@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent asks the Payment Team to review Rhys Morgan's EUR payment, confirmed 40 seconds after a 30-second quote, without promising to pay the difference.

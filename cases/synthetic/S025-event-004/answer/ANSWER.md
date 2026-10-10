@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates to the joint-account disputes team because both verified holders gave opposite instructions on the Elm Row Lettings standing order, without cancelling it or telling either holder what the other said.

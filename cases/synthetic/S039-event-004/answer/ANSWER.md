@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Rosa Lind's secure-portal cancellation (event 002) of the Brightline Broadband Direct Debit mandate, noting the clock-drift warning that explains its early timestamp.

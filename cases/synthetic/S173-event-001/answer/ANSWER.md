@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `ask`
+- Description: The H&V service agent confirms with Toby Wren the 14 PixelPlay Games payments in the attachment before asking the card team to review them, without disputing other payments or promising refunds.

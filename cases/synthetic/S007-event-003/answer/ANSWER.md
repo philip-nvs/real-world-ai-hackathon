@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent asks Tomasz Wilk in the secure portal which limit he means (daily transfer limit or overdraft) and how much he needs, explaining that any change is confirmed by him in the secure portal, without promising a same-day change.

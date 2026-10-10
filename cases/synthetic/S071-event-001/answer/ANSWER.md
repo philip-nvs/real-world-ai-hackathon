@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `ask`
+- Description: The H&V service agent asks Anjali Rao which period her visa statement should cover, without ordering a period by guesswork.
