@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V service agent sends Maeve Ellery, via the secure portal, the requested change moving the next run of her standing order to Willow Yard Studios from 18 September to 22 September 2025 for her secure confirmation, without changing the instruction on her behalf.

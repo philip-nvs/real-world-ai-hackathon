@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V agent checks that Mira Ellery is the verified owner of her standing order to Westmere Garden Cooperative and may amend it, recording in case HV-012 that her chat request to raise it from £42.00 to £68.00 a month is not authorisation, so the order stays unchanged until she confirms in the secure portal.

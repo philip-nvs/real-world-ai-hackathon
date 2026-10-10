@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: H&V (the card team, acting after registering the enquiry) tells Mara Ellery through the H&V secure portal that her enquiry about the £38.40 Fern & Finch Books card purchase is registered as case HV-023, without stating who made the purchase, whether it was fraudulent or whether a refund is due, and offers to guide her through H&V's secure card-protection options.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V business support agent tells Nadia Bell in the secure chat that access cannot be granted on her email or employee role, and that it will check Merefield Design Studio Ltd's authorised company-administrator record and, if confirmed, send the request to that administrator for approval.

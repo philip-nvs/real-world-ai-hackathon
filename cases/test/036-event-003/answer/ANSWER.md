@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V service agent submits Mara Ellison's verified correspondence-address change request, with the confirmations the workflow requires, through the H&V profile change process, without changing the address on her behalf.

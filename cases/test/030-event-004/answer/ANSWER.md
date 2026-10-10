@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: The H&V agent sends Maren Ellery a status update through the H&V secure portal for replacement request HV-030, reporting that the card is in manufacture and that dispatch and delivery are not confirmed.

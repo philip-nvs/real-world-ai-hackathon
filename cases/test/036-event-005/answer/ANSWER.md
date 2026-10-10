@@ -1,3 +1,0 @@
-- Cut-off: event-005
-- Action: `act`
-- Description: H&V (Harrow & Vale Bank plc) messages Mara Ellison through the secure portal to confirm that her new correspondence address, submitted via the H&V profile change process for case HV-036, is now marked as current.

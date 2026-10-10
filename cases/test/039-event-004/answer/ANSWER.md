@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: The H&V security team prepares the session extract for Nerys Wren's profile (case HV-039), limiting it to the permitted session details and withholding device and network identifiers, and reports this back to the H&V service agent in an internal note.

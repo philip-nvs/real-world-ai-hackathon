@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: The H&V business support agent checks H&V's access-request journal in the business portal for the delivery status of the new-user access request sent to the verified company administrator of Merefield Design Studio Ltd.

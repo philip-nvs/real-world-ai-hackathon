@@ -1,3 +1,0 @@
-- Cut-off: event-005
-- Action: `act`
-- Description: H&V applies Maeve Ellery's securely confirmed change in the secure portal, moving the next run of her standing order to Willow Yard Studios from 18 September to 22 September 2025.

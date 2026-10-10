@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V service agent replies to Elowen Marr via the secure portal with the result of the H&V incoming-entry journal check for a £42.80 refund matching her transfer to Northmere Home Supplies, stating only what H&V's records show.

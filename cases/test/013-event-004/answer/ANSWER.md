@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: H&V messages Elodie Mercer in the secure portal to tell her the future run of her recurring studio-rent payment instruction (HV-013) is cancelled, and that this does not reverse or return any payments already sent.

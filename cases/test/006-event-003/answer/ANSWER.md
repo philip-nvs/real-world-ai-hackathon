@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: The H&V agent replies to Mira Ellison in the secure portal that H&V's payment instruction journal shows two separate payment instructions to North Quay Utilities for £84.20 (one Completed, one Pending), and that no cancellation or return of the pending instruction has been initiated.

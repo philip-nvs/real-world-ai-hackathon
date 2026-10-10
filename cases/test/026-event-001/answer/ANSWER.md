@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `escalate`
+- Description: The H&V agent escalates HV-026 to the Access team for the prescribed PIN route for Maren Ellwood's forgotten debit card PIN, noting the required customer check is complete in the secure portal and that no PIN was asked for or recorded.
