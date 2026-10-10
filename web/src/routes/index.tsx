@@ -1,9 +1,10 @@
 import { useRef, useState, type DragEvent } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { useQueryClient } from '@tanstack/react-query'
-import { ChevronRightIcon, FileIcon, FolderUpIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
+import { ChevronRightIcon, FileIcon, FolderUpIcon, PlayIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
 import { cn } from 'cn'
 import { api, errorMessage } from '@/api/client'
+import type { components } from '@/api/schema'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -211,14 +212,32 @@ type CaseRowProps = { id: string; uploadedAt: string; deleting: boolean; onDelet
 function CaseRow({ id, uploadedAt, deleting, onDelete }: CaseRowProps) {
   const [open, setOpen] = useState(false)
   const detail = api.useQuery('get', '/cases/{case_id}', { params: { path: { case_id: id } } }, { enabled: open })
+  const start = api.useMutation('post', '/cases/{case_id}/sessions', { onSettled: () => setOpen(true) })
+  // Polls the latest run until it ends.
+  const session = api.useQuery(
+    'get',
+    '/sessions/{session_id}',
+    { params: { path: { session_id: start.data?.id ?? '' } } },
+    { enabled: !!start.data, refetchInterval: (q) => (finished(q.state.data?.status) ? false : 1000) },
+  )
+  const running = start.isPending || (!!start.data && !finished(session.data?.status))
 
   return (
     <li>
-      <details className="group" onToggle={(e) => setOpen(e.currentTarget.open)}>
+      <details className="group" open={open} onToggle={(e) => setOpen(e.currentTarget.open)}>
         <summary className="flex cursor-pointer list-none items-center gap-3 px-3 py-2 hover:bg-muted/50">
           <ChevronRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90" />
           <span className="min-w-0 flex-1 truncate font-mono text-xs">{id}</span>
           <span className="shrink-0 text-xs text-muted-foreground">{new Date(uploadedAt).toLocaleString()}</span>
+          <Button
+            variant="ghost"
+            size="icon-xs"
+            aria-label={`Start a session on case ${id}`}
+            disabled={running}
+            onClick={(e) => (e.preventDefault(), start.mutate({ params: { path: { case_id: id } } }))}
+          >
+            <PlayIcon />
+          </Button>
           <Button
             variant="ghost"
             size="icon-xs"
@@ -253,8 +272,91 @@ function CaseRow({ id, uploadedAt, deleting, onDelete }: CaseRowProps) {
               ))}
             </ul>
           )}
+          {start.isError && <p className="mt-2 text-destructive">Couldn't start a session: {errorMessage(start.error)}</p>}
+          {start.data && <SessionTrace key={start.data.id} sessionId={start.data.id} session={session.data} />}
         </div>
       </details>
     </li>
   )
+}
+
+type SessionEvent = components['schemas']['SessionEvent']
+const finished = (status?: string) => status === 'done' || status === 'failed'
+const json = (v: unknown) => JSON.stringify(v, null, 2)
+
+// Polls the trace until the run ends. A done session's last trace line is always its decision,
+// so this stops on that (or on failed), never before its final lines are in.
+// ponytail: refetches the whole trace each second; pass `after` and append if traces grow long
+function SessionTrace({ sessionId, session }: { sessionId: string; session?: components['schemas']['Session'] }) {
+  const events = api.useQuery(
+    'get',
+    '/sessions/{session_id}/events',
+    { params: { path: { session_id: sessionId } } },
+    { refetchInterval: (q) => (q.state.data?.at(-1)?.kind === 'decision' || session?.status === 'failed' ? false : 1000) },
+  )
+  const status = session?.status ?? 'queued'
+
+  return (
+    <div className="mt-3 space-y-2 border-t pt-3">
+      <p className="text-xs text-muted-foreground">
+        Session <span className="font-mono">{sessionId.slice(0, 8)}</span> · {status}
+        {!finished(status) && '…'}
+      </p>
+      {session?.error && <p className="text-xs text-destructive">{session.error}</p>}
+      <ol className="max-h-96 space-y-2 overflow-y-auto text-xs">
+        {events.data?.map((e) => (
+          <li key={e.seq}>
+            <TraceLine e={e} />
+          </li>
+        ))}
+      </ol>
+    </div>
+  )
+}
+
+const pre = 'max-h-40 overflow-auto whitespace-pre-wrap rounded bg-muted p-2 font-mono text-[11px]'
+
+function TraceLine({ e }: { e: SessionEvent }) {
+  const d = e as Record<string, any>
+  switch (e.kind) {
+    case 'loaded':
+      return <p className="text-muted-foreground">Loaded {d.case}: {d.events} events, {d.attachments.length} attachments</p>
+    case 'model':
+      return (
+        <div className="space-y-1">
+          {d.thinking?.map((t: string, i: number) => (
+            <p key={i} className="whitespace-pre-wrap text-muted-foreground italic">{t}</p>
+          ))}
+          {d.text.map((t: string, i: number) => (
+            <p key={i} className="whitespace-pre-wrap">{t}</p>
+          ))}
+        </div>
+      )
+    case 'tool_call':
+      return (
+        <div>
+          <p className="font-mono">→ {d.tool}</p>
+          <pre className={pre}>{json(d.input)}</pre>
+        </div>
+      )
+    case 'tool_result':
+      return (
+        <div>
+          <p className="font-mono text-muted-foreground">← {d.tool}</p>
+          <pre className={pre}>{json(d.output)}</pre>
+        </div>
+      )
+    case 'tool_error':
+      return <p className="font-mono text-destructive">✕ {d.tool}: {d.error}</p>
+    case 'guard_block':
+      return <p className="font-mono text-destructive">⛔ {d.tool} blocked: {d.problems.join('; ')}</p>
+    case 'crash':
+      return <p className="font-mono text-destructive">Crashed: {d.error}</p>
+    case 'decision':
+      return (
+        <p className="rounded border p-2">
+          <span className="font-medium uppercase">{d.decision}</span> · {d.final_result}
+        </p>
+      )
+  }
 }

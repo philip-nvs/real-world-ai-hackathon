@@ -316,6 +316,7 @@ def run_agent(case, client, trace, tools=TOOLS):
         state["tokens"][0] += resp.usage.input_tokens
         state["tokens"][1] += resp.usage.output_tokens
         trace("model", stop_reason=resp.stop_reason, text=[b.text for b in resp.content if b.type == "text"],
+              thinking=[b.thinking for b in resp.content if b.type == "thinking" and b.thinking],
               usage=[resp.usage.input_tokens, resp.usage.output_tokens])
         messages.append({"role": "assistant", "content": resp.content})
         uses = [b for b in resp.content if b.type == "tool_use"]
