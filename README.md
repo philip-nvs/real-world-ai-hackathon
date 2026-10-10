@@ -17,6 +17,22 @@ MongoDB (`src/repository`, set `MONGODB_URI`/`MONGODB_DB` in `.env`):
 docker compose up -d
 ```
 
+## Case upload API
+
+`uv run fastapi dev src/main.py`. Full spec: [`src/openapi.yaml`](src/openapi.yaml) (a test keeps it in step with the routes). A case is one MongoDB document in `cases`, keyed by case id, holding every file's path, type and bytes (15 MB cap per case).
+
+| Endpoint | Does |
+|---|---|
+| `POST /cases` | multipart `files`, each filename its path (`001/attachments/x.pdf`, what `<input webkitdirectory>` sends). One shared top folder becomes the case id and is stripped; loose files need a `case_id` form field. Re-uploading an id replaces it. |
+| `GET /cases` | case ids and upload times |
+| `GET /cases/{id}` | file list (path, size, type), no bytes |
+| `GET /cases/{id}/files/{path}` | one file's raw bytes |
+| `DELETE /cases/{id}` | removes the case |
+
+```bash
+curl -F files=@cases/full/001/index.md\;filename=001/index.md -F files=@cases/full/001/history.md\;filename=001/history.md localhost:8000/cases
+```
+
 ## Run
 
 ```bash
@@ -75,6 +91,7 @@ The dev loop runs the same `run_case` with the agent's tools answering from the 
 uv run test_run.py
 uv run test_bank_env.py
 uv run -m src.repository.test_repository   # needs MongoDB running
+uv run --with pytest pytest src/            # API; the upload test needs MongoDB running
 ```
 
 Neither needs an API key.
