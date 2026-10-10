@@ -56,34 +56,41 @@
       "kind": "outgoing_transfer",
       "party": "p1",
       "match_terms": [
+        "HV-007",
         "international transfer",
-        "international payment",
-        "HV-007"
+        "international payment"
       ],
       "attributes": [
         {
-          "key": "payment_type",
-          "value": "international"
+          "key": "type",
+          "value": "international payment",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "sent"
+          "value": "sent",
+          "since_event": null
         },
         {
           "key": "trace_stage",
-          "value": "instruction sent onward from H&V"
+          "value": "instruction sent onward from H&V",
+          "since_event": null
         },
         {
-          "key": "downstream_processing_status",
-          "value": "pending"
+          "key": "downstream_status",
+          "value": "pending",
+          "since_event": null
         },
         {
-          "key": "beneficiary_receipt_confirmed",
-          "value": "not confirmed"
+          "key": "beneficiary_receipt",
+          "value": "not confirmed",
+          "since_event": null
         }
       ],
       "customer_facing": null,
-      "disclosure_rules": [],
+      "disclosure_rules": [
+        "H&V's sent status is not confirmation that the beneficiary received the funds"
+      ],
       "exists_before_agent": true,
       "created_by": null,
       "source_event": "event-001"
@@ -98,8 +105,8 @@
         "HV-007",
         "international transfer",
         "current stage",
-        "payment stage",
-        "beneficiary receipt"
+        "beneficiary receipt",
+        "payment status"
       ],
       "status": "completed",
       "reference": null,

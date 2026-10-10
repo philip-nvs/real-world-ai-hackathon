@@ -58,33 +58,37 @@
       "match_terms": [
         "H&V card",
         "Rowan Ellery",
-        "card temporarily unavailable",
-        "restriction",
+        "card restriction",
+        "temporarily unavailable",
         "grocery purchase decline"
       ],
       "attributes": [
         {
           "key": "status",
-          "value": "temporarily unavailable"
+          "value": "temporarily unavailable",
+          "since_event": null
         },
         {
           "key": "restriction_category",
-          "value": "temporary security-related restriction"
+          "value": "temporary security-related restriction",
+          "since_event": null
         },
         {
           "key": "restriction_basis",
-          "value": "not shown"
+          "value": "not shown",
+          "since_event": null
         },
         {
           "key": "restriction_lifted",
-          "value": "not confirmed"
+          "value": "not confirmed",
+          "since_event": null
         }
       ],
-      "customer_facing": "Your card has a temporary security-related restriction. Further operational detail can't be provided, and this confirmation does not mean the restriction has been lifted or say when it may be.",
+      "customer_facing": "Your card has a temporary security-related restriction. No further operational detail can be provided, and this confirmation does not mean the restriction has been lifted or say when it may be.",
       "disclosure_rules": [
-        "Exact basis is not shown",
-        "Do not provide operational detail",
-        "Do not confirm that the restriction will be lifted"
+        "exact basis not shown",
+        "do not provide operational detail",
+        "do not confirm that the restriction will be lifted"
       ],
       "exists_before_agent": true,
       "created_by": null,

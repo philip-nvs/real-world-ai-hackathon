@@ -66,58 +66,25 @@
         "Elowen Mercer",
         "phone number",
         "profile phone number",
-        "old phone"
+        "H&V profile"
       ],
       "attributes": [
         {
-          "key": "field",
-          "value": "phone number"
+          "key": "name",
+          "value": "Elowen Mercer",
+          "since_event": null
         },
         {
-          "key": "change_status",
-          "value": "not changed"
-        },
-        {
-          "key": "old_device_check",
-          "value": "in place; not bypassed"
+          "key": "phone_number_status",
+          "value": "original number on profile",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [],
       "exists_before_agent": true,
       "created_by": null,
-      "source_event": "event-003"
-    },
-    {
-      "id": "r2",
-      "system": "customer_profile",
-      "kind": "phone_change_request",
-      "party": "p1",
-      "match_terms": [
-        "Elowen Mercer",
-        "phone number change",
-        "replacement number",
-        "secure profile-change process"
-      ],
-      "attributes": [
-        {
-          "key": "status",
-          "value": "awaiting customer confirmation"
-        },
-        {
-          "key": "channel",
-          "value": "secure portal"
-        },
-        {
-          "key": "note",
-          "value": "No change will be made until the customer confirms."
-        }
-      ],
-      "customer_facing": "Please review the replacement number entered in this secure process and confirm whether you want it applied to your profile. No change will be made until you confirm.",
-      "disclosure_rules": [],
-      "exists_before_agent": false,
-      "created_by": "x1",
-      "source_event": "event-004"
+      "source_event": "event-001"
     }
   ],
   "team_responses": [],
@@ -129,7 +96,7 @@
       "match_terms": [
         "phone number",
         "replacement number",
-        "profile",
+        "profile phone number change",
         "Elowen Mercer"
       ],
       "target_record": "r1",
@@ -138,12 +105,9 @@
       ],
       "effect": [
         {
-          "key": "change_status",
-          "value": "updated"
-        },
-        {
-          "key": "phone_number",
-          "value": "replacement number confirmed by customer in secure process"
+          "key": "phone_number_status",
+          "value": "updated to replacement number confirmed by customer in secure process",
+          "since_event": "event-006"
         }
       ],
       "result": "Phone number updated. The phone number in your profile has been updated following your secure confirmation.",

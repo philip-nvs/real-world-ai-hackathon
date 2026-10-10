@@ -16,7 +16,7 @@
       "name": "Northmere Studio Ltd.",
       "kind": "business",
       "roles": [
-        "account_holder"
+        "business_customer"
       ],
       "acts_for": null
     }
@@ -67,75 +67,96 @@
       "match_terms": [
         "batch-041.csv",
         "HV-041",
-        "June 2025",
+        "June 2025 payroll",
         "payroll",
         "Northmere Studio Ltd.",
+        "Mara Ellison",
         "Staff A",
         "Staff B",
         "420.00",
         "385.00",
         "805.00",
         "row 1",
-        "row 2"
+        "row 2",
+        "2025-10-07"
       ],
       "attributes": [
         {
           "key": "file_name",
-          "value": "batch-041.csv"
+          "value": "batch-041.csv",
+          "since_event": null
         },
         {
           "key": "reference",
-          "value": "HV-041"
+          "value": "HV-041",
+          "since_event": null
         },
         {
           "key": "payroll_period",
-          "value": "June 2025"
+          "value": "June 2025",
+          "since_event": null
         },
         {
           "key": "company",
-          "value": "Northmere Studio Ltd."
+          "value": "Northmere Studio Ltd.",
+          "since_event": null
         },
         {
           "key": "uploaded_by",
-          "value": "Mara Ellison"
+          "value": "Mara Ellison",
+          "since_event": null
         },
         {
-          "key": "status",
-          "value": "received"
+          "key": "uploaded_at",
+          "value": "2025-10-07 09:00:00 UTC",
+          "since_event": null
         },
         {
-          "key": "row_count",
-          "value": "2"
-        },
-        {
-          "key": "row_1",
-          "value": "Staff A, 420.00 GBP"
-        },
-        {
-          "key": "row_2",
-          "value": "Staff B, 385.00 GBP"
-        },
-        {
-          "key": "total_amount_gbp",
-          "value": "805.00"
+          "key": "receipt_status",
+          "value": "received",
+          "since_event": null
         },
         {
           "key": "validation_status",
-          "value": "not confirmed"
+          "value": "not confirmed",
+          "since_event": null
         },
         {
           "key": "authorisation_status",
-          "value": "not confirmed"
+          "value": "not confirmed",
+          "since_event": null
         },
         {
           "key": "payment_execution_status",
-          "value": "not confirmed"
+          "value": "not confirmed",
+          "since_event": null
+        },
+        {
+          "key": "row_count",
+          "value": "2",
+          "since_event": null
+        },
+        {
+          "key": "total_amount_gbp",
+          "value": "805.00",
+          "since_event": null
+        },
+        {
+          "key": "row_1",
+          "value": "Staff A, 420.00 GBP",
+          "since_event": null
+        },
+        {
+          "key": "row_2",
+          "value": "Staff B, 385.00 GBP",
+          "since_event": null
         }
       ],
       "customer_facing": "Receipt confirmed: batch-041.csv, reference HV-041, June 2025 payroll. This confirms that the file was received only; validation, payment authorisation, and payment execution are not confirmed.",
       "disclosure_rules": [
-        "The entry confirms receipt only; do not state or imply validation, authorisation, or payment",
-        "Receipt does not mean the file's rows have been processed"
+        "The import-journal entry confirms receipt only.",
+        "Do not state or imply that the file has been validated, authorised or paid.",
+        "Receipt does not mean the file's rows have been processed."
       ],
       "exists_before_agent": true,
       "created_by": null,

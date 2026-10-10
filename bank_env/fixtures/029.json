@@ -58,26 +58,29 @@
       "match_terms": [
         "new tablet",
         "tablet",
-        "HV-029",
-        "H&V app",
         "device linking",
-        "Mara Ellison"
+        "HV-029",
+        "Mara Ellison",
+        "H&V app"
       ],
       "attributes": [
         {
-          "key": "status",
-          "value": "Awaiting confirmation"
+          "key": "device_description",
+          "value": "new tablet",
+          "since_event": null
         },
         {
-          "key": "device_type",
-          "value": "tablet"
+          "key": "status",
+          "value": "Awaiting confirmation",
+          "since_event": null
         },
         {
           "key": "admitted_for_banking_operations",
-          "value": "false"
+          "value": "no",
+          "since_event": null
         }
       ],
-      "customer_facing": "Device status: Awaiting confirmation. This tablet has not yet been admitted for banking operations.",
+      "customer_facing": null,
       "disclosure_rules": [],
       "exists_before_agent": true,
       "created_by": null,

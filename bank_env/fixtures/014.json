@@ -64,24 +64,28 @@
       "attributes": [
         {
           "key": "payee",
-          "value": "Northmere Water Services"
+          "value": "Northmere Water Services",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "Active"
+          "value": "Active",
+          "since_event": null
         },
         {
           "key": "status_checked_date",
-          "value": "2025-08-14"
+          "value": "2025-08-14",
+          "since_event": null
         },
         {
-          "key": "record_side",
-          "value": "payer-side mandate record"
+          "key": "record_type",
+          "value": "payer-side mandate record",
+          "since_event": null
         }
       ],
       "customer_facing": "Direct Debit mandate — Northmere Water Services — Status: Active. Status checked 14 August 2025.",
       "disclosure_rules": [
-        "Confirms bank-side mandate status only; does not establish any obligation to Northmere Water Services",
+        "Confirms the bank-side mandate status only; does not establish any obligation to Northmere Water Services",
         "Absence of newer collections does not by itself mean the mandate was cancelled"
       ],
       "exists_before_agent": true,
@@ -97,20 +101,28 @@
         "Northmere Water Services",
         "Direct Debit",
         "March 2025",
-        "statement period ending 31 March 2025"
+        "2025-03-31"
       ],
       "attributes": [
         {
           "key": "payee",
-          "value": "Northmere Water Services"
+          "value": "Northmere Water Services",
+          "since_event": null
+        },
+        {
+          "key": "payment_type",
+          "value": "Direct Debit collection",
+          "since_event": null
         },
         {
           "key": "statement_period_end",
-          "value": "2025-03-31"
+          "value": "2025-03-31",
+          "since_event": null
         },
         {
           "key": "entry_type",
-          "value": "historic statement entry"
+          "value": "historic statement entry",
+          "since_event": null
         }
       ],
       "customer_facing": null,

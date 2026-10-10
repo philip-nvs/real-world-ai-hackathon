@@ -60,34 +60,34 @@
         "Fern & Finch Books",
         "38.40",
         "2025-07-14",
-        "14 July 2025",
-        "unrecognised purchase"
+        "14 July 2025"
       ],
       "attributes": [
         {
           "key": "merchant",
-          "value": "Fern & Finch Books"
+          "value": "Fern & Finch Books",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "38.40"
+          "value": "38.40",
+          "since_event": null
         },
         {
           "key": "transaction_date",
-          "value": "2025-07-14"
+          "value": "2025-07-14",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "posted"
-        },
-        {
-          "key": "purchaser_established",
-          "value": "false"
+          "value": "posted",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "Appearance in the transaction list does not establish who made the purchase"
+        "Its appearance in the transaction list does not establish who made it",
+        "No conclusion about the merchant or the purchase has been reached"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -95,27 +95,6 @@
     },
     {
       "id": "r2",
-      "system": "card_journal",
-      "kind": "card",
-      "party": "p1",
-      "match_terms": [
-        "card",
-        "Mara Ellery card"
-      ],
-      "attributes": [
-        {
-          "key": "card_change_made",
-          "value": "none"
-        }
-      ],
-      "customer_facing": null,
-      "disclosure_rules": [],
-      "exists_before_agent": true,
-      "created_by": null,
-      "source_event": "event-005"
-    },
-    {
-      "id": "r3",
       "system": "card_journal",
       "kind": "card_case",
       "party": "p1",
@@ -128,23 +107,33 @@
       "attributes": [
         {
           "key": "reference",
-          "value": "HV-023"
+          "value": "HV-023",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "registered"
+          "value": "registered",
+          "since_event": null
+        },
+        {
+          "key": "subject",
+          "value": "Unrecognised posted card purchase at Fern & Finch Books for £38.40 on 14 July 2025",
+          "since_event": null
         },
         {
           "key": "fraud_finding",
-          "value": "none"
+          "value": "none made",
+          "since_event": null
         },
         {
           "key": "refund_decision",
-          "value": "none"
+          "value": "none made",
+          "since_event": null
         },
         {
           "key": "purchaser_established",
-          "value": "false"
+          "value": "no",
+          "since_event": null
         }
       ],
       "customer_facing": "I have registered your card-purchase enquiry as HV-023. We have not established who made the purchase, whether it was fraudulent, or whether a refund is due.",
@@ -162,10 +151,10 @@
       "team": "card_team",
       "topic_terms": [
         "unrecognised purchase",
+        "card case",
         "Fern & Finch Books",
         "38.40",
-        "14 July 2025",
-        "card case"
+        "14 July 2025"
       ],
       "status": "registered",
       "reference": "HV-023",

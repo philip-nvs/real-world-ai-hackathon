@@ -10,6 +10,15 @@
         "account_holder"
       ],
       "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "Northmere Home Supplies",
+      "kind": "business",
+      "roles": [
+        "payee"
+      ],
+      "acts_for": null
     }
   ],
   "events": [
@@ -63,19 +72,23 @@
       "attributes": [
         {
           "key": "payee",
-          "value": "Northmere Home Supplies"
+          "value": "Northmere Home Supplies",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "42.80"
+          "value": "42.80",
+          "since_event": null
         },
         {
           "key": "direction",
-          "value": "outgoing"
+          "value": "outgoing",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "shown in account history"
+          "value": "shown in account history",
+          "since_event": null
         }
       ],
       "customer_facing": null,
@@ -89,34 +102,34 @@
     {
       "id": "r2",
       "system": "incoming_payments",
-      "kind": "refund_credit",
+      "kind": "refund",
       "party": "p1",
       "match_terms": [
         "Northmere Home Supplies",
         "42.80",
         "refund",
-        "incoming entry"
+        "incoming credit"
       ],
       "attributes": [
         {
           "key": "amount_gbp",
-          "value": "42.80"
+          "value": "42.80",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "credited"
+          "value": "credited",
+          "since_event": null
         },
         {
-          "key": "type",
-          "value": "refund"
+          "key": "identified_as",
+          "value": "refund for the Northmere Home Supplies transfer in the account history",
+          "since_event": null
         },
         {
-          "key": "matched_outgoing_transfer",
-          "value": "Northmere Home Supplies transfer in the account history"
-        },
-        {
-          "key": "counterparty",
-          "value": "Northmere Home Supplies"
+          "key": "linked_outgoing_record",
+          "value": "r1",
+          "since_event": null
         }
       ],
       "customer_facing": "Refund status: £42.80 credited to your account. This credit matches the Northmere Home Supplies transfer shown in your account history.",

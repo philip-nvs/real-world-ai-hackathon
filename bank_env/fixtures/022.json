@@ -58,24 +58,25 @@
       "party": "p1",
       "match_terms": [
         "debit card",
-        "H&V debit card",
-        "missing card",
         "Mara Ellison",
+        "missing card",
+        "Alder Quay Market",
         "HV-022"
       ],
       "attributes": [
         {
           "key": "card_type",
-          "value": "debit"
+          "value": "debit",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "Block confirmation does not assess any disputed transactions; those are handled separately and no outcome is recorded"
+        "Block confirmation does not assess any disputed transactions; those are handled separately and no outcome on them is recorded"
       ],
       "exists_before_agent": true,
       "created_by": null,
-      "source_event": "event-004"
+      "source_event": "event-001"
     }
   ],
   "team_responses": [],
@@ -85,10 +86,11 @@
       "process": "card_system",
       "action": "block_card",
       "match_terms": [
-        "block card",
-        "missing debit card",
-        "HV-022",
-        "Mara Ellison"
+        "debit card",
+        "Mara Ellison",
+        "block",
+        "missing card",
+        "HV-022"
       ],
       "target_record": "r1",
       "confirmed_by": [
@@ -97,7 +99,8 @@
       "effect": [
         {
           "key": "status",
-          "value": "BLOCKED"
+          "value": "BLOCKED",
+          "since_event": "event-004"
         }
       ],
       "result": "Card journal status: BLOCKED. The card is marked blocked.",

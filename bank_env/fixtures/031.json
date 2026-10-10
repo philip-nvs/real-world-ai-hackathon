@@ -46,7 +46,7 @@
       "channel": "Secure portal",
       "party": null,
       "bank_originated": true,
-      "verified": false
+      "verified": true
     }
   ],
   "records": [],
@@ -60,8 +60,7 @@
         "secure portal",
         "HV-031",
         "statement-031.pdf",
-        "statement period",
-        "account owner"
+        "Elowen Marr"
       ],
       "status": "completed",
       "reference": "HV-031",

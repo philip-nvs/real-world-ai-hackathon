@@ -7,6 +7,7 @@
       "name": "Maren Ellery",
       "kind": "person",
       "roles": [
+        "account_holder",
         "cardholder"
       ],
       "acts_for": null
@@ -53,34 +54,45 @@
     {
       "id": "r1",
       "system": "card_journal",
-      "kind": "card_replacement",
+      "kind": "replacement_card",
       "party": "p1",
       "match_terms": [
         "HV-030",
         "replacement card",
-        "debit card replacement",
-        "Maren Ellery"
+        "debit card",
+        "replacement request",
+        "2025-09-15"
       ],
       "attributes": [
         {
-          "key": "reference",
-          "value": "HV-030"
+          "key": "replacement_reference",
+          "value": "HV-030",
+          "since_event": null
         },
         {
           "key": "request_status",
-          "value": "accepted"
+          "value": "accepted",
+          "since_event": null
+        },
+        {
+          "key": "card_type",
+          "value": "debit card",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "in manufacture"
+          "value": "in manufacture",
+          "since_event": null
         },
         {
           "key": "dispatch",
-          "value": "not confirmed"
+          "value": "not confirmed",
+          "since_event": null
         },
         {
           "key": "delivery",
-          "value": "not confirmed"
+          "value": "not confirmed",
+          "since_event": null
         }
       ],
       "customer_facing": null,

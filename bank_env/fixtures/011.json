@@ -60,37 +60,43 @@
         "standing order",
         "monthly",
         "household contribution",
-        "monthly household contribution standing order",
-        "2025-09-03",
-        "3 September 2025"
+        "3 September 2025",
+        "2025-09-03"
       ],
       "attributes": [
         {
           "key": "status",
-          "value": "active"
+          "value": "active",
+          "since_event": null
         },
         {
           "key": "frequency",
-          "value": "monthly"
+          "value": "monthly",
+          "since_event": null
         },
         {
           "key": "purpose",
-          "value": "household contribution"
+          "value": "household contribution",
+          "since_event": null
         },
         {
           "key": "next_run_date",
-          "value": "2025-09-03"
+          "value": "2025-09-03",
+          "since_event": null
         },
         {
           "key": "next_payment_executed",
-          "value": "false"
+          "value": "false",
+          "since_event": null
+        },
+        {
+          "key": "next_run_date_note",
+          "value": "scheduled run date, not a guarantee of when the recipient will receive the money",
+          "since_event": null
         }
       ],
       "customer_facing": null,
-      "disclosure_rules": [
-        "The next run date is the scheduled run date, not a guarantee of when the recipient will receive the money",
-        "The future payment has not yet been made; do not present it as executed"
-      ],
+      "disclosure_rules": [],
       "exists_before_agent": true,
       "created_by": null,
       "source_event": "event-004"

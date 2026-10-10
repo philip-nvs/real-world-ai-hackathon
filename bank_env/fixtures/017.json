@@ -55,7 +55,7 @@
       "channel": "Secure portal",
       "party": null,
       "bank_originated": true,
-      "verified": false
+      "verified": true
     }
   ],
   "records": [
@@ -66,42 +66,45 @@
       "party": "p1",
       "match_terms": [
         "Elm Quay Property Services",
-        "Elm Quay",
         "rent",
-        "monthly rent standing order",
+        "monthly",
         "standing order",
         "Mara Ellery"
       ],
       "attributes": [
         {
           "key": "payee",
-          "value": "Elm Quay Property Services"
+          "value": "Elm Quay Property Services",
+          "since_event": null
         },
         {
           "key": "purpose",
-          "value": "rent"
+          "value": "rent",
+          "since_event": null
         },
         {
           "key": "frequency",
-          "value": "monthly"
+          "value": "monthly",
+          "since_event": null
         },
         {
           "key": "scheduled_run_status",
-          "value": "not executed"
+          "value": "Not executed",
+          "since_event": null
         },
         {
           "key": "scheduled_run_reason",
-          "value": "insufficient cleared funds at the scheduled processing time"
+          "value": "insufficient cleared funds at the scheduled processing time",
+          "since_event": null
         },
         {
           "key": "payment_made_for_run",
-          "value": "no"
+          "value": "no",
+          "since_event": null
         }
       ],
-      "customer_facing": "Standing-order status: Not executed — insufficient cleared funds at the scheduled processing time.",
-      "disclosure_rules": [
-        "Do not advise the customer to pay again without first checking for any new or pending activity"
-      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
       "exists_before_agent": true,
       "created_by": null,
       "source_event": "event-004"

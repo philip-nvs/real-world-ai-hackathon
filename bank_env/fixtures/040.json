@@ -1,6 +1,6 @@
 {
   "case_id": "040",
-  "case_ref": "HV-040",
+  "case_ref": null,
   "parties": [
     {
       "id": "p1",
@@ -58,40 +58,45 @@
       "match_terms": [
         "HV-040",
         "74.00",
-        "2025-07-14",
         "14 July 2025",
         "repair contractor"
       ],
       "attributes": [
         {
           "key": "reference",
-          "value": "HV-040"
+          "value": "HV-040",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "74.00"
+          "value": "74.00",
+          "since_event": null
         },
         {
           "key": "payment_date",
-          "value": "2025-07-14"
+          "value": "14 July 2025",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "SENT"
+          "value": "SENT",
+          "since_event": null
         },
         {
-          "key": "recipient_credit",
-          "value": "not confirmed"
+          "key": "direction",
+          "value": "outgoing",
+          "since_event": null
         },
         {
-          "key": "payee",
-          "value": "repair contractor"
+          "key": "credit_to_recipient",
+          "value": "not confirmed",
+          "since_event": null
         }
       ],
-      "customer_facing": "The £74.00 payment dated 14 July 2025 (HV-040) is recorded as SENT; this does not confirm credit to the recipient.",
+      "customer_facing": "The £74.00 payment dated 14 July 2025 (HV-040) has bank status SENT; this does not confirm credit to the recipient.",
       "disclosure_rules": [
-        "Routing details intentionally withheld",
-        "Do not state that the payment has been credited to or received by the recipient"
+        "Do not state that the payment has been credited to or received by the recipient; credit is not confirmed",
+        "Routing details are withheld"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -107,12 +112,12 @@
         "HV-040",
         "74.00",
         "14 July 2025",
-        "proof of payment",
-        "document"
+        "payment document",
+        "proof of payment"
       ],
       "status": "completed",
       "reference": "HV-040",
-      "response": "Record HV-040 generated for the payment dated 14 July 2025, amount £74.00. The bank status on the record is SENT. The record does not confirm credit to the recipient; routing details are withheld.",
+      "response": "Record HV-040 generated for the payment dated 14 July 2025, amount £74.00. The bank status on the record is SENT. The record does not confirm credit to the recipient; routing details are withheld. Delivered to the customer's secure portal.",
       "document": "payment-record-040.pdf",
       "source_event": "event-004"
     }

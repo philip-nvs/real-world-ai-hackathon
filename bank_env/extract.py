@@ -48,6 +48,10 @@ withheld basis or identifiers), set customer_facing and disclosure_rules.
 - exists_before_agent: false for anything that only comes into being through an action during the case (a request \
 registered or sent for approval, a case opened, a document issued, an export created); point created_by at the \
 team_response or process whose action creates it. The simulator hides such records until that action happens.
+- Facts that change during the case without an agent action (the customer's own recovery or confirmation step, a \
+later system update): list each value as its own attribute with the same key, the original with since_event null and \
+each later one with the since_event it holds from. Never fold a later state into a fact that held from the start. \
+Changes made by a process belong in its effect instead.
 - match_terms: the identifiers someone would search by: payee, amount like "420.00", date, case reference, file name, row id.
 - team_responses: what each team replied to a request (status, reference, reply, produced document file name).
 - processes: only account-changing operations the case performs or prepares. confirmed_by lists the events that are a \

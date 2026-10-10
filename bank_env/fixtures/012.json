@@ -77,31 +77,34 @@
         "standing order",
         "42.00",
         "68.00",
-        "monthly",
         "HV-012"
       ],
       "attributes": [
         {
           "key": "payee",
-          "value": "Westmere Garden Cooperative"
+          "value": "Westmere Garden Cooperative",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "42.00"
+          "value": "42.00",
+          "since_event": null
         },
         {
           "key": "frequency",
-          "value": "monthly"
+          "value": "monthly",
+          "since_event": null
         },
         {
           "key": "owner",
-          "value": "Mira Ellery (verified owner, may amend)"
+          "value": "Mira Ellery (verified owner, may amend)",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "An amount update does not guarantee the next payment",
-        "Applicable date of an amendment is as recorded in the standing-order record"
+        "The applicable date of the amended amount is the date in the standing-order record; do not promise a specific date beyond that record",
+        "Do not state that the next payment is guaranteed at the new amount"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -119,7 +122,7 @@
         "standing order",
         "42.00",
         "68.00",
-        "monthly"
+        "amend amount"
       ],
       "target_record": "r1",
       "confirmed_by": [
@@ -128,7 +131,8 @@
       "effect": [
         {
           "key": "amount_gbp",
-          "value": "68.00"
+          "value": "68.00",
+          "since_event": "event-006"
         }
       ],
       "result": "Standing order updated: £68.00 per month. The applicable date is recorded in your standing-order record. This update does not guarantee the next payment.",

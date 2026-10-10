@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""Dev loop: run the same agent as run.py on the hand-cut test cases in cases/test/, and have
-Claude judge its next step against each case's gold ANSWER.md.
+"""Dev loop: run the same agent as run.py on the test cut-offs in cases/test/, and have Claude
+judge its next step against each one's gold answer.
 
-Each test case holds the history up to a curated cut-off; ANSWER.md (never shown to the agent)
-gives the gold action (act/ask/wait/escalate) and description. The agent's tools answer from
+Each test case (NNN-event-KKK/) holds a public case's history up to event KKK; its answer/ folder
+(never shown to the agent) holds ANSWER.md with the gold action (act/ask/wait/escalate) and
+description, plus any artefact from the full case. The agent's tools answer from
 the case's bank_env fixture, seeing only the test history's events; every bank call lands in
 answers/<case>/bank_log.json. --mock uses tools.py's mocks instead.
 
-    python evaluate.py                          # all 50 curated test cases
-    python evaluate.py 001 017 041              # a few
-    python evaluate.py --cases cases/cutoffs    # the generated extra cut-offs (NNN-eKKK); ids match NNN too
+    python evaluate.py                          # all test cut-offs
+    python evaluate.py 001 017 041              # every cut-off of a few public cases
+    python evaluate.py 017-event-004            # one cut-off
 """
 
 import argparse
@@ -45,15 +46,19 @@ def parse_gold(path):
 
 
 def case_id(path):
-    """Public case number of a test case folder: "017" for both 017/ and 017-e004/."""
+    """Public case number of a test case folder: "017" for 017-event-004/."""
     return Path(path).name.split("-")[0]
 
 
+def gold_file(src):
+    return Path(src) / "answer" / "ANSWER.md"
+
+
 def stage_case(src, dst):
-    """Copy a test case for the agent, leaving ANSWER.md behind. dst is cleared first so nothing
-    from an earlier run (e.g. a later attachment) leaks in."""
+    """Copy a test case for the agent, leaving the answer/ folder (gold answer and artefacts) behind.
+    dst is cleared first so nothing from an earlier run (e.g. a later attachment) leaks in."""
     shutil.rmtree(dst, ignore_errors=True)
-    shutil.copytree(src, dst, ignore=shutil.ignore_patterns("ANSWER.md"))
+    shutil.copytree(src, dst, ignore=shutil.ignore_patterns("answer", "ANSWER.md"))
 
 
 def judge(client, gold, outcome, answer_md):
@@ -88,14 +93,14 @@ def main():
     load_env()
 
     out = Path(args.out)
-    srcs = sorted(p for p in Path(args.cases).iterdir() if (p / "ANSWER.md").is_file()
+    srcs = sorted(p for p in Path(args.cases).iterdir() if gold_file(p).is_file()
                   and (not args.ids or p.name in args.ids or case_id(p) in args.ids))
     if not srcs:
-        sys.exit(f"No test cases (with ANSWER.md) under {args.cases}")
+        sys.exit(f"No test cases (with answer/ANSWER.md) under {args.cases}")
     client = anthropic.Anthropic(timeout=600, max_retries=3)
 
     def one(src):
-        gold = parse_gold(src / "ANSWER.md")
+        gold = parse_gold(gold_file(src))
         stage_case(src, out / "cases" / src.name)
         bank = None
         if not args.mock and (FIXTURES / f"{case_id(src)}.json").is_file():

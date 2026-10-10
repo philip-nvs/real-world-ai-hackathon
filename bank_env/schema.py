@@ -21,6 +21,9 @@ class Strict(BaseModel):
 class Attr(Strict):
     key: str = Field(description="snake_case fact name, e.g. status, amount_gbp, next_run_date, decline_reason")
     value: str
+    since_event: str | None = Field(default=None, description="Event from which this fact holds, if it only became "
+                                                              "true during the case; null if it held before the "
+                                                              "agent's first action")
 
 
 class Party(Strict):
@@ -108,6 +111,8 @@ def check_world(world, event_ids):
         if item.source_event not in events:
             problems.append(f"{item.id}: source_event {item.source_event} not in case")
     problems += [f"{r.id}: unknown party {r.party}" for r in world.records if r.party and r.party not in parties]
+    problems += [f"{r.id}.{a.key}: since_event {a.since_event} not in case"
+                 for r in world.records for a in r.attributes if a.since_event and a.since_event not in events]
     creators = {t.id for t in world.team_responses} | {x.id for x in world.processes}
     for r in world.records:
         if r.created_by and r.created_by not in creators:

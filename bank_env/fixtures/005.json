@@ -59,34 +59,39 @@
         "286.40",
         "pottery-studio bill",
         "shared pottery-studio bill",
-        "wrong saved recipient",
+        "saved recipient",
         "HV-005"
       ],
       "attributes": [
         {
           "key": "status",
-          "value": "sent"
+          "value": "sent",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "286.40"
+          "value": "286.40",
+          "since_event": null
         },
         {
           "key": "purpose",
-          "value": "shared pottery-studio bill"
+          "value": "shared pottery-studio bill",
+          "since_event": null
         },
         {
           "key": "recipient_type",
-          "value": "saved recipient"
+          "value": "saved recipient",
+          "since_event": null
         },
         {
           "key": "return_status",
-          "value": "not confirmed"
+          "value": "not confirmed; sent status does not confirm the recipient has returned the money",
+          "since_event": null
         }
       ],
       "customer_facing": "Transfer status: sent. This status confirms the transfer was sent from your H&V account; it does not confirm that the recipient has returned the money.",
       "disclosure_rules": [
-        "Sent status confirms only that the transfer left the H&V account; it does not confirm the recipient has returned the money"
+        "Sent status must not be presented as confirming that the money has been returned"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -101,29 +106,23 @@
         "HV-005",
         "return request",
         "286.40",
-        "pottery-studio bill",
-        "2025-07-27"
+        "pottery-studio bill"
       ],
       "attributes": [
         {
           "key": "status",
-          "value": "registered"
-        },
-        {
-          "key": "case_ref",
-          "value": "HV-005"
+          "value": "registered",
+          "since_event": "event-004"
         },
         {
           "key": "linked_transfer",
-          "value": "r1"
+          "value": "r1",
+          "since_event": "event-004"
         },
         {
-          "key": "reason",
-          "value": "recipient selected in error"
-        },
-        {
-          "key": "return_of_money",
-          "value": "not confirmed"
+          "key": "return_outcome",
+          "value": "not confirmed",
+          "since_event": "event-004"
         }
       ],
       "customer_facing": "Request status: registered. H&V has registered your request to seek a return of the transfer; a return of the money is not confirmed.",
@@ -142,11 +141,10 @@
       "topic_terms": [
         "return request",
         "wrong recipient",
-        "wrong saved recipient",
         "seek return",
+        "HV-005",
         "286.40",
-        "pottery-studio bill",
-        "HV-005"
+        "pottery-studio bill"
       ],
       "status": "registered",
       "reference": "HV-005",

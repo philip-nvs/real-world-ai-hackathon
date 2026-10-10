@@ -10,15 +10,6 @@
         "account_holder"
       ],
       "acts_for": null
-    },
-    {
-      "id": "p2",
-      "name": "Northmere Housing Co-operative",
-      "kind": "business",
-      "roles": [
-        "payee"
-      ],
-      "acts_for": null
     }
   ],
   "events": [
@@ -68,38 +59,38 @@
         "Northmere Housing Co-operative",
         "2025-07-14",
         "14 July 2025",
-        "Mara Ellery"
+        "transfer"
       ],
       "attributes": [
         {
           "key": "payee",
-          "value": "Northmere Housing Co-operative"
+          "value": "Northmere Housing Co-operative",
+          "since_event": null
         },
         {
           "key": "date",
-          "value": "2025-07-14"
+          "value": "2025-07-14",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "Not completed"
+          "value": "Not completed",
+          "since_event": null
         },
         {
           "key": "decline_code_recorded",
-          "value": "true"
+          "value": "true",
+          "since_event": null
         },
         {
           "key": "decline_reason",
-          "value": "The receiving bank declined the transfer"
-        },
-        {
-          "key": "completed_by_hv",
-          "value": "false"
+          "value": "The receiving bank declined the transfer.",
+          "since_event": null
         }
       ],
       "customer_facing": "The receiving bank declined the transfer.",
       "disclosure_rules": [
-        "Share only the permitted customer-facing wording",
-        "Decline code itself not shown to the customer"
+        "Only the permitted customer-facing wording may be shared; the decline code itself is not shown to the customer"
       ],
       "exists_before_agent": true,
       "created_by": null,

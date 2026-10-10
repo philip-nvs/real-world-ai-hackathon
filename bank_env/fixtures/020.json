@@ -63,24 +63,28 @@
       "attributes": [
         {
           "key": "payee",
-          "value": "Willowmere Lettings"
+          "value": "Willowmere Lettings",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "active"
+          "value": "active",
+          "since_event": null
         },
         {
           "key": "frequency",
-          "value": "monthly"
+          "value": "monthly",
+          "since_event": null
         },
         {
           "key": "changed_during_case",
-          "value": "no"
+          "value": "no",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "Register shows H&V payer-side records only; it does not confirm the recipient's records or any payment outcome"
+        "Register shows H&V's payer-side record only; it does not confirm the recipient's records or any payment outcome"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -99,26 +103,46 @@
       "attributes": [
         {
           "key": "payee",
-          "value": "Northmere Energy"
+          "value": "Northmere Energy",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "active"
+          "value": "active",
+          "since_event": null
         },
         {
           "key": "changed_during_case",
-          "value": "no"
+          "value": "no",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "Register shows H&V payer-side records only; it does not confirm the recipient's records or any payment outcome"
+        "Register shows H&V's payer-side record only; it does not confirm the recipient's records or any payment outcome"
       ],
       "exists_before_agent": true,
       "created_by": null,
       "source_event": "event-004"
     }
   ],
-  "team_responses": [],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "document_service",
+      "topic_terms": [
+        "protected overview",
+        "active instructions",
+        "standing order",
+        "direct debit",
+        "account closure"
+      ],
+      "status": "completed",
+      "reference": null,
+      "response": "Protected overview of active instructions delivered via the secure portal. It lists the Willowmere Lettings standing order and the Northmere Energy direct debit mandate recorded by H&V. It does not confirm the recipients' records or any payment outcome. The account remains open, and no payments have been moved or changed.",
+      "document": null,
+      "source_event": "event-005"
+    }
+  ],
   "processes": []
 }

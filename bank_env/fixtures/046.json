@@ -6,9 +6,7 @@
       "id": "p1",
       "name": "Larkmere Studio Ltd",
       "kind": "business",
-      "roles": [
-        "business_customer"
-      ],
+      "roles": [],
       "acts_for": null
     },
     {
@@ -25,8 +23,7 @@
       "name": "Owen Bell",
       "kind": "person",
       "roles": [
-        "payroll_approver",
-        "former_employee"
+        "payroll_approver"
       ],
       "acts_for": "p1"
     }
@@ -82,19 +79,23 @@
       "attributes": [
         {
           "key": "role",
-          "value": "Payroll Approver"
+          "value": "Payroll Approver",
+          "since_event": null
         },
         {
           "key": "assigned_user",
-          "value": "Owen Bell"
+          "value": "Owen Bell",
+          "since_event": null
         },
         {
           "key": "business",
-          "value": "Larkmere Studio Ltd"
+          "value": "Larkmere Studio Ltd",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "active"
+          "value": "active",
+          "since_event": null
         }
       ],
       "customer_facing": null,
@@ -116,26 +117,25 @@
       "attributes": [
         {
           "key": "user",
-          "value": "Mara Ellery"
+          "value": "Mara Ellery",
+          "since_event": null
         },
         {
           "key": "role",
-          "value": "business administrator"
+          "value": "business administrator",
+          "since_event": null
         },
         {
           "key": "business",
-          "value": "Larkmere Studio Ltd"
-        },
-        {
-          "key": "mandate_status",
-          "value": "verified"
+          "value": "Larkmere Studio Ltd",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [],
       "exists_before_agent": true,
       "created_by": null,
-      "source_event": "event-003"
+      "source_event": "event-002"
     }
   ],
   "team_responses": [],
@@ -157,11 +157,12 @@
       "effect": [
         {
           "key": "status",
-          "value": "revoked"
+          "value": "revoked",
+          "since_event": null
         }
       ],
-      "result": "Revocation instruction processed. Admin log: Payroll Approver role for Owen Bell — REVOKED. The admin-log status is available to the business administrator in the secure portal.",
-      "applied_event": "event-004",
+      "result": "Revocation instruction processed. Admin log: Payroll Approver role for Owen Bell — REVOKED.",
+      "applied_event": "event-005",
       "source_event": "event-003"
     }
   ]

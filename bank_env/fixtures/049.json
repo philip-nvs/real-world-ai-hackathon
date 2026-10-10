@@ -64,7 +64,7 @@
     {
       "id": "r1",
       "system": "business_mandate",
-      "kind": "business_user",
+      "kind": "company_user",
       "party": "p1",
       "match_terms": [
         "Mara Venn",
@@ -73,16 +73,24 @@
       ],
       "attributes": [
         {
-          "key": "role",
-          "value": "authorised manager"
+          "key": "user_name",
+          "value": "Mara Venn",
+          "since_event": null
         },
         {
           "key": "business",
-          "value": "North Quay Printworks"
+          "value": "North Quay Printworks",
+          "since_event": null
         },
         {
-          "key": "authority_checked",
-          "value": "true"
+          "key": "role",
+          "value": "authorised_manager",
+          "since_event": null
+        },
+        {
+          "key": "authority_status",
+          "value": "authority confirmed for this business",
+          "since_event": null
         }
       ],
       "customer_facing": null,
@@ -100,14 +108,15 @@
         "acquiring report",
         "merchant report",
         "1–7 July 2025",
+        "2025-07-01_to_2025-07-07",
+        "North Quay Printworks",
         "card sales",
         "adjustments",
-        "North Quay Printworks",
-        "secure portal"
+        "merchant-report-049.csv"
       ],
       "status": "completed",
       "reference": null,
-      "response": "I placed the report for 1–7 July 2025 in the secure portal. Its report total is £236.00 (card sales £240.00, adjustments -£4.00); placement confirms report availability only, not a settlement credit.",
+      "response": "I placed the report for 1–7 July 2025 in the secure portal. Its report total is £236.00 (card sales £240.00; adjustments -£4.00). Placement confirms report availability only, not a settlement credit. Availability does not confirm that funds were credited.",
       "document": "merchant-report-049.csv",
       "source_event": "event-004"
     }

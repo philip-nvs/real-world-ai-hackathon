@@ -58,32 +58,34 @@
       "match_terms": [
         "Northmere Heating",
         "34.80",
-        "standing order"
+        "standing order",
+        "future payment"
       ],
       "attributes": [
         {
-          "key": "instruction_type",
-          "value": "customer standing order"
-        },
-        {
           "key": "payee",
-          "value": "Northmere Heating"
+          "value": "Northmere Heating",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "34.80"
+          "value": "34.80",
+          "since_event": null
         },
         {
-          "key": "portal_display",
-          "value": "shown as a future payment line"
+          "key": "instruction_type",
+          "value": "customer standing order",
+          "since_event": null
         },
         {
-          "key": "relationship",
-          "value": "separate instruction record from the direct debit mandate to the same payee; type and internal reference distinct"
+          "key": "shown_in_portal_as",
+          "value": "future payment line",
+          "since_event": null
         },
         {
-          "key": "status",
-          "value": "not cancelled"
+          "key": "relationship_to_other_line",
+          "value": "separate instruction record with distinct type and internal reference from the Direct Debit mandate to the same payee; not a duplicate entry of the same instruction",
+          "since_event": null
         }
       ],
       "customer_facing": null,
@@ -100,32 +102,35 @@
       "match_terms": [
         "Northmere Heating",
         "34.80",
-        "direct debit"
+        "direct debit",
+        "mandate",
+        "future payment"
       ],
       "attributes": [
         {
-          "key": "instruction_type",
-          "value": "direct debit mandate"
-        },
-        {
           "key": "payee",
-          "value": "Northmere Heating"
+          "value": "Northmere Heating",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "34.80"
+          "value": "34.80",
+          "since_event": null
         },
         {
-          "key": "portal_display",
-          "value": "shown as a future payment line"
+          "key": "instruction_type",
+          "value": "direct debit mandate",
+          "since_event": null
         },
         {
-          "key": "relationship",
-          "value": "separate instruction record from the standing order to the same payee; type and internal reference distinct"
+          "key": "shown_in_portal_as",
+          "value": "future payment line",
+          "since_event": null
         },
         {
-          "key": "status",
-          "value": "not cancelled"
+          "key": "relationship_to_other_line",
+          "value": "separate instruction record with distinct type and internal reference from the standing order to the same payee; not a duplicate entry of the same instruction",
+          "since_event": null
         }
       ],
       "customer_facing": null,

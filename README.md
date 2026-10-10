@@ -49,23 +49,19 @@ Server-side refusal fallback (`fallbacks: "default"`) is on for every Claude cal
 ## Dev loop
 
 ```bash
-uv run evaluate.py              # all 50 test cases in cases/test/
-uv run evaluate.py 001 017 041  # a few
-uv run evaluate.py --mock       # against tools.py's mocks instead of the simulated bank
-uv run evaluate.py --cases cases/cutoffs   # the generated extra cut-offs
+uv run evaluate.py                # every test cut-off in cases/test/
+uv run evaluate.py 001 017 041    # all cut-offs of a few public cases
+uv run evaluate.py 017-event-004  # one cut-off
+uv run evaluate.py --mock         # against tools.py's mocks instead of the simulated bank
 ```
 
-Each case in `cases/test/` holds a public case's history up to a hand-picked cut-off, with the gold next step in `ANSWER.md` (action and description). The agent never sees `ANSWER.md`. The dev loop runs the same `run_case` with the agent's tools answering from the case's `bank_env` fixture. The adapter sees only the events in the test history, so a confirmation that comes later doesn't count yet. Claude then judges the agent's step against the gold one. `eval_out/scorecard.md` holds:
+Each folder in `cases/test/` (`NNN-event-KKK/`) holds public case NNN's history up to event KKK, with 2–4 cut-offs per case. Its `answer/` folder holds the gold next step in `ANSWER.md` (action and description) and any artefact from the full case. The agent never sees `answer/`.
+
+The dev loop runs the same `run_case` with the agent's tools answering from the case's `bank_env` fixture. The adapter sees only the events in the test history, so a confirmation that comes later doesn't count yet. Claude then judges the agent's step against the gold one. `eval_out/scorecard.md` holds:
 - the judge's pass rate;
 - how often the agent's decision matches the gold action, plus a gold-vs-agent table;
 - guard blocks, crashes and tokens;
 - each case's bank calls (full log in `eval_out/answers/<case>/bank_log.json`).
-
-### More cut-offs
-
-`cases/test/` has one curated cut-off per case. `cases/cutoffs/NNN-eKKK/` adds the case's other decision points: a cut after event KKK where that event is new input (a customer or outside message, a system or team reply) and the bank moves next. Points right after the agent's own move are left out, because it's only waiting on itself.
-- `make_cutoffs.py` builds each one from the curated test case (same neutralised title), with the full history cut after KKK and only the attachments the visible history names. Rebuilding the curated cut-offs this way reproduces `cases/test/` exactly.
-- Claude writes the gold `ANSWER.md` from the full case and marks it as generated. `cases/cutoffs/MANIFEST.md` lists every point, including the skipped ones, with Claude's reason.
 
 ## Tests
 
@@ -75,5 +71,5 @@ uv run test_bank_env.py
 ```
 
 Neither needs an API key.
-- `test_run.py` covers the loader, the guard rules, parsing the gold answers and staging test cases without them, the agent loop driven by a scripted fake Claude (including a guard block and re-plan), and the crash fallback.
+- `test_run.py` covers the loader, the guard rules, parsing the gold answers, staging test cases without their `answer/` folder, the consistency of every test cut-off (history ends at the cut-off, only attachments the agent could know of), the agent loop driven by a scripted fake Claude (including a guard block and re-plan), and the crash fallback.
 - `test_bank_env.py` replays every lookup the public cases' own agent makes against the fixtures, and covers the adapter, overlays and faults.
