@@ -7,14 +7,14 @@ One command reads every case, works out the single next step with Claude and a s
 ## Setup
 
 ```bash
-uv venv && uv pip install -r requirements.txt   # or: python -m venv .venv && .venv/bin/pip install -r requirements.txt
-cp .env.example .env                            # then put your ANTHROPIC_API_KEY in .env
+uv sync
+cp .env.example .env   # then put your ANTHROPIC_API_KEY in .env
 ```
 
 ## Run
 
 ```bash
-.venv/bin/python run.py HackatonChallendges/ --out ANSWERS/
+uv run run.py HackatonChallendges/ --out ANSWERS/
 ```
 
 `run.py` accepts a folder of case folders, nested track folders, or a single case folder (anything holding an `index.md`). `--workers N` sets parallelism (default 4).
@@ -49,8 +49,8 @@ Server-side refusal fallback (`fallbacks: "default"`) is on for every Claude cal
 ## Dev loop
 
 ```bash
-.venv/bin/python evaluate.py              # all 50 public Banking cases
-.venv/bin/python evaluate.py 001 017 041  # a few
+uv run evaluate.py              # all 50 public Banking cases
+uv run evaluate.py 001 017 041  # a few
 ```
 
 The dev loop cuts each public case just before the bank agent's first move. It hides the Overview, Next action and Outcome sections and every later event. Then it runs the same `run_case` and has Claude judge the agent's next action against the gold *Next action at escalation*. Results land in `eval_out/scorecard.md` with the pass rate, guard blocks, crashes and tokens.
@@ -58,7 +58,7 @@ The dev loop cuts each public case just before the bank agent's first move. It h
 ## Tests
 
 ```bash
-.venv/bin/python test_run.py
+uv run test_run.py
 ```
 
 The offline test needs no API key. It covers the loader, the guard rules, the case cutting, the agent loop driven by a scripted fake Claude (including a guard block and re-plan), and the crash fallback.
