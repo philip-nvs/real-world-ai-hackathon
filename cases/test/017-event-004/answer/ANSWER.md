@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V agent informs Mara Ellery via the H&V secure portal of the recorded status of her scheduled monthly rent standing order run, as shown in the H&V standing-order journal.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the H&V payment journal for the final instruction and execution record of Mara Ellwood's completed transfer to her property manager, to confirm the amount H&V sent.

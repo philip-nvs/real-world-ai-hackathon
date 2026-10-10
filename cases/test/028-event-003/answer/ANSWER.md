@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: H&V's secure profile-change process asks Elowen Mercer, via the secure portal, to review the replacement phone number entered and confirm whether she wants it applied to her H&V profile, with no change made until she confirms.

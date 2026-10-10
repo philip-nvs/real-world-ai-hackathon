@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V data team posts a journal status update to Elowen Marr through the secure portal, telling her that the HV-037 request to correct her profile name from “Elowen Mar” to “Elowen Marr” has been received for review, that the name is unchanged for now, and that any supporting information needed will be requested through the secure process.

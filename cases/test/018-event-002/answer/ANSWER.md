@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the H&V instruction journal for the type and internal reference of each instruction behind Mara Ellison's two future £34.80 payment lines to Northmere Heating, without cancelling either instruction.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent escalates Mara Ellison's authorised Northmere Studio Ltd payment to Alder Quay Supplies (materials invoice) to the H&V payment team under case HV-050, asking them to check and confirm the payment stage recorded in H&V's payment journal.

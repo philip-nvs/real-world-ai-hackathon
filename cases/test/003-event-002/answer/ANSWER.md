@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the stage of Elise Rowan's saved invoice transfer instruction in the H&V instruction journal, using the identifier in her secure session, without authorising the payment on her behalf.

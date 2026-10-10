@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Elowen Marsh through the secure portal that H&V's incoming-payment check found no incoming payment (the kiln contribution) on her account at the time of the check, and that H&V's records cannot show whether the sender made or completed the transfer.

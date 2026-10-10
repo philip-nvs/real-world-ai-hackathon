@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent replies to Leona Voss in secure chat confirming that row SUP-17 (studio materials supplier) in the "Alderwick supplier payments" batch is shown as rejected with the reason displayed in her portal, and that the batch's processed status does not mean every payment line was paid.

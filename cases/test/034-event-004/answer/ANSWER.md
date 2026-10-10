@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent sends Mara Ellery a secure portal message explaining that the £3.20 debit is the fee for her recorded foreign-currency cash withdrawal and matches the H&V tariff entry in force on its processing date, without making any refund decision.

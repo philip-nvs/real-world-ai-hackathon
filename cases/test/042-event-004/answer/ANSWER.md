@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Nadia Fenwick over secure chat that validation-042.txt for batch HV-042 (Fenwick Workshop) is in her secure portal and flags a missing required payee label on row 2, that no corrected batch has been submitted, and that she can review it and decide whether to submit a correction.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V customer support agent checks the H&V Card Journal for the permitted category of Rowan Ellery's card restriction and the limit on what may be disclosed to Rowan.

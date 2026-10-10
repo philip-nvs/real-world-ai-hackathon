@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent orders Mara Ellison's January 2024 statement for case HV-032 from the H&V statement service through the business portal, following the archive group's availability check.

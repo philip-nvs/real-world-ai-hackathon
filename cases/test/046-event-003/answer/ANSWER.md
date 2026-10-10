@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V business banking agent takes no further action after event-003; the next step rests with the H&V admin process, which handles the agent's submitted instruction from verified administrator Mara Ellery to revoke Owen Bell's Payroll Approver role for Larkmere Studio Ltd.

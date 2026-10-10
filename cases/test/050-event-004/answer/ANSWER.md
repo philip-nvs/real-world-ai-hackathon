@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V tells Mara Ellison, Northmere Studio Ltd's authorised signatory, through the business portal that H&V's payment journal records the Alder Quay Supplies materials-invoice payment as "sent", and that this record cannot confirm whether the supplier has received the funds.

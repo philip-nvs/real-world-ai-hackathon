@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V Tariff Team messages Mara Ellison via the secure portal confirming that her request (HV-035) to review the tariff application of the £4.50 paper statement fee dated 18 June 2025 has been accepted for review.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V agent messages Mara Ellison via the secure portal to tell her that account-confirmation-038.pdf, dated 1 October 2025 and confirming her account relationship was active at the issue date (not a payment instruction), is now available in her secure portal.

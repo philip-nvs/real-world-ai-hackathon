@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V agent tells Elodie Mercer through the secure portal that the future run of her recurring studio-rent payment instruction (HV-013) is cancelled, and that this does not reverse or return any payments already sent.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V's app restores and records Mara Ellison's access to her H&V profile after the completed recovery checks, and tells her in the secure portal that she can now sign in.

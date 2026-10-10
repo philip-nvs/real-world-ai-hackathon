@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V (Harrow & Vale Bank plc) updates Mara Ellison's secure portal to show her Northmere Fitness Direct Debit mandate as cancelled, following the instruction submitted to the H&V Direct Debit service.

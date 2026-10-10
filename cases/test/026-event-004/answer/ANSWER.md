@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V (the H&V secure system) starts the prescribed PIN procedure for Maren Ellwood's H&V debit card under case HV-026 and posts the status to her in the secure portal, without issuing any PIN in the conversation.

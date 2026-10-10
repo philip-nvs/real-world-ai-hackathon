@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V agent advises Mira Ellison via the secure portal that the two £84.20 transfers to North Quay Utilities are two separate payment instructions (one Completed, one Pending), and that it has not cancelled or initiated a return for the pending one.

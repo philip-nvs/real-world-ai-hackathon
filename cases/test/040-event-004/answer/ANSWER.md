@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent makes the generated payment record payment-record-040.pdf for Mara Ellison's £74.00 payment HV-040 (dated 14 July 2025) available to her in the H&V secure portal.

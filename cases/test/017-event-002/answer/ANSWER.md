@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V agent checks the H&V standing-order journal for Mara Ellery's scheduled monthly rent standing order (payee Elm Quay Property Services) to find the recorded outcome and any reason shown for that run.

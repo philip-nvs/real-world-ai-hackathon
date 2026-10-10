@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent replies to Elena Marlow via the secure portal with the purpose text recorded on her transfer instruction to Mallow Pottery Works in H&V's payment journal ("Deposit for kiln repair estimate"), noting it is H&V's record and has not been sent to the supplier.

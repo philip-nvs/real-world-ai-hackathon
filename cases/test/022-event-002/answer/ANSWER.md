@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent submits Mara Ellison's verified instruction to block her missing debit card under case HV-022 to the H&V card system via the secure portal.

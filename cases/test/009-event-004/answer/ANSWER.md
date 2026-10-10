@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent replies to Mara Ellwood via the secure portal confirming that H&V's payment journal shows £648.20 was sent on her completed transfer to her property manager, noting the journal confirms the amount sent by H&V, not the amount received by the recipient.

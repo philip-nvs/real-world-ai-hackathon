@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V (card team) messages Mara Ellery via the secure portal to give her the registration number HV-023 for her enquiry about the £38.40 Fern & Finch Books card purchase, stating no finding on who made it, fraud or refund has been made and no card change has been made, and offering to guide her through H&V's secure card-protection options.

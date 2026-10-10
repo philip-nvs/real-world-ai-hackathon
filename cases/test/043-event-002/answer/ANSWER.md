@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks Northmere Studio Ltd's payroll payment package signing queue against the business mandate in the H&V signing log, without approving or releasing anything on either signer's behalf.

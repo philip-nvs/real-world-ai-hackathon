@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent, after matching case HV-038 to the verified account holder Mara Ellison, asks the H&V document service to issue the permitted account confirmation for release to her own secure portal only.

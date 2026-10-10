@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the H&V incoming-payment journal for incoming credits to Elowen Marsh's account, looking for the sender's expected kiln contribution.

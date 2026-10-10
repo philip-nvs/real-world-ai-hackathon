@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent opens case HV-034 and starts reviewing Mara Ellery's £3.20 fee by matching the recorded transaction type and processing date in H&V transaction records against the tariff in force on that date, with no refund or account change authorised.

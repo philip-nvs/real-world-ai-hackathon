@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V agent, with account-holder authority confirmed, asks the H&V instruction register (internal note, no changes) to return the current payer-side recurring instructions on Elena Wren's account before discussing closure.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V (the payment team) updates Leona Mercer via the secure portal that her request to seek a return of the £286.40 pottery-studio bill transfer sent to the wrong saved recipient is registered, noting that a return of the money is not confirmed.

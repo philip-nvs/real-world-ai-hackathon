@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks H&V's transfer journal for the recorded status of Mara Ellison's one-off £420 transfer to Alder & Reed Workshop.

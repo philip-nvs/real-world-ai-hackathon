@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks Mara Ellison's identity, reviews the workflow's requirements, and opens the address-change process for case HV-036 in the H&V profile change process, without recording any address in the note.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent notifies Mara Ellison via the secure portal that her January 2024 statement (HV-032) is ready there as statement-032.pdf.

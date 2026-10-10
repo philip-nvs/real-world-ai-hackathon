@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V agent checks the card journal for the dispatch record of Mara Ellison's replacement card (case HV-021) to see whether dispatch has been registered.

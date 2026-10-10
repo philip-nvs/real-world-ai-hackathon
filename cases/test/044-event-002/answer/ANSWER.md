@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent looks up row SUP-17 (Leona Voss's studio materials supplier payment) in the previously authorised "Alderwick supplier payments" batch in the H&V payment journal to verify that line's status specifically.

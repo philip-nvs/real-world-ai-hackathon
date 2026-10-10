@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent directs Mara Ellison, via H&V secure chat, to the recovery option in H&V's secure portal to complete the access-recovery checks there, stating the agent will not ask for her password or a verification code.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent replies to Mara Ellison in the secure portal that the H&V standing-order record shows her active monthly household contribution standing order is next scheduled to run on 3 September 2025, noting this is the scheduled run date rather than a guarantee of when the recipient receives the money and that the future payment has not yet been made.

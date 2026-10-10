@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V Customer Support Agent replies to Rowan Ellery via the secure portal confirming only the permitted category from the H&V Card Journal (a temporary security-related restriction), without giving operational detail or confirming that or when the restriction will be lifted.

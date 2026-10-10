@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V agent checks the H&V card journal for Maren Ellery's existing replacement card request, reference HV-030, without making any changes to her account.

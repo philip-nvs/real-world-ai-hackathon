@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V agent checks the H&V payment instruction journal for the count and instruction references of Mira Ellison's two £84.20 transfers to North Quay Utilities, without cancelling or returning either instruction.
