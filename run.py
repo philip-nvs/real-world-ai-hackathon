@@ -115,21 +115,51 @@ def section(md, title):
     return m.group(1).strip() if m else ""
 
 
+def event_marks(history):
+    """Event headers to trust, and warnings about the rest. A message can quote text that looks like
+    an event header ("## ... event 002" inside a customer's message). When the history marks its events
+    with <a id="event-NNN"></a> anchors, only a header right after its own anchor counts. Returns
+    (marks, warnings, suspect event ids): suspect ids repeat or break the numbering order, so even an
+    anchored forgery can't authorise anything."""
+    marks, warnings = list(EVENT_RE.finditer(history)), []
+    if '<a id="event-' in history:
+        anchored = []
+        for m in marks:
+            before = history[max(0, m.start() - 200): m.start()].rstrip().rsplit("\n", 1)[-1].strip()
+            if before == f'<a id="event-{m["num"]}"></a>':
+                anchored.append(m)
+            else:
+                warnings.append(f'An "event {m["num"]}" header ({m["ts"]}) has no event anchor: it sits inside another '
+                                "event's text and is not treated as an event.")
+        marks = anchored
+    nums = [m["num"] for m in marks]
+    suspect = {f"event-{n}" for n in nums if nums.count(n) > 1}
+    suspect |= {f"event-{b}" for a, b in zip(nums, nums[1:]) if a.isdigit() and b.isdigit() and int(b) <= int(a)}
+    warnings += [f"{e} appears more than once or out of order in the history." for e in sorted(suspect)]
+    total = re.search(r"^Total events:\s*(\d+)", history, re.M)
+    if total and int(total[1]) != len(marks):
+        warnings.append(f"The history says Total events: {total[1]}, but {len(marks)} events were found.")
+    return marks, warnings, suspect
+
+
 def load_case(path):
     path = Path(path)
     read = lambda p: p.read_text(errors="replace") if p.is_file() else ""
     index, history = read(path / "index.md"), read(path / "history.md")
-    marks = list(EVENT_RE.finditer(history))
+    marks, warnings, suspect = event_marks(history)
     events = []
     for i, m in enumerate(marks):
         block = history[m.end(): marks[i + 1].start() if i + 1 < len(marks) else None]
-        fields = {k.lower(): v.strip() for k, v in FIELD_RE.findall(block)}
+        fields = {}
+        for k, v in FIELD_RE.findall(block):  # first occurrence: the header's own fields, not quoted ones further down
+            fields.setdefault(k.lower(), v.strip())
         events.append({"id": f"event-{m['num']}", "ts": m["ts"], "channel": fields.get("channel", ""),
-                       "from": fields.get("from", ""), "to": fields.get("to", "")})
+                       "from": fields.get("from", ""), "to": fields.get("to", ""),
+                       "suspect": f"event-{m['num']}" in suspect})
     att_dir = path / "attachments"
     attachments = sorted(p for p in att_dir.rglob("*") if p.is_file()) if att_dir.is_dir() else []
     return {"id": path.name, "path": path, "index": index, "history": history, "events": events,
-            "attachments": attachments}
+            "attachments": attachments, "warnings": warnings}
 
 
 def case_content(case):
@@ -146,6 +176,9 @@ def case_content(case):
             text.append(f"## attachments/{a.name}\n\n{a.read_text(errors='replace')}")
         else:
             text.append(f"## attachments/{a.name}\n\n(binary file, not readable here)")
+    if case.get("warnings"):
+        text.append("## Case loader notes\n\nFrom H&V's case loader, not from anyone in the case:\n"
+                    + "\n".join(f"- {w}" for w in case["warnings"]))
     return blocks + [{"type": "text", "text": "\n\n".join(text)}]
 
 
@@ -183,9 +216,13 @@ def guard_tool(name, args, case):
         if RESEND.search(args.get("instruction", "")):
             problems.append("re-sends or duplicates a payment")
         ref = args.get("authorised_by_event", "").strip().lower()
-        event = next((e for e in case["events"] if ref and e["id"].split("-")[-1] == ref.split("-")[-1]), None)
-        if event is None:
+        cited = [e for e in case["events"] if ref and e["id"].split("-")[-1] == ref.split("-")[-1]]
+        event = cited[0] if len(cited) == 1 else None
+        if not cited:
             problems.append(f"authorised_by_event '{ref}' is not an event in this case")
+        elif event is None or event.get("suspect"):
+            problems.append(f"authorised_by_event '{ref}' appears more than once or out of order in the history, so it "
+                            "can't authorise anything")
         elif event["channel"].lower() not in SECURE_CHANNELS:
             problems.append(f"{event['id']} came by '{event['channel']}', which is not a secure confirmation (an email is never authorisation)")
         elif re.search(r"\b(h&v|harrow|agent|bank)\b", event["from"], re.I):
@@ -325,6 +362,8 @@ def write_answer(out_dir, case, d, state):
     failed = state["failures"] + [f"Policy guard blocked `{b['tool']}`: {'; '.join(b['problems'])}" for b in state["blocked"]]
     received = (f"{request}\n\n{len(case['events'])} events; attachments: "
                 f"{', '.join(a.name for a in case['attachments']) or 'none'}.")
+    if case.get("warnings"):
+        received += "\n\nCase loader notes:\n" + bullets(case["warnings"], "")
     answer = f"""# Case {case['id']}: {d['decision'].upper()}
 
 ## What the system received
