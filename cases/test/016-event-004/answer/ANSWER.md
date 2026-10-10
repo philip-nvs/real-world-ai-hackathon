@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V Direct Debit team tells Tamsin Rook via the secure portal that her request to review the £18.40 Direct Debit charge is registered under reference HV-016, noting that registration does not determine whether the amount was due or whether a refund is available.

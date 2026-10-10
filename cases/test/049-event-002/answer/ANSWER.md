@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `escalate`
-- Description: After checking Mara Venn's authority as the authorised manager of North Quay Printworks, the H&V service agent asks the H&V acquiring service to prepare and place the acquiring report for 1–7 July 2025 in the secure portal for her.
+- Action: `act`
+- Description: After checking Mara Venn's authority as the authorised manager of North Quay Printworks, the H&V service agent sends an internal request to the H&V acquiring service to prepare and place the acquiring report for 1–7 July 2025 in the secure portal for her.

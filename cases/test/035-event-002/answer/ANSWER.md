@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `escalate`
-- Description: The H&V service agent registers Mara Ellison's request for review of the £4.50 paper statement fee dated 18 June 2025 with the Tariff Team, giving her reason that she had chosen electronic statements.
+- Action: `act`
+- Description: The H&V service agent sends an internal request to the Tariff Team registering Mara Ellison's request for review of the £4.50 paper statement fee dated 18 June 2025, giving her reason that she had chosen electronic statements.

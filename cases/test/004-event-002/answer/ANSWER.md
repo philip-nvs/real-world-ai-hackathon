@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the H&V transaction journal for the decline code on Mara Ellery's 14 July 2025 transfer to Northmere Housing Co-operative and the customer-facing wording H&V is permitted to share.

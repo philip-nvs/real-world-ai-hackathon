@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V tells Maren Ellery via the secure portal what the card journal confirms for replacement request HV-030: the card is in manufacture, and dispatch and delivery are not confirmed.

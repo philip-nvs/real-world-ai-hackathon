@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Mara Ellery via the business portal that H&V's signing queue confirms Northmere Studio Ltd's payroll payment package is awaiting the second signatory's consent, with her first consent recorded, no second consent recorded and no individual payment submissions shown.

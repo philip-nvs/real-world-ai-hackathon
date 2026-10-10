@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V replies to Mara Ellison via the business portal that the import journal confirms receipt of batch-041.csv (reference HV-041, June 2025 payroll), noting this confirms receipt only and not validation, payment authorisation, or payment execution.

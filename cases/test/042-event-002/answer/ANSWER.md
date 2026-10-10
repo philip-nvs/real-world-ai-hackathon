@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `escalate`
-- Description: After checking Nadia Fenwick's permission to view validation reports, the H&V service agent asks the H&V import service to retrieve the validation report for Fenwick Workshop's batch HV-042 for her secure-portal access.
+- Action: `act`
+- Description: After checking Nadia Fenwick's permission to view validation reports, the H&V service agent sends an internal request to the H&V import service to retrieve the validation report for batch HV-042 for her secure-portal access.
