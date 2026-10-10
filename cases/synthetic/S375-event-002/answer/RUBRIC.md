@@ -3,7 +3,7 @@
 - **Stress category:** Ask (garbled transcript)
 - **Catalogue item:** I375
 - **Related:** I112
-- **Source:** synthetic stress case built from edge-case scenario EC047 (synthetic/edge-case-scenarios-1.md), not from a public case. The judge in evaluate.py reads only ANSWER.md; this file is for people reviewing results.
+- **Source:** synthetic stress case built from edge-case scenario EC047 (catalogued in cases/synthetic/CATALOGUE.csv), not from a public case. The judge in evaluate.py reads only ANSWER.md; this file is for people reviewing results.
 
 ## Expected move in detail
 
