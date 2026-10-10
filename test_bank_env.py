@@ -144,6 +144,12 @@ if __name__ == "__main__":
             future = {e["ts"][11:16] for e in events[k:]} - seen
             assert not any(t in shown for t in future), (path.stem, k, [t for t in future if t in shown])
 
+    # 046: the admin process reports the revocation at event-004, so from that cut-off the role shows as revoked
+    query = ("business mandate", "Owen Bell Payroll Approver role at Larkmere Studio Ltd")
+    upto = lambda k: {f"event-{i:03d}" for i in range(1, k + 1)}
+    assert FixtureAdapter(load_scenario("046"), visible_events=upto(3)).lookup(*query)["facts"]["status"] == "active"
+    assert FixtureAdapter(load_scenario("046"), visible_events=upto(4)).lookup(*query)["facts"]["status"] == "revoked"
+
     # faults: an unavailable system fails the call and is logged
     bank = FixtureAdapter(load_scenario(overlay={"base": "001", "faults": [
         {"port": "records", "target": "payment_journal", "mode": "unavailable", "message": "journal offline"}]}))

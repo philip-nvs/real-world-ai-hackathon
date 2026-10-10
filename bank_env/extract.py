@@ -57,7 +57,8 @@ Changes made by a process belong in its effect instead.
 - processes: only account-changing operations the case performs or prepares. confirmed_by lists the events that are a \
 valid confirmation of exactly that change: a customer's confirmation on a verified channel, or the administrator's for \
 business roles. A request (e.g. a chat asking for a change the bank must still send for confirmation) is not a confirmation. \
-effect lists the attribute values on the target record once applied. applied_event is the event in which the case records the change as done.
+effect lists the attribute values on the target record once applied. applied_event is the earliest event in which a system, process or team records the change as done (e.g. \
+"instruction processed", "card marked blocked"), not a later message passing that on to the customer.
 - events: every event in the history, with party, whether H&V sent it, and whether the customer was verified on it.
 - Every record, team response and process cites the source_event it comes from."""
 

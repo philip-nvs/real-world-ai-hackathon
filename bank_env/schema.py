@@ -85,8 +85,9 @@ class Process(Strict):
                                                 "of exactly this change. A request is not a confirmation.")
     effect: list[Attr] = Field(description="Attribute values on the target record once applied")
     result: str = Field(description="What the process reports once applied")
-    applied_event: str | None = Field(description="Event in which the case records the change as applied "
-                                                  "(e.g. the system confirming it), else null")
+    applied_event: str | None = Field(description="Earliest event in which a system, process or team records the "
+                                                  "change as applied (not a later message telling the customer), "
+                                                  "else null")
     source_event: str
 
 

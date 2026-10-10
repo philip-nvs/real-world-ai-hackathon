@@ -6,7 +6,9 @@
       "id": "p1",
       "name": "Larkmere Studio Ltd",
       "kind": "business",
-      "roles": [],
+      "roles": [
+        "business_customer"
+      ],
       "acts_for": null
     },
     {
@@ -23,6 +25,7 @@
       "name": "Owen Bell",
       "kind": "person",
       "roles": [
+        "former_employee",
         "payroll_approver"
       ],
       "acts_for": "p1"
@@ -107,7 +110,7 @@
     {
       "id": "r2",
       "system": "business_mandate",
-      "kind": "company_administrator",
+      "kind": "administrator",
       "party": "p1",
       "match_terms": [
         "Mara Ellery",
@@ -116,13 +119,13 @@
       ],
       "attributes": [
         {
-          "key": "user",
-          "value": "Mara Ellery",
+          "key": "role",
+          "value": "business administrator",
           "since_event": null
         },
         {
-          "key": "role",
-          "value": "business administrator",
+          "key": "assigned_user",
+          "value": "Mara Ellery",
           "since_event": null
         },
         {
@@ -158,11 +161,11 @@
         {
           "key": "status",
           "value": "revoked",
-          "since_event": null
+          "since_event": "event-004"
         }
       ],
-      "result": "Revocation instruction processed. Admin log: Payroll Approver role for Owen Bell — REVOKED.",
-      "applied_event": "event-005",
+      "result": "Revocation instruction processed. The admin-log status is available to the business administrator in the secure portal. Admin log: Payroll Approver role for Owen Bell — REVOKED.",
+      "applied_event": "event-004",
       "source_event": "event-003"
     }
   ]
