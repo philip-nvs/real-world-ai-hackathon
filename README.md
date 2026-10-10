@@ -9,6 +9,9 @@ Nevis' case agent for the Banking & Financial Services track of Dwelly's Real-wo
 - LinkedIn: https://lnkd.in/p/efNuAtMV
 - X: https://x.com/xylankant/status/2108940085068702192
 
+## Demo video
+- Screen Recording 2026-10-10 162027.zip
+
 ## Project Setup
 
 You need [uv](https://docs.astral.sh/uv/), Node.js 20.19+ or 22.12+, and Docker (for MongoDB).
