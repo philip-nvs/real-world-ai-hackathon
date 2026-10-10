@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `act`
-- Description: The H&V service agent opens a protected name review and sends an internal request to the H&V data team to check Elowen Marr's requested spelling correction from "Elowen Mar" to "Elowen Marr" and determine what supporting information is required, without changing the profile.
+- Action: `escalate`
+- Description: The H&V service agent opens a protected name review and escalates Elowen Marr's requested spelling correction from "Elowen Mar" to "Elowen Marr" to the H&V data team, asking them to determine what supporting information is required, without changing the profile.

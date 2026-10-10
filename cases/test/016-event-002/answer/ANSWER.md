@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `act`
-- Description: The H&V service agent sends an internal request to the H&V Direct Debit team to review Tamsin Rook's disputed £18.40 Direct Debit charge to Northmere Water Services dated 9 July 2025, quoting her statement "I dispute the amount debited."
+- Action: `escalate`
+- Description: The H&V service agent escalates Tamsin Rook's disputed £18.40 Direct Debit charge to Northmere Water Services dated 9 July 2025 to the H&V Direct Debit team, asking them to register a review and quoting her statement "I dispute the amount debited."

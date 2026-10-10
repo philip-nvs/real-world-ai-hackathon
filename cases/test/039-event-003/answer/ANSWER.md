@@ -1,3 +1,3 @@
 - Cut-off: event-003
-- Action: `act`
-- Description: The H&V service agent sends an internal request to the H&V security team for the permitted session extract for Nerys Wren's profile, asking them to determine the allowed scope and exclude internal detection details and anyone else's data.
+- Action: `escalate`
+- Description: The H&V service agent escalates case HV-039 to the H&V security team, asking them to prepare the permitted session extract for Nerys Wren's profile, determine the allowed scope and exclude internal detection details and anyone else's data.
