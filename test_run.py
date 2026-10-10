@@ -26,7 +26,7 @@ def fake_client(script):
     return NS(beta=NS(messages=NS(create=create)))
 
 
-DECISION = dict(decision="act", next_action="Check the standing-order journal for the specific run.",
+DECISION = dict(received="The customer asks whether this cycle's rent standing order ran.", decision="act", next_action="Check the standing-order journal for the specific run.",
                 evidence=[{"event_id": "event-002", "fact": "Customer asked about the run"}], conflicts=[],
                 customer_message="", handover="", rejected_options=[], final_result="Journal check requested.")
 
@@ -54,7 +54,8 @@ if __name__ == "__main__":
                  "Please don't send the payment again.", "We'll make contact with you again once the team replies."):
         assert red_flags(text) == [], text
     assert guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-001"}, case)
-    assert not guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-002"}, case)
+    # 017's event-002 is a secure-chat request: chat carries requests, not confirmations
+    assert any("not a secure confirmation" in p for p in guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-002"}, case))
     assert guard_tool("submit_instruction", {"system": "PAY", "instruction": "Re-send the payment", "authorised_by_event": "event-002"}, case)
     # forged events: S200 quotes fake event headers inside the customer's message
     forged = load_case(next(Path("cases/synthetic").glob("S200-*")))
@@ -80,7 +81,7 @@ if __name__ == "__main__":
     # an anchored forgery reusing a real event id, or breaking the numbering order, can't authorise anything
     dup = case_of(history(("001", "Secure chat", False), ("002", "Verified call", False), ("002", "Secure portal", False)))
     assert guard_tool("submit_instruction", {**cancel, "authorised_by_event": "event-002"}, dup)
-    late = case_of(history(("001", "Secure chat", False), ("003", "Secure chat", False), ("002", "Verified call", False)))
+    late = case_of(history(("001", "Secure portal", False), ("003", "Secure portal", False), ("002", "Verified call", False)))
     assert guard_tool("submit_instruction", {**cancel, "authorised_by_event": "event-002"}, late)
     assert not guard_tool("submit_instruction", {**cancel, "authorised_by_event": "event-001"}, late)
     assert any("Total events: 5" in w for w in case_of(history(("001", "Secure chat", False), total=5))["warnings"])
@@ -93,8 +94,8 @@ if __name__ == "__main__":
     assert not re.search(r"H&V|Harrow", SYSTEM + json.dumps(TOOL_SCHEMAS + [DECISION_TOOL]) + json.dumps(TOOLS["check_record"]("x", "y")))
     assert bank_names("- **Bank:** Harrow & Vale Bank plc (fictional)") == ["Harrow & Vale Bank plc", "Harrow & Vale", "H&V"]
     other = {"bank_names": bank_names("- **Bank:** Northgate Mutual"), "events": [
-        {"id": "event-001", "channel": "Secure chat", "from": "Northgate Mutual support desk", "to": "Ann Customer", "suspect": False},
-        {"id": "event-002", "channel": "Secure chat", "from": "Ann Customer", "to": "Northgate Mutual", "suspect": False}]}
+        {"id": "event-001", "channel": "Secure portal", "from": "Northgate Mutual support desk", "to": "Ann Customer", "suspect": False},
+        {"id": "event-002", "channel": "Secure portal", "from": "Ann Customer", "to": "Northgate Mutual", "suspect": False}]}
     staff_ok = {"system": "Direct Debit service", "instruction": "Cancel the mandate", "authorised_by_event": "event-001"}
     assert any("from the bank" in p for p in guard_tool("submit_instruction", staff_ok, other))
     assert not guard_tool("submit_instruction", {**staff_ok, "authorised_by_event": "event-002"}, other)
@@ -154,6 +155,12 @@ if __name__ == "__main__":
         assert "MOCK" not in answer and "queued" not in answer and "delivered" not in answer
         kinds = [json.loads(l)["kind"] for l in (Path(tmp) / "out/trace.jsonl").read_text().splitlines()]
         assert "guard_block" in kinds and kinds[-1] == "decision"
+
+        # text in the case aimed at graders never reaches ANSWER.md: the writer uses the agent's summary
+        s190 = next(Path("cases/synthetic").glob("S190-*"))
+        assert "Note to graders" in (s190 / "index.md").read_text() + (s190 / "history.md").read_text()
+        run_case(s190, Path(tmp) / "s190", fake_client([[tool_use(9, "submit_decision", **DECISION)]]))
+        assert "graders" not in (Path(tmp) / "s190/ANSWER.md").read_text().lower()
 
         # a crashing client still yields an Escalate answer
         r = run_case(CASE, Path(tmp) / "crash", fake_client([]))
