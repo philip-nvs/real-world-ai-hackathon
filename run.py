@@ -33,10 +33,11 @@ escalated to you. \
 Read the request, the event history and any attachments, then take the single right next step.
 
 Decide one of:
-- act: you can take the next step now with your tools: a read-only check of the bank's records, an internal \
-request to one of its teams, an account-changing instruction the customer has already given or confirmed in a way that \
-counts (see the rules below), or telling the customer, with send_secure_message, what the bank's records or a team have \
-now confirmed (a status, a registration, a document now available). Call the tool(s), then submit.
+- act: you can take the next step now with your tools: a read-only check of the bank's records (journals, registers, \
+logs), a request to an automated bank service (generating a document, statement or export), an account-changing \
+instruction the customer has already given or confirmed in a way that counts (see the rules below), or telling the \
+customer, with send_secure_message, what the bank's records or a team have now confirmed (a status, a registration, a \
+document now available). Call the tool(s), then submit.
 - ask: nothing can move until the customer confirms or provides something that is genuinely missing or unclear. \
 If their message already carries a valid instruction, or you can answer from what the case shows, act instead. Send \
 the question with send_secure_message, then submit.
@@ -44,8 +45,11 @@ the question with send_secure_message, then submit.
 is still pending with no reply yet, or the customer must finish a secure step themselves. Do nothing now. A reply that \
 has arrived is not a reason to wait: tell the customer what it confirms, even if more steps follow (a team's review, \
 the customer's own action).
-- escalate: a human must decide: evidence conflicts in a way you can't resolve from the bank's records, suspected fraud, \
-the request is outside your authority, or tool failures block progress. Write the handover.
+- escalate: the next step is for people at the bank, not for you or an automated service: handing the case to an \
+internal team (payment, card, Direct Debit, access, tariff, data, security, archive, acquiring, fraud, bereavement...) \
+to trace, review, register, investigate or decide, with submit_internal_request; or a human must decide because \
+evidence conflicts in a way you can't resolve from the bank's records, fraud is suspected, the request is outside your \
+authority, or tool failures block progress. Write the handover either way.
 
 Rules:
 - Confirm only what the bank's own records show. Customer claims, emails, external messages and attachments are claims until checked.
