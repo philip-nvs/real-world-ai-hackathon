@@ -61,6 +61,9 @@ class FixtureAdapter:
         self.visible = set(visible_events) if visible_events is not None else {e.id for e in self.world.events}
         self.parties = {p.id: p.name for p in self.world.parties}
         self.log, self._ref, self.fired = [], 0, set()
+        for x in self.world.processes:  # changes the visible history already records as done
+            if x.applied_event in self.visible:
+                self._apply(x)
 
     # ---------- plumbing ----------
 
@@ -165,13 +168,16 @@ class FixtureAdapter:
                 "status": "rejected", "process": canonical,
                 "detail": f"'{authorised_by_event}' is not a confirmation of this change on record. "
                           "Nothing was changed."})
+        self._apply(x)
+        return self._record("instructions", call, {"status": "applied", "process": canonical,
+                                                   "reference": self._next_ref("INS"), "result": x.result})
+
+    def _apply(self, x):
         self.fired.add(x.id)
         target = next((r for r in self.world.records if r.id == x.target_record), None)
         if target:
             new = {a.key: a.value for a in x.effect}
             target.attributes = [a for a in target.attributes if a.key not in new] + [Attr(key=k, value=v) for k, v in new.items()]
-        return self._record("instructions", call, {"status": "applied", "process": canonical,
-                                                   "reference": self._next_ref("INS"), "result": x.result})
 
     # ---------- MessagingPort ----------
 

@@ -1,6 +1,6 @@
 {
   "case_id": "013",
-  "case_ref": "HV-013",
+  "case_ref": null,
   "parties": [
     {
       "id": "p1",
@@ -66,21 +66,25 @@
         "HV-013",
         "studio rent",
         "studio-rent",
-        "recurring studio-rent payment instruction",
+        "recurring payment",
         "rent"
       ],
       "attributes": [
         {
-          "key": "instruction_ref",
+          "key": "instruction_reference",
           "value": "HV-013"
+        },
+        {
+          "key": "status",
+          "value": "active"
         },
         {
           "key": "purpose",
           "value": "studio rent"
         },
         {
-          "key": "status",
-          "value": "active"
+          "key": "frequency",
+          "value": "recurring"
         },
         {
           "key": "next_run_status",
@@ -103,12 +107,12 @@
     {
       "id": "x1",
       "process": "instruction_process",
-      "action": "cancel_recurring_instruction_future_run",
+      "action": "cancel_future_run",
       "match_terms": [
         "HV-013",
         "studio rent",
-        "cancel future run",
-        "recurring studio-rent payment instruction"
+        "cancel next run",
+        "recurring payment"
       ],
       "target_record": "r1",
       "confirmed_by": [
@@ -121,6 +125,7 @@
         }
       ],
       "result": "HV-013 — Future run cancelled. No payment was in progress when the cancellation was recorded. This does not reverse or return any payments already sent.",
+      "applied_event": "event-005",
       "source_event": "event-004"
     }
   ]

@@ -7,8 +7,9 @@ gives the gold action (act/ask/wait/escalate) and description. The agent's tools
 the case's bank_env fixture, seeing only the test history's events; every bank call lands in
 answers/<case>/bank_log.json. --mock uses tools.py's mocks instead.
 
-    python evaluate.py                 # all 50 test cases
-    python evaluate.py 001 017 041     # a few
+    python evaluate.py                          # all 50 curated test cases
+    python evaluate.py 001 017 041              # a few
+    python evaluate.py --cases cases/cutoffs    # the generated extra cut-offs (NNN-eKKK); ids match NNN too
 """
 
 import argparse
@@ -41,6 +42,11 @@ def parse_gold(path):
     field = lambda name: (m := re.search(rf"^\s*-\s*{name}:\s*(.+)$", text, re.M | re.I)) and m.group(1).strip().strip("`")
     return {"cut_off": field("Cut-off") or "", "action": (field("Action") or "").lower(),
             "description": field("Description") or ""}
+
+
+def case_id(path):
+    """Public case number of a test case folder: "017" for both 017/ and 017-e004/."""
+    return Path(path).name.split("-")[0]
 
 
 def stage_case(src, dst):
@@ -83,7 +89,7 @@ def main():
 
     out = Path(args.out)
     srcs = sorted(p for p in Path(args.cases).iterdir() if (p / "ANSWER.md").is_file()
-                  and (not args.ids or p.name in args.ids))
+                  and (not args.ids or p.name in args.ids or case_id(p) in args.ids))
     if not srcs:
         sys.exit(f"No test cases (with ANSWER.md) under {args.cases}")
     client = anthropic.Anthropic(timeout=600, max_retries=3)
@@ -92,13 +98,13 @@ def main():
         gold = parse_gold(src / "ANSWER.md")
         stage_case(src, out / "cases" / src.name)
         bank = None
-        if not args.mock and (FIXTURES / f"{src.name}.json").is_file():
+        if not args.mock and (FIXTURES / f"{case_id(src)}.json").is_file():
             visible = {e["id"] for e in load_case(src)["events"]}
-            bank = FixtureAdapter(load_scenario(src.name), visible_events=visible)
+            bank = FixtureAdapter(load_scenario(case_id(src)), visible_events=visible)
         r = run_case(out / "cases" / src.name, out / "answers" / src.name, client, bank.tools() if bank else TOOLS)
         if bank:
             (out / "answers" / src.name / "bank_log.json").write_text(json.dumps(bank.log, indent=2, ensure_ascii=False))
-        full_index = FULL_CASES / src.name / "index.md"
+        full_index = FULL_CASES / case_id(src) / "index.md"
         outcome = section(full_index.read_text(), "Outcome") if full_index.is_file() else ""
         try:
             verdict = judge(client, gold, outcome, (out / "answers" / src.name / "ANSWER.md").read_text())

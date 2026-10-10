@@ -7,7 +7,8 @@ import tempfile
 from pathlib import Path
 from types import SimpleNamespace as NS
 
-from evaluate import FULL_CASES, TEST_CASES, parse_gold, stage_case
+from evaluate import FULL_CASES, TEST_CASES, case_id, parse_gold, stage_case
+from make_cutoffs import CUTOFFS, build_cut, decision_points
 from run import guard_tool, load_case, red_flags, run_case
 
 CASE = FULL_CASES / "017"
@@ -50,6 +51,26 @@ if __name__ == "__main__":
         stage_case(TEST_CASES / "017", Path(tmp) / "staged")
         assert sorted(f.name for f in (Path(tmp) / "staged").iterdir()) == ["history.md", "index.md"]
         assert all(parse_gold(a)["action"] in ("act", "ask", "wait", "escalate") for a in TEST_CASES.glob("*/ANSWER.md"))
+
+        # the cut-off builder reproduces every curated test case from the full one
+        for curated in sorted(TEST_CASES.iterdir()):
+            k = int(parse_gold(curated / "ANSWER.md")["cut_off"].split("-")[1])
+            build_cut(curated.name, k, Path(tmp) / "rebuilt" / curated.name)
+            for f in ("index.md", "history.md"):
+                assert (Path(tmp) / "rebuilt" / curated.name / f).read_text().rstrip() == (curated / f).read_text().rstrip(), (curated.name, f)
+            assert k not in decision_points(curated.name, k)
+
+        # every generated cut-off: history ends at its cut, gold parses, only attachments the agent could know of
+        for cut in sorted(p for p in CUTOFFS.iterdir() if p.is_dir()):
+            gold = parse_gold(cut / "ANSWER.md")
+            k = int(cut.name.split("-e")[1])
+            events = load_case(cut)["events"]
+            assert gold["cut_off"] == f"event-{k:03d}" and gold["action"] in ("act", "ask", "wait", "escalate"), cut.name
+            assert [e["id"] for e in events] == [f"event-{i:03d}" for i in range(1, k + 1)], cut.name
+            assert f"Total events: {k}" in (cut / "history.md").read_text(), cut.name
+            visible_text = (cut / "history.md").read_text() + (cut / "index.md").read_text()
+            assert all(a.name in visible_text for a in (cut / "attachments").glob("*")), cut.name
+            assert (FULL_CASES / case_id(cut)).is_dir(), cut.name
 
         # first a red-flag message (blocked), then a clean check + decision
         client = fake_client([

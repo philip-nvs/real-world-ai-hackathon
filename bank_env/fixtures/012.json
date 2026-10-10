@@ -11,6 +11,15 @@
         "standing_order_owner"
       ],
       "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "Westmere Garden Cooperative",
+      "kind": "business",
+      "roles": [
+        "payee"
+      ],
+      "acts_for": null
     }
   ],
   "events": [
@@ -91,8 +100,8 @@
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "Applicable date of any amendment is as recorded in the standing-order record; do not state an unrecorded date",
-        "An update does not guarantee the next payment"
+        "An amount update does not guarantee the next payment",
+        "Applicable date of an amendment is as recorded in the standing-order record"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -120,13 +129,10 @@
         {
           "key": "amount_gbp",
           "value": "68.00"
-        },
-        {
-          "key": "frequency",
-          "value": "monthly"
         }
       ],
       "result": "Standing order updated: £68.00 per month. The applicable date is recorded in your standing-order record. This update does not guarantee the next payment.",
+      "applied_event": "event-006",
       "source_event": "event-004"
     }
   ]

@@ -71,7 +71,7 @@
       ],
       "attributes": [
         {
-          "key": "payee",
+          "key": "recipient",
           "value": "Northmere Fitness"
         },
         {
@@ -79,15 +79,14 @@
           "value": "Active"
         },
         {
-          "key": "collection_in_processing",
-          "value": "cannot be ruled out; needs separate reconciliation"
+          "key": "collection_stage",
+          "value": "A collection already being processed cannot be ruled out; this needs separate reconciliation"
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "Cancelling the mandate does not cancel the customer's agreement with Northmere Fitness",
-        "Any collection already in processing is a separate matter; no refund is confirmed",
-        "No end to any debt owed to Northmere Fitness is confirmed"
+        "Cancelling the mandate does not confirm a refund of any collection already in processing",
+        "Cancelling the mandate does not cancel the customer's agreement with Northmere Fitness or end any debt"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -103,8 +102,7 @@
       "match_terms": [
         "Northmere Fitness",
         "Direct Debit",
-        "mandate",
-        "cancel"
+        "cancel mandate"
       ],
       "target_record": "r1",
       "confirmed_by": [
@@ -117,6 +115,7 @@
         }
       ],
       "result": "Direct Debit mandate: Northmere Fitness — Cancelled.",
+      "applied_event": "event-005",
       "source_event": "event-004"
     }
   ]

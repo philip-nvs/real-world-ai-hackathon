@@ -3,17 +3,7 @@
   "case_ref": null,
   "parties": [
     {
-      "id": "p1",
-      "name": "Nadia Bell",
-      "kind": "person",
-      "roles": [
-        "authorised_business_user",
-        "finance_operations"
-      ],
-      "acts_for": "p2"
-    },
-    {
-      "id": "p2",
+      "id": "b1",
       "name": "Merefield Design Studio Ltd",
       "kind": "business",
       "roles": [
@@ -22,20 +12,32 @@
       "acts_for": null
     },
     {
-      "id": "p3",
+      "id": "p1",
+      "name": "Nadia Bell",
+      "kind": "person",
+      "roles": [
+        "authorised_business_user",
+        "finance_operations"
+      ],
+      "acts_for": "b1"
+    },
+    {
+      "id": "p2",
       "name": "Verified company administrator for Merefield Design Studio Ltd",
       "kind": "person",
       "roles": [
         "company_administrator"
       ],
-      "acts_for": "p2"
+      "acts_for": "b1"
     },
     {
-      "id": "p4",
+      "id": "p3",
       "name": "New colleague (unnamed)",
       "kind": "person",
-      "roles": [],
-      "acts_for": "p2"
+      "roles": [
+        "prospective_payment_administration_user"
+      ],
+      "acts_for": "b1"
     }
   ],
   "events": [
@@ -80,7 +82,7 @@
       "id": "r1",
       "system": "business_mandate",
       "kind": "company_administrator",
-      "party": "p3",
+      "party": "p2",
       "match_terms": [
         "Merefield Design Studio Ltd",
         "company administrator",
@@ -96,7 +98,7 @@
           "value": "true"
         },
         {
-          "key": "can_approve_user_roles",
+          "key": "can_approve_user_access",
           "value": "true"
         }
       ],
@@ -118,11 +120,15 @@
       ],
       "attributes": [
         {
-          "key": "company_administrator",
+          "key": "role",
+          "value": "authorised_business_user"
+        },
+        {
+          "key": "is_company_administrator",
           "value": "false"
         },
         {
-          "key": "can_assign_roles",
+          "key": "can_assign_user_roles",
           "value": "false"
         }
       ],
@@ -130,19 +136,19 @@
       "disclosure_rules": [],
       "exists_before_agent": true,
       "created_by": null,
-      "source_event": "event-001"
+      "source_event": "event-003"
     },
     {
       "id": "r3",
       "system": "business_mandate",
       "kind": "new_user_access_request",
-      "party": "p2",
+      "party": "b1",
       "match_terms": [
+        "Merefield Design Studio Ltd",
         "new user access request",
         "new colleague",
-        "secure-portal access",
         "payment administration",
-        "Merefield Design Studio Ltd"
+        "secure-portal access"
       ],
       "attributes": [
         {
@@ -150,20 +156,16 @@
           "value": "Awaiting administrator approval"
         },
         {
-          "key": "delivered_to",
-          "value": "Verified company administrator for Merefield Design Studio Ltd"
-        },
-        {
           "key": "delivery",
           "value": "Delivered to administrator for review"
         },
         {
-          "key": "access_granted",
-          "value": "false"
-        },
-        {
           "key": "requested_purpose",
           "value": "payment administration"
+        },
+        {
+          "key": "access_granted",
+          "value": "false"
         }
       ],
       "customer_facing": null,
@@ -182,11 +184,12 @@
         "administrator approval",
         "secure-portal access",
         "new colleague",
-        "payment administration"
+        "payment administration",
+        "Merefield Design Studio Ltd"
       ],
       "status": "pending",
       "reference": null,
-      "response": "Request delivered to administrator for review. Status: Awaiting administrator approval. No access has been granted; the request is awaiting the administrator's decision.",
+      "response": "Request delivered to administrator for review. Status: Awaiting administrator approval. No access has been granted.",
       "document": null,
       "source_event": "event-005"
     }
@@ -195,26 +198,23 @@
     {
       "id": "x1",
       "process": "admin_process",
-      "action": "grant_user_access",
+      "action": "grant_role",
       "match_terms": [
         "new colleague",
-        "secure-portal access",
         "payment administration",
+        "secure-portal access",
         "Merefield Design Studio Ltd"
       ],
       "target_record": "r3",
       "confirmed_by": [],
       "effect": [
         {
-          "key": "status",
-          "value": "Approved"
-        },
-        {
           "key": "access_granted",
           "value": "true"
         }
       ],
-      "result": "New colleague granted secure-portal access for payment administration following company administrator approval",
+      "result": "Not applied: awaiting company administrator approval; no access granted.",
+      "applied_event": null,
       "source_event": "event-004"
     }
   ]
