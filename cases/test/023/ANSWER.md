@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Open a card-team case for review of Mara Ellery's unrecognised £38.40 Fern & Finch Books purchase on 14 July 2025.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Check H&V's import journal for the receipt record of batch-041.csv under reference HV-041.

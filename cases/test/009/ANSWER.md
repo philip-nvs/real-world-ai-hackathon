@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Check the H&V payment journal's final instruction and execution record to confirm the amount sent on Mara Ellwood's completed property-manager transfer.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Check the payroll package's signing queue against Northmere Studio Ltd's business mandate to confirm whether the second signatory's consent is still outstanding, without approving or releasing anything.

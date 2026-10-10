@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: Verify Merefield Design Studio Ltd's authorised company administrator and send them the new-user access request for approval through the secure business portal, without granting access.

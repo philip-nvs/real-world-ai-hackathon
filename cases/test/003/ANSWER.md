@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Check the current stage of Elise Rowan's saved transfer instruction in H&V's instruction journal using the identifier in her secure session, without authorising it on her behalf.

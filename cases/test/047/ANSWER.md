@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Check Maeve Calder's mandate to view company limits and the active company payment-limit setting in H&V's limit register.
