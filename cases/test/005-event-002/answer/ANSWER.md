@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `act`
-- Description: The H&V service agent, having verified the payer and checked the transfer details, sends an internal request to the H&V payment team to register the prescribed request to seek return of Leona Mercer's pottery-studio bill transfer sent to the wrong saved recipient (case HV-005).
+- Action: `escalate`
+- Description: The H&V service agent, having verified the payer and checked the transfer details, escalates Leona Mercer's pottery-studio bill transfer sent to the wrong saved recipient (case HV-005) to the H&V payment team, asking them to register the prescribed request to seek its return.
