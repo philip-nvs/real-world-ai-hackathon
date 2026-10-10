@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type DragEvent } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { useQueryClient } from '@tanstack/react-query'
-import { ChevronRightIcon, DownloadIcon, FileIcon, FolderUpIcon, PlayIcon, RotateCwIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
+import { ChevronRightIcon, DownloadIcon, FileIcon, FolderUpIcon, PanelRightIcon, PlayIcon, RotateCwIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
 import { cn } from 'cn'
 import { api, errorMessage } from '@/api/client'
 import type { components } from '@/api/schema'
@@ -254,6 +254,10 @@ function CaseRow({ id, uploadedAt, deleting, playAll, onDelete }: CaseRowProps) 
   const past = api.useQuery('get', '/cases/{case_id}/sessions', { params: { path: { case_id: id } } })
   const ran = !!start.data || !!past.data?.length
   const running = start.isPending || (!!start.data && !finished(session.data?.status))
+  // The newest run, as export picks it: its answer only shows once it's done.
+  const latest = start.data ? session.data : past.data?.[0]
+  const sidebar = useRef<HTMLDialogElement>(null)
+  const [showAnswer, setShowAnswer] = useState(false)
   const play = () => start.mutate({ params: { path: { case_id: id } } })
   // Skips mount (0) and rows already running.
   useEffect(() => {
@@ -276,6 +280,16 @@ function CaseRow({ id, uploadedAt, deleting, playAll, onDelete }: CaseRowProps) 
             onClick={(e) => (e.preventDefault(), play())}
           >
             {ran ? <RotateCwIcon /> : <PlayIcon />}
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon-xs"
+            aria-label={`Show the answer and reasoning for case ${id}`}
+            title="Answer"
+            disabled={latest?.status !== 'done'}
+            onClick={(e) => (e.preventDefault(), setShowAnswer(true), sidebar.current?.showModal())}
+          >
+            <PanelRightIcon />
           </Button>
           <Button
             variant="ghost"
@@ -315,7 +329,48 @@ function CaseRow({ id, uploadedAt, deleting, playAll, onDelete }: CaseRowProps) 
           {start.data && <SessionTrace key={start.data.id} sessionId={start.data.id} session={session.data} />}
         </div>
       </details>
+      <dialog
+        ref={sidebar}
+        onClose={() => setShowAnswer(false)}
+        // click on the backdrop (the dialog itself, not its content) closes it
+        onClick={(e) => e.target === e.currentTarget && e.currentTarget.close()}
+        className="fixed inset-y-0 right-0 left-auto m-0 h-full max-h-none w-full max-w-2xl bg-background p-0 text-sm text-foreground shadow-xl backdrop:bg-black/30"
+      >
+        {showAnswer && latest && <AnswerPanel caseId={id} sessionId={latest.id} onClose={() => sidebar.current?.close()} />}
+      </dialog>
     </li>
+  )
+}
+
+function AnswerPanel({ caseId, sessionId, onClose }: { caseId: string; sessionId: string; onClose: () => void }) {
+  const s = api.useQuery('get', '/sessions/{session_id}', { params: { path: { session_id: sessionId } } })
+  return (
+    <div className="flex h-full flex-col">
+      <div className="flex items-center gap-2 border-b px-4 py-3">
+        <p className="min-w-0 flex-1 truncate font-mono text-xs">
+          {caseId} · session {sessionId.slice(0, 8)}
+        </p>
+        <Button variant="ghost" size="icon-xs" aria-label="Close" onClick={onClose}>
+          <XIcon />
+        </Button>
+      </div>
+      <div className="flex-1 space-y-4 overflow-y-auto p-4">
+        {s.isPending && <p className="text-muted-foreground">Loading…</p>}
+        {s.isError && <p className="text-destructive">Couldn't load the answer: {errorMessage(s.error)}</p>}
+        {s.data && (
+          <>
+            <section className="space-y-1">
+              <h3 className="font-medium">ANSWER.md</h3>
+              <pre className="whitespace-pre-wrap rounded bg-muted p-3 font-mono text-xs">{s.data.answer_md}</pre>
+            </section>
+            <section className="space-y-1">
+              <h3 className="font-medium">REASONING.md</h3>
+              <pre className="whitespace-pre-wrap rounded bg-muted p-3 font-mono text-xs">{s.data.reasoning_md}</pre>
+            </section>
+          </>
+        )}
+      </div>
+    </div>
   )
 }
 
