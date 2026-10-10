@@ -1,3 +1,3 @@
 - Cut-off: event-002
 - Action: `escalate`
-- Description: Ask H&V's Payment Team to check the available trace for case HV-007 and report the current stage, distinguishing H&V's status from beneficiary receipt.
+- Description: Ask H&V's Payment Team to check the available trace for Mara Ellwood's international transfer and report the current stage, distinguishing H&V's status from beneficiary receipt.

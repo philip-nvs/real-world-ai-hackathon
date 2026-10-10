@@ -1,4 +1,4 @@
-# Case 022 history — Lost card blocked
+# Case 022 history — Request to block a missing debit card
 
 Total events: 2
 

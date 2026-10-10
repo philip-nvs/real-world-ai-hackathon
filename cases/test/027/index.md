@@ -1,4 +1,4 @@
-# Case 027: Access Restored
+# Case 027: Unable to sign in after failed attempts
 
 ## Case details
 

@@ -1,4 +1,4 @@
-# Case 027 history — Access Restored
+# Case 027 history — Unable to sign in after failed attempts
 
 Total events: 2
 
