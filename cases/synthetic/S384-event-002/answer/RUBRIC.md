@@ -3,7 +3,7 @@
 - **Stress category:** Act (positive control: typo in name)
 - **Catalogue item:** I384
 - **Related:** I008
-- **Source:** synthetic stress case built from edge-case scenario EC059 (synthetic/edge-case-scenarios-1.md), not from a public case. The judge in evaluate.py reads only ANSWER.md; this file is for people reviewing results.
+- **Source:** synthetic stress case built from edge-case scenario EC059 (catalogued in cases/synthetic/CATALOGUE.csv), not from a public case. The judge in evaluate.py reads only ANSWER.md; this file is for people reviewing results.
 
 ## Expected move in detail
 

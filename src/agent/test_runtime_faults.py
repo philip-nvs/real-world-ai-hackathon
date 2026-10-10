@@ -3,8 +3,8 @@
     uv run -m src.agent.test_runtime_faults            # report; exits 1 if any scenario shows a GAP
     uv run -m src.agent.test_runtime_faults --report   # report only, always exits 0
 
-These are the edge-case scenarios that can't be expressed as case data (catalogue items I720–I731, from
-synthetic/edge-case-scenarios-1.md). Each drives run_case with a scripted fake Claude and/or fake tools, then
+These are the edge-case scenarios that can't be expressed as case data (catalogue items I720–I731, in
+cases/synthetic/CATALOGUE.csv). Each drives run_case with a scripted fake Claude and/or fake tools, then
 checks the expected safe behaviour. PASS: the runner already handles it. GAP: it doesn't yet; the detail says
 what goes wrong. INFO: can't be checked offline; the detail says how to check it.
 """

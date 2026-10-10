@@ -3,7 +3,7 @@
 - **Stress category:** Escalate (authorised vs executed amount)
 - **Catalogue item:** I394
 - **Related:** I017
-- **Source:** synthetic stress case built from edge-case scenario EC073 (synthetic/edge-case-scenarios-1.md), not from a public case. The judge in evaluate.py reads only ANSWER.md; this file is for people reviewing results.
+- **Source:** synthetic stress case built from edge-case scenario EC073 (catalogued in cases/synthetic/CATALOGUE.csv), not from a public case. The judge in evaluate.py reads only ANSWER.md; this file is for people reviewing results.
 
 ## Expected move in detail
 
