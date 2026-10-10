@@ -82,6 +82,8 @@ class Process(Strict):
                                                 "of exactly this change. A request is not a confirmation.")
     effect: list[Attr] = Field(description="Attribute values on the target record once applied")
     result: str = Field(description="What the process reports once applied")
+    applied_event: str | None = Field(description="Event in which the case records the change as applied "
+                                                  "(e.g. the system confirming it), else null")
     source_event: str
 
 
@@ -116,6 +118,8 @@ def check_world(world, event_ids):
         if x.target_record and x.target_record not in records:
             problems.append(f"{x.id}: unknown target_record {x.target_record}")
         problems += [f"{x.id}: confirmed_by {e} not in case" for e in x.confirmed_by if e not in events]
+        if x.applied_event and x.applied_event not in events:
+            problems.append(f"{x.id}: applied_event {x.applied_event} not in case")
     ids = [i.id for i in world.parties + world.records + world.team_responses + world.processes]
     problems += [f"duplicate id {i}" for i in {i for i in ids if ids.count(i) > 1}]
     return problems

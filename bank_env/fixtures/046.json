@@ -73,7 +73,7 @@
       "id": "r1",
       "system": "business_mandate",
       "kind": "user_role",
-      "party": "p3",
+      "party": "p1",
       "match_terms": [
         "Owen Bell",
         "Payroll Approver",
@@ -106,8 +106,8 @@
     {
       "id": "r2",
       "system": "business_mandate",
-      "kind": "administrator_mandate",
-      "party": "p2",
+      "kind": "company_administrator",
+      "party": "p1",
       "match_terms": [
         "Mara Ellery",
         "administrator",
@@ -115,20 +115,20 @@
       ],
       "attributes": [
         {
-          "key": "role",
-          "value": "business administrator"
-        },
-        {
           "key": "user",
           "value": "Mara Ellery"
+        },
+        {
+          "key": "role",
+          "value": "business administrator"
         },
         {
           "key": "business",
           "value": "Larkmere Studio Ltd"
         },
         {
-          "key": "mandate_check",
-          "value": "checked"
+          "key": "mandate_status",
+          "value": "verified"
         }
       ],
       "customer_facing": null,
@@ -160,8 +160,9 @@
           "value": "revoked"
         }
       ],
-      "result": "Revocation instruction processed. The admin-log status is available to the business administrator in the secure portal. Admin log: Payroll Approver role for Owen Bell — REVOKED.",
-      "source_event": "event-004"
+      "result": "Revocation instruction processed. Admin log: Payroll Approver role for Owen Bell — REVOKED. The admin-log status is available to the business administrator in the secure portal.",
+      "applied_event": "event-004",
+      "source_event": "event-003"
     }
   ]
 }

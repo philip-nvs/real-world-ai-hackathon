@@ -105,13 +105,24 @@ if __name__ == "__main__":
     assert sent["status"] != "queued", sent
     assert "Awaiting" in str(bank.lookup(*query))
 
-    # 036: wording written after the address change stays hidden until the change is applied
-    bank = FixtureAdapter(load_scenario("036"))
+    # 036: wording written after the address change stays hidden until the change is applied (confirmed at
+    # event-004, applied at event-006)
+    bank = FixtureAdapter(load_scenario("036"), visible_events={f"event-00{i}" for i in range(1, 5)})
     query = ("customer profile", "Mara Ellison correspondence address")
     assert "permitted_customer_wording" not in bank.lookup(*query)
     process = next(x for x in bank.world.processes if x.action == "change_address")
     bank.submit_instruction("profile change", " ".join(process.match_terms), process.confirmed_by[0])
     assert "permitted_customer_wording" in bank.lookup(*query)
+
+    # 013: once the history records the cancellation, the adapter shows it as done
+    process = next(x for x in load_scenario("013").world.processes if x.applied_event)
+    applied = int(process.applied_event.split("-")[1])
+    query = ("instruction register", " ".join(process.match_terms))
+    before = FixtureAdapter(load_scenario("013"), visible_events={f"event-{i:03d}" for i in range(1, applied)})
+    after = FixtureAdapter(load_scenario("013"), visible_events={f"event-{i:03d}" for i in range(1, applied + 1)})
+    effect = {a.key: a.value for a in process.effect}
+    assert all(after.lookup(*query)["facts"].get(k) == v for k, v in effect.items()), after.lookup(*query)
+    assert not all(before.lookup(*query)["facts"].get(k) == v for k, v in effect.items())
 
     # faults: an unavailable system fails the call and is logged
     bank = FixtureAdapter(load_scenario(overlay={"base": "001", "faults": [

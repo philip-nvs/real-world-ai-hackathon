@@ -64,25 +64,16 @@
       "party": "p1",
       "match_terms": [
         "Mara Ellison",
+        "HV-036",
         "correspondence address",
-        "address",
-        "HV-036"
+        "address"
       ],
-      "attributes": [
-        {
-          "key": "address_type",
-          "value": "correspondence"
-        },
-        {
-          "key": "move",
-          "value": "customer moved within the UK"
-        }
-      ],
-      "customer_facing": "Your new address is marked as current for correspondence. This confirmation does not establish whether any correspondence already sent was redirected or delivered.",
+      "attributes": [],
+      "customer_facing": "Your new address is marked as current for correspondence.",
       "disclosure_rules": [
-        "new address not displayed in full",
-        "no address recorded in internal notes",
-        "confirmation does not establish whether correspondence already sent was redirected or delivered"
+        "new address is not displayed in full",
+        "no address is recorded in internal notes",
+        "confirmation does not establish whether any correspondence already sent was redirected or delivered"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -96,10 +87,10 @@
       "process": "profile_change",
       "action": "change_address",
       "match_terms": [
-        "correspondence address",
-        "address change",
         "HV-036",
-        "Mara Ellison"
+        "Mara Ellison",
+        "correspondence address",
+        "address change"
       ],
       "target_record": "r1",
       "confirmed_by": [
@@ -107,11 +98,12 @@
       ],
       "effect": [
         {
-          "key": "status",
-          "value": "new address marked as current for correspondence"
+          "key": "new_address_status",
+          "value": "current for correspondence"
         }
       ],
       "result": "Your new address is marked as current for correspondence. This confirmation does not establish whether any correspondence already sent was redirected or delivered.",
+      "applied_event": "event-006",
       "source_event": "event-003"
     }
   ]
