@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Search H&V's payment journal for the purpose field on Elena Marlow's transfer instruction to Mallow Pottery Works.

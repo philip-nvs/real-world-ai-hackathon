@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Check the H&V card journal for the permitted category of Rowan Ellery's card restriction and the limit on what may be disclosed.

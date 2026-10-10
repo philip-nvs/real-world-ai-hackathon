@@ -1,0 +1,21 @@
+# Case 014 history — Direct Debit mandate status
+
+Total events: 2
+
+<a id="event-001"></a>
+## 2025-08-14 09:00:00 UTC — event 001
+
+- **Channel:** Secure portal
+- **From:** Harrow & Vale Bank plc
+- **To:** Mara Ellery
+
+Your statement for the period ending 31 March 2025 shows a Direct Debit collection to Northmere Water Services. This is a historic statement entry.
+
+<a id="event-002"></a>
+## 2025-08-14 09:47:00 UTC — event 002
+
+- **Channel:** Secure chat
+- **From:** Mara Ellery
+- **To:** H&V service agent
+
+I saw that collection on my March statement and have not seen another one. Could you check whether the mandate is currently active? Please don't cancel it; I only need its status.

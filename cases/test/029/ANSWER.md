@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Check the device-linking state of Mara Ellison's new tablet in H&V's access log.

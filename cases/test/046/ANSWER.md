@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Submit Mara Ellery's verified instruction to the H&V admin process to revoke Owen Bell's Payroll Approver role for Larkmere Studio Ltd.

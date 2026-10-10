@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: Compare the recorded transaction type and processing date of Mara Ellery's foreign-currency cash withdrawal with the H&V tariff in force on that date to verify the £3.20 fee.
