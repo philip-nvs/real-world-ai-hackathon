@@ -162,6 +162,14 @@ if __name__ == "__main__":
         run_case(s190, Path(tmp) / "s190", fake_client([[tool_use(9, "submit_decision", **DECISION)]]))
         assert "graders" not in (Path(tmp) / "s190/ANSWER.md").read_text().lower()
 
+        # a multi-line customer message is quoted on every line in ANSWER.md
+        letter = "Dear Ms Ellery,\n\nYour standing order run was not executed.\n\nKind regards"
+        quoted_run = fake_client([[tool_use(10, "send_secure_message", recipient="Mara", message=letter),
+                                   tool_use(11, "submit_decision", **dict(DECISION, customer_message=letter))]])
+        run_case(CASE, Path(tmp) / "quoted", quoted_run)
+        tail = (Path(tmp) / "quoted/ANSWER.md").read_text().split("recorded, not sent):\n\n", 1)[1].strip().splitlines()
+        assert tail == ["> Dear Ms Ellery,", ">", "> Your standing order run was not executed.", ">", "> Kind regards"], tail
+
         # a crashing client still yields an Escalate answer
         r = run_case(CASE, Path(tmp) / "crash", fake_client([]))
         assert r["crashed"] and r["decision"] == "escalate"
