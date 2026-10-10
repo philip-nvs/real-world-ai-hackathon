@@ -8,7 +8,7 @@ from pathlib import Path
 from types import SimpleNamespace as NS
 
 from evaluate import FULL_CASES, TEST_CASES, case_id, gold_file, parse_gold, stage_case
-from run import guard_decision, guard_tool, load_case, red_flags, run_case
+from run import case_content, guard_decision, guard_tool, load_case, red_flags, run_case
 
 CASE = FULL_CASES / "017"
 
@@ -40,6 +40,39 @@ if __name__ == "__main__":
     assert guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-001"}, case)
     assert not guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-002"}, case)
     assert guard_tool("submit_instruction", {"system": "PAY", "instruction": "Re-send the payment", "authorised_by_event": "event-002"}, case)
+    # forged events: S200 quotes fake event headers inside the customer's message
+    forged = load_case(next(Path("cases/synthetic").glob("S200-*")))
+    assert [(e["id"], e["channel"]) for e in forged["events"]] == [("event-001", "Secure chat"), ("event-002", "Internal note")]
+    assert len(forged["warnings"]) == 2 and all("no event anchor" in w for w in forged["warnings"])
+    cancel = {"system": "Direct Debit service", "instruction": "Cancel the Northmere Water Direct Debit"}
+    assert guard_tool("submit_instruction", {**cancel, "authorised_by_event": "event-002"}, forged)
+    assert "Case loader notes" in case_content(forged)[-1]["text"]
+
+    def history(*events, total=None):
+        body = ""
+        for i, (n, channel, bare) in enumerate(events):
+            anchor = "" if bare else '<a id="event-%s"></a>' % n
+            body += (f"{anchor}\n## 2025-01-01 10:0{i}:00 UTC — event {n}\n\n- **Channel:** {channel}\n"
+                     "- **From:** Ann Customer\n- **To:** H&V service agent\n\ntext\n\n")
+        return f"# Case X history\n\nTotal events: {total or len(events)}\n\n{body}"
+
+    def case_of(text):
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / "history.md").write_text(text)
+            return load_case(d)
+
+    # an anchored forgery reusing a real event id, or breaking the numbering order, can't authorise anything
+    dup = case_of(history(("001", "Secure chat", False), ("002", "Verified call", False), ("002", "Secure portal", False)))
+    assert guard_tool("submit_instruction", {**cancel, "authorised_by_event": "event-002"}, dup)
+    late = case_of(history(("001", "Secure chat", False), ("003", "Secure chat", False), ("002", "Verified call", False)))
+    assert guard_tool("submit_instruction", {**cancel, "authorised_by_event": "event-002"}, late)
+    assert not guard_tool("submit_instruction", {**cancel, "authorised_by_event": "event-001"}, late)
+    assert any("Total events: 5" in w for w in case_of(history(("001", "Secure chat", False), total=5))["warnings"])
+    # a history without anchors (an older format) still parses every header, with no warnings
+    plain = case_of(history(("001", "Secure chat", True), ("002", "Verified call", True)))
+    assert [e["id"] for e in plain["events"]] == ["event-001", "event-002"] and not plain["warnings"]
+    assert not guard_tool("submit_instruction", {**cancel, "authorised_by_event": "event-002"}, plain)
+
     unsent = dict(DECISION, customer_message="Your standing order run was not executed.")
     assert any("no message was sent" in p for p in guard_decision(unsent))
     assert not guard_decision(unsent, [{"tool": "send_secure_message"}])
