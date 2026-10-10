@@ -11,6 +11,12 @@ uv sync
 cp .env.example .env   # then put your ANTHROPIC_API_KEY in .env
 ```
 
+MongoDB (`src/repository`, set `MONGODB_URI`/`MONGODB_DB` in `.env`):
+
+```bash
+docker compose up -d
+```
+
 ## Run
 
 ```bash
@@ -68,6 +74,7 @@ The dev loop runs the same `run_case` with the agent's tools answering from the 
 ```bash
 uv run test_run.py
 uv run test_bank_env.py
+uv run -m src.repository.test_repository   # needs MongoDB running
 ```
 
 Neither needs an API key.

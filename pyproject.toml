@@ -6,4 +6,5 @@ dependencies = [
     "anthropic>=1.13",
     "fastapi[standard]>=0.143.0",
     "pydantic>=2",
+    "pymongo>=4.13",
 ]
