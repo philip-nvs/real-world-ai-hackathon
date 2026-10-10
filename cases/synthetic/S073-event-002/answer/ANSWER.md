@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Hamza Iqbal where the £1,342.18 balance should go and points out his active standing order and Direct Debit, without closing the account.

@@ -1,0 +1,3 @@
+- Cut-off: event-030
+- Action: `act`
+- Description: The H&V service agent tells Arthur Bloom that the branch updated his phone number on 1 Nov and asks the access team why the app is asking again.

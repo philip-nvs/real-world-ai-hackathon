@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `ask`
+- Description: The H&V service agent confirms with Lydia Moss the three payments to dispute (two £19.99 VIDLY, one £4.99 APPSTORE-X) before registering card-team reviews, without treating the TOTAL row as a payment.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Jay Rivers calmly that no wage payment has arrived today (last salary credit 31 Oct, Brightside Logistics), without saying it is on its way.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent asks Lena Park which option she wants (a replacement with the same number or a new card number), without ordering either.

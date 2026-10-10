@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V business support agent tells Nia Evans that row 4 has been rejected for a name mismatch three months running, so that payee's name needs correcting.

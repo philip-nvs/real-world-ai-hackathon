@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent asks the Tariff Team again for the status of Dina Akhtar's review HV-T-3301, because their reply was about HV-T-3310, without relaying the other case's outcome.

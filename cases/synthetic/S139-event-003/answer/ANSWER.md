@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent tells Noel Brandt that the call record is unavailable and asks him to restate his request.

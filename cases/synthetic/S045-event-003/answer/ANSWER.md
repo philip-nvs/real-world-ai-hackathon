@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Petra Lindqvist that no Sona Home refund credit is recorded yet and suggests she ask Sona Home for the refund reference, without promising when it will arrive.

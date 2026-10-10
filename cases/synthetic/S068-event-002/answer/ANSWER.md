@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Morag Bell that H&V does not make payments for customers from chat and that she pays her saved payee D FRASER BUILD herself in online banking, without making a payment.

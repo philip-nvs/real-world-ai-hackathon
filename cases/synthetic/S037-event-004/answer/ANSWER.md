@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent checks the card journal for a replacement order for Leah Morgan's card, because the earlier note says 'done' but no order is recorded, without promising a delivery date.

@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `act`
+- Description: The H&V service agent gives Jack Allen general information on moving abroad (address update, terms for non-UK residents, regular payments), without changing or closing the account.

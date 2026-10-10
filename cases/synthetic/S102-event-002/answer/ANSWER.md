@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V business support agent tells Hannah Doyle that a signatory change needs the mandate-change form signed by two existing signatories, without changing the mandate.

@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Ruby Dale that the payment executed at 00:05 UK time on 1 April (23:05 UTC on 31 March), as scheduled.

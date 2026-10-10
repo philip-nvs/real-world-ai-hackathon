@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent asks the Payment Team to investigate Ama Boateng's £980 rent standing order, which the journal shows EXECUTED on 1 Nov although no debit posted and the payee received nothing, without telling her it was paid or advising her to pay again.

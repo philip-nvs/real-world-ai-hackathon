@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `escalate`
+- Description: The H&V service agent escalates to the card team that card ending 6620 was sent to Sam Whitlow's previous address, so it can be blocked and reissued to his current address.

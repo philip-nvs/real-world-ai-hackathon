@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent submits Paula Grey's limit change to £8,000, which she confirmed in the portal in event 003, and tells her the result.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent asks Ian Coyle which of his six recent transfers went to the wrong person (payee, amount, date), without registering a return yet.

@@ -1,0 +1,3 @@
+- Cut-off: none (no history.md)
+- Action: `act`
+- Description: The H&V service agent asks the card team to block card ending 3301 urgently, noting that the case has no history to confirm verification.

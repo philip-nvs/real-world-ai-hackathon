@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V business support agent asks Nina Roy whether she means the per-payment limit (£20,000) or the daily limit (£40,000), noting that per-payment limits above £25,000 need a Payments Risk review.

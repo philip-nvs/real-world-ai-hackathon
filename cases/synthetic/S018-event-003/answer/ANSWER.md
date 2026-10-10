@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent tells Jasper Kole in the secure portal that the screenshot did not come through and asks which payment he means (two Streamly declines, a Harbour Gym decline, the 1 Nov rent standing order), without re-running any payment.

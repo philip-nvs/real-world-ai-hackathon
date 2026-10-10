@@ -1,0 +1,3 @@
+- Cut-off: event-007
+- Action: `escalate`
+- Description: The H&V service agent escalates the stolen card ending 4417 to the card fraud team as urgent, because the card system rejected the block twice (CMS-77812, CMS-77840) and the card is still being used, and tells Priya Calloway in the secure portal that the block has not been applied yet and the £38.60 Kestrel Lane Mini-Mart payment is recorded as unrecognised.

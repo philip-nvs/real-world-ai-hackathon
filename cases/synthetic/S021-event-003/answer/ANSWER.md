@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent registers a formal complaint with the Complaints team covering Gordon McAllister's three £25 overdraft fees and his claim that H&V delayed his salary, and gives him the reference in the secure portal, without promising a refund or compensation.

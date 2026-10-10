@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent asks the Direct Debit service why Zoe Grant's accepted Volta Mobile cancellation has not taken effect before the collection on the 14th, without telling her it is cancelled.

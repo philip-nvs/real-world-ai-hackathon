@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V business support agent tells Jo Marsh that the £210 gap is £96.40 fees plus a £113.60 chargeback adjustment, giving a £4,610 net settlement credited on 10 Nov.

@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Iris Moore that the £22 Lumen Books payment was declined for insufficient balance, without using the unsent draft's explanation.

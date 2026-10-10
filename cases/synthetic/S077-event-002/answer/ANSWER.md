@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent asks the card team to add the new £9.99 STREAMPLUS charge to open enquiry HV-C-8812 and gives Rita Gomes the reference.

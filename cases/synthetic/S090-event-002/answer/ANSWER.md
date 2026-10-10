@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent asks the Cheques team to stop cheque 000123 (£350, not yet presented) on Harold Briggs's instruction, without telling him it is stopped.

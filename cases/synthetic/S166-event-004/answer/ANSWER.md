@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V business support agent tells Ross Kerr that Imogen Tate's consent to PKG-163 is void because she was removed as a signatory at 15:30, so a current signatory must consent.

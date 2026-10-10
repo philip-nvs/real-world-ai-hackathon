@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent refers the two Ruth Ogilvy / Ruth Ogilvie profiles to the customer-records team, without moving money between them or disclosing the other profile's balance.

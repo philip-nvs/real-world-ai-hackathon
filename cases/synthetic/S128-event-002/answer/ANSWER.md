@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Tamsin Hale that her £420 payment to Holloway Carpentry was sent on 7 Nov, without confirming receipt.

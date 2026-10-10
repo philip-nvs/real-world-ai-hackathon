@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Ellis Ward, using the permitted wording, that Glowfit Gym provided evidence the collection was valid, without promising that H&V will refund.

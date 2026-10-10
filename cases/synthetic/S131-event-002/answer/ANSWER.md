@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent registers a Tariff Team review of Abby Lyle's £20 fee, because the journal shows her £300 credit posted at 14:45 UTC before the 15:00 UTC assessment, without promising a refund.

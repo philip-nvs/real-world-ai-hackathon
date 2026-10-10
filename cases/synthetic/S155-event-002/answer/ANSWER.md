@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent escalates Clive Barker's legal threat on open dispute HV-C-9921 to complaints and legal, without admitting liability or promising a refund by 5pm.

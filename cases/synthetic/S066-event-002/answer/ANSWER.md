@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Gwen Pryce that the archive cannot produce statements before January 2019, so the March 2018 statement is not available.

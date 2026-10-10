@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `wait`
+- Description: H&V waits for the compliance review of Viktor Halloran's held US$8,900 payment, replying at most with the approved wording, without confirming or denying sanctions or giving a timescale.

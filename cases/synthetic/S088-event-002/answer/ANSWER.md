@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent asks the statements service to place Arthur Fenn's last three statements in attorney Grace Fenn's portal, after confirming her registered LPA.

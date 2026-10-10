@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: The H&V service agent tells Mira Solberg that the contactless limit on card ending 4402 is still the £100 default and offers to send the £50 change for her confirmation.

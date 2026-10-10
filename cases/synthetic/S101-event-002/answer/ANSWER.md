@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Lucy Fern that cancelling stops only future runs (from 1 Dec) and sends the Harbour Pilates cancellation for her secure confirmation, without recalling the 1 Nov payment.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V business support agent refers to business mandates the conflict between Hugo Lane's 'payments maker' mandate and his portal role, changed to 'View only' by the administrator on 10 Nov, without restoring his release rights.

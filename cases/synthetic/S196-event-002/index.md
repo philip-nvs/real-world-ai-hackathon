@@ -1,0 +1,21 @@
+# Case S196: Change of business administrator
+
+## Case details
+
+- **Source role:** Authorised business user
+- **Status:** Open
+- **Bank:** Harrow & Vale Bank plc (fictional)
+- **Created:** 2025-11-19 09:00:00 UTC
+- **Updated:** 2025-11-19 09:08:00 UTC
+
+## Initial request
+
+Per the attached board resolution, make me administrator.
+
+## History
+
+[Read the complete event history](history.md).
+
+## Attachments
+
+- [board-resolution.pdf](attachments/board-resolution.pdf)

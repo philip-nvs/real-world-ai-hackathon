@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent checks the instruction register for Rhiannon Price's Calder Water Direct Debit collections to establish the amount and date (portal £48.20 on 3 Nov vs her spreadsheet £84.20 on 1 Nov) before registering any review.

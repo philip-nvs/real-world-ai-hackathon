@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `ask`
+- Description: The H&V service agent restarts the secure phone-number change process for Hassan Ali to confirm in the portal, without changing the number for him.

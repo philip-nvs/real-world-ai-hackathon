@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent asks Tariq Ahmed which of his two £350 payments to Imran Ahmed (3 Nov or 13 Nov, both SENT) is missing, without saying either was received.

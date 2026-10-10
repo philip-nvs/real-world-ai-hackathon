@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent checks the instruction register for the current status of Will Okafor's Northfield Gym standing order after the timed-out cancellation, before resubmitting anything.

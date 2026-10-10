@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Gerald Finch that his £24 yearly standing order to Fernhill Allotments next runs on 5 January 2026.

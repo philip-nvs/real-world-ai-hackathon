@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `escalate`
+- Description: The H&V service agent escalates Rita Kaur's held £1,800 payment to Payments Risk and the vulnerable-customer team, without releasing it.

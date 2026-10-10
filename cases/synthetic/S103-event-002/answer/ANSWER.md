@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Yusuf Demir that his £875 standing order to P WALSH ran and was sent on 1 Nov and offers a payment record in his portal, without contacting his landlord.

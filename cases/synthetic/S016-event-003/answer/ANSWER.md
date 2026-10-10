@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V business support agent submits Theo Lam's instructions from event 002 to revoke Ross Pelham's Payments Approver role and block company card ending 5512, without touching the payments Ross set up yesterday.

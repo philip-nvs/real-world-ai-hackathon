@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent refers Leanne Shaw to the financial support team, with her consent, and points her to free debt advice, without promising the £18.40 interest back.

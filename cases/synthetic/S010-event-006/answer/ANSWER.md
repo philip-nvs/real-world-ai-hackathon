@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `wait`
+- Description: H&V waits for the Payment Team's trace TR-55120 on Owen Marsh's €2,400 transfer, without sending a second payment, cancelling the first or promising an arrival time.

@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `escalate`
+- Description: The H&V service agent refers Moira Gale to the bereavement team, with condolences, without removing Bernard Gale's name from the account.

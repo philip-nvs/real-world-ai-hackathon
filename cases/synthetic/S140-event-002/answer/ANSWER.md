@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent sends Kate Bloom's Pulse Fitness Direct Debit cancellation for her secure-portal confirmation, without touching her card.

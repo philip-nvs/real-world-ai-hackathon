@@ -1,0 +1,3 @@
+- Cut-off: event-042
+- Action: `act`
+- Description: The H&V service agent asks the Tariff Team to honour the waiver of the £60 box fee approved in August (HV-L155-2) and tells Asha Verma it has been passed on.

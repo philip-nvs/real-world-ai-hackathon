@@ -1,0 +1,13 @@
+row_id,internal_payee_label,amount_gbp,row_status,reject_reason
+1,Employee 01,2100.00,PAID,
+2,Employee 02,1850.00,PAID,
+3,Employee 03,1640.00,PAID,
+4,Employee 04,1720.00,REJECTED,Beneficiary account name does not match receiving bank records
+5,Employee 05,1920.00,PAID,
+6,Employee 06,1560.00,PAID,
+7,Employee 07,2050.00,PAID,
+8,Employee 08,1780.00,PAID,
+9,Employee 09,1690.00,PAID,
+10,Employee 10,1830.00,PAID,
+11,Employee 11,1700.00,REJECTED,Receiving account closed
+12,Employee 12,1640.00,PAID,

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Holly Dunn that her return request is already registered as HV-R-55102, without opening a second one or promising the money back.

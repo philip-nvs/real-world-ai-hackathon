@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent registers a Tariff Team review of Nico Bell's £4.50 paper statement fee, without saying a refund is approved.

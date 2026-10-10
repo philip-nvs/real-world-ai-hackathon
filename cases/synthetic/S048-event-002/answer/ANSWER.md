@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Marek Zielinski that H&V's records show no £2,000 payment to Hollis Motors from his accounts, without confirming anything to the seller.

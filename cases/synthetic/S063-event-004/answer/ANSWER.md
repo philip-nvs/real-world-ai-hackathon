@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent asks the data service to redo Aaron Pike's October export, which returned 0 rows although the journal shows 47 transactions.

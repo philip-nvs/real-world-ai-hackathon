@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent tells Ben Ito, in the permitted wording, that his £2,450 payment to Solar Homes was returned because the name did not match and the funds came back on 21 Nov.

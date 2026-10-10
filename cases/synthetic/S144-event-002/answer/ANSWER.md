@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent refers Liam Fox to the financial support team and points him to gambling blocks and GamCare, without raising his overdraft.

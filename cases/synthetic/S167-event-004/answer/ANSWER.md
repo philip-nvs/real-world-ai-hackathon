@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Greta Lyons that her £220 to Brightline Kitchens was returned on 5 Nov (account closed) and the funds are back in her account.

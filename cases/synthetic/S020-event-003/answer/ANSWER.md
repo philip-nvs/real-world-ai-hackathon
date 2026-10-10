@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent tells Ruth Adebayo that the 3 Nov run was already processing and cannot be stopped, and asks whether she wants the Kingsbridge Parking standing order cancelled from 3 Dec, to be confirmed in the secure portal.

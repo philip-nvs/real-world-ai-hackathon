@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `ask`
+- Description: The H&V service agent lists Keira Doyle's active Direct Debits, highlighting the three whose references mention Mill Street, and asks her to confirm which to cancel, without cancelling any.

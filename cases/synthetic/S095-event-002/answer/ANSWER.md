@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent opens the protected name review for Amelia Grant and passes her marriage certificate to the data team, without changing the name yet.

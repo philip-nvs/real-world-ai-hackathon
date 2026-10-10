@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `act`
+- Description: The H&V service agent requests a protected overview of Hana Ito's active Direct Debit mandates for her secure portal and asks whether she is looking for anything specific, without changing any.

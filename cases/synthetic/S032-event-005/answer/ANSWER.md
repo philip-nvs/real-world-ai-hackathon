@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `escalate`
+- Description: The H&V service agent escalates to card operations as urgent that card ending 7781 was approved for £64 at 18:15 after showing BLOCKED at 18:05, and tells Carl Pemberton the payment went through and is recorded as unrecognised, without saying the card is safe.

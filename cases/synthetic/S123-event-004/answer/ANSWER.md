@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent tells Dev Patel that the card journal shows one £56.20 Northway Rail payment and the second alert was a notification glitch, without raising a dispute.

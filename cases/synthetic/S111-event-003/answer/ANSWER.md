@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent acknowledges Max Holder's frustration and asks whether he really wants to close the account, offering e-statements, without starting a closure.

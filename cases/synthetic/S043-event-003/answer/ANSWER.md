@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `ask`
+- Description: The H&V service agent asks Ben Carter whether he wants £860 (his chat request) or £680 (his portal confirmation) for the Oakfield Nursery standing order, without applying either.

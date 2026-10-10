@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V business support agent tells Aisha Bello that payroll batch PAY-S24 paid 10 rows and rejected rows 4 and 11 (name mismatch; account closed), so only those two need correcting and resubmitting, without resubmitting the batch.

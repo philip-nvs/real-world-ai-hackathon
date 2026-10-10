@@ -1,0 +1,3 @@
+- Cut-off: event-012
+- Action: `act`
+- Description: The H&V service agent tells Kofi Mensah that his £60 to K ASANTE was sent on 11 Nov at 08:30 and apologises for the repeated reminders.

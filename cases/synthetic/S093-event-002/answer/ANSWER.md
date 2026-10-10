@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V service agent tells Keith Rowe, in the permitted wording, that his funds are restricted by a legal order and refers him to the Legal Orders team, without releasing funds or naming the creditor.

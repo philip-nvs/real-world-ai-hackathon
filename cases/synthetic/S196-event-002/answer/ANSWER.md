@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `escalate`
+- Description: The H&V business support agent refers Rory Clegg's request to become administrator to the mandates team, without changing any role.

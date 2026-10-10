@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent checks the payment team's return-request register for Rhea Kapoor's £150 transfer, because the handover notes contradict each other.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent tells Sam Okoro that H&V's records show a 31 Oct closing balance of £1,412.06, matching his statement.

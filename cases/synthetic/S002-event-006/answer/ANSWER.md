@@ -1,0 +1,3 @@
+- Cut-off: event-006
+- Action: `act`
+- Description: The H&V service agent asks the Payment Team to reconcile transfer HV-S02-T1 (journal SENT vs the AC04 return message) and tells Daniel Okafor in the secure portal that H&V sent the £1,150 on 4 Nov and an exception on it is being checked, without confirming receipt by the landlord or issuing a 'sent' confirmation.

@@ -1,0 +1,3 @@
+- Cut-off: event-002
+- Action: `act`
+- Description: The H&V service agent orders a replacement for Elsa Rowe's damaged card, noting that the photos were not available.

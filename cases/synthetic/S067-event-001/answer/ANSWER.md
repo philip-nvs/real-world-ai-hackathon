@@ -1,0 +1,3 @@
+- Cut-off: event-001
+- Action: `ask`
+- Description: The H&V service agent asks Joel Sutton what he wants to cancel, without cancelling anything.
