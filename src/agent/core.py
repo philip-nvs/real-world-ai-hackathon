@@ -510,7 +510,8 @@ def write_answer(out_dir, case, d, state):
 """
     if d["customer_message"]:
         unsent = any(x["tool"] == "send_secure_message" for x in not_executed)
-        answer += f"\nMessage to the customer (secure portal{', recorded, not sent' if unsent else ''}):\n\n> {d['customer_message']}\n"
+        quoted = "\n".join(f"> {line}".rstrip() for line in d["customer_message"].splitlines())  # every line, not just the first
+        answer += f"\nMessage to the customer (secure portal{', recorded, not sent' if unsent else ''}):\n\n{quoted}\n"
     reasoning = f"""# Case {case['id']}: reasoning
 
 ## Evidence relied on
