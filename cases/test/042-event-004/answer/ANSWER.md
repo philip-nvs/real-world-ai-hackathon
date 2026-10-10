@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent confirms to Nadia Fenwick via secure chat that validation-042.txt is available in her secure portal and reports a missing required payee label on row 2, noting no corrected batch has been submitted and she can review the report and decide whether to prepare a correction.

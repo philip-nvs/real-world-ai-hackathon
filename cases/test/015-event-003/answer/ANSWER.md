@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V service agent, having completed the identification checks and collection-stage review, submits Mara Ellison's checked instruction to cancel her Northmere Fitness Direct Debit mandate to the H&V Direct Debit service through the business portal, recording her instruction rather than authorising it on her behalf.

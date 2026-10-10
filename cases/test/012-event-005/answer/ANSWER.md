@@ -1,0 +1,3 @@
+- Cut-off: event-005
+- Action: `act`
+- Description: H&V applies the standing-order change Mira Ellery confirmed in the secure portal, updating her standing order to Westmere Garden Cooperative from £42.00 to £68.00 a month and notifying her in the portal, without guaranteeing the next payment.

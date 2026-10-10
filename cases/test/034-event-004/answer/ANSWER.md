@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: H&V replies to Mara Ellery in the secure portal explaining that the £3.20 debit is the fee for the recorded foreign-currency cash withdrawal and that its amount matches the tariff entry in force on the processing date, without making any refund decision.

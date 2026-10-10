@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `escalate`
-- Description: The H&V agent asks the Statements service, by internal note, to check Elowen Marr's June 2025 statement period and place the available statement in her secure portal under case reference HV-031.
+- Action: `act`
+- Description: The H&V agent sends an internal request to the Statements service to check Elowen Marr's June 2025 statement period and place the available statement in her secure portal under case reference HV-031.

@@ -1,0 +1,3 @@
+- Cut-off: event-003
+- Action: `act`
+- Description: The H&V agent checks the card journal for replacement request HV-030 to see whether the card is in manufacture and whether it has been dispatched or delivered.

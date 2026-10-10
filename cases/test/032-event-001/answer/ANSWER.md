@@ -1,3 +1,3 @@
 - Cut-off: event-001
-- Action: `escalate`
-- Description: After checking Mara Ellison's account-holder mandate in the secure session, the H&V service agent asks the H&V archive group to confirm whether her January 2024 statement is available and can be ordered, without promising availability or a fee.
+- Action: `act`
+- Description: After checking Mara Ellison's account-holder mandate in the secure session, the H&V service agent sends an internal request to the H&V archive group to confirm whether her January 2024 statement is available and can be ordered, without promising availability or a fee.

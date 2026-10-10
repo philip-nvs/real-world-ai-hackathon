@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `escalate`
-- Description: The H&V agent opens a case with the H&V card team, via internal note, for review of Mara Ellery's specific posted card purchase at Fern & Finch Books for £38.40 on 14 July 2025, noting she does not recognise it and that no conclusion about the merchant or purchase has been reached.
+- Action: `act`
+- Description: The H&V service agent sends an internal request to the H&V card team to open a review case for Mara Ellery's posted card purchase at Fern & Finch Books for £38.40 on 14 July 2025, noting she does not recognise it and that no conclusion about the merchant or purchase has been reached.

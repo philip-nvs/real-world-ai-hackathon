@@ -1,0 +1,3 @@
+- Cut-off: event-004
+- Action: `act`
+- Description: The H&V service agent replies to Leona Voss via secure chat confirming that row SUP-17 is shown as rejected with the reason displayed in her portal, noting that the other rows were not re-evaluated and the batch's processed status does not mean every payment line was paid.

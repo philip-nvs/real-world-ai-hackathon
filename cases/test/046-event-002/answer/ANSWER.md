@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `escalate`
-- Description: The H&V business banking agent submits verified administrator Mara Ellery's instruction to the H&V admin process to revoke former employee Owen Bell's Payroll Approver role for Larkmere Studio Ltd.
+- Action: `act`
+- Description: The H&V business banking agent sends an internal request to the H&V admin process to revoke former employee Owen Bell's Payroll Approver role for Larkmere Studio Ltd, as instructed by verified administrator Mara Ellery.
