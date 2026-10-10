@@ -104,6 +104,10 @@ def test_agent_session():
             assert z.namelist() == ["001/ANSWER.md", "001/REASONING.md"]
             assert z.read("001/ANSWER.md").decode() == s["answer_md"]
             assert c.get("/export", params={"case_id": "nope"}).status_code == 404
+            # a newer failed run hides the older answer instead of exporting it
+            from datetime import UTC, datetime
+            sessions.sync_db().sessions.insert_one({"_id": "newer", "case_id": "001", "status": "failed", "created_at": datetime.now(UTC)})
+            assert c.get("/export", params={"case_id": "001"}).status_code == 404
         finally:
             c.delete("/cases/001")
             sessions.sync_db().sessions.delete_many({"case_id": {"$in": ["001", "nope"]}})
