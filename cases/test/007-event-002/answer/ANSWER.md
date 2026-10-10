@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `act`
-- Description: The H&V service agent sends an internal request to the H&V Payment Team to check the available trace for case HV-007 on Mara Ellwood's international transfer and report its current recorded stage, distinguishing H&V's status from any confirmation of receipt by the beneficiary.
+- Action: `escalate`
+- Description: The H&V service agent escalates case HV-007 to the H&V Payment Team, asking them to check the available trace on Mara Ellwood's international transfer and report its current recorded stage, distinguishing H&V's status from any confirmation of receipt by the beneficiary.

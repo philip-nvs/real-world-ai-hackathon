@@ -1,3 +1,3 @@
 - Cut-off: event-002
-- Action: `act`
-- Description: The H&V service agent sends an internal request to the H&V payment team under case HV-050 to check and confirm the payment stage recorded in H&V's payment journal for Mara Ellison's authorised Northmere Studio Ltd payment to Alder Quay Supplies (materials invoice).
+- Action: `escalate`
+- Description: The H&V service agent escalates Mara Ellison's authorised Northmere Studio Ltd payment to Alder Quay Supplies (materials invoice) to the H&V payment team under case HV-050, asking them to check and confirm the payment stage recorded in H&V's payment journal.
