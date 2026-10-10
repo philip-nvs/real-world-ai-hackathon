@@ -9,7 +9,7 @@ from types import SimpleNamespace as NS
 
 from evaluate import FULL_CASES, TEST_CASES, case_id, parse_gold, stage_case
 from make_cutoffs import CUTOFFS, build_cut, decision_points
-from run import guard_tool, load_case, red_flags, run_case
+from run import guard_decision, guard_tool, load_case, red_flags, run_case
 
 CASE = FULL_CASES / "017"
 
@@ -41,6 +41,9 @@ if __name__ == "__main__":
     assert guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-001"}, case)
     assert not guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-002"}, case)
     assert guard_tool("submit_instruction", {"system": "PAY", "instruction": "Re-send the payment", "authorised_by_event": "event-002"}, case)
+    unsent = dict(DECISION, customer_message="Your standing order run was not executed.")
+    assert any("no message was sent" in p for p in guard_decision(unsent))
+    assert not guard_decision(unsent, [{"tool": "send_secure_message"}])
 
     with tempfile.TemporaryDirectory() as tmp:
         # the dev loop's gold answer is parsed, and never staged where the agent can read it
