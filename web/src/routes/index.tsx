@@ -1,7 +1,7 @@
 import { useRef, useState, type DragEvent } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { useQueryClient } from '@tanstack/react-query'
-import { FileIcon, FolderUpIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
+import { ChevronRightIcon, FileIcon, FolderUpIcon, Trash2Icon, UploadIcon, XIcon } from 'lucide-react'
 import { cn } from 'cn'
 import { api, errorMessage } from '@/api/client'
 import { Button } from '@/components/ui/button'
@@ -188,19 +188,13 @@ function Index() {
           {!!cases.data?.length && (
             <ul className="divide-y rounded-lg border">
               {cases.data.map((c) => (
-                <li key={c.id} className="flex items-center gap-3 px-3 py-2">
-                  <span className="min-w-0 flex-1 truncate font-mono text-xs">{c.id}</span>
-                  <span className="shrink-0 text-xs text-muted-foreground">{new Date(c.uploaded_at).toLocaleString()}</span>
-                  <Button
-                    variant="ghost"
-                    size="icon-xs"
-                    aria-label={`Delete case ${c.id}`}
-                    disabled={remove.isPending}
-                    onClick={() => confirm(`Delete case ${c.id}?`) && remove.mutate({ params: { path: { case_id: c.id } } })}
-                  >
-                    <Trash2Icon />
-                  </Button>
-                </li>
+                <CaseRow
+                  key={c.id}
+                  id={c.id}
+                  uploadedAt={c.uploaded_at}
+                  deleting={remove.isPending}
+                  onDelete={() => confirm(`Delete case ${c.id}?`) && remove.mutate({ params: { path: { case_id: c.id } } })}
+                />
               ))}
             </ul>
           )}
@@ -208,5 +202,59 @@ function Index() {
         </CardContent>
       </Card>
     </main>
+  )
+}
+
+type CaseRowProps = { id: string; uploadedAt: string; deleting: boolean; onDelete: () => void }
+
+// Expands to the case's files; they're only fetched once the row is opened.
+function CaseRow({ id, uploadedAt, deleting, onDelete }: CaseRowProps) {
+  const [open, setOpen] = useState(false)
+  const detail = api.useQuery('get', '/cases/{case_id}', { params: { path: { case_id: id } } }, { enabled: open })
+
+  return (
+    <li>
+      <details className="group" onToggle={(e) => setOpen(e.currentTarget.open)}>
+        <summary className="flex cursor-pointer list-none items-center gap-3 px-3 py-2 hover:bg-muted/50">
+          <ChevronRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90" />
+          <span className="min-w-0 flex-1 truncate font-mono text-xs">{id}</span>
+          <span className="shrink-0 text-xs text-muted-foreground">{new Date(uploadedAt).toLocaleString()}</span>
+          <Button
+            variant="ghost"
+            size="icon-xs"
+            aria-label={`Delete case ${id}`}
+            disabled={deleting}
+            // keep the click from also toggling the row
+            onClick={(e) => (e.preventDefault(), onDelete())}
+          >
+            <Trash2Icon />
+          </Button>
+        </summary>
+        <div className="border-t bg-muted/20 px-3 py-2">
+          {detail.isPending && <p className="text-muted-foreground">Loading…</p>}
+          {detail.isError && <p className="text-destructive">Couldn't load files: {errorMessage(detail.error)}</p>}
+          {detail.data && (
+            <ul className="space-y-1">
+              {detail.data.files.map((f) => (
+                <li key={f.path} className="flex items-center gap-3 pl-7">
+                  <FileIcon className="size-3.5 shrink-0 text-muted-foreground" />
+                  <a
+                    // the API takes the path with its "/" unescaped
+                    href={`/api/cases/${encodeURIComponent(id)}/files/${f.path.split('/').map(encodeURIComponent).join('/')}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="min-w-0 flex-1 truncate font-mono text-xs hover:underline"
+                    title={f.path}
+                  >
+                    {f.path}
+                  </a>
+                  <span className="shrink-0 text-xs text-muted-foreground tabular-nums">{formatSize(f.size)}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </details>
+    </li>
   )
 }
