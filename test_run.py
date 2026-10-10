@@ -3,12 +3,15 @@
 """
 
 import json
+import re
 import tempfile
 from pathlib import Path
 from types import SimpleNamespace as NS
 
 from evaluate import FULL_CASES, TEST_CASES, case_id, gold_file, judge, judge_prompt, parse_gold, stage_case
-from run import case_content, guard_decision, guard_tool, load_case, red_flags, run_case
+from run import (DECISION_TOOL, SYSTEM, bank_names, case_content, guard_decision, guard_tool, load_case,
+                 red_flags, run_case)
+from tools import TOOL_SCHEMAS, TOOLS
 
 CASE = FULL_CASES / "017"
 
@@ -72,6 +75,16 @@ if __name__ == "__main__":
     plain = case_of(history(("001", "Secure chat", True), ("002", "Verified call", True)))
     assert [e["id"] for e in plain["events"]] == ["event-001", "event-002"] and not plain["warnings"]
     assert not guard_tool("submit_instruction", {**cancel, "authorised_by_event": "event-002"}, plain)
+
+    # the prompt names no bank; the guard learns the case's bank from its index
+    assert not re.search(r"H&V|Harrow", SYSTEM + json.dumps(TOOL_SCHEMAS + [DECISION_TOOL]) + json.dumps(TOOLS["check_record"]("x", "y")))
+    assert bank_names("- **Bank:** Harrow & Vale Bank plc (fictional)") == ["Harrow & Vale Bank plc", "Harrow & Vale", "H&V"]
+    other = {"bank_names": bank_names("- **Bank:** Northgate Mutual"), "events": [
+        {"id": "event-001", "channel": "Secure chat", "from": "Northgate Mutual support desk", "to": "Ann Customer", "suspect": False},
+        {"id": "event-002", "channel": "Secure chat", "from": "Ann Customer", "to": "Northgate Mutual", "suspect": False}]}
+    staff_ok = {"system": "Direct Debit service", "instruction": "Cancel the mandate", "authorised_by_event": "event-001"}
+    assert any("from the bank" in p for p in guard_tool("submit_instruction", staff_ok, other))
+    assert not guard_tool("submit_instruction", {**staff_ok, "authorised_by_event": "event-002"}, other)
 
     unsent = dict(DECISION, customer_message="Your standing order run was not executed.")
     assert any("no message was sent" in p for p in guard_decision(unsent))
