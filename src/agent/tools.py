@@ -3,7 +3,7 @@
 Each tool records the action as the system's next step and executes nothing: no data comes
 back, no reference is invented, no message is delivered. Swap the bodies of TOOLS for the
 organisers' real tools if they supply any; schemas stay the same, so the agent doesn't change.
-The dev loop uses bank_env's fixture adapter instead, which does answer."""
+Cases with a src/bank_env fixture use its adapter instead, which does answer."""
 
 NOT_EXECUTED = "Recorded as the bank's next step; not executed. No live bank system is connected in this environment, " \
                "so no result will come back. Treat the step as taken; don't wait for or assume its result."

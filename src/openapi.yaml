@@ -184,7 +184,7 @@ paths:
       summary: Download the answers for some cases as a zip
       description: |
         For each `case_id`, the newest session's ANSWER.md and REASONING.md, stored as
-        `<case_id>/ANSWER.md` and `<case_id>/REASONING.md` (the same layout as `run.py --out`).
+        `<case_id>/ANSWER.md` and `<case_id>/REASONING.md` (one folder per case).
         Cases whose newest session is not `done` are left out. `/`, `\` and leading dots in a case id are replaced or stripped
         so every entry stays inside the zip.
       parameters:

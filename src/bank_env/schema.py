@@ -7,7 +7,7 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from bank_env.systems import PROCESSES, RECORD_SYSTEMS, TEAMS
+from src.bank_env.systems import PROCESSES, RECORD_SYSTEMS, TEAMS
 
 SystemName = Literal[tuple(RECORD_SYSTEMS)]
 TeamName = Literal[tuple(TEAMS)]

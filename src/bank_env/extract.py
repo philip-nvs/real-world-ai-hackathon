@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Extract a world fixture from each full public case with Claude, validate it, write it.
 
-    uv run python -m bank_env.extract 001 012 024     # writes bank_env/fixtures/NNN.json
+    uv run python -m src.bank_env.extract 001 012 024     # writes src/bank_env/fixtures/NNN.json
 
 Reads the whole case, endings included: the system replies after the agent's first move are
 exactly what the bank's records hold. The agent never sees fixtures, only adapter replies."""
@@ -16,11 +16,11 @@ from pathlib import Path
 import anthropic
 from pydantic import ValidationError
 
-from bank_env.schema import World, check_world
-from bank_env.systems import PROCESSES, RECORD_SYSTEMS, TEAMS
-from run import call_claude, case_content, load_case, load_env
+from src.bank_env.schema import World, check_world
+from src.bank_env.systems import PROCESSES, RECORD_SYSTEMS, TEAMS
+from src.agent.core import call_claude, case_content, load_case, load_env
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 CASES = ROOT / "cases" / "full"
 FIXTURES = Path(__file__).parent / "fixtures"
 MAX_ATTEMPTS = 3

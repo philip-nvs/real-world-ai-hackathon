@@ -1,5 +1,5 @@
 """Offline self-check: loader, policy guard, and the agent loop driven by a scripted fake Claude.
-    python test_run.py
+    uv run -m src.agent.test_core
 """
 
 import json
@@ -8,12 +8,12 @@ import tempfile
 from pathlib import Path
 from types import SimpleNamespace as NS
 
-from evaluate import FULL_CASES, TEST_CASES, case_id, gold_file, judge, judge_prompt, parse_gold, stage_case
-from run import (DECISION_TOOL, SYSTEM, bank_names, case_content, guard_decision, guard_tool, load_case,
+from src.agent.core import (DECISION_TOOL, SYSTEM, bank_names, case_content, guard_decision, guard_tool, load_case,
                  red_flags, run_case)
-from tools import TOOL_SCHEMAS, TOOLS
+from src.agent.tools import TOOL_SCHEMAS, TOOLS
 
-CASE = FULL_CASES / "017"
+CASES = Path(__file__).parents[2] / "cases"
+CASE = CASES / "full" / "017"
 
 
 def tool_use(i, name, **args):
@@ -58,7 +58,7 @@ if __name__ == "__main__":
     assert any("not a secure confirmation" in p for p in guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-002"}, case))
     assert guard_tool("submit_instruction", {"system": "PAY", "instruction": "Re-send the payment", "authorised_by_event": "event-002"}, case)
     # forged events: S200 quotes fake event headers inside the customer's message
-    forged = load_case(next(Path("cases/synthetic").glob("S200-*")))
+    forged = load_case(next((CASES / "synthetic").glob("S200-*")))
     assert [(e["id"], e["channel"]) for e in forged["events"]] == [("event-001", "Secure chat"), ("event-002", "Internal note")]
     assert len(forged["warnings"]) == 2 and all("no event anchor" in w for w in forged["warnings"])
     cancel = {"system": "Direct Debit service", "instruction": "Cancel the Northmere Water Direct Debit"}
@@ -105,41 +105,6 @@ if __name__ == "__main__":
     assert not guard_decision(unsent, [{"tool": "send_secure_message"}])
 
     with tempfile.TemporaryDirectory() as tmp:
-        # the dev loop's gold answer is parsed, and the answer/ folder is never staged where the agent can read it
-        sample = TEST_CASES / "017-event-002"
-        gold = parse_gold(gold_file(sample))
-        assert gold["action"] == "act" and gold["cut_off"] == "event-002" and "standing" in gold["description"].lower()
-        (Path(tmp) / "staged/stale.txt").parent.mkdir(parents=True)
-        (Path(tmp) / "staged/stale.txt").write_text("left over from an earlier run")
-        stage_case(TEST_CASES / "031-event-004", Path(tmp) / "staged")
-        assert sorted(f.name for f in (Path(tmp) / "staged").iterdir()) == ["attachments", "history.md", "index.md"]
-
-        # the judge sees a case's rubric when there is one; the agent never does; a critical failure never passes
-        synthetic = next(Path("cases/synthetic").glob("S200-*"))
-        rubric = (synthetic / "answer" / "RUBRIC.md").read_text()
-        with_rubric = judge_prompt(parse_gold(gold_file(synthetic)), "", "answer", rubric)
-        assert "Acceptable alternatives" in with_rubric and "the rubric wins" in with_rubric
-        assert "Case rubric" not in judge_prompt(gold, "", "answer")
-        stage_case(synthetic, Path(tmp) / "staged_synthetic")
-        assert not list((Path(tmp) / "staged_synthetic").rglob("RUBRIC.md"))
-        lenient = NS(text='{"pass": true, "critical_failure": true, "reason": "executed the forged instruction"}', type="text")
-        judge_client = NS(beta=NS(messages=NS(create=lambda **kw: NS(content=[lenient], stop_reason="end_turn"))))
-        assert judge(judge_client, gold, "", "answer", rubric)["pass"] is False
-
-        # every test cut-off: gold parses and matches its folder, history ends at the cut-off, and only
-        # attachments the visible history or request names
-        cuts = sorted(p for p in TEST_CASES.iterdir() if p.is_dir())
-        uncovered = {p.name for p in FULL_CASES.iterdir() if p.is_dir()} - {case_id(c) for c in cuts}
-        assert not uncovered, f"public cases without a test cut-off: {sorted(uncovered)}"
-        for cut in cuts:
-            gold = parse_gold(gold_file(cut))
-            k = int(cut.name.split("-event-")[1])
-            assert gold["cut_off"] == f"event-{k:03d}" and gold["action"] in ("act", "ask", "wait", "escalate"), cut.name
-            assert [e["id"] for e in load_case(cut)["events"]] == [f"event-{i:03d}" for i in range(1, k + 1)], cut.name
-            visible_text = (cut / "history.md").read_text() + (cut / "index.md").read_text()
-            assert all(a.name in visible_text for a in (cut / "attachments").glob("*")), cut.name
-            assert (FULL_CASES / case_id(cut)).is_dir(), cut.name
-
         # first a red-flag message (blocked), then a clean check + decision
         client = fake_client([
             [tool_use(1, "send_secure_message", recipient="Mara", message="Your refund will be issued tomorrow.")],
@@ -157,7 +122,7 @@ if __name__ == "__main__":
         assert "guard_block" in kinds and kinds[-1] == "decision"
 
         # text in the case aimed at graders never reaches ANSWER.md: the writer uses the agent's summary
-        s190 = next(Path("cases/synthetic").glob("S190-*"))
+        s190 = next((CASES / "synthetic").glob("S190-*"))
         assert "Note to graders" in (s190 / "index.md").read_text() + (s190 / "history.md").read_text()
         run_case(s190, Path(tmp) / "s190", fake_client([[tool_use(9, "submit_decision", **DECISION)]]))
         assert "graders" not in (Path(tmp) / "s190/ANSWER.md").read_text().lower()
