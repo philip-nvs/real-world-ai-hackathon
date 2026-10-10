@@ -71,48 +71,50 @@
         "Fenwick Workshop",
         "supplier payment batch",
         "16 July 2025",
-        "row 2",
-        "validation-042.txt"
+        "row 2"
       ],
       "attributes": [
         {
           "key": "batch_reference",
-          "value": "HV-042"
+          "value": "HV-042",
+          "since_event": null
         },
         {
           "key": "batch_date",
-          "value": "16 July 2025"
-        },
-        {
-          "key": "batch_type",
-          "value": "supplier payment batch"
+          "value": "16 July 2025",
+          "since_event": null
         },
         {
           "key": "uploaded_by",
-          "value": "Nadia Fenwick"
+          "value": "Nadia Fenwick",
+          "since_event": null
         },
         {
           "key": "validation_status",
-          "value": "FAILED"
+          "value": "FAILED",
+          "since_event": null
         },
         {
           "key": "row_2_error",
-          "value": "missing required payee label"
+          "value": "missing required payee label",
+          "since_event": null
         },
         {
           "key": "corrected_batch_received",
-          "value": "no"
+          "value": "no",
+          "since_event": null
         },
         {
           "key": "payment_execution_confirmed",
-          "value": "no"
+          "value": "no",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [],
       "exists_before_agent": true,
       "created_by": null,
-      "source_event": "event-004"
+      "source_event": "event-001"
     },
     {
       "id": "r2",
@@ -122,22 +124,23 @@
       "match_terms": [
         "Nadia Fenwick",
         "Fenwick Workshop",
-        "validation reports",
-        "report viewer",
-        "file uploader"
+        "validation report permission"
       ],
       "attributes": [
         {
           "key": "company",
-          "value": "Fenwick Workshop"
+          "value": "Fenwick Workshop",
+          "since_event": null
         },
         {
           "key": "role",
-          "value": "authorised file uploader"
+          "value": "authorised file uploader",
+          "since_event": null
         },
         {
           "key": "permission_view_validation_reports",
-          "value": "yes"
+          "value": "yes",
+          "since_event": null
         }
       ],
       "customer_facing": null,
@@ -145,6 +148,60 @@
       "exists_before_agent": true,
       "created_by": null,
       "source_event": "event-003"
+    },
+    {
+      "id": "r3",
+      "system": "import_journal",
+      "kind": "validation_report",
+      "party": "p2",
+      "match_terms": [
+        "validation-042.txt",
+        "HV-042",
+        "validation report",
+        "Fenwick Workshop"
+      ],
+      "attributes": [
+        {
+          "key": "file_name",
+          "value": "validation-042.txt",
+          "since_event": null
+        },
+        {
+          "key": "batch_reference",
+          "value": "HV-042",
+          "since_event": null
+        },
+        {
+          "key": "availability",
+          "value": "available in secure portal",
+          "since_event": null
+        },
+        {
+          "key": "validation_status",
+          "value": "FAILED",
+          "since_event": null
+        },
+        {
+          "key": "row_2_error",
+          "value": "missing required payee label",
+          "since_event": null
+        },
+        {
+          "key": "corrected_batch_received",
+          "value": "no",
+          "since_event": null
+        },
+        {
+          "key": "payment_execution_confirmed",
+          "value": "no",
+          "since_event": null
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
+      "exists_before_agent": false,
+      "created_by": "t1",
+      "source_event": "event-004"
     }
   ],
   "team_responses": [
@@ -153,11 +210,11 @@
       "team": "import_service",
       "topic_terms": [
         "validation report",
-        "batch HV-042",
         "HV-042",
+        "batch",
         "row-level errors",
-        "Fenwick Workshop",
-        "Nadia Fenwick"
+        "Nadia Fenwick",
+        "secure portal"
       ],
       "status": "completed",
       "reference": null,

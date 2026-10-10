@@ -10,6 +10,15 @@
         "account_holder"
       ],
       "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "Willow Yard Studios",
+      "kind": "business",
+      "roles": [
+        "payee"
+      ],
+      "acts_for": null
     }
   ],
   "events": [
@@ -66,33 +75,38 @@
         "Willow Yard Studios",
         "standing order",
         "monthly",
-        "18 September 2025",
-        "2025-09-18"
+        "18 September 2025"
       ],
       "attributes": [
         {
           "key": "status",
-          "value": "active"
+          "value": "active",
+          "since_event": null
         },
         {
           "key": "payee",
-          "value": "Willow Yard Studios"
+          "value": "Willow Yard Studios",
+          "since_event": null
         },
         {
           "key": "frequency",
-          "value": "monthly"
+          "value": "monthly",
+          "since_event": null
         },
         {
           "key": "next_run_date",
-          "value": "2025-09-18"
+          "value": "18 September 2025",
+          "since_event": null
         },
         {
           "key": "next_run_processing_stage",
-          "value": "not yet being processed"
+          "value": "not yet being processed",
+          "since_event": null
         },
         {
-          "key": "next_run_payment_status",
-          "value": "not yet made"
+          "key": "payment_status",
+          "value": "not yet made",
+          "since_event": null
         }
       ],
       "customer_facing": null,
@@ -102,7 +116,25 @@
       "source_event": "event-001"
     }
   ],
-  "team_responses": [],
+  "team_responses": [
+    {
+      "id": "t1",
+      "team": "payment_team",
+      "topic_terms": [
+        "standing order",
+        "Willow Yard Studios",
+        "processing stage",
+        "next run",
+        "18 September 2025",
+        "payment-stage check"
+      ],
+      "status": "completed",
+      "reference": null,
+      "response": "The 18 September 2025 run of the active standing order is not yet being processed, so the requested date change can be sent to the customer for secure confirmation.",
+      "document": null,
+      "source_event": "event-003"
+    }
+  ],
   "processes": [
     {
       "id": "x1",
@@ -111,10 +143,10 @@
       "match_terms": [
         "Willow Yard Studios",
         "standing order",
-        "date change",
         "18 September 2025",
         "22 September 2025",
-        "2025-09-22"
+        "change date",
+        "next run"
       ],
       "target_record": "r1",
       "confirmed_by": [
@@ -122,16 +154,9 @@
       ],
       "effect": [
         {
-          "key": "status",
-          "value": "active"
-        },
-        {
           "key": "next_run_date",
-          "value": "2025-09-22"
-        },
-        {
-          "key": "next_run_payment_status",
-          "value": "not yet made"
+          "value": "22 September 2025",
+          "since_event": "event-006"
         }
       ],
       "result": "Standing order update confirmed. Next scheduled run: 22 September 2025. Payment status: not yet made.",

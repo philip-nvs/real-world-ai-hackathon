@@ -73,15 +73,19 @@
       "attributes": [
         {
           "key": "payee",
-          "value": "Mallow Pottery Works"
+          "value": "Mallow Pottery Works",
+          "since_event": null
         },
         {
           "key": "purpose",
-          "value": "Deposit for kiln repair estimate"
+          "value": "Deposit for kiln repair estimate",
+          "since_event": null
         }
       ],
       "customer_facing": null,
-      "disclosure_rules": [],
+      "disclosure_rules": [
+        "Share the bank's recorded purpose text only with the verified customer; do not send it to or rewrite a message for the supplier"
+      ],
       "exists_before_agent": true,
       "created_by": null,
       "source_event": "event-004"

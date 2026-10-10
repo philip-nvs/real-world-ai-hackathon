@@ -63,34 +63,39 @@
       ],
       "attributes": [
         {
-          "key": "status",
-          "value": "completed"
-        },
-        {
           "key": "payee",
-          "value": "property manager"
+          "value": "property manager",
+          "since_event": null
         },
         {
-          "key": "amount_gbp",
-          "value": "648.20"
+          "key": "status",
+          "value": "completed",
+          "since_event": null
         },
         {
           "key": "final_instruction_amount_gbp",
-          "value": "648.20"
+          "value": "648.20",
+          "since_event": null
         },
         {
-          "key": "execution_record_amount_gbp",
-          "value": "648.20"
+          "key": "execution_amount_gbp",
+          "value": "648.20",
+          "since_event": null
+        },
+        {
+          "key": "amount_gbp",
+          "value": "648.20",
+          "since_event": null
         },
         {
           "key": "amount_received_by_recipient",
-          "value": "not established by this record"
+          "value": "not established by this record",
+          "since_event": null
         }
       ],
-      "customer_facing": "The amount sent was £648.20. The journal confirms the amount sent by H&V, not the amount received by the recipient.",
+      "customer_facing": "We checked the H&V payment journal: the amount sent was £648.20. The journal confirms the amount sent by H&V, not the amount received by the recipient.",
       "disclosure_rules": [
-        "Record confirms only the amount sent by H&V; it does not establish the amount received by the recipient",
-        "No record of the draft amount £684.20; confirm only the final instruction and execution amount"
+        "Journal confirms only the amount sent by H&V; it does not establish the amount received by the recipient"
       ],
       "exists_before_agent": true,
       "created_by": null,

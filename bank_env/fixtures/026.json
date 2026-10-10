@@ -7,6 +7,7 @@
       "name": "Maren Ellwood",
       "kind": "person",
       "roles": [
+        "account_holder",
         "cardholder"
       ],
       "acts_for": null
@@ -58,18 +59,20 @@
       "match_terms": [
         "H&V debit card",
         "debit card",
-        "Maren Ellwood"
+        "Maren Ellwood",
+        "HV-026"
       ],
       "attributes": [
         {
           "key": "card_type",
-          "value": "debit"
+          "value": "debit",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
         "PIN must not be sent in correspondence",
-        "PIN is not visible to the agent"
+        "Agent does not ask for or record the PIN"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -81,34 +84,34 @@
       "kind": "pin_procedure",
       "party": "p1",
       "match_terms": [
-        "HV-026",
         "PIN procedure",
         "forgotten PIN",
-        "Maren Ellwood"
+        "HV-026",
+        "Maren Ellwood",
+        "secure portal"
       ],
       "attributes": [
         {
-          "key": "status",
-          "value": "PIN procedure started"
+          "key": "customer_check",
+          "value": "complete",
+          "since_event": null
         },
         {
-          "key": "customer_check",
-          "value": "complete"
+          "key": "status",
+          "value": "PIN procedure started",
+          "since_event": "event-005"
         },
         {
           "key": "pin_issued_in_conversation",
-          "value": "false"
-        },
-        {
-          "key": "channel",
-          "value": "secure portal"
+          "value": "false",
+          "since_event": "event-005"
         }
       ],
       "customer_facing": "Status: PIN procedure started. No PIN has been issued in this conversation.",
       "disclosure_rules": [
         "PIN must not be sent in correspondence",
-        "PIN is not visible to the agent",
-        "Case does not establish that the customer knows or has received her PIN"
+        "Agent cannot see the PIN",
+        "Procedure is completed by the customer in the secure portal"
       ],
       "exists_before_agent": false,
       "created_by": "t1",
@@ -120,11 +123,11 @@
       "id": "t1",
       "team": "access_team",
       "topic_terms": [
-        "HV-026",
         "PIN",
         "forgotten PIN",
+        "PIN procedure",
         "prescribed PIN route",
-        "PIN procedure"
+        "HV-026"
       ],
       "status": "completed",
       "reference": "HV-026",

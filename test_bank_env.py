@@ -2,6 +2,7 @@
     uv run test_bank_env.py
 """
 
+import json
 import re
 from pathlib import Path
 
@@ -33,7 +34,7 @@ if __name__ == "__main__":
     assert resolve_process("H&V Direct Debit service") == "instruction_process"
 
     # every committed fixture is consistent with its case, and answers the lookups the case's own agent made:
-    # found (018 lists both instructions), or ambiguous where 006 holds two look-alike instructions to compare
+    # found, or (where 006 and 018 hold two look-alike instructions to compare) ambiguous or a listing of both
     replayed = 0
     for path in sorted(FIXTURES.glob("*.json")):
         case = load_case(CASES / path.stem)
@@ -47,7 +48,9 @@ if __name__ == "__main__":
                 continue
             body = case["history"][marks[i].end(): marks[i + 1].start() if i + 1 < len(marks) else None]
             r = bank.lookup(e["to"], re.sub(r"^\s*- \*\*.*$", "", body, flags=re.M))
-            assert r["status"] == ("ambiguous" if path.stem == "006" else "found"), (path.stem, e["id"], r)
+            expected = {"ambiguous", "found"} if path.stem in ("006", "018") else {"found"}
+            assert r["status"] in expected and (path.stem not in ("006", "018") or len(r.get("candidates") or
+                                                r.get("records") or []) == 2), (path.stem, e["id"], r)
             replayed += 1
     assert replayed >= 20, replayed
 
@@ -123,6 +126,23 @@ if __name__ == "__main__":
     effect = {a.key: a.value for a in process.effect}
     assert all(after.lookup(*query)["facts"].get(k) == v for k, v in effect.items()), after.lookup(*query)
     assert not all(before.lookup(*query)["facts"].get(k) == v for k, v in effect.items())
+
+    # 027: the access log shows the state the agent has reached, not the customer's later recovery
+    query = ("access log", "Mara Ellison profile sign-in")
+    early = FixtureAdapter(load_scenario("027"), visible_events={"event-001", "event-002"}).lookup(*query)["facts"]
+    late = FixtureAdapter(load_scenario("027")).lookup(*query)["facts"]
+    assert "restored" not in json.dumps(early) and "declined" in json.dumps(early), early
+    assert "restored" in json.dumps(late), late
+
+    # no cut-off leaks the future: nothing the adapter can show names the time of an event the agent hasn't reached
+    for path in sorted(FIXTURES.glob("*.json")):
+        events = load_case(CASES / path.stem)["events"]
+        for k in range(1, len(events)):
+            bank = FixtureAdapter(load_scenario(path.stem), visible_events={e["id"] for e in events[:k]})
+            shown = json.dumps([bank._view(r) for r in bank.world.records if bank._exists(r)])
+            seen = {e["ts"][11:16] for e in events[:k]}
+            future = {e["ts"][11:16] for e in events[k:]} - seen
+            assert not any(t in shown for t in future), (path.stem, k, [t for t in future if t in shown])
 
     # faults: an unavailable system fails the call and is logged
     bank = FixtureAdapter(load_scenario(overlay={"base": "001", "faults": [

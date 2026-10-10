@@ -18,7 +18,7 @@
       "channel": "Secure portal",
       "party": null,
       "bank_originated": true,
-      "verified": false
+      "verified": true
     },
     {
       "id": "event-002",
@@ -46,7 +46,7 @@
       "channel": "Secure portal",
       "party": null,
       "bank_originated": true,
-      "verified": false
+      "verified": true
     }
   ],
   "records": [
@@ -57,28 +57,34 @@
       "party": "p1",
       "match_terms": [
         "North Quay Utilities",
-        "84.20"
+        "84.20",
+        "Completed"
       ],
       "attributes": [
         {
           "key": "payee",
-          "value": "North Quay Utilities"
+          "value": "North Quay Utilities",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "84.20"
+          "value": "84.20",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "Completed"
+          "value": "Completed",
+          "since_event": null
         },
         {
-          "key": "instruction_reference",
-          "value": "distinct from the other North Quay Utilities £84.20 instruction (reference value not stated)"
+          "key": "instruction_reference_distinct",
+          "value": "true",
+          "since_event": null
         },
         {
           "key": "separate_instruction",
-          "value": "true"
+          "value": "true",
+          "since_event": null
         }
       ],
       "customer_facing": null,
@@ -94,32 +100,39 @@
       "party": "p1",
       "match_terms": [
         "North Quay Utilities",
-        "84.20"
+        "84.20",
+        "Pending"
       ],
       "attributes": [
         {
           "key": "payee",
-          "value": "North Quay Utilities"
+          "value": "North Quay Utilities",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "84.20"
+          "value": "84.20",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "Pending"
+          "value": "Pending",
+          "since_event": null
         },
         {
-          "key": "instruction_reference",
-          "value": "distinct from the other North Quay Utilities £84.20 instruction (reference value not stated)"
+          "key": "instruction_reference_distinct",
+          "value": "true",
+          "since_event": null
         },
         {
           "key": "separate_instruction",
-          "value": "true"
+          "value": "true",
+          "since_event": null
         },
         {
-          "key": "cancellation_or_return",
-          "value": "none initiated"
+          "key": "cancellation_or_return_initiated",
+          "value": "false",
+          "since_event": null
         }
       ],
       "customer_facing": null,

@@ -55,8 +55,9 @@
       "id": "t1",
       "team": "data_service",
       "topic_terms": [
-        "transaction export",
         "CSV export",
+        "transaction export",
+        "transactions",
         "6 May 2025",
         "9 May 2025",
         "6–9 May 2025",
@@ -66,7 +67,7 @@
       ],
       "status": "completed",
       "reference": null,
-      "response": "Export created for the requested period (6–9 May 2025) and made available for placement in the customer's secure portal. Data is for the verified account holder's secure portal only and is not sent to any third party. Third-party accounting software compatibility has not been checked.",
+      "response": "Export created for the requested period (6–9 May 2025) and made available for placement in the customer's secure portal. Export is for the verified account holder's secure portal only; not sent to any third party. Third-party accounting software compatibility not verified.",
       "document": "transactions-033.csv",
       "source_event": "event-004"
     }

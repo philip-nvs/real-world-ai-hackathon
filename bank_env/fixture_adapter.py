@@ -117,11 +117,24 @@ class FixtureAdapter:
                                for r in matches]})
         return self._record("records", call, {"status": "found", "system": matches[0].system, **self._view(matches[0])})
 
+    def _holds(self, record, attr):
+        """A fact holds once its since_event is visible; the facts a created record is born with (since its own
+        source_event) hold as soon as the agent fires the request or process that creates it."""
+        return (attr.since_event is None or attr.since_event in self.visible
+                or (record.created_by in self.fired and attr.since_event == record.source_event))
+
+    def _event_no(self, event):
+        return int(event.split("-")[1]) if event else 0
+
     def _view(self, r):
-        out = {"record_ref": f"{r.system}:{r.id}", "kind": r.kind, "facts": {a.key: a.value for a in r.attributes}}
-        # wording on a record a process changes is often written after the change (036: "new address is marked
-        # as current"), so it only shows once that process has been applied
-        pending = any(x.target_record == r.id and x.id not in self.fired for x in self.world.processes)
+        # a fact can change during the case (027: access "declined", then "restored" after the customer's own
+        # recovery); show each key's latest value whose since_event the agent has seen
+        visible = sorted((a for a in r.attributes if self._holds(r, a)), key=lambda a: self._event_no(a.since_event))
+        out = {"record_ref": f"{r.system}:{r.id}", "kind": r.kind, "facts": {a.key: a.value for a in visible}}
+        # wording on a record that still changes is often written after the change (036: "new address is marked
+        # as current"), so it only shows once the record has reached its final state
+        pending = any(x.target_record == r.id and x.id not in self.fired for x in self.world.processes) or \
+            not all(self._holds(r, a) for a in r.attributes)
         if r.customer_facing and not pending:
             out["permitted_customer_wording"] = r.customer_facing
         if r.disclosure_rules:

@@ -16,35 +16,35 @@
   "events": [
     {
       "id": "event-001",
-      "channel": "Secure portal",
+      "channel": "secure_portal",
       "party": null,
       "bank_originated": true,
       "verified": true
     },
     {
       "id": "event-002",
-      "channel": "Secure chat",
+      "channel": "secure_chat",
       "party": "p1",
       "bank_originated": false,
       "verified": true
     },
     {
       "id": "event-003",
-      "channel": "Internal note",
+      "channel": "internal_note",
       "party": null,
       "bank_originated": true,
       "verified": false
     },
     {
       "id": "event-004",
-      "channel": "Internal note",
+      "channel": "internal_note",
       "party": null,
       "bank_originated": true,
       "verified": false
     },
     {
       "id": "event-005",
-      "channel": "Secure portal",
+      "channel": "secure_portal",
       "party": null,
       "bank_originated": true,
       "verified": true
@@ -64,22 +64,25 @@
       ],
       "attributes": [
         {
-          "key": "request_status",
-          "value": "accepted"
+          "key": "replacement_request_status",
+          "value": "accepted",
+          "since_event": null
         },
         {
           "key": "dispatch_status",
-          "value": "registered"
+          "value": "registered",
+          "since_event": null
         },
         {
-          "key": "customer_receipt",
-          "value": "not recorded"
+          "key": "receipt_by_customer",
+          "value": "not recorded",
+          "since_event": null
         }
       ],
       "customer_facing": "Card status: dispatch registered. We do not have confirmation that you have received the card.",
       "disclosure_rules": [
-        "Return the recorded dispatch status only",
-        "Do not confirm delivery or receipt of the card; receipt by the customer is not recorded"
+        "Return recorded dispatch status only",
+        "Do not confirm delivery or receipt of the card"
       ],
       "exists_before_agent": true,
       "created_by": null,

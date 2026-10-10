@@ -64,20 +64,20 @@
       "party": "p1",
       "match_terms": [
         "Mara Ellison",
-        "HV-036",
         "correspondence address",
-        "address"
+        "address",
+        "HV-036"
       ],
       "attributes": [],
       "customer_facing": "Your new address is marked as current for correspondence.",
       "disclosure_rules": [
-        "new address is not displayed in full",
-        "no address is recorded in internal notes",
-        "confirmation does not establish whether any correspondence already sent was redirected or delivered"
+        "Address is not displayed in full",
+        "No address is recorded in internal notes",
+        "Confirmation does not establish whether any correspondence already sent was redirected or delivered"
       ],
       "exists_before_agent": true,
       "created_by": null,
-      "source_event": "event-006"
+      "source_event": "event-003"
     }
   ],
   "team_responses": [],
@@ -88,9 +88,9 @@
       "action": "change_address",
       "match_terms": [
         "HV-036",
-        "Mara Ellison",
         "correspondence address",
-        "address change"
+        "address change",
+        "Mara Ellison"
       ],
       "target_record": "r1",
       "confirmed_by": [
@@ -98,8 +98,9 @@
       ],
       "effect": [
         {
-          "key": "new_address_status",
-          "value": "current for correspondence"
+          "key": "address_status",
+          "value": "new address marked as current for correspondence",
+          "since_event": "event-006"
         }
       ],
       "result": "Your new address is marked as current for correspondence. This confirmation does not establish whether any correspondence already sent was redirected or delivered.",

@@ -64,24 +64,29 @@
       "attributes": [
         {
           "key": "fee_type",
-          "value": "paper_statement_fee"
+          "value": "paper_statement_fee",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "4.50"
+          "value": "4.50",
+          "since_event": null
         },
         {
-          "key": "date",
-          "value": "2025-06-18"
+          "key": "fee_date",
+          "value": "2025-06-18",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "applied"
+          "value": "applied",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "The fee notification does not confirm whether the fee will be changed."
+        "Notification does not confirm whether the fee will be changed",
+        "No cancellation or refund has been confirmed"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -102,28 +107,44 @@
       "attributes": [
         {
           "key": "reference",
-          "value": "HV-035"
+          "value": "HV-035",
+          "since_event": null
         },
         {
-          "key": "status",
-          "value": "accepted_for_review"
-        },
-        {
-          "key": "routed_to",
-          "value": "Tariff Team"
+          "key": "fee_reviewed",
+          "value": "paper statement fee 4.50 dated 2025-06-18",
+          "since_event": null
         },
         {
           "key": "reason",
-          "value": "Customer had chosen electronic statements"
+          "value": "customer had chosen electronic statements; please check how the tariff was applied",
+          "since_event": null
         },
         {
-          "key": "fee_decision",
-          "value": "none; no cancellation or refund confirmed"
+          "key": "routed_to",
+          "value": "Tariff Team",
+          "since_event": null
+        },
+        {
+          "key": "status",
+          "value": "registered",
+          "since_event": null
+        },
+        {
+          "key": "decision",
+          "value": "none",
+          "since_event": null
+        },
+        {
+          "key": "status",
+          "value": "accepted_for_review",
+          "since_event": "event-005"
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "Registration and acceptance do not indicate a decision on the fee; no cancellation or refund has been confirmed."
+        "Registration does not indicate a decision on the fee",
+        "Acceptance for review only; no cancellation or refund confirmed"
       ],
       "exists_before_agent": false,
       "created_by": "t1",
@@ -140,13 +161,13 @@
         "18 June 2025",
         "tariff review",
         "electronic statements",
-        "fee dispute"
+        "fee review"
       ],
       "status": "registered",
       "reference": "HV-035",
-      "response": "Request HV-035 registered and routed to the Tariff Team. We have accepted your request for review of the tariff application for the paper statement fee dated 18 June 2025. This confirms acceptance for review only; no cancellation or refund has been confirmed.",
+      "response": "Request HV-035 registered and routed to the Tariff Team. Registration does not indicate a decision on the fee. We have accepted your request for review of the tariff application for the paper statement fee dated 18 June 2025. This confirms acceptance for review only; no cancellation or refund has been confirmed.",
       "document": null,
-      "source_event": "event-005"
+      "source_event": "event-004"
     }
   ],
   "processes": []

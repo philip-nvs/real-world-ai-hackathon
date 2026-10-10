@@ -59,74 +59,43 @@
         "Mara Ellison",
         "H&V profile",
         "sign-in",
-        "sign-in declined",
         "recovery",
-        "access restored",
-        "2025-09-09"
+        "access restored"
       ],
       "attributes": [
         {
-          "key": "sign_in_result",
-          "value": "declined"
+          "key": "sign_in_status",
+          "value": "declined",
+          "since_event": null
         },
         {
-          "key": "sign_in_declined_message",
-          "value": "Sign-in declined. Use H&V's secure recovery process to restore access."
+          "key": "recovery_instruction",
+          "value": "Use H&V's secure recovery process to restore access",
+          "since_event": null
         },
         {
-          "key": "recovery_channel",
-          "value": "H&V secure portal recovery process"
-        },
-        {
-          "key": "recovery_checks_status",
-          "value": "completed securely"
-        },
-        {
-          "key": "recovery_checks_completed_at",
-          "value": "2025-09-09 11:21:00 UTC"
+          "key": "recovery_checks",
+          "value": "completed securely; return to sign-in",
+          "since_event": "event-004"
         },
         {
           "key": "access_status",
-          "value": "restored"
+          "value": "restored and recorded by the system",
+          "since_event": "event-005"
         },
         {
-          "key": "access_restored_recorded_at",
-          "value": "2025-09-09 12:08:00 UTC"
-        },
-        {
-          "key": "access_restored_message",
-          "value": "Access restored and recorded by the system. You can now sign in."
+          "key": "sign_in_status",
+          "value": "can now sign in",
+          "since_event": "event-005"
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "Agent does not ask for or handle the customer's password or verification codes",
-        "Recovery is completed by the customer through H&V's secure portal, not by the agent"
+        "Agent does not ask for or handle the customer's password or verification codes; recovery is completed only through the official secure portal"
       ],
       "exists_before_agent": true,
       "created_by": null,
       "source_event": "event-001"
-    },
-    {
-      "id": "r2",
-      "system": "customer_profile",
-      "kind": "profile",
-      "party": "p1",
-      "match_terms": [
-        "Mara Ellison",
-        "H&V profile"
-      ],
-      "attributes": [
-        {
-          "key": "name",
-          "value": "Mara Ellison"
-        }
-      ],
-      "customer_facing": null,
-      "disclosure_rules": [],
-      "exists_before_agent": true,
-      "created_by": null,
-      "source_event": "event-002"
     }
   ],
   "team_responses": [],

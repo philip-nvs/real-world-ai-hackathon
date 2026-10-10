@@ -1,6 +1,6 @@
 {
   "case_id": "013",
-  "case_ref": null,
+  "case_ref": "HV-013",
   "parties": [
     {
       "id": "p1",
@@ -71,28 +71,29 @@
       ],
       "attributes": [
         {
-          "key": "instruction_reference",
-          "value": "HV-013"
-        },
-        {
-          "key": "status",
-          "value": "active"
+          "key": "instruction_ref",
+          "value": "HV-013",
+          "since_event": null
         },
         {
           "key": "purpose",
-          "value": "studio rent"
+          "value": "studio rent",
+          "since_event": null
         },
         {
-          "key": "frequency",
-          "value": "recurring"
+          "key": "status",
+          "value": "active",
+          "since_event": null
         },
         {
           "key": "next_run_status",
-          "value": "not started"
+          "value": "not started",
+          "since_event": null
         },
         {
-          "key": "authority",
-          "value": "Elodie Mercer has authority over this instruction"
+          "key": "mandate_holder",
+          "value": "Elodie Mercer",
+          "since_event": null
         }
       ],
       "customer_facing": null,
@@ -111,8 +112,8 @@
       "match_terms": [
         "HV-013",
         "studio rent",
-        "cancel next run",
-        "recurring payment"
+        "recurring payment",
+        "cancel next run"
       ],
       "target_record": "r1",
       "confirmed_by": [
@@ -121,10 +122,11 @@
       "effect": [
         {
           "key": "next_run_status",
-          "value": "cancelled"
+          "value": "cancelled",
+          "since_event": "event-005"
         }
       ],
-      "result": "HV-013 — Future run cancelled. No payment was in progress when the cancellation was recorded. This does not reverse or return any payments already sent.",
+      "result": "HV-013 — Future run cancelled. No payment was in progress when the cancellation was recorded. Payments already sent are not reversed or returned.",
       "applied_event": "event-005",
       "source_event": "event-004"
     }

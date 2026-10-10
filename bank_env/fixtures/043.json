@@ -3,22 +3,22 @@
   "case_ref": "HV-043",
   "parties": [
     {
-      "id": "b1",
-      "name": "Northmere Studio Ltd",
-      "kind": "business",
-      "roles": [
-        "account_holder"
-      ],
-      "acts_for": null
-    },
-    {
       "id": "p1",
       "name": "Mara Ellery",
       "kind": "person",
       "roles": [
         "first_signatory"
       ],
-      "acts_for": "b1"
+      "acts_for": "p2"
+    },
+    {
+      "id": "p2",
+      "name": "Northmere Studio Ltd",
+      "kind": "business",
+      "roles": [
+        "account_holder"
+      ],
+      "acts_for": null
     }
   ],
   "events": [
@@ -63,7 +63,7 @@
       "id": "r1",
       "system": "signing_queue",
       "kind": "payment_package",
-      "party": "b1",
+      "party": "p2",
       "match_terms": [
         "Northmere Studio Ltd",
         "payroll payment package",
@@ -73,23 +73,28 @@
       "attributes": [
         {
           "key": "package_type",
-          "value": "payroll"
+          "value": "payroll payment package",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "Awaiting second signatory consent"
+          "value": "Awaiting second signatory consent",
+          "since_event": null
         },
         {
           "key": "first_consent",
-          "value": "recorded (Mara Ellery, first signatory)"
+          "value": "recorded (Mara Ellery, first signatory)",
+          "since_event": null
         },
         {
           "key": "second_consent",
-          "value": "not recorded"
+          "value": "not recorded",
+          "since_event": null
         },
         {
           "key": "individual_payment_submissions",
-          "value": "none shown"
+          "value": "none shown",
+          "since_event": null
         }
       ],
       "customer_facing": null,
@@ -102,7 +107,7 @@
       "id": "r2",
       "system": "business_mandate",
       "kind": "company_mandate",
-      "party": "b1",
+      "party": "p2",
       "match_terms": [
         "Northmere Studio Ltd",
         "Mara Ellery",
@@ -112,11 +117,13 @@
       "attributes": [
         {
           "key": "first_signatory",
-          "value": "Mara Ellery"
+          "value": "Mara Ellery",
+          "since_event": null
         },
         {
-          "key": "signing_rule",
-          "value": "second signatory must provide their own consent"
+          "key": "second_signatory_requirement",
+          "value": "second signatory must provide their own consent",
+          "since_event": null
         }
       ],
       "customer_facing": null,

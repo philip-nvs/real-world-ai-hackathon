@@ -64,11 +64,8 @@
       "attributes": [
         {
           "key": "name",
-          "value": "Elowen Mar"
-        },
-        {
-          "key": "change_status",
-          "value": "unchanged"
+          "value": "Elowen Mar",
+          "since_event": null
         }
       ],
       "customer_facing": null,
@@ -85,40 +82,40 @@
       "match_terms": [
         "HV-037",
         "name correction",
-        "protected name review",
         "Elowen Marr",
-        "Elowen Mar"
+        "Elowen Mar",
+        "protected name review"
       ],
       "attributes": [
         {
           "key": "status",
-          "value": "received for review"
-        },
-        {
-          "key": "current_name",
-          "value": "Elowen Mar"
+          "value": "received for review",
+          "since_event": null
         },
         {
           "key": "requested_name",
-          "value": "Elowen Marr"
+          "value": "Elowen Marr",
+          "since_event": null
         },
         {
           "key": "basis_validated",
-          "value": "not yet validated"
-        },
-        {
-          "key": "profile_name_changed",
-          "value": "no"
+          "value": "false",
+          "since_event": null
         },
         {
           "key": "supporting_documents_supplied",
-          "value": "none"
+          "value": "none",
+          "since_event": null
+        },
+        {
+          "key": "profile_name_changed",
+          "value": "false",
+          "since_event": null
         }
       ],
-      "customer_facing": "Your correction request has been received for review. Your profile name has not been changed; any supporting information required will be requested through the secure process.",
+      "customer_facing": null,
       "disclosure_rules": [
-        "Basis for correction not yet validated; do not state the name has been or will be corrected",
-        "Supporting information is requested only through the secure process"
+        "any supporting information required is requested through the secure process"
       ],
       "exists_before_agent": false,
       "created_by": "t1",
@@ -133,8 +130,9 @@
         "name correction",
         "spelling",
         "profile name",
-        "HV-037",
         "Elowen Marr",
+        "Elowen Mar",
+        "HV-037",
         "protected name review"
       ],
       "status": "registered",

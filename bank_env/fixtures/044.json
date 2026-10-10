@@ -7,6 +7,7 @@
       "name": "Leona Voss",
       "kind": "person",
       "roles": [
+        "authorised_business_user",
         "payout_viewer"
       ],
       "acts_for": "p2"
@@ -71,20 +72,24 @@
       "attributes": [
         {
           "key": "batch_name",
-          "value": "Alderwick supplier payments"
+          "value": "Alderwick supplier payments",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "Processed"
+          "value": "Processed",
+          "since_event": null
         },
         {
           "key": "authorisation",
-          "value": "previously authorised"
+          "value": "previously authorised",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [
-        "Batch status Processed does not establish that every payment line was paid; check each row individually"
+        "A processed batch status does not establish that every payment line was paid; line status must be checked per row",
+        "Other rows were not re-evaluated in this case"
       ],
       "exists_before_agent": true,
       "created_by": null,
@@ -103,29 +108,32 @@
       "attributes": [
         {
           "key": "row_id",
-          "value": "SUP-17"
+          "value": "SUP-17",
+          "since_event": null
         },
         {
-          "key": "batch_name",
-          "value": "Alderwick supplier payments"
+          "key": "batch",
+          "value": "Alderwick supplier payments",
+          "since_event": null
         },
         {
           "key": "payee",
-          "value": "studio materials supplier"
+          "value": "studio materials supplier",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "Rejected"
+          "value": "Rejected",
+          "since_event": null
         },
         {
           "key": "reason",
-          "value": "Beneficiary details did not match the receiving institution’s records."
+          "value": "Beneficiary details did not match the receiving institution’s records.",
+          "since_event": null
         }
       ],
-      "customer_facing": "Row SUP-17 — status: Rejected. Reason: Beneficiary details did not match the receiving institution’s records.",
-      "disclosure_rules": [
-        "Status applies to row SUP-17 only; other rows in the batch were not re-evaluated"
-      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
       "exists_before_agent": true,
       "created_by": null,
       "source_event": "event-004"

@@ -63,7 +63,7 @@
     {
       "id": "r1",
       "system": "incoming_payments",
-      "kind": "incoming_activity_check",
+      "kind": "business_account_incoming_activity",
       "party": "p1",
       "match_terms": [
         "Alder Quay Studio Ltd.",
@@ -73,24 +73,27 @@
       ],
       "attributes": [
         {
-          "key": "matching_credit_found",
-          "value": "false"
+          "key": "matching_identifiable_credit",
+          "value": "none shown in the account activity checked",
+          "since_event": null
         },
         {
-          "key": "result",
-          "value": "No identifiable incoming credit matching the available payment details is shown in the account activity checked"
+          "key": "check_basis",
+          "value": "incoming account activity checked against the payment details available to the bank",
+          "since_event": null
         },
         {
-          "key": "checked_at",
-          "value": "2025-10-21 11:21:00 UTC"
+          "key": "invoice_payment_confirmed",
+          "value": "false",
+          "since_event": null
         }
       ],
       "customer_facing": "We checked your business account's incoming activity and could not identify a matching credit at the time of the check. This check does not confirm the status of a payment in the buyer's bank, or confirm that your invoice has been paid.",
       "disclosure_rules": [
         "Result applies only at the time of the check",
-        "Does not establish whether the buyer sent a payment",
         "Does not confirm the status of a payment in the buyer's bank",
-        "Does not confirm the invoice has been paid"
+        "Does not confirm whether the buyer sent a payment",
+        "Does not confirm that the invoice has been paid"
       ],
       "exists_before_agent": true,
       "created_by": null,

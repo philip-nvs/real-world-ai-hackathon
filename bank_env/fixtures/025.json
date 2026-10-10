@@ -11,6 +11,15 @@
         "cardholder"
       ],
       "acts_for": null
+    },
+    {
+      "id": "p2",
+      "name": "North Quay Books",
+      "kind": "business",
+      "roles": [
+        "merchant"
+      ],
+      "acts_for": null
     }
   ],
   "events": [
@@ -71,19 +80,23 @@
       "attributes": [
         {
           "key": "merchant",
-          "value": "North Quay Books"
+          "value": "North Quay Books",
+          "since_event": null
         },
         {
           "key": "amount_gbp",
-          "value": "18.40"
+          "value": "18.40",
+          "since_event": null
         },
         {
           "key": "status",
-          "value": "declined"
+          "value": "declined",
+          "since_event": null
         },
         {
           "key": "decline_reason",
-          "value": "available balance was insufficient to cover the £18.40 authorisation at the time of the attempt"
+          "value": "available balance was insufficient to cover the £18.40 authorisation at the time of the attempt",
+          "since_event": null
         }
       ],
       "customer_facing": null,

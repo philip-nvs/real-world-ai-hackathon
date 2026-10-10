@@ -49,7 +49,43 @@
       "verified": true
     }
   ],
-  "records": [],
+  "records": [
+    {
+      "id": "r1",
+      "system": "customer_profile",
+      "kind": "account_relationship",
+      "party": "p1",
+      "match_terms": [
+        "Mara Ellison",
+        "HV-038",
+        "account relationship"
+      ],
+      "attributes": [
+        {
+          "key": "name",
+          "value": "Mara Ellison",
+          "since_event": null
+        },
+        {
+          "key": "verified_account_holder",
+          "value": "true",
+          "since_event": null
+        },
+        {
+          "key": "account_relationship_status",
+          "value": "active at issue date, 1 October 2025",
+          "since_event": null
+        }
+      ],
+      "customer_facing": null,
+      "disclosure_rules": [
+        "Account number and sort code not stated in the case; withheld in the training copy of the confirmation"
+      ],
+      "exists_before_agent": true,
+      "created_by": null,
+      "source_event": "event-004"
+    }
+  ],
   "team_responses": [
     {
       "id": "t1",
@@ -57,14 +93,13 @@
       "topic_terms": [
         "account confirmation",
         "account relationship",
-        "confirmation letter",
-        "HV-038",
         "secure portal",
-        "Mara Ellison"
+        "HV-038",
+        "verified account holder"
       ],
       "status": "completed",
       "reference": "HV-038",
-      "response": "Issued: account-confirmation-038.pdf. Status: available to the verified account holder in the secure portal. Account relationship: active at issue date, 1 October 2025. Released to the secure portal only. Account number and sort code are withheld. This is not a payment instruction.",
+      "response": "Issued: account-confirmation-038.pdf. Status: available to the verified account holder in the secure portal. Account relationship: active at issue date, 1 October 2025. The document is not a payment instruction.",
       "document": "account-confirmation-038.pdf",
       "source_event": "event-004"
     }

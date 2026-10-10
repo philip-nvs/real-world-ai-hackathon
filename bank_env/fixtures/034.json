@@ -65,55 +65,42 @@
       "attributes": [
         {
           "key": "amount_gbp",
-          "value": "3.20"
+          "value": "3.20",
+          "since_event": null
         },
         {
           "key": "fee_type",
-          "value": "service fee"
+          "value": "service fee",
+          "since_event": null
         },
         {
           "key": "transaction_type",
-          "value": "foreign-currency cash withdrawal"
+          "value": "foreign-currency cash withdrawal",
+          "since_event": null
         },
         {
           "key": "fee_basis",
-          "value": "tariff entry in force on the transaction's processing date for a foreign-currency cash withdrawal"
+          "value": "tariff entry in force on the transaction's processing date for a foreign-currency cash withdrawal",
+          "since_event": null
         },
         {
-          "key": "matches_applicable_tariff_entry",
-          "value": "true"
+          "key": "matches_tariff_entry",
+          "value": "true",
+          "since_event": null
         },
         {
           "key": "refund_decision",
-          "value": "none made"
+          "value": "none made",
+          "since_event": null
         }
       ],
       "customer_facing": null,
       "disclosure_rules": [],
       "exists_before_agent": true,
       "created_by": null,
-      "source_event": "event-004"
+      "source_event": "event-001"
     }
   ],
-  "team_responses": [
-    {
-      "id": "t1",
-      "team": "tariff_team",
-      "topic_terms": [
-        "fee",
-        "tariff",
-        "3.20",
-        "foreign-currency cash withdrawal",
-        "processing date",
-        "fee review",
-        "HV-034"
-      ],
-      "status": "completed",
-      "reference": "HV-034",
-      "response": "The transaction record identifies a foreign-currency cash withdrawal, and the £3.20 fee matches the tariff entry applicable to that transaction on its processing date. No refund or account change is authorised by this review; no refund decision has been made.",
-      "document": null,
-      "source_event": "event-004"
-    }
-  ],
+  "team_responses": [],
   "processes": []
 }

@@ -10,14 +10,14 @@
         "authorised_business_user",
         "limit_viewer"
       ],
-      "acts_for": "b1"
+      "acts_for": "p2"
     },
     {
-      "id": "b1",
-      "name": "Company profile (name not stated)",
+      "id": "p2",
+      "name": "Maeve Calder's company (name not stated)",
       "kind": "business",
       "roles": [
-        "account_holder"
+        "business_customer"
       ],
       "acts_for": null
     }
@@ -62,89 +62,68 @@
   "records": [
     {
       "id": "r1",
-      "system": "limit_register",
-      "kind": "company_limit",
-      "party": "b1",
+      "system": "business_mandate",
+      "kind": "user_mandate",
+      "party": "p1",
       "match_terms": [
-        "company payment limit",
-        "outgoing-payment limit",
-        "company profile limit",
-        "20000.00",
-        "£20,000"
+        "Maeve Calder",
+        "view company limits",
+        "mandate"
       ],
       "attributes": [
         {
-          "key": "status",
-          "value": "active"
+          "key": "user",
+          "value": "Maeve Calder",
+          "since_event": null
         },
         {
-          "key": "limit_type",
-          "value": "per outgoing payment"
-        },
-        {
-          "key": "max_amount_gbp",
-          "value": "20000.00"
+          "key": "may_view_company_limits",
+          "value": "true",
+          "since_event": null
         }
       ],
-      "customer_facing": "Your current company-profile limit is £20,000 per outgoing payment. No limit change or payment has been made; this confirmation does not authorise a payment above the limit.",
-      "disclosure_rules": [
-        "Share only with a user whose mandate permits viewing company limits",
-        "Confirmation of the limit does not authorise a payment above the limit"
-      ],
+      "customer_facing": null,
+      "disclosure_rules": [],
       "exists_before_agent": true,
       "created_by": null,
       "source_event": "event-004"
     },
     {
       "id": "r2",
-      "system": "business_mandate",
-      "kind": "user_permission",
-      "party": "p1",
+      "system": "limit_register",
+      "kind": "company_limit",
+      "party": "p2",
       "match_terms": [
-        "Maeve Calder",
-        "view company limits",
-        "viewing mandate"
+        "company payment limit",
+        "outgoing payment limit",
+        "20000.00",
+        "company profile"
       ],
       "attributes": [
         {
-          "key": "user",
-          "value": "Maeve Calder"
+          "key": "limit_type",
+          "value": "maximum per outgoing payment",
+          "since_event": null
         },
         {
-          "key": "permission",
-          "value": "may view company limits"
+          "key": "amount_gbp",
+          "value": "20000.00",
+          "since_event": null
+        },
+        {
+          "key": "status",
+          "value": "active",
+          "since_event": null
         }
       ],
-      "customer_facing": null,
-      "disclosure_rules": [],
+      "customer_facing": "Your current company-profile limit is £20,000 per outgoing payment. No limit change or payment has been made; this confirmation does not authorise a payment above the limit.",
+      "disclosure_rules": [
+        "Share only after confirming the requester's mandate to view company limits",
+        "Confirmation does not authorise a payment above the limit"
+      ],
       "exists_before_agent": true,
       "created_by": null,
       "source_event": "event-004"
-    },
-    {
-      "id": "r3",
-      "system": "instruction_register",
-      "kind": "planned_supplier_payout",
-      "party": "b1",
-      "match_terms": [
-        "planned supplier payout",
-        "supplier payment"
-      ],
-      "attributes": [
-        {
-          "key": "status",
-          "value": "not submitted"
-        },
-        {
-          "key": "executed",
-          "value": "false"
-        }
-      ],
-      "customer_facing": null,
-      "disclosure_rules": [],
-      "exists_before_agent": true,
-      "created_by": null,
-      "source_event": "event-001"
     }
   ],
   "team_responses": [],
