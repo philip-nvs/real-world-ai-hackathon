@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for H&V's instruction register to return the current payer-side recurring instruction entries on Elena Wren's account; nothing new to do until it replies.

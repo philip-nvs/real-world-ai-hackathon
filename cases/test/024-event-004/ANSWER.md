@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Rowan Ellery via the secure portal confirming the card has a temporary security-related restriction, without giving operational detail or saying whether or when it will be lifted.

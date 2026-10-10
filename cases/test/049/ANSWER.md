@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Verify Mara Venn's authority for North Quay Printworks and ask H&V's acquiring service to prepare and place the 1–7 July 2025 acquiring report in the secure portal.

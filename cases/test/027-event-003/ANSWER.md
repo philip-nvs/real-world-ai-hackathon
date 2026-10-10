@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for Mara Ellison to complete the checks in H&V's secure recovery process and for the recovery system to report the result; nothing new to do until it does.

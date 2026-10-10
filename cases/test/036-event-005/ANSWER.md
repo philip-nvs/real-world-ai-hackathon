@@ -1,3 +1,0 @@
-- Cut-off: event-005
-- Action: `act`
-- Description: Send Mara a secure portal reply confirming that her new address is marked as current for correspondence, without implying anything about correspondence already sent.

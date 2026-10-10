@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Check H&V's payer-side instruction register for the active recurring instructions on Elena Wren's account, without making any changes.

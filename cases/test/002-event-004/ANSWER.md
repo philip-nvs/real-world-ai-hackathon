@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Elowen Marsh through the secure portal that no incoming payment was found on her account at the time of the check, and that H&V's records cannot show whether the sender made or completed the payment.

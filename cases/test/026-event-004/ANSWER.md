@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `wait`
-- Description: Wait for the secure system to confirm in the portal that Maren's PIN procedure has started; no new step is needed and no PIN should be sent in correspondence.

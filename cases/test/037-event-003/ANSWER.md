@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for the data team to pick up the referred name review and confirm it is logged for review; no further agent action or profile change is due yet.

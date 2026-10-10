@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `wait`
-- Description: Wait for Maeve Ellery to confirm the date change to 22 September 2025 through the secure portal; nothing further to do until she confirms.

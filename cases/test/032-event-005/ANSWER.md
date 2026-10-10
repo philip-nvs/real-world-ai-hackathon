@@ -1,3 +1,0 @@
-- Cut-off: event-005
-- Action: `act`
-- Description: Tell Mara Ellison via the secure portal that her January 2024 statement is ready for access there, without claiming it has been downloaded.

@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Ask the statements service to check Elowen Marr's June 2025 statement period and place the available statement in her secure portal.

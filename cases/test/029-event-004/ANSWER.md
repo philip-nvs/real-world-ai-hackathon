@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Mara Ellison via the secure portal that the tablet's device status is awaiting confirmation and it has not yet been admitted for banking operations.

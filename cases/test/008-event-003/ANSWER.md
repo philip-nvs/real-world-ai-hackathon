@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for H&V's payment journal to return the purpose field recorded on Elena Marlow's transfer instruction to Mallow Pottery Works; nothing new to do until it replies.

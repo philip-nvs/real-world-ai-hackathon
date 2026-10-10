@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `wait`
-- Description: Wait for the H&V statement service to process the January 2024 statement order; nothing new to do until it reports the statement's status.

@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Tell Mara Ellery via the secure portal that the standing-order run was not executed because there were insufficient cleared funds at the scheduled processing time.

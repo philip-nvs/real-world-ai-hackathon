@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Send Mara a secure-portal message giving her the HV-023 registration number, stating that ownership, fraud and any refund are not yet established, and offering H&V's secure card-protection options.

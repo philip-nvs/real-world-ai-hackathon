@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Confirm Mara Ellison's identity checks and the workflow requirements, then open the correspondence address-change process.

@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `wait`
-- Description: Wait for H&V's system to record that Mara Ellison's profile access is restored after the completed recovery checks; the agent should not request any password or verification details.

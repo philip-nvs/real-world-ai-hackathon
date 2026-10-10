@@ -1,3 +1,0 @@
-- Cut-off: event-005
-- Action: `wait`
-- Description: Wait for H&V's secure profile-change system to apply the confirmed replacement number and notify Elowen Mercer; nothing new for the agent to do.

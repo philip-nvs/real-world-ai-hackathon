@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: The payment record request is with the H&V document service; wait for it to confirm the record has been generated before replying to Mara Ellison.

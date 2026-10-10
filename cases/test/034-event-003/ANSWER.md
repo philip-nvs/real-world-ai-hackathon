@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: Check the recorded transaction type and processing date against the H&V tariff entry in force on that date and record whether the £3.20 fee matches it.

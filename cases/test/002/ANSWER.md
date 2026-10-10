@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Check H&V's incoming-payment records for Elowen Marsh's account to see whether the kiln contribution has arrived.

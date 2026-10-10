@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `wait`
-- Description: Wait for H&V's access-request journal to confirm the request was delivered to the administrator and for the administrator's approval decision; do not grant access in the meantime.

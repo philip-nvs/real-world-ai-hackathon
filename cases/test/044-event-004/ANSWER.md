@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Leona Voss confirming that row SUP-17 is shown as rejected with the reason displayed in her portal, and explain that the batch's processed status does not mean every line was paid and the other rows were not re-evaluated.

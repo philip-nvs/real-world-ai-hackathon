@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Mira via the secure portal confirming these are two separate payment instructions (one Completed, one Pending) rather than one duplicated in the display, and that no cancellation or return of the pending instruction has been initiated.

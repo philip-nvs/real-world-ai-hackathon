@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Mara Ellwood via the secure portal that H&V's trace shows the instruction sent onward from H&V with downstream processing pending, and that receipt by the beneficiary is not confirmed.

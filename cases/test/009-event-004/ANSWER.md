@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Mara Ellwood via the secure portal confirming from the H&V payment journal that £648.20 was sent, noting this does not establish the amount the recipient received.

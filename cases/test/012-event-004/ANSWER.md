@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `wait`
-- Description: Wait for Mira to confirm the £42.00 to £68.00 amendment in her secure portal session; the standing order stays unchanged until she does.

@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for H&V's access log to return the recorded device-linking status of Mara Ellison's new tablet; nothing new to do until it replies.

@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Tell Mara Ellison through the secure portal that her CSV export for 6–9 May 2025 is now available there.

@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Hold the opened address-change process until Mara Ellison gives her secure confirmation of the new correspondence address through the profile process; do not change the address on her behalf.

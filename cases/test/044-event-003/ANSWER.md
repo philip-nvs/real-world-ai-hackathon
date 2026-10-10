@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for H&V's payment journal to return the recorded status of row SUP-17 in the "Alderwick supplier payments" batch; nothing new to do until it replies.

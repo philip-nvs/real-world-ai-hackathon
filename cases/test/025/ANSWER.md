@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `act`
-- Description: Search H&V's card authorisation journal for Mara Ellison's £18.40 North Quay Books attempt and check its recorded decline reason.

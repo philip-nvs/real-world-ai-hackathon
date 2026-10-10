@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for H&V's acquiring service to prepare and place the 1–7 July 2025 acquiring report in the secure portal; nothing new to do until it replies.

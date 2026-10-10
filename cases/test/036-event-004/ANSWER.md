@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Submit the verified address-change request with the confirmations required by the profile workflow, now that Mara has confirmed securely.

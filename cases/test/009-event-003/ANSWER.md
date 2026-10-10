@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for the H&V payment journal to return the amount recorded in the final instruction and execution record before replying to Mara Ellwood.

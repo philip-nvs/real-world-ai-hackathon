@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for H&V's card system to return the card journal status for the block instruction submitted under case HV-022; no new action is needed yet.

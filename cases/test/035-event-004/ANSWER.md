@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `wait`
-- Description: Wait for the Tariff Team to respond to Mara Ellison about request HV-035; the request is registered and routed, so there is nothing new for the service agent to do.

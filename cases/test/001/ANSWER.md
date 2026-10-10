@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Check the status of Mara Ellison's £420 one-off transfer to Alder & Reed Workshop in H&V's transfer journal.

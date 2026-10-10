@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Check H&V's incoming-entry journal for a £42.80 refund specifically matching Elowen Marr's transfer to Northmere Home Supplies.

@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Check the type and internal reference of each instruction behind the two £34.80 Northmere Heating future payments in H&V's instruction journal, without cancelling either.

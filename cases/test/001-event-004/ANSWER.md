@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Mara Ellison via the secure portal that H&V's journal records the transfer as sent, making clear this does not confirm receipt or credit by the recipient bank.

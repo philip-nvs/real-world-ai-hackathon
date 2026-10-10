@@ -1,3 +1,0 @@
-- Cut-off: event-005
-- Action: `act`
-- Description: Deliver the permitted session extract to Nerys Wren via the secure portal, noting that device and network identifiers are withheld and the origin of the new session is not determined.

@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Update Leona Mercer via the secure portal that her request to seek a return of the transfer has been registered, while making clear that a return of the money is not confirmed.

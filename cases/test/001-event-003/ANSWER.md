@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for H&V's transfer journal to return the recorded status of the £420 one-off transfer to Alder & Reed Workshop; nothing new to do until it replies.

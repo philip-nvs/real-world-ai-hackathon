@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for the H&V standing-order journal to return the recorded outcome and reason for Mara Ellery's scheduled rent standing-order run; nothing new to do until it replies.

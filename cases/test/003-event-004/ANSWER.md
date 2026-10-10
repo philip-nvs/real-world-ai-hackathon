@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Elise Rowan via the secure portal that the journal shows the instruction is awaiting her authorisation and has not yet been authorised or executed.

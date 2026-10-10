@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Submit Mara Ellison's verified instruction to block her missing debit card to H&V's card system under case HV-022.

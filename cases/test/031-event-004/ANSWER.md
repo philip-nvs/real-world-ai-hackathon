@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Tell Elowen Marr through the secure portal that her June 2025 statement, statement-031.pdf, is now available to download in her secure portal and has not been sent by email.

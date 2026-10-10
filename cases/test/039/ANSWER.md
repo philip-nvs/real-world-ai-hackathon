@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `escalate`
-- Description: Escalate to the H&V security team requesting the permitted session extract for Nerys Wren's profile, excluding internal detection details and others' data.

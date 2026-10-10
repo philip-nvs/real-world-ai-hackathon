@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Mara Ellison in the secure portal that the account confirmation (account-confirmation-038.pdf, dated 1 October 2025, stating the relationship was active at issue date) is available there and is not a payment instruction.

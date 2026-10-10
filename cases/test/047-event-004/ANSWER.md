@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Securely reply to Maeve confirming the company-profile limit of £20,000 per outgoing payment, noting that no limit change or payment has been made.

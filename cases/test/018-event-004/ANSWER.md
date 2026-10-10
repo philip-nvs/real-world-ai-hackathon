@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Mara Ellison via the secure portal confirming the two lines are separate instructions (a standing order and a direct debit mandate), that neither has been cancelled, and asking her to identify which instruction, if any, she wants changed before acting.

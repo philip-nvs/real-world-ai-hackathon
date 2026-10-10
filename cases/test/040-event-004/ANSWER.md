@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Make the generated payment record for HV-040 available in Mara Ellison's secure portal and tell her it records the £74.00 payment dated 14 July 2025 as SENT and does not confirm credit to the recipient.

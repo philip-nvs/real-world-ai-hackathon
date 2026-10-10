@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Reply to Mara Ellison in the secure portal with the next scheduled run date from the standing-order record, noting it is the scheduled run date, not a guaranteed receipt date, and the payment has not yet been made.

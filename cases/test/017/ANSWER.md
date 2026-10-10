@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `act`
-- Description: Check the H&V standing-order journal for Mara Ellery's scheduled monthly rent standing-order run to establish its recorded status and reason.

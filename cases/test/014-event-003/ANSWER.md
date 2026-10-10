@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: Wait for H&V's mandate journal to return the current status of the Northmere Water Services Direct Debit mandate; nothing new to do until it replies.

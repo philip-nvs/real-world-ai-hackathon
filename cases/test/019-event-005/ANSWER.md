@@ -1,3 +1,0 @@
-- Cut-off: event-005
-- Action: `act`
-- Description: Apply Maeve Ellery's securely confirmed change so the standing order's next scheduled run becomes 22 September 2025, and confirm the update to her through the secure portal.

@@ -1,3 +1,0 @@
-- Cut-off: event-002
-- Action: `escalate`
-- Description: Register Mara Ellison's review request with the Tariff Team, identifying the £4.50 paper statement fee dated 18 June 2025 and her reason that she had chosen electronic statements.

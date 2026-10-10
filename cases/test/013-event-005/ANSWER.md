@@ -1,3 +1,0 @@
-- Cut-off: event-005
-- Action: `act`
-- Description: Tell Elodie Mercer in the secure portal that the future run of her studio-rent instruction is cancelled, and that this does not reverse or return any payments already sent.

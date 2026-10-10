@@ -1,3 +1,0 @@
-- Cut-off: event-003
-- Action: `wait`
-- Description: The report request has been sent to the H&V import service; wait for it to make the validation report for batch HV-042 available in Nadia Fenwick's secure portal.

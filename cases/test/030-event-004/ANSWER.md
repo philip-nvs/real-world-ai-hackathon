@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `act`
-- Description: Send Maren a substantive update on replacement request HV-030 confirming the card is in manufacture and that dispatch and delivery are not yet confirmed.

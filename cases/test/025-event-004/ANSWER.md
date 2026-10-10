@@ -1,3 +1,0 @@
-- Cut-off: event-004
-- Action: `wait`
-- Description: The journal search for the £18.40 North Quay Books attempt is already under way; wait for the card authorisation journal to return the matching record and its decline reason.
