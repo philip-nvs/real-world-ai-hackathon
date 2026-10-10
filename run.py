@@ -200,7 +200,8 @@ def case_content(case):
 # ---------- policy guard: plain code, no LLM ----------
 
 # ponytail: sentence-level negation skip ("we cannot promise a refund"), swap for a classifier if it misfires
-NEGATION = re.compile(r"\b(not|cannot|can't|unable|never|no|without|isn't|doesn't|won't|whether)\b", re.I)
+NEGATION = re.compile(r"\b(not|cannot|can't|unable|never|no|without|isn't|doesn't|don't|won't|shouldn't|mustn't|whether)\b",
+                      re.I)
 RED_FLAGS = [
     (r"\b(will|shall) (be )?refund|\brefund\b.{0,30}\b(will be|has been|have been|is being) (issued|made|processed|paid|credited|sent)"
      r"|\byou will (receive|get) (a |your )?(refund|money back)", "promises a refund"),
@@ -209,18 +210,33 @@ RED_FLAGS = [
      r"|\b(recipient|payee|beneficiary) (has|have) received", "promises delivery or receipt"),
     (r"\bguarantee", "gives a guarantee"),
     (r"\b(send|share|tell|give|provide|enter|confirm|type)\b.{0,40}\b(password|pin|passcode|one-time|otp|security code)\b", "asks for credentials"),
-    (r"\b(pay|send|make)\b.{0,25}\bagain\b", "advises paying again"),
+    (r"\bpay\b.{0,40}\bagain\b|\b(send|make|transfer)\b.{0,30}(\b(payment|transfer|money|amount)\b|£).{0,30}\bagain\b",
+     "advises paying again"),
 ]
+# Suggesting a payment is only a pay-again risk when the message is about one that didn't go through: "pay the rent
+# yourself as a one-off" after a missed standing-order run may duplicate a pending payment, while "pay the builder
+# yourself in online banking" for a payment the bank won't make for the customer is right.
+FAILED_PAYMENT = re.compile(r"\b(not (been )?(executed|completed|made|sent|paid)|declined|failed|missed|returned|rejected"
+                            r"|bounced|insufficient|unpaid|did(n't| not) (go through|arrive|run))\b", re.I)
+PAY_SUGGESTION = re.compile(r"\bpay\b.{0,40}\b(yourself|manually|directly|instead|again)\b"
+                            r"|\b(send|make)\b.{0,30}(\b(payment|transfer|money|amount|it)\b|£).{0,30}"
+                            r"\b(yourself|manually|directly|instead|again)\b"
+                            r"|\b(make|set up|send|arrange|create)\b.{0,25}\b(one-off|manual|new|replacement|separate|another)\b"
+                            r".{0,20}\b(payment|transfer)\b|\bre-?(send|pay|submit)\b", re.I)
+HOLD_OFF = re.compile(r"\b(don't|do not|not|never|no need|before|until|unless|wait|hold off|instead of|rather than|avoid)\b", re.I)
 RESEND = re.compile(r"\b(re-?send|re-?submit|send again|repeat|duplicate|retry)\b.{0,30}\bpayment|\bpayment\b.{0,30}\bagain\b", re.I)
 
 
 def red_flags(text):
     hits = []
+    failed = FAILED_PAYMENT.search(text or "")
     for sentence in re.split(r"(?<=[.!?])\s+|\n+", text or ""):
+        if failed and PAY_SUGGESTION.search(sentence) and not HOLD_OFF.search(sentence):
+            hits.append("advises paying again")
         if NEGATION.search(sentence):
             continue
         hits += [why for pattern, why in RED_FLAGS if re.search(pattern, sentence, re.I)]
-    return hits
+    return list(dict.fromkeys(hits))
 
 
 def guard_tool(name, args, case):

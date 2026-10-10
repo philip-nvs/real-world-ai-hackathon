@@ -40,6 +40,19 @@ if __name__ == "__main__":
     assert red_flags("Please never share your PIN.") == []
     assert red_flags("Receipt confirmed: batch-041.csv was received by H&V.") == []
     assert red_flags("The payment will arrive on Friday.") == ["promises delivery or receipt"]
+    # paying again: suggesting a payment is a risk when the message is about one that didn't go through
+    for text in ("The run was not executed due to insufficient cleared funds. You may want to pay the rent yourself as a one-off.",
+                 "Your transfer was declined. You can make a one-off payment to your landlord in online banking.",
+                 "The payment was returned. Please send the money to the supplier again.",
+                 "The supplier payment failed. Please set up a new transfer to Alder Quay Supplies.",
+                 "The transfer failed. Please send it again.", "Please pay the rent again tomorrow."):
+        assert red_flags(text) == ["advises paying again"], text
+    for text in ("We don't make payments on customers' behalf. You can pay D FRASER BUILD yourself in online banking.",
+                 "The payment was not executed. Please don't make a new payment until we've checked for pending activity.",
+                 "The payment was declined. Before making any new payment, we'll check for pending activity.",
+                 "The payment was declined. If you want to change your transfer limit, please do it yourself in the app.",
+                 "Please don't send the payment again.", "We'll make contact with you again once the team replies."):
+        assert red_flags(text) == [], text
     assert guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-001"}, case)
     assert not guard_tool("submit_instruction", {"system": "SO", "instruction": "Cancel order", "authorised_by_event": "event-002"}, case)
     assert guard_tool("submit_instruction", {"system": "PAY", "instruction": "Re-send the payment", "authorised_by_event": "event-002"}, case)
