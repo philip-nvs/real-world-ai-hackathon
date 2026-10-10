@@ -126,13 +126,13 @@ def ec465_act_with_refund_promise():
 
 def ec466_nondeterminism():
     return "INFO", ("not checkable offline. The agent uses adaptive thinking (no temperature/seed). Check by running "
-                    "a case twice through the API and diffing the decisions")
+                    "`uv run -m src.evaluate --cases cases/synthetic --out eval_a` twice and diffing decisions per case")
 
 
 def ec470_irreversible_tool_in_eval():
     out = TOOLS["submit_instruction"](system="card system", instruction="Block card ending 4417", authorised_by_event="event-001")
     if out.get("executed") is False:
-        return "PASS", ("tools.py records side-effecting calls without executing them; cases without "
+        return "PASS", ("tools.py records side-effecting calls without executing them; src.evaluate --mock and cases without "
                         "a fixture use it, and fixture adapters simulate. Keep it that way when real tools are wired in")
     return "GAP", f"the mock submit_instruction reports execution: {out}"
 

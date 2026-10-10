@@ -60,6 +60,8 @@ uv run -m src.agent.test_runtime_faults --report   # model/tool/runner fault sce
 uv run -m src.bank_env.test_bank_env               # fixtures, adapter, overlays, faults; no API key or MongoDB
 uv run -m src.repository.test_repository           # needs MongoDB running
 uv run --with pytest pytest src/                   # API; upload and session tests need MongoDB running
+uv run -m src.evaluate                             # dev loop: run every cases/test cut-off, Claude judges each; scorecard in eval_out/
+uv run -m src.evaluate 017-event-004 --mock        # one cut-off (or case ids like 001 017), against the tool stubs
 ```
 
 UI, from `web/`:
